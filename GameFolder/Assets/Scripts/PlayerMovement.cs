@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Blend",1);
+        animator.SetFloat("Speed",Mathf.Abs(movement.y));
+        animator.SetFloat("HSpeed", Mathf.Abs(movement.x));
+
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
