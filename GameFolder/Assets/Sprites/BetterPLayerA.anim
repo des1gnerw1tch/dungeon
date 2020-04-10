@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IdlePlayer_RPG
+  m_Name: BetterPLayerA
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,6 +21,15 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 4845827712778815830, guid: 886d06661c033b84e965e631534e5d4a,
+        type: 3}
+    - time: 0.15
+      value: {fileID: 5452265138537179192, guid: 886d06661c033b84e965e631534e5d4a,
+        type: 3}
+    - time: 0.3
+      value: {fileID: 5831372652825027437, guid: 886d06661c033b84e965e631534e5d4a,
+        type: 3}
+    - time: 0.45
+      value: {fileID: 4927900447440810366, guid: 886d06661c033b84e965e631534e5d4a,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -42,12 +51,15 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 4845827712778815830, guid: 886d06661c033b84e965e631534e5d4a, type: 3}
+    - {fileID: 5452265138537179192, guid: 886d06661c033b84e965e631534e5d4a, type: 3}
+    - {fileID: 5831372652825027437, guid: 886d06661c033b84e965e631534e5d4a, type: 3}
+    - {fileID: 4927900447440810366, guid: 886d06661c033b84e965e631534e5d4a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.46666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

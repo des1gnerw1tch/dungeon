@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 96376c754868324479218496ab5c8409
+guid: 886d06661c033b84e965e631534e5d4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4860299344087775799
-    second: Player_rpg_0
+      213: 4845827712778815830
+    second: BetterPlayer_0
   - first:
-      213: -8131802398144343064
-    second: Player_rpg_1
+      213: 5452265138537179192
+    second: BetterPlayer_1
   - first:
-      213: 113271826745837045
-    second: Player_rpg_2
+      213: 5831372652825027437
+    second: BetterPlayer_2
   - first:
-      213: -1108961273103436625
-    second: Player_rpg_3
-  - first:
-      213: 8298259447008620707
-    second: Player_rpg_4
-  - first:
-      213: -4450971255673294589
-    second: Player_rpg_5
+      213: 4927900447440810366
+    second: BetterPlayer_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,85 +135,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_rpg_0
+      name: BetterPlayer_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 48
-        height: 32
+        x: 4
+        y: 39
+        width: 24
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a7a62a080437340800000000000000
-      internalID: 4860299344087775799
+      spriteID: 659cce661a6df3340800000000000000
+      internalID: 4845827712778815830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_rpg_1
+      name: BetterPlayer_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 48
-        height: 32
+        x: 36
+        y: 39
+        width: 24
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e3dfe29dc8062f80800000000000000
-      internalID: -8131802398144343064
+      spriteID: 83821c391465aab40800000000000000
+      internalID: 5452265138537179192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_rpg_2
+      name: BetterPlayer_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
-        height: 32
+        x: 4
+        y: 7
+        width: 24
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f5ce34502c629100800000000000000
-      internalID: 113271826745837045
+      spriteID: d63209428823de050800000000000000
+      internalID: 5831372652825027437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_rpg_3
+      name: BetterPlayer_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 32
+        x: 36
+        y: 7
+        width: 24
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa4310ff89d2c90f0800000000000000
-      internalID: -1108961273103436625
+      spriteID: e71b23a095b636440800000000000000
+      internalID: 4927900447440810366
       vertices: []
       indices: 
       edges: []
