@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class SpiderMovement : MonoBehaviour
 {
     public float spiderSpeed = 5f;
     public Rigidbody2D rb;
