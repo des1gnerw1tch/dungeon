@@ -11,4 +11,5 @@ public class BulletHit : MonoBehaviour
         Destroy(effect, .2f);
         Destroy(gameObject);
     }
+    
 }
