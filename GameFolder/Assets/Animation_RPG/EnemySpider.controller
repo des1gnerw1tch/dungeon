@@ -62,9 +62,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23511c5ebb0441241ae87f7b380dcc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiderSpeed: 3
-  pounceSpeed: 400
-  lifeTime: 1
+  spiderSpeed: 1000
+  pounceSpeed: 200
+  lifeTime: 2
 --- !u!1102 &-377811072369003627
 AnimatorState:
   serializedVersion: 5
@@ -135,7 +135,7 @@ AnimatorController:
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -186,5 +186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3bd1bd1408f20f47a991f1d1cfef16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiderSpeed: 3
+  spiderSpeed: 1
   pounceSpeed: 10
