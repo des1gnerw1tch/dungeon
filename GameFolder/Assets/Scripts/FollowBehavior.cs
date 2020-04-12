@@ -7,33 +7,30 @@ public class FollowBehavior : StateMachineBehaviour
 
     private Transform target;
     public float spiderSpeed = 3f;
-    public float pounceSpeed = 5f;
-    private bool hasAttacked = false;
+    public float AttackDistance;
+    
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        
-        if (Vector2.Distance(animator.transform.position, target.position) > 3 )
+        if (Vector2.Distance(animator.transform.position, target.position) > AttackDistance )
         {
            animator.transform.position = Vector2.MoveTowards(animator.transform.position, target.position, spiderSpeed * Time.deltaTime);
-           
-           
-            
+
         }
         else
         {
            animator.SetFloat("IsClose", 1);
-           
-            //Invoke("Attack", 2.0f);
-            
-        
+
         }
       
     }

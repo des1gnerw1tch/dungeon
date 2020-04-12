@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SpiderMovement : MonoBehaviour
 {
-    public float spiderSpeed = 5f;
-    public float pounceSpeed = 0f;
+    
     public Rigidbody2D rb;
     private Transform target;
-    public Animator animator;
+    
     //private bool hasHit = false;
     //public Camera cam;
 

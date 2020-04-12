@@ -7,7 +7,8 @@ public class AttackState : StateMachineBehaviour
     private Transform target;
     public float spiderSpeed = 3f;
     public float pounceSpeed = 20f;
-    public float lifeTime = 5f;
+    public float lifeTimeFirstAttack = 5f;
+    public float lifeTimeAttack = 5f;
     private bool hasAttacked = false;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -20,15 +21,15 @@ public class AttackState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         
-        if(lifeTime > 0){
-            lifeTime -= Time.deltaTime;
+        if(lifeTimeFirstAttack > 0){
+            lifeTimeFirstAttack -= Time.deltaTime;
             
             
 		}
-        if (lifeTime <= 0){
+        if (lifeTimeFirstAttack <= 0){
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, target.position, pounceSpeed * Time.deltaTime);
             animator.SetFloat("IsClose", -1);
-            lifeTime = 1f;
+            lifeTimeFirstAttack = lifeTimeAttack;
         }
             
        
