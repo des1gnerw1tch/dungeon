@@ -5,8 +5,21 @@ using UnityEngine;
 public class BulletHit : MonoBehaviour
 {
     public GameObject hitEffect;
+    public int damage = 20;
     void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effect, .2f);
+        Destroy(gameObject);
+    }
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        SpiderHealth enemy = hitInfo.GetComponent<SpiderHealth>();
+
+        if(enemy != null){
+            enemy.TakeDamage(20);  
+		}
+        
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, .2f);
         Destroy(gameObject);

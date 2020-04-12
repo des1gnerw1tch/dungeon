@@ -7,23 +7,33 @@ public class Spawner : MonoBehaviour
     private Transform target;
     private bool hasSpawned = false;
     public GameObject SpiderPrefab;
+    public float spawnTime;
+    private float spawnTimeCounter;
     Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        offset.Set(Random.Range(-10.0f, 10.0f) + 10, Random.Range(-10.0f, 10.0f) + 10, 0f);
+        
     }
-    void Spawn(){
-        if(hasSpawned == false){
-            GameObject Spider = Instantiate(SpiderPrefab, target.position - offset, target.rotation);
-            hasSpawned = true;
-		}
+    void Spawn()
+    {
+        offset.Set(Random.Range(-10.0f, 10.0f) + 10, Random.Range(-10.0f, 10.0f) + 10, 0f);
+        GameObject Spider = Instantiate(SpiderPrefab, target.position - offset, target.rotation);
+        
+            
 	}
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("Spawn",5f);
+        
+        if(spawnTimeCounter > 0){
+              spawnTimeCounter -= Time.deltaTime;
+		}
+        if(spawnTimeCounter <= 0){
+              Spawn();
+              spawnTimeCounter = spawnTime;
+		}
     }
 }
