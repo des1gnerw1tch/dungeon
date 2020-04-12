@@ -9,7 +9,7 @@ public class SpiderMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Transform target;
     public Animator animator;
-    private bool hasHit = false;
+    //private bool hasHit = false;
     //public Camera cam;
 
     Vector2 mousePos;
@@ -25,19 +25,19 @@ public class SpiderMovement : MonoBehaviour
         Vector3 attackPosition = transform.position;
         Vector3 attackTarget = target.position;
         //Move the Spider towards the player IsClose is the animation variable name so i can switch between the attack animation and the chase animation
-        if (Vector2.Distance(transform.position, target.position) > 3 || hasHit == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, spiderSpeed * Time.deltaTime);
+        //if (Vector2.Distance(transform.position, target.position) > 3 || hasHit == true)
+        //{
+          //  transform.position = Vector2.MoveTowards(transform.position, target.position, spiderSpeed * Time.deltaTime);
            
-            animator.SetFloat("IsClose", -1);
+           // animator.SetFloat("IsClose", -1);
             
-        }
-        else
-        {
-            animator.SetFloat("IsClose", 1);
-            transform.position = Vector2.MoveTowards(attackPosition, attackTarget, pounceSpeed * Time.deltaTime);
-            hasHit = true;
-        }
+        //}
+        //else
+       // {
+           // animator.SetFloat("IsClose", 1);
+           // transform.position = Vector2.MoveTowards(attackPosition, attackTarget, pounceSpeed * Time.deltaTime);
+           // hasHit = true;
+       // }
 
         mousePos.Set(target.position.x, target.position.y);
         //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
