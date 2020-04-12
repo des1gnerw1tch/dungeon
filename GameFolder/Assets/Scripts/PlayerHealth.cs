@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -19,15 +20,24 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
+        if(currentHealth <= 0){
+            SceneManager.LoadScene("GameOver");
+		}
     }
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        SpiderHealth enemy = hitInfo.GetComponent<SpiderHealth>();
+
+        if(enemy != null){
+            TakeDamage(10);  
+		}
+        
+        
     }
 }

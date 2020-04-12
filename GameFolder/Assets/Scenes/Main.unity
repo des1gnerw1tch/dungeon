@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpiderPrefab: {fileID: 1578111181576999759, guid: 330ea06ecb1f9874c8210203a8da00cf,
     type: 3}
-  spawnTime: 5
+  spawnTime: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +423,11 @@ PrefabInstance:
     - target: {fileID: 3844409361931145734, guid: c96a10a4ed074f542b393f60c062da54,
         type: 3}
       propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844409361931145734, guid: c96a10a4ed074f542b393f60c062da54,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3844409361931145735, guid: c96a10a4ed074f542b393f60c062da54,
@@ -25223,6 +25228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578111181576999756, guid: 330ea06ecb1f9874c8210203a8da00cf,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1578111181576999759, guid: 330ea06ecb1f9874c8210203a8da00cf,
         type: 3}
