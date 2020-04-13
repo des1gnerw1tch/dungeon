@@ -7,9 +7,13 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     public float maxHealth = 100;
     private float curHealth;
+    public int num; 
+    
+    public int deathOfObject;
     void Start()
     {
         curHealth = maxHealth;
+        
     }
 
     // Update is called once per frame
@@ -21,8 +25,18 @@ public class EnemyHealth : MonoBehaviour
         Die();
 	   }
     }
-    void Die(){
-
-      Destroy(gameObject);
+    void Die()
+    {
+        eathOfObject();
+        Debug.Log("Enemy number should decrease");
+        Destroy(gameObject);
+        
+      
+	}
+    public void eathOfObject(){
+        
+        num += 1;
+        
+       
 	}
 }
