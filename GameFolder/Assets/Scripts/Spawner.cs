@@ -2,37 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Spawner : MonoBehaviour
 {
     private Transform target;
     private bool hasSpawned = false;
-    public GameObject SpiderPrefab;
+    public GameObject prefab;
     public float spawnTime;
     private float spawnTimeCounter;
+    public int max;
+    public int numAlive = 0;
     Vector3 offset;
+    Vector2 pos;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
+
     }
     void Spawn()
     {
-        offset.Set(Random.Range(-10.0f, 10.0f) + 10, Random.Range(-10.0f, 10.0f) + 10, 0f);
-        GameObject Spider = Instantiate(SpiderPrefab, target.position - offset, target.rotation);
-        
-            
+
+        pos.Set(Random.Range(-40f, 40f), Random.Range(-40f, 40f));
+        if (Vector2.Distance(pos, target.position) > 7)  {
+          GameObject Spider = Instantiate(prefab, pos, target.rotation);
+          numAlive++;
+        } else {
+          Debug.Log("Spawned inside the player :(");
+          Spawn();
+        }
+
+
+
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if(spawnTimeCounter > 0){
               spawnTimeCounter -= Time.deltaTime;
 		}
         if(spawnTimeCounter <= 0){
+              if (numAlive < max) {
               Spawn();
+              }
               spawnTimeCounter = spawnTime;
 		}
     }

@@ -32,12 +32,12 @@ public class PlayerHealth : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        SpiderHealth enemy = hitInfo.GetComponent<SpiderHealth>();
+        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
 
         if(enemy != null){
-            TakeDamage(10);  
+            TakeDamage(10);
 		}
-        
-        
+
+
     }
 }

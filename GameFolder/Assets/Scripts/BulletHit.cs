@@ -12,17 +12,19 @@ public class BulletHit : MonoBehaviour
         Destroy(effect, .2f);
         Destroy(gameObject);
     }
+
+    /* when bullet hits enemy*/
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        SpiderHealth enemy = hitInfo.GetComponent<SpiderHealth>();
+        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
 
-        if(enemy != null){
-            enemy.TakeDamage(20);  
+        if(enemy != null) {
+            enemy.TakeDamage(20);
 		}
-        
+
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, .2f);
         Destroy(gameObject);
     }
-    
+
 }

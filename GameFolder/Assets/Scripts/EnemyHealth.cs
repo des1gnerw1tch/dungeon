@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float spiderMaxHealth = 100;
-    private float spiderCurrentHealth;
+    public float maxHealth = 100;
+    private float curHealth;
     void Start()
     {
-        spiderCurrentHealth = spiderMaxHealth;
+        curHealth = maxHealth;
     }
 
     // Update is called once per frame
     public void TakeDamage(int damage)
     {
-       spiderCurrentHealth -= damage;
+       curHealth -= damage;
 
-       if(spiderCurrentHealth <= 0){
+       if(curHealth <= 0){
         Die();
 	   }
     }
     void Die(){
-        Destroy(gameObject);
+
+      Destroy(gameObject);
 	}
 }
