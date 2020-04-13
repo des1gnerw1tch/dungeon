@@ -6,14 +6,16 @@ public class EnemyHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     public float maxHealth = 100;
+    
     private float curHealth;
     public int num; 
-    
+    public GameObject gundropPrefab;
+    Vector2 pos;
     public int deathOfObject;
     void Start()
     {
         curHealth = maxHealth;
-        
+        pos.Set(0f, 0f);
     }
 
     // Update is called once per frame
@@ -29,7 +31,9 @@ public class EnemyHealth : MonoBehaviour
     {
         eathOfObject();
         Debug.Log("Enemy number should decrease");
+        Instantiate(gundropPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
+        
         
       
 	}
