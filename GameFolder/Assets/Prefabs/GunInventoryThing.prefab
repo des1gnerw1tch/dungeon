@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8342886678536528541}
   - component: {fileID: 4799790432935870790}
   - component: {fileID: 3162926242805100931}
+  - component: {fileID: 1201790232629331280}
   m_Layer: 5
   m_Name: GunInventoryThing
   m_TagString: Untagged
@@ -117,3 +118,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1201790232629331280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777170430896820844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c26d3676ed4c074ab85254d856059af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636, type: 3}

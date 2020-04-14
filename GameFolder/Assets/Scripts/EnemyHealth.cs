@@ -31,7 +31,11 @@ public class EnemyHealth : MonoBehaviour
     {
         eathOfObject();
         Debug.Log("Enemy number should decrease");
-        Instantiate(gundropPrefab, transform.position, transform.rotation);
+            
+         if(Random.Range(0,11) <= 1){
+            Instantiate(gundropPrefab, transform.position, Quaternion.identity);
+		 }
+            
         Destroy(gameObject);
         
         

@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  enemyTransform: {fileID: 1578111181576999745}
   num: 0
   gundropPrefab: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636,
     type: 3}
