@@ -1,41 +1,52 @@
 ﻿using UnityEngine;
 
-public class bunnyMovement : MonoBehaviour
-{
-    private bool isMoving = false;
+public class bunnyMovement : MonoBehaviour  {
+    private bool moveState = true;
+    private float speed;
     Vector2 destination;
+    public Animator animator;
 
     void Start()  {
       destination.Set(transform.position.x, transform.position.y);
     }
     void Update()
     {
-      if (Vector2.Distance(transform.position,destination) > .2f) {
-        transform.position = Vector2.MoveTowards(transform.position, destination, 2 * Time.deltaTime);
-        isMoving = true;
-      } else  {
-        isMoving = false;
+      if(moveState) {
+        moveBunny();
       }
-
-      /*if (transform.position.x == destination.x && transform.position.y == destination.y) {
-        isMoving = false;
-      }*/
-
-      if (!isMoving) {
-        Debug.Log("called");
-        //Invoke("randomMovement", 4);
-        randomMovement();
-        isMoving = true;
-      }
-
 
     }
-    void randomMovement() {
 
-      destination.Set(Random.Range(transform.position.x -15, transform.position.x + 15)
-      , Random.Range(transform.position.y -15, transform.position.y + 15));
+    void moveBunny()  {
+      if (Vector2.Distance(transform.position,destination) > .2f) {
+        transform.position = Vector2.MoveTowards(transform.position, destination, 2 * Time.deltaTime);
+        animator.SetFloat("Speed", speed);
+      } else  {
+        moveState = false;
+        animator.SetFloat("Speed", 0f);
+        Invoke("startMoving", Random.Range(3f, 8f));
+        randomSpot();
+      }
+    }
 
-      //isMoving = false;
+    void randomSpot() {
+      float x = Random.Range(transform.position.x -5, transform.position.x + 5);
+      if (x < transform.position.x) {      
+        speed = -1f;
+      } else {
+        speed = 1f;
+      }
+      float y = Random.Range(transform.position.y -5, transform.position.y + 5);
+      destination.Set(x,y);
+    }
+
+    void startMoving()  {
+      if (speed < 0f)  {
+        animator.SetBool("lastMoveRight", false);
+      } else {
+        animator.SetBool("lastMoveRight", true);
+      }
+      moveState = true;
     }
 
 }
