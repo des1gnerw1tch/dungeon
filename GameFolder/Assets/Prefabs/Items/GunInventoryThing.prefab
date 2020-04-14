@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4799790432935870790}
   - component: {fileID: 3162926242805100931}
   - component: {fileID: 1201790232629331280}
+  - component: {fileID: 1546274493841503555}
   m_Layer: 5
   m_Name: GunInventoryThing
   m_TagString: Untagged
@@ -118,7 +119,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4799790432935870790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1546274493841503555}
+        m_MethodName: Start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1546274493841503555}
+        m_MethodName: Update
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1201790232629331280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,3 +155,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636, type: 3}
+--- !u!114 &1546274493841503555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777170430896820844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00109eaae99d07544a76193a113b2853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GunPrefab: {fileID: 8415564807121775683, guid: 1e93c0a6f85db954ebea18dc1d857082,
+    type: 3}
