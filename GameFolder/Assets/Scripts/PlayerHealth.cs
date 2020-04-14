@@ -23,12 +23,13 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0){
             SceneManager.LoadScene("GameOver");
 		}
+        healthBar.SetHealth(currentHealth);
     }
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
-        healthBar.SetHealth(currentHealth);
+        
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {

@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     private float curHealth;
     public int num; 
     public GameObject gundropPrefab;
+    public GameObject HealthPrefab;
     Vector2 pos;
     public int deathOfObject;
     void Start()
@@ -29,22 +30,19 @@ public class EnemyHealth : MonoBehaviour
     }
     void Die()
     {
-        eathOfObject();
+        
         Debug.Log("Enemy number should decrease");
-            
-         if(Random.Range(0,11) <= 1){
+        num = Random.Range(0,11);
+        if(num <= 1){
             Instantiate(gundropPrefab, transform.position, Quaternion.identity);
-		 }
+		}else if(num >= 8){
+            Instantiate(HealthPrefab, transform.position, Quaternion.identity);
+		}
             
         Destroy(gameObject);
         
         
       
 	}
-    public void eathOfObject(){
-        
-        num += 1;
-        
-       
-	}
+   
 }

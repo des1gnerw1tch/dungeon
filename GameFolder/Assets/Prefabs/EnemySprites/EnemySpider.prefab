@@ -182,4 +182,6 @@ MonoBehaviour:
   num: 0
   gundropPrefab: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636,
     type: 3}
+  HealthPrefab: {fileID: 143954038635760408, guid: 937bb5bbdf5f3eb4691f2e28bec14c57,
+    type: 3}
   deathOfObject: 0
