@@ -14,15 +14,20 @@ public class AttachGunToPlayer : MonoBehaviour
         firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
         GunScript = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
     }
+    void DestroyGun(){
+        GameObject.Destroy(GunScript.GunPrefab);  
+	}
 
     // Update is called once per frame
     void Update()
     {
-        //if(GunScript.isEquipped == true){
+        if(GunScript.isEquipped == true){
             firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
-            GunScript.Gun.transform.position = firepointPos.position;
-            GunScript.Gun.transform.rotation = firepointPos.rotation;
-		//}
+            GunScript.GunPrefab.transform.position = firepointPos.position;
+            GunScript.GunPrefab.transform.rotation = firepointPos.rotation;
+		}else{
+            DestroyGun();
+		}
         
     }
 }
