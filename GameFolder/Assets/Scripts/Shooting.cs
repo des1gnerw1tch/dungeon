@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject rocketPrefab;
+    public shakeCamera Camera;
     //private EquippedGun isGunEquipped;
     [HideInInspector]public bool ARshoot =false;
     [HideInInspector]public bool RPGisShooting =false;
@@ -21,7 +22,7 @@ public class Shooting : MonoBehaviour
 	}
     // Update is called once per frame
     void Update()
-    {   
+    {
         if(ARshoot){
             if (Input.GetButton("Fire1"))
             {
@@ -30,6 +31,7 @@ public class Shooting : MonoBehaviour
                   if(timeLeft <= 0){
                       timeLeft = timeCounter;
                       pistolShoot();
+                      Camera.shake(2f, 1f, .1f);
                   }
 		        }
             }
@@ -37,12 +39,14 @@ public class Shooting : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 RPGshoot();
-            }  
+                Camera.shake(3f, .1f, .2f);
+            }
 		}else{
             if (Input.GetButtonDown("Fire1"))
             {
                 pistolShoot();
-            }  
+                Camera.shake(1f, 1f, .1f);
+            }
 		}
 
     }
