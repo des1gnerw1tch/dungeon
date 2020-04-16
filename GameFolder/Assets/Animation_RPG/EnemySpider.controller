@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3544072a896440f38eca427eb06fd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 15
+  radius: 8
 --- !u!1101 &-4173790568778995688
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -129,8 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23511c5ebb0441241ae87f7b380dcc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pounceSpeed: 50
-  lifeTimeFirstAttack: 1
+  pounceSpeed: 400
   lifeTimeAttack: 1
 --- !u!1101 &-2917159084604850683
 AnimatorStateTransition:
@@ -169,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5ae6100fc03764da0a874ec05939dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 15
+  radius: 8
 --- !u!1101 &-1995050471286024461
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -447,8 +446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spiderSpeed: 7
-  AttackDistance: 4
-  radius: 15
+  AttackDistance: 2
+  radius: 8
 --- !u!1101 &8235189629309999892
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

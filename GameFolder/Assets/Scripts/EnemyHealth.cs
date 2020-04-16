@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject HealthPrefab;
     Vector2 pos;
     public int deathOfObject;
-    bool hasDroppedGun = false;
+    public static bool hasDroppedGun = false;
     void Start()
     {
         curHealth = maxHealth;

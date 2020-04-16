@@ -8,7 +8,7 @@ public class BulletHit : MonoBehaviour
     public int damage = 20;
     void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
         Destroy(effect, .2f);
         Destroy(gameObject);
     }
@@ -22,7 +22,7 @@ public class BulletHit : MonoBehaviour
             enemy.TakeDamage(20);
 		}
 
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
         Destroy(effect, .2f);
         Destroy(gameObject);
     }
