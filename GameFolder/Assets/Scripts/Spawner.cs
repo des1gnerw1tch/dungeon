@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
     {
 
 
-        pos.Set(Random.Range(-40f, 40f), Random.Range(-40f, 40f));
+        pos.Set(Random.Range(-20f, 20f), Random.Range(-20f, 20f));
         if (Vector2.Distance(pos, target.position) > 7)  {
           GameObject Spider = Instantiate(prefab, pos, Quaternion.identity);
           numAlive++;

@@ -15,6 +15,7 @@ public class DestroyGun : MonoBehaviour
         foreach(Transform child in transform){
             GameObject.Destroy(child.gameObject);
             shootingScript.ARshoot = false;
+            shootingScript.RPGisShooting = false;
       }
 	}
 

@@ -6,11 +6,14 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject rocketPrefab;
     //private EquippedGun isGunEquipped;
     [HideInInspector]public bool ARshoot =false;
+    [HideInInspector]public bool RPGisShooting =false;
     public float timeCounter;
     private float timeLeft;
     public float bulletForce = 20f;
+    public float rocketForce = 8f;
 
     void Start(){
         //isGunEquipped = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
@@ -30,7 +33,12 @@ public class Shooting : MonoBehaviour
                   }
 		        }
             }
-        }else{
+        }else if(RPGisShooting){
+            if (Input.GetButtonDown("Fire1"))
+            {
+                RPGshoot();
+            }  
+		}else{
             if (Input.GetButtonDown("Fire1"))
             {
                 pistolShoot();
@@ -45,6 +53,12 @@ public class Shooting : MonoBehaviour
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         Destroy(bullet,1f);
     }
+    void RPGshoot(){
+        GameObject Rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = Rocket.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        Destroy(Rocket,2f);
+	}
 
 
 }
