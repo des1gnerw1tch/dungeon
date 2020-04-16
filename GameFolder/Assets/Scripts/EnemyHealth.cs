@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject HealthPrefab;
     Vector2 pos;
     public int deathOfObject;
+    bool hasDroppedGun = false;
     void Start()
     {
         curHealth = maxHealth;
@@ -33,8 +34,9 @@ public class EnemyHealth : MonoBehaviour
         
         Debug.Log("Enemy number should decrease");
         num = Random.Range(0,11);
-        if(num <= 1){
+        if(num <= 1 && !hasDroppedGun){
             Instantiate(gundropPrefab, transform.position, Quaternion.identity);
+            hasDroppedGun = true;
 		}else if(num >= 8){
             Instantiate(HealthPrefab, transform.position, Quaternion.identity);
 		}

@@ -21,13 +21,11 @@ public class AttachGunToPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GunScript.isEquipped == true){
-            firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
-            GunScript.GunPrefab.transform.position = firepointPos.position;
-            GunScript.GunPrefab.transform.rotation = firepointPos.rotation;
-		}else{
-            DestroyGun();
-		}
+        //if(GunScript.isEquipped == true){
+            //firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
+            //GunScript.GunPrefab.transform.position = firepointPos.position;
+            //GunScript.GunPrefab.transform.rotation = firepointPos.rotation;
+		//}
         
     }
 }

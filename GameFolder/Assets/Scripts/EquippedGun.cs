@@ -5,14 +5,18 @@ using UnityEngine;
 public class EquippedGun : MonoBehaviour
 {
     private Transform firepointPos;
+    private Shooting shootingScript;
     public GameObject GunPrefab;
-    public bool isEquipped;
-    public void Start()
+    [HideInInspector]public GameObject gunInstance;
+    
+    public void use()
     {
+        shootingScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
         firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
-        GunPrefab = Instantiate(GunPrefab, Pos,firepointPos.rotation);
-        isEquipped = true;
+        gunInstance = Instantiate(GunPrefab,firepointPos.transform,false);
+        shootingScript.ARshoot = true;
+        
     }
 
     // Update is called once per frame
