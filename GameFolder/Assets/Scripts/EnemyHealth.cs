@@ -6,11 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     public float maxHealth = 100;
-    
+
     private float curHealth;
-    public int num; 
+    public int num;
     public GameObject gundropPrefab;
     public GameObject HealthPrefab;
+    public Dissolve dissolve;
     Vector2 pos;
     public int deathOfObject;
     public static bool hasDroppedGun = false;
@@ -31,8 +32,8 @@ public class EnemyHealth : MonoBehaviour
     }
     void Die()
     {
-        
-        Debug.Log("Enemy number should decrease");
+
+
         num = Random.Range(0,11);
         if(num <= 1 && !hasDroppedGun){
             Instantiate(gundropPrefab, transform.position, Quaternion.identity);
@@ -40,11 +41,11 @@ public class EnemyHealth : MonoBehaviour
 		}else if(num >= 8){
             Instantiate(HealthPrefab, transform.position, Quaternion.identity);
 		}
-            
-        Destroy(gameObject);
-        
-        
-      
+    //disolves the enemy
+    dissolve.isDissolving = true;
+
+
+
 	}
-   
+
 }
