@@ -9,8 +9,7 @@ public class Shooting : MonoBehaviour
     public GameObject rocketPrefab;
     public shakeCamera Camera;
     //private EquippedGun isGunEquipped;
-    [HideInInspector]public bool ARshoot =false;
-    [HideInInspector]public bool RPGisShooting =false;
+    public string whatGunIsEquippedString;
     public float timeCounter;
     private float timeLeft;
     public float bulletForce = 20f;
@@ -23,19 +22,20 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ARshoot){
+        if(whatGunIsEquippedString == "AR"){
             if (Input.GetButton("Fire1"))
-            {
-                if(timeLeft > 0){
-                  timeLeft -= Time.deltaTime;
-                  if(timeLeft <= 0){
-                      timeLeft = timeCounter;
+            {   
+                if(timeLeft > 0 ){
+                    timeLeft -= Time.deltaTime;
+                    if(timeLeft <= 0){
                       pistolShoot();
                       Camera.shake(2f, 1f, .1f);
-                  }
-		        }
+                      timeLeft = timeCounter;
+					}
+				}
+
             }
-        }else if(RPGisShooting){
+        }else if(whatGunIsEquippedString == "RPG"){
             if (Input.GetButtonDown("Fire1"))
             {
                 RPGshoot();
@@ -56,6 +56,8 @@ public class Shooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         Destroy(bullet,1f);
+        Camera.shake(2f, 1f, .1f);
+        
     }
     void RPGshoot(){
         GameObject Rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);

@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23511c5ebb0441241ae87f7b380dcc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pounceSpeed: 400
+  pounceSpeed: 200
   lifeTimeAttack: 1
 --- !u!1101 &-2917159084604850683
 AnimatorStateTransition:

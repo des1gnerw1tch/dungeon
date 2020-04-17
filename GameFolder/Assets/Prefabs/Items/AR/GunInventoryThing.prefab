@@ -159,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPrefab: {fileID: 8415564807121775683, guid: 1e93c0a6f85db954ebea18dc1d857082,
     type: 3}
+  RPG: {fileID: 7595654393046510679, guid: 1af24089edfe6ff4dabbe60af1d74c1c, type: 3}
   gunInstance: {fileID: 0}
-  isEquipped: 0
 --- !u!114 &-2643167321761376727
 MonoBehaviour:
   m_ObjectHideFlags: 0

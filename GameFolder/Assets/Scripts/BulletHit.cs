@@ -19,7 +19,7 @@ public class BulletHit : MonoBehaviour
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
 
         if(enemy != null) {
-            enemy.TakeDamage(20);
+            enemy.TakeDamage(damage);
 		}
 
         GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);

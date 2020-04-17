@@ -158,4 +158,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPrefab: {fileID: 5230449497779319931, guid: 1af24089edfe6ff4dabbe60af1d74c1c,
     type: 3}
+  RPG: {fileID: 7595654393046510679, guid: 1af24089edfe6ff4dabbe60af1d74c1c, type: 3}
   gunInstance: {fileID: 0}
