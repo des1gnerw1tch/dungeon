@@ -11,18 +11,21 @@ public class Shooting : MonoBehaviour
     public shakeCamera Camera;
     //private EquippedGun isGunEquipped;
     public string whatGunIsEquippedString;
-    public float timeCounter;
-    private float timeLeft;
+    
     public float bulletForce = 20f;
     public float rocketForce = 8f;
     public GameObject ARPrefab;
     public GameObject RPGPrefab;
     public GameObject SniperPrefab;
     private Transform firepointPos;
-    public bool showGun = false;
+    [HideInInspector]public bool showGun = false;
     [HideInInspector]public GameObject gunInstance;
+    //Creates firerates for each gun it would be good if all of these where one
+    public float timeCounter;
+    private float timeLeft;
     private float sniperFireRate = 0;
-
+    private float RpgFireRate = 0;
+    public ReloadTimebarScript ReloadTimebar;
     void Start(){
         //isGunEquipped = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
         timeLeft = timeCounter;
@@ -42,6 +45,7 @@ public class Shooting : MonoBehaviour
                 
                 if(timeLeft > 0 ){
                     timeLeft -= Time.deltaTime;
+                    
                     if(timeLeft <= 0){
                       pistolShoot();
                       Camera.shake(2f, 1f, .1f);
@@ -55,11 +59,17 @@ public class Shooting : MonoBehaviour
                 PlaceGunInPlayerHand(RPGPrefab);
                 showGun = true;
 			}
+            if( RpgFireRate > 0 ){
+                    
+                    RpgFireRate -= Time.deltaTime;
+                    ReloadTimebar.SetTime(RpgFireRate + .61f);
+			}
             
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && RpgFireRate <= 0)
             {
                 RPGshoot();
                 Camera.shake(3f, .1f, .2f);
+                RpgFireRate = 5;
             }
 		}else if(whatGunIsEquippedString == "Sniper"){
             if(!showGun){
@@ -69,6 +79,7 @@ public class Shooting : MonoBehaviour
             
             if( sniperFireRate > 0 ){
                     sniperFireRate -= Time.deltaTime;
+                    ReloadTimebar.SetTime(sniperFireRate + .61f);
 			}
             if (Input.GetButtonDown("Fire1") && sniperFireRate <= 0)
             {
@@ -115,6 +126,7 @@ public class Shooting : MonoBehaviour
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         gunInstance = Instantiate(GunPrefab,firepointPos.transform,false);
 	}
+    
 
 
 }

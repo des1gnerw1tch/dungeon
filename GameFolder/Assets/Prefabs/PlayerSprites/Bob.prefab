@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8747800943941732922}
   - component: {fileID: 5493401359268361209}
   - component: {fileID: 5493401359268361210}
+  - component: {fileID: 184997451201820118}
   m_Layer: 0
   m_Name: Bob
   m_TagString: Player
@@ -119,7 +120,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6903378669057283929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -192,7 +193,6 @@ MonoBehaviour:
   sniperbulletPrefab: {fileID: 0}
   Camera: {fileID: 0}
   whatGunIsEquippedString: 
-  timeCounter: 0
   bulletForce: 20
   rocketForce: 8
   ARPrefab: {fileID: 0}
@@ -200,6 +200,8 @@ MonoBehaviour:
   SniperPrefab: {fileID: 0}
   showGun: 0
   gunInstance: {fileID: 0}
+  timeCounter: 0
+  ReloadTimebar: {fileID: 0}
 --- !u!114 &5493401359268361209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +236,22 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!70 &184997451201820118
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0014787018, y: 0.05471036}
+  m_Size: {x: 0.39807886, y: 0.39807886}
+  m_Direction: 0
 --- !u!1 &8747800943320054309
 GameObject:
   m_ObjectHideFlags: 0
