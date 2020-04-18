@@ -541,7 +541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 116851708}
   - component: {fileID: 116851707}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120026561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300427, y: 5.7865157, z: -10}
+  m_LocalPosition: {x: -1.9300424, y: 5.7865157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1850454325}
@@ -1249,6 +1249,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 621260434251354320, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1313,6 +1318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RPG_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246492608094845224, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb89a4486516cc4b904ea8f7ab025c1, type: 3}
@@ -1488,7 +1498,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1508,7 +1518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300427, y: 5.7865157, z: -10}
+  m_LocalPosition: {x: -1.9300424, y: 5.7865157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2079122491}
@@ -1769,7 +1779,7 @@ PrefabInstance:
     - target: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636,
         type: 3}
       propertyPath: m_Name
-      value: GunDrop (2)
+      value: AR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33dbfde07da1a4d4fbf796c8619a8636, type: 3}
@@ -2049,6 +2059,7 @@ GameObject:
   - component: {fileID: 827244121}
   - component: {fileID: 827244123}
   - component: {fileID: 827244122}
+  - component: {fileID: 827244124}
   m_Layer: 0
   m_Name: Tilemap (1)
   m_TagString: Untagged
@@ -2106,8 +2117,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1303079411
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -35267,6 +35278,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!68 &827244124
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827244120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -11.25}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -17.05396, y: 7.9652348}
+  - {x: -14.011999, y: 7.949971}
+  - {x: -10.970037, y: 7.934707}
+  - {x: -10.865821, y: 18.47248}
+  - {x: -14.789659, y: 18.59286}
+  - {x: -14.9103775, y: 21.577972}
+  - {x: -20.095152, y: 21.5241}
+  - {x: -20.049822, y: 15.976384}
+  - {x: -17.222786, y: 15.964958}
+  - {x: -17.09156, y: 8.021271}
 --- !u!1 &857278152
 GameObject:
   m_ObjectHideFlags: 0
@@ -36109,10 +36146,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bob
       objectReference: {fileID: 0}
+    - target: {fileID: 6903378669057283929, guid: fe8cb37edf25147079e061ae4e0e7d8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747800943320054309, guid: fe8cb37edf25147079e061ae4e0e7d8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8747800943585440479, guid: fe8cb37edf25147079e061ae4e0e7d8a,
         type: 3}
       propertyPath: m_TagString
       value: FirePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747800943585440479, guid: fe8cb37edf25147079e061ae4e0e7d8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8747800943941732918, guid: fe8cb37edf25147079e061ae4e0e7d8a,
         type: 3}
@@ -36628,7 +36680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 604466057937721332, guid: 47e0f461033ea401b850a247181757fe, type: 3}
   spawnTime: 0.1
-  max: 10
+  max: 20
   numAlive: 0
 --- !u!4 &2032112168
 Transform:

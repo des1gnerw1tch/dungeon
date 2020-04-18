@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1422465503
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4845827712778815830, guid: 886d06661c033b84e965e631534e5d4a,
     type: 3}
@@ -188,7 +188,18 @@ MonoBehaviour:
   firePoint: {fileID: 8747800943585440480}
   bulletPrefab: {fileID: 2195576620641826499, guid: 6895a62060eaac74a8248e27a423ba83,
     type: 3}
+  rocketPrefab: {fileID: 0}
+  sniperbulletPrefab: {fileID: 0}
+  Camera: {fileID: 0}
+  whatGunIsEquippedString: 
+  timeCounter: 0
   bulletForce: 20
+  rocketForce: 8
+  ARPrefab: {fileID: 0}
+  RPGPrefab: {fileID: 0}
+  SniperPrefab: {fileID: 0}
+  showGun: 0
+  gunInstance: {fileID: 0}
 --- !u!114 &5493401359268361209
 MonoBehaviour:
   m_ObjectHideFlags: 0

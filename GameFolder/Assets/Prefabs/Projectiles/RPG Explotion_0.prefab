@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7132068410806904260}
   - component: {fileID: 1889752969429589000}
   - component: {fileID: 814360050903020686}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RPG Explotion_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -129681771
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: -730814461320914078, guid: 3722f4b3115f71440863a5869e295664,
     type: 3}

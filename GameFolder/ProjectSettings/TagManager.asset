@@ -18,9 +18,9 @@ TagManager:
   - 
   - MiniMap
   - 
-  - 
-  - 
-  - 
+  - Sprites
+  - Drops
+  - Bullets
   - 
   - 
   - 
@@ -42,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tilemap
+    uniqueID: 1303079411
+    locked: 0
+  - name: Sprites
+    uniqueID: 2872501793
+    locked: 0
+  - name: Bullets
+    uniqueID: 4165285525
+    locked: 0
+  - name: Objects
+    uniqueID: 3784963909
+    locked: 0
+  - name: UI
+    uniqueID: 1475812027
     locked: 0

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1222707490903898385}
   - component: {fileID: 1240484142}
   - component: {fileID: 548355550}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemySpider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1422465503
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -5406220460104578054, guid: 011a668b1f3d95846b5488a9ef520130,
     type: 3}
@@ -204,7 +204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dissolveMat: {fileID: 2100000, guid: 19b2c3d4bbb924777ac3ac4a0e9cf681, type: 2}
   isDissolving: 0
-  fade: 1
 --- !u!114 &548355550
 MonoBehaviour:
   m_ObjectHideFlags: 0

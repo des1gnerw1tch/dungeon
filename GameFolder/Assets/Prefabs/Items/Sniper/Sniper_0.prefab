@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4950131379623785325}
   - component: {fileID: 4206953965716023364}
   - component: {fileID: 9204024363953631717}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sniper_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1422465503
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -7040960777665541239, guid: c6be27595a91e2c43afb47c1cc36df01,
     type: 3}
