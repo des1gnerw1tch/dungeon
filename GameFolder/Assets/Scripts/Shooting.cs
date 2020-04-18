@@ -21,6 +21,7 @@ public class Shooting : MonoBehaviour
     private Transform firepointPos;
     public bool showGun = false;
     [HideInInspector]public GameObject gunInstance;
+    private float sniperFireRate = 0;
 
     void Start(){
         //isGunEquipped = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
@@ -66,14 +67,14 @@ public class Shooting : MonoBehaviour
                 showGun = true;
 			}
             
-            if(timeLeft > 0 ){
-                    timeLeft -= Time.deltaTime;
+            if( sniperFireRate > 0 ){
+                    sniperFireRate -= Time.deltaTime;
 			}
-            if (Input.GetButtonDown("Fire1") && timeLeft <= 0)
+            if (Input.GetButtonDown("Fire1") && sniperFireRate <= 0)
             {
                 sniperShoot();
                 Camera.shake(10f, .1f, .2f);
-                timeLeft = 3;
+                sniperFireRate = 3;
             }
 		}else{
             if (Input.GetButtonDown("Fire1"))

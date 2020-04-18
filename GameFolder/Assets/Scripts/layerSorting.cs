@@ -10,7 +10,7 @@ public class layerSorting : MonoBehaviour
     {
       if (player.position.y > transform.position.y - .8) {
 
-        tree.sortingOrder = 3;
+        tree.sortingOrder = 4;
       } else  {
 
         tree.sortingOrder = 1;
