@@ -11,7 +11,10 @@ public class EnemyHealth : MonoBehaviour
     public int num;
     public GameObject gundropPrefab;
     public GameObject HealthPrefab;
+
     public Dissolve dissolve;
+    public Tint tint;
+
     Vector2 pos;
     public int deathOfObject;
     public static bool hasDroppedGun = false;
@@ -25,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
        curHealth -= damage;
-
+       tint.SetTintColor(new Color(1, 1, 1, 1f));
        if(curHealth <= 0){
         Die();
 	   }
@@ -42,7 +45,7 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(HealthPrefab, transform.position, Quaternion.identity);
 		}
     //disolves the enemy
-    dissolve.isDissolving = true;
+    dissolve.play(2f);
 
 
 
