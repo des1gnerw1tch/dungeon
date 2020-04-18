@@ -7,6 +7,7 @@ public class RPG_Equipped : MonoBehaviour
     private Transform firepointPos;
     private Shooting shootingScript;
     public GameObject GunPrefab;
+    
     //public SpriteRenderer RPG;
     [HideInInspector]public GameObject gunInstance;
     
