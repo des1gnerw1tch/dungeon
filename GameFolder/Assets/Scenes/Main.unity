@@ -769,7 +769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120026561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300425, y: 5.7865157, z: -10}
+  m_LocalPosition: {x: -1.9300427, y: 5.7865157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1850454325}
@@ -1783,7 +1783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300425, y: 5.7865157, z: -10}
+  m_LocalPosition: {x: -1.9300427, y: 5.7865157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2079122491}
@@ -36555,6 +36555,12 @@ PrefabInstance:
       propertyPath: ReloadTimebar
       value: 
       objectReference: {fileID: 366534477}
+    - target: {fileID: 8747800943941732922, guid: fe8cb37edf25147079e061ae4e0e7d8a,
+        type: 3}
+      propertyPath: healthPrefab
+      value: 
+      objectReference: {fileID: 357245384828748845, guid: e5349e32b4fcacb4792517029f21c7b7,
+        type: 3}
     - target: {fileID: 8747800943941732923, guid: fe8cb37edf25147079e061ae4e0e7d8a,
         type: 3}
       propertyPath: m_Offset.x
@@ -37501,7 +37507,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2302955627594117551, guid: 937bb5bbdf5f3eb4691f2e28bec14c57, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 937bb5bbdf5f3eb4691f2e28bec14c57, type: 3}
 --- !u!1001 &3862044888016998572
 PrefabInstance:

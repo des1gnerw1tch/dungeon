@@ -33,7 +33,7 @@ public class scroll : MonoBehaviour
     void Update()
     {
         //input logic
-        if (Input.mouseScrollDelta.y >= .1)  {
+        if (Input.mouseScrollDelta.y <= -.1)  {
           //scroll down, add
           if (activeSlot >= 4) {
             activeSlot = 0;
@@ -42,7 +42,7 @@ public class scroll : MonoBehaviour
           }
 
         }
-        else if (Input.mouseScrollDelta.y <= -.1)  {
+        else if (Input.mouseScrollDelta.y >= .1)  {
           //scroll up, subtract
           if (activeSlot <= 0) {
             activeSlot = 4;

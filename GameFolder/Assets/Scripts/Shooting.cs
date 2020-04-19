@@ -17,6 +17,7 @@ public class Shooting : MonoBehaviour
     public GameObject ARPrefab;
     public GameObject RPGPrefab;
     public GameObject SniperPrefab;
+    public GameObject healthPrefab;
     private Transform firepointPos;
     [HideInInspector]public bool showGun = false;
     [HideInInspector]public GameObject gunInstance;
@@ -94,6 +95,9 @@ public class Shooting : MonoBehaviour
         }
         break;
       //------------------------------------------
+      case "HealthPotion":
+        PlaceGunInPlayerHand(healthPrefab);
+        break;
       default:
         if(!showGun){
 
