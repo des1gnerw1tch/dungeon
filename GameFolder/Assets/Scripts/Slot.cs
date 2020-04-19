@@ -7,7 +7,7 @@ public class Slot : MonoBehaviour
     private Inventory inventory;
     public int i;
     private DestroyGun DropThing;
-    
+
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -18,14 +18,14 @@ public class Slot : MonoBehaviour
             inventory.isFull[i]  = false;
 		}
 	}
-    
+
     public void DropItem(){
         foreach(Transform child in transform){
             child.GetComponent<ItemSpawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
             DropThing.DropGun();
 	    }
-        
-        
+
+
 	}
 }

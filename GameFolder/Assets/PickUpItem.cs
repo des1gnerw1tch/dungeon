@@ -1,12 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class PickUpItem : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
-    public EquippedGun equippedGun;
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -19,7 +18,7 @@ public class PickUp : MonoBehaviour
 
                     Instantiate(itemButton, inventory.slots[i].transform,false);
                     Destroy(gameObject);
-                    inventory.item[i] = equippedGun.GunType;
+
 
                     break;
 				}

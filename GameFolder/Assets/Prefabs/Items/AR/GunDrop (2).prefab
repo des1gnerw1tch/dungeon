@@ -99,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1777170430896820844, guid: d4d4cda4b8fc197479fc0fc02956b347,
     type: 3}
+  equippedGun: {fileID: 1546274493841503555, guid: d4d4cda4b8fc197479fc0fc02956b347,
+    type: 3}
 --- !u!61 &8816895071248745646
 BoxCollider2D:
   m_ObjectHideFlags: 0

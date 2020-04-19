@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     public shakeCamera Camera;
     //private EquippedGun isGunEquipped;
     [HideInInspector]public string whatGunIsEquippedString;
-    
+
     public float bulletForce = 20f;
     public float rocketForce = 8f;
     public GameObject ARPrefab;
@@ -29,8 +29,8 @@ public class Shooting : MonoBehaviour
     void Start(){
         //isGunEquipped = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
         timeLeft = timeCounter;
-        
-        
+
+
 	}
     // Update is called once per frame
     void Update()
@@ -41,11 +41,11 @@ public class Shooting : MonoBehaviour
                 showGun = true;
 			}
             if (Input.GetButton("Fire1"))
-            {   
-                
+            {
+
                 if(timeLeft > 0 ){
                     timeLeft -= Time.deltaTime;
-                    
+
                     if(timeLeft <= 0){
                       pistolShoot();
                       Camera.shake(2f, 1f, .1f);
@@ -60,11 +60,11 @@ public class Shooting : MonoBehaviour
                 showGun = true;
 			}
             if( RpgFireRate > 0 ){
-                    
+
                     RpgFireRate -= Time.deltaTime;
                     ReloadTimebar.SetTime(RpgFireRate + .61f);
 			}
-            
+
             if (Input.GetButtonDown("Fire1") && RpgFireRate <= 0)
             {
                 RPGshoot();
@@ -76,7 +76,7 @@ public class Shooting : MonoBehaviour
                 PlaceGunInPlayerHand(SniperPrefab);
                 showGun = true;
 			}
-            
+
             if( sniperFireRate > 0 ){
                     sniperFireRate -= Time.deltaTime;
                     ReloadTimebar.SetTime(sniperFireRate + .61f);
@@ -87,12 +87,17 @@ public class Shooting : MonoBehaviour
                 Camera.shake(10f, .1f, .2f);
                 sniperFireRate = 3;
             }
-		}else{
+		}else{ //pistol
+          if(!showGun){
+            
+            Destroy(gunInstance);
+            }
             if (Input.GetButtonDown("Fire1"))
             {
                 pistolShoot();
                 Camera.shake(1f, 1f, .1f);
             }
+
 		}
 
     }
@@ -103,7 +108,7 @@ public class Shooting : MonoBehaviour
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         Destroy(bullet,1f);
         Camera.shake(2f, 1f, .1f);
-        
+
     }
     void sniperShoot()
     {
@@ -112,7 +117,7 @@ public class Shooting : MonoBehaviour
         rb.AddForce(firePoint.up * (bulletForce * 2f) , ForceMode2D.Impulse);
         Destroy(bullet,1f);
         Camera.shake(2f, 1f, .1f);
-        
+
     }
     void RPGshoot(){
         GameObject Rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
@@ -129,7 +134,7 @@ public class Shooting : MonoBehaviour
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         gunInstance = Instantiate(GunPrefab,firepointPos.transform,false);
 	}
-    
+
 
 
 }

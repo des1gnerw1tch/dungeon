@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7073364693800931750}
   - component: {fileID: 2374213417929340248}
   m_Layer: 12
-  m_Name: RPG_0
+  m_Name: RPG_Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 6427746124770674087, guid: 379013b4a97ed6746abc912343dd8b19,
+    type: 3}
+  equippedGun: {fileID: 6311861153967998136, guid: 379013b4a97ed6746abc912343dd8b19,
     type: 3}
 --- !u!61 &2374213417929340248
 BoxCollider2D:

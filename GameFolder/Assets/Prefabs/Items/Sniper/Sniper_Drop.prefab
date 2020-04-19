@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4206953965716023364}
   - component: {fileID: 9204024363953631717}
   m_Layer: 12
-  m_Name: Sniper_0
+  m_Name: Sniper_Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,4 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 153160888118910108, guid: 360274db309696c4dbf1c139caca6887,
+    type: 3}
+  equippedGun: {fileID: 5680257749058556840, guid: 360274db309696c4dbf1c139caca6887,
     type: 3}
