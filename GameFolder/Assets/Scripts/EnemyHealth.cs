@@ -17,7 +17,11 @@ public class EnemyHealth : MonoBehaviour
 
     Vector2 pos;
     public int deathOfObject;
-    public static bool hasDroppedGun = false;
+    public bool hasDroppedGun = false;
+
+    //scripts
+
+    public mobDrop gunDrop;
     void Start()
     {
         curHealth = maxHealth;
@@ -29,24 +33,24 @@ public class EnemyHealth : MonoBehaviour
     {
        curHealth -= damage;
        tint.SetTintColor(new Color(1, 1, 1, 1f));
-       if(curHealth <= 0){
+       if(curHealth <= 0 && !hasDroppedGun){
         Die();
 	   }
     }
     void Die()
     {
 
-
-        num = Random.Range(0,11);
+        hasDroppedGun = true;
+        /*num = Random.Range(0,11);
         if(num <= 1 && !hasDroppedGun){
             Instantiate(gundropPrefab, transform.position, Quaternion.identity);
             hasDroppedGun = true;
 		}else if(num >= 8){
             Instantiate(HealthPrefab, transform.position, Quaternion.identity);
-		}
-    //disolves the enemy
-    dissolve.play(2f);
-
+		}*/
+        //disolves the enemy
+        dissolve.play(2f);
+        gunDrop.SpiderDrop(transform.position);
 
 
 	}

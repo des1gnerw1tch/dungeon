@@ -191,6 +191,7 @@ MonoBehaviour:
   dissolve: {fileID: 1240484142}
   tint: {fileID: 548355550}
   deathOfObject: 0
+  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
 --- !u!114 &1240484142
 MonoBehaviour:
   m_ObjectHideFlags: 0
