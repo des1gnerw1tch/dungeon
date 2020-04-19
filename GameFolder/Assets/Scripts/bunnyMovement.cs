@@ -31,7 +31,7 @@ public class bunnyMovement : MonoBehaviour  {
 
     void randomSpot() {
       float x = Random.Range(transform.position.x -5, transform.position.x + 5);
-      if (x < transform.position.x) {      
+      if (x < transform.position.x) {
         speed = -1f;
       } else {
         speed = 1f;
@@ -47,6 +47,14 @@ public class bunnyMovement : MonoBehaviour  {
         animator.SetBool("lastMoveRight", true);
       }
       moveState = true;
+    }
+    /*invokes a reset when bunny collides with something, make sure it doesn't
+    get stuck running into a wall*/
+    void OnCollisionStay2D(Collision2D collision)  {
+      moveState = false;
+      animator.SetFloat("Speed", 0f);
+      Invoke("startMoving", Random.Range(3f, 8f));
+      randomSpot();
     }
 
 }
