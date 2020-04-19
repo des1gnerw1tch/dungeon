@@ -35,70 +35,78 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(whatGunIsEquippedString == "AR"){
-            if(!showGun){
-                PlaceGunInPlayerHand(ARPrefab);
-                showGun = true;
-			}
-            if (Input.GetButton("Fire1"))
-            {
 
-                if(timeLeft > 0 ){
-                    timeLeft -= Time.deltaTime;
+    switch (whatGunIsEquippedString)  {
+      //--------------------------------
+      case "AR":
+        if(!showGun){
+            PlaceGunInPlayerHand(ARPrefab);
+            showGun = true;
+         }
+        if (Input.GetButton("Fire1"))
+        {
 
-                    if(timeLeft <= 0){
-                      pistolShoot();
-                      Camera.shake(2f, 1f, .1f);
-                      timeLeft = timeCounter;
-					}
-				}
+            if(timeLeft > 0 ){
+                timeLeft -= Time.deltaTime;
 
-            }
-        }else if(whatGunIsEquippedString == "RPG"){
-            if(!showGun){
-                PlaceGunInPlayerHand(RPGPrefab);
-                showGun = true;
-			}
-            if( RpgFireRate > 0 ){
+                if(timeLeft <= 0){
+                  pistolShoot();
+                  Camera.shake(2f, 1f, .1f);
+                  timeLeft = timeCounter;
+                 }
+             }
+        }
+        break;
+        //------------------------------------------
+      case "RPG":
+        if(!showGun){
+            PlaceGunInPlayerHand(RPGPrefab);
+            showGun = true;
+        }
+        if( RpgFireRate > 0 ){
+          RpgFireRate -= Time.deltaTime;
+          ReloadTimebar.SetTime(RpgFireRate + .61f);
+        }
 
-                    RpgFireRate -= Time.deltaTime;
-                    ReloadTimebar.SetTime(RpgFireRate + .61f);
-			}
+        if (Input.GetButtonDown("Fire1") && RpgFireRate <= 0)
+        {
+            RPGshoot();
+            Camera.shake(3f, .1f, .2f);
+            RpgFireRate = 5;
+        }
+        break;
+        //-----------------------------------
+      case "Sniper":
+        if(!showGun){
+            PlaceGunInPlayerHand(SniperPrefab);
+            showGun = true;
+        }
 
-            if (Input.GetButtonDown("Fire1") && RpgFireRate <= 0)
-            {
-                RPGshoot();
-                Camera.shake(3f, .1f, .2f);
-                RpgFireRate = 5;
-            }
-		}else if(whatGunIsEquippedString == "Sniper"){
-            if(!showGun){
-                PlaceGunInPlayerHand(SniperPrefab);
-                showGun = true;
-			}
+        if( sniperFireRate > 0 ){
+                sniperFireRate -= Time.deltaTime;
+                ReloadTimebar.SetTime(sniperFireRate + .61f);
+        }
+        if (Input.GetButtonDown("Fire1") && sniperFireRate <= 0)
+        {
+            sniperShoot();
+            Camera.shake(10f, .1f, .2f);
+            sniperFireRate = 3;
+        }
+        break;
+      //------------------------------------------
+      default:
+        if(!showGun){
 
-            if( sniperFireRate > 0 ){
-                    sniperFireRate -= Time.deltaTime;
-                    ReloadTimebar.SetTime(sniperFireRate + .61f);
-			}
-            if (Input.GetButtonDown("Fire1") && sniperFireRate <= 0)
-            {
-                sniperShoot();
-                Camera.shake(10f, .1f, .2f);
-                sniperFireRate = 3;
-            }
-		}else{ //pistol
-          if(!showGun){
-            
-            Destroy(gunInstance);
-            }
-            if (Input.GetButtonDown("Fire1"))
-            {
-                pistolShoot();
-                Camera.shake(1f, 1f, .1f);
-            }
+          Destroy(gunInstance);
+          }
+          if (Input.GetButtonDown("Fire1"))
+          {
+              pistolShoot();
+              Camera.shake(1f, 1f, .1f);
+          }
+          break;
 
-		}
+        }
 
     }
     void pistolShoot()

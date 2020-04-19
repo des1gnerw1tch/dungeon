@@ -12,11 +12,13 @@ public class DestroyGun : MonoBehaviour
     }
     public void DropGun()
     {
-        foreach(Transform child in transform){
-            GameObject.Destroy(child.gameObject);
-            shootingScript.whatGunIsEquippedString = "";
 
-      }
+          foreach(Transform child in transform){
+            if (child.gameObject != null) {
+              GameObject.Destroy(child.gameObject);
+              shootingScript.whatGunIsEquippedString = "";
+          }
+        }
 	}
 
     // Update is called once per frame

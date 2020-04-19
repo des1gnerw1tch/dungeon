@@ -664,17 +664,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: d54317d7ba8cf3346bfbbc3e14f26228, type: 3}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &116851706
 GameObject:
   m_ObjectHideFlags: 0
@@ -35716,7 +35705,12 @@ MonoBehaviour:
   slot3: {fileID: 54527649}
   slot4: {fileID: 399551359}
   inventory: {fileID: 1922524448}
-  canvasSlot: {fileID: 267085506}
+  activeCanvasSlot: {fileID: 0}
+  canvasSlot0: {fileID: 267085506}
+  canvasSlot1: {fileID: 621764324}
+  canvasSlot2: {fileID: 2054288364}
+  canvasSlot3: {fileID: 54527652}
+  canvasSlot4: {fileID: 399551362}
 --- !u!4 &1029960827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2433562606673585644, guid: 8e7205dfa06db4902976590d05e1b11c,
@@ -36951,7 +36945,12 @@ MonoBehaviour:
   slot3: {fileID: 54527649}
   slot4: {fileID: 399551359}
   inventory: {fileID: 1922524448}
-  canvasSlot: {fileID: 267085506}
+  activeCanvasSlot: {fileID: 0}
+  canvasSlot0: {fileID: 0}
+  canvasSlot1: {fileID: 0}
+  canvasSlot2: {fileID: 0}
+  canvasSlot3: {fileID: 0}
+  canvasSlot4: {fileID: 0}
 --- !u!1001 &1922986774
 PrefabInstance:
   m_ObjectHideFlags: 0

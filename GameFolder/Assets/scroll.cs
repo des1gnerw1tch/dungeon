@@ -15,7 +15,12 @@ public class scroll : MonoBehaviour
     private Shooting shootingScript;
     public Inventory inventory;
     private DestroyGun destroyGun;
-    public Slot canvasSlot;
+    public Slot activeCanvasSlot;
+    public Slot canvasSlot0;
+    public Slot canvasSlot1;
+    public Slot canvasSlot2;
+    public Slot canvasSlot3;
+    public Slot canvasSlot4;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,28 +51,27 @@ public class scroll : MonoBehaviour
           }
 
         }
-        //ui switches black dot
+        //ui switches black dot and active slot
         switch (activeSlot) {
           case 0 :
             indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-
-
+            activeCanvasSlot = canvasSlot0;
             break;
           case 1:
             indicatorLoc.anchoredPosition = slot1.anchoredPosition;
-
+            activeCanvasSlot = canvasSlot1;
             break;
           case 2:
             indicatorLoc.anchoredPosition = slot2.anchoredPosition;
-
+            activeCanvasSlot = canvasSlot2;
             break;
           case 3:
             indicatorLoc.anchoredPosition = slot3.anchoredPosition;
-
+            activeCanvasSlot = canvasSlot3;
             break;
           case 4:
             indicatorLoc.anchoredPosition = slot4.anchoredPosition;
-
+            activeCanvasSlot = canvasSlot4;
             break;
         }
 
@@ -81,12 +85,12 @@ public class scroll : MonoBehaviour
             lastSlot = activeSlot;
           }
           //drop, janky
-          if (Input.GetKeyDown("q"))  {
+          if (Input.GetKeyDown("q") && inventory.item[activeSlot] != null)  {
             inventory.item[activeSlot] = null;
             shootingScript.showGun = false;
             //only drops the top item
-            //canvasSlot.DropItem();
-            destroyGun.DropGun();
+            activeCanvasSlot.DropItem();
+            //destroyGun.DropGun();
           }
 
 
