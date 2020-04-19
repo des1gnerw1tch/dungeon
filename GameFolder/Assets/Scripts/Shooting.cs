@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     public GameObject sniperbulletPrefab;
     public shakeCamera Camera;
     //private EquippedGun isGunEquipped;
-    public string whatGunIsEquippedString;
+    [HideInInspector]public string whatGunIsEquippedString;
     
     public float bulletForce = 20f;
     public float rocketForce = 8f;
@@ -122,6 +122,9 @@ public class Shooting : MonoBehaviour
 	}
     void PlaceGunInPlayerHand(GameObject GunPrefab){
         Destroy(gunInstance);
+        ReloadTimebar.SetTime(0);
+        RpgFireRate = 0;
+        sniperFireRate = 0;
         firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         gunInstance = Instantiate(GunPrefab,firepointPos.transform,false);
