@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 3061497130140870276}
   - component: {fileID: 2884502186356667465}
   - component: {fileID: 8747800943941732919}
-  - component: {fileID: 8747800943941732923}
   - component: {fileID: 8747800943941732924}
   - component: {fileID: 8747800943941732918}
   - component: {fileID: 8747800943941732922}
   - component: {fileID: 5493401359268361209}
   - component: {fileID: 5493401359268361210}
   - component: {fileID: 184997451201820118}
-  m_Layer: 0
+  - component: {fileID: 1922524453}
+  m_Layer: 11
   m_Name: Bob
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4845827712778815830, guid: 886d06661c033b84e965e631534e5d4a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,32 +113,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &8747800943941732923
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903378669057283929}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.003336534, y: 0.055287838}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.5}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.70978975, y: 0.3701923}
-  m_EdgeRadius: 0
 --- !u!95 &8747800943941732924
 Animator:
   serializedVersion: 3
@@ -189,19 +163,28 @@ MonoBehaviour:
   firePoint: {fileID: 8747800943585440480}
   bulletPrefab: {fileID: 2195576620641826499, guid: 6895a62060eaac74a8248e27a423ba83,
     type: 3}
-  rocketPrefab: {fileID: 0}
-  sniperbulletPrefab: {fileID: 0}
+  rocketPrefab: {fileID: 2248193845924477178, guid: 38ea37cf83e552e41ae706fc6ba23703,
+    type: 3}
+  sniperbulletPrefab: {fileID: 2195576620641826499, guid: 77d2f1284e6832846820a1dda1b4b84c,
+    type: 3}
   Camera: {fileID: 0}
   whatGunIsEquippedString: 
-  bulletForce: 20
+  bulletForce: 30
   rocketForce: 8
-  ARPrefab: {fileID: 0}
-  RPGPrefab: {fileID: 0}
-  SniperPrefab: {fileID: 0}
+  ARPrefab: {fileID: 8415564807121775683, guid: 1e93c0a6f85db954ebea18dc1d857082,
+    type: 3}
+  RPGPrefab: {fileID: 5230449497779319931, guid: 1af24089edfe6ff4dabbe60af1d74c1c,
+    type: 3}
+  SniperPrefab: {fileID: 4305675573630898345, guid: a66112ccfa6e2614293ecd6981486e26,
+    type: 3}
+  healthPrefab: {fileID: 357245384828748845, guid: e5349e32b4fcacb4792517029f21c7b7,
+    type: 3}
   showGun: 0
   gunInstance: {fileID: 0}
-  timeCounter: 0
+  timeCounter: 0.2
   ReloadTimebar: {fileID: 0}
+  playerHealthScript: {fileID: 5493401359268361209}
+  hasHealed: 0
 --- !u!114 &5493401359268361209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +219,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  item: []
 --- !u!70 &184997451201820118
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -252,6 +236,31 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0014787018, y: 0.05471036}
   m_Size: {x: 0.39807886, y: 0.39807886}
   m_Direction: 0
+--- !u!114 &1922524453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc66e5f4f8704bf5a456c3579dda086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorLoc: {fileID: 0}
+  slot0: {fileID: 0}
+  slot1: {fileID: 0}
+  slot2: {fileID: 0}
+  slot3: {fileID: 0}
+  slot4: {fileID: 0}
+  inventory: {fileID: 5493401359268361210}
+  activeCanvasSlot: {fileID: 0}
+  canvasSlot0: {fileID: 0}
+  canvasSlot1: {fileID: 0}
+  canvasSlot2: {fileID: 0}
+  canvasSlot3: {fileID: 0}
+  canvasSlot4: {fileID: 0}
 --- !u!1 &8747800943320054309
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8747800943320054310}
   - component: {fileID: 8747800943320054311}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: MinimapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,9 +351,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8747800943585440480}
-  m_Layer: 0
+  - component: {fileID: 411884615}
+  m_Layer: 11
   m_Name: FirePoint
-  m_TagString: Untagged
+  m_TagString: FirePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,3 +373,15 @@ Transform:
   m_Father: {fileID: 3061497130140870276}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411884615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747800943585440479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54317d7ba8cf3346bfbbc3e14f26228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
