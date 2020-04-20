@@ -27,10 +27,13 @@ public class Shooting : MonoBehaviour
     private float sniperFireRate = 0;
     private float RpgFireRate = 0;
     public ReloadTimebarScript ReloadTimebar;
+
+    public PlayerHealth playerHealthScript;
+    public bool hasHealed = false;
     void Start(){
         //isGunEquipped = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
         timeLeft = timeCounter;
-
+        
 
 	}
     // Update is called once per frame
@@ -96,7 +99,19 @@ public class Shooting : MonoBehaviour
         break;
       //------------------------------------------
       case "HealthPotion":
-        PlaceGunInPlayerHand(healthPrefab);
+        if(!showGun){
+            PlaceGunInPlayerHand(healthPrefab);
+            showGun = true;
+        }
+        if (Input.GetButtonDown("Fire1"))
+          {
+              if(playerHealthScript.currentHealth < playerHealthScript.maxHealth){
+                playerHealthScript.currentHealth += 10;
+                Destroy(gunInstance);
+                hasHealed = true;
+		       }
+          }
+        
         break;
       default:
         if(!showGun){

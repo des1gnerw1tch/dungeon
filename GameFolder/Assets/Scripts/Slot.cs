@@ -28,4 +28,11 @@ public class Slot : MonoBehaviour
 
 
 	}
+    public void DestroyItem(){
+        foreach(Transform child in transform){
+            GameObject.Destroy(child.gameObject);
+            }
+
+
+	}
 }
