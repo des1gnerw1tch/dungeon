@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -36310,6 +36310,26 @@ PrefabInstance:
       propertyPath: slot4
       value: 
       objectReference: {fileID: 399551359}
+    - target: {fileID: 1922524453, guid: fe8cb37edf25147079e061ae4e0e7d8a, type: 3}
+      propertyPath: canvasSlot0
+      value: 
+      objectReference: {fileID: 267085506}
+    - target: {fileID: 1922524453, guid: fe8cb37edf25147079e061ae4e0e7d8a, type: 3}
+      propertyPath: canvasSlot1
+      value: 
+      objectReference: {fileID: 621764324}
+    - target: {fileID: 1922524453, guid: fe8cb37edf25147079e061ae4e0e7d8a, type: 3}
+      propertyPath: canvasSlot2
+      value: 
+      objectReference: {fileID: 2054288364}
+    - target: {fileID: 1922524453, guid: fe8cb37edf25147079e061ae4e0e7d8a, type: 3}
+      propertyPath: canvasSlot3
+      value: 
+      objectReference: {fileID: 54527652}
+    - target: {fileID: 1922524453, guid: fe8cb37edf25147079e061ae4e0e7d8a, type: 3}
+      propertyPath: canvasSlot4
+      value: 
+      objectReference: {fileID: 399551362}
     - target: {fileID: 3061497130140870276, guid: fe8cb37edf25147079e061ae4e0e7d8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37411,7 +37431,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632716, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: max
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632716, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
