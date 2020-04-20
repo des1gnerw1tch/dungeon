@@ -769,7 +769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120026561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300427, y: 5.7865157, z: -10}
+  m_LocalPosition: {x: -1.9300425, y: 5.7865157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1850454325}
@@ -1783,7 +1783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9300427, y: 5.7865157, z: -10}
+  m_LocalPosition: {x: -1.9300425, y: 5.7865157, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2079122491}
@@ -35923,6 +35923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rabbit_0
       objectReference: {fileID: 0}
+    - target: {fileID: 604466057937721332, guid: 47e0f461033ea401b850a247181757fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47e0f461033ea401b850a247181757fe, type: 3}
 --- !u!1 &1143581249
@@ -37600,12 +37605,12 @@ PrefabInstance:
     - target: {fileID: 8247079406849632716, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: max
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632716, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: spawnTime
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
