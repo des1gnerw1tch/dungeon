@@ -15,7 +15,7 @@ public class FollowBehavior : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        
 
     }
 
