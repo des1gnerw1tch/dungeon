@@ -35,14 +35,10 @@ public class PlayerHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
-        if(hitInfo.gameObject.tag == "Cave"){
-              SceneManager.LoadScene("GameOver");
-		}
+        
 
         if(enemy != null){
             TakeDamage(10);
-		}
-
-
+		        }
     }
 }
