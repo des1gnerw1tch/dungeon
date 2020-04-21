@@ -3455,7 +3455,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2177524917216289705
+--- !u!1001 &1362201601
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3465,12 +3465,12 @@ PrefabInstance:
     - target: {fileID: 2177524917881198643, guid: a5d7e5ac1462b43dbbaacd7db2d2173d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28
+      value: -26.007664
       objectReference: {fileID: 0}
     - target: {fileID: 2177524917881198643, guid: a5d7e5ac1462b43dbbaacd7db2d2173d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.01
+      value: 31.493845
       objectReference: {fileID: 0}
     - target: {fileID: 2177524917881198643, guid: a5d7e5ac1462b43dbbaacd7db2d2173d,
         type: 3}
@@ -3520,7 +3520,7 @@ PrefabInstance:
     - target: {fileID: 2177524917881198654, guid: a5d7e5ac1462b43dbbaacd7db2d2173d,
         type: 3}
       propertyPath: m_Name
-      value: goblin_0
+      value: Goblin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5d7e5ac1462b43dbbaacd7db2d2173d, type: 3}

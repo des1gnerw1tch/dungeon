@@ -10,9 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2177524917881198643}
   - component: {fileID: 2177524917881198640}
+  - component: {fileID: 905705337893731696}
   - component: {fileID: 2177524917881198641}
-  m_Layer: 0
-  m_Name: goblin_0
+  - component: {fileID: 8247682188220123959}
+  - component: {fileID: -6677500666373917982}
+  - component: {fileID: 6437016395578428586}
+  - component: {fileID: 819445978010323823}
+  m_Layer: 10
+  m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1422465503
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2572365745140355499, guid: 2427de9537c934983b8b223f2c7c3e01,
     type: 3}
@@ -83,6 +88,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &905705337893731696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.12312889}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6622467, y: 1.1866493}
+  m_EdgeRadius: 0
 --- !u!95 &2177524917881198641
 Animator:
   serializedVersion: 3
@@ -102,3 +133,62 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8247682188220123959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b273f41915149b19d177619729dad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6677500666373917982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3df7dcba921641ecb0b9273cb669a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMat: {fileID: 2100000, guid: 19b2c3d4bbb924777ac3ac4a0e9cf681, type: 2}
+  dissolveSpeed: 1
+--- !u!114 &6437016395578428586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8af708e40593a4d85d018e2c813675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ARdropPrefab: {fileID: 0}
+  RPGdropPrefab: {fileID: 0}
+  SnipeDropPrefab: {fileID: 0}
+  HealthPrefab: {fileID: 0}
+--- !u!114 &819445978010323823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  enemyID: Goblin
+  gunDrop: {fileID: 6437016395578428586}
+  dissolve: {fileID: -6677500666373917982}
+  tint: {fileID: 8247682188220123959}

@@ -183,15 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  num: 0
-  gundropPrefab: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636,
-    type: 3}
-  HealthPrefab: {fileID: 143954038635760408, guid: 937bb5bbdf5f3eb4691f2e28bec14c57,
-    type: 3}
+  enemyID: Spider
+  hasDied: 0
+  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   dissolve: {fileID: 1240484142}
   tint: {fileID: 548355550}
-  deathOfObject: 0
-  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
 --- !u!114 &1240484142
 MonoBehaviour:
   m_ObjectHideFlags: 0
