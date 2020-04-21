@@ -26,6 +26,9 @@ public class Shooting : MonoBehaviour
     private float timeLeft;
     private float sniperFireRate = 0;
     private float RpgFireRate = 0;
+    public float ARreloadTime = 5f;
+    private int ARclip;
+    private int MaxARclip = 2;
     public ReloadTimebarScript ReloadTimebar;
 
     public PlayerHealth playerHealthScript;
@@ -33,7 +36,7 @@ public class Shooting : MonoBehaviour
     void Start(){
         //isGunEquipped = GameObject.FindGameObjectWithTag("AR").GetComponent<EquippedGun>();
         timeLeft = timeCounter;
-        
+        ARclip = MaxARclip;
 
 	}
     // Update is called once per frame
@@ -43,18 +46,29 @@ public class Shooting : MonoBehaviour
     switch (whatGunIsEquippedString)  {
       //--------------------------------
       case "AR":
+        /*if(ARclip <= 0 ||(Input.GetKey("r") && ARclip != MaxARclip )){
+            for(float i = ARreloadTime; i > 0 ; i = i - Time.deltaTime){
+                if(i <= 0){
+                    //Debug.Log(i);
+                    Debug.Log("reloading");
+                    ARclip = MaxARclip;
+                    break;
+                }
+		    }
+		}*/
         if(!showGun){
             PlaceGunInPlayerHand(ARPrefab);
             showGun = true;
          }
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && ARclip > 0)
         {
-
+            Debug.Log(timeLeft);
             if(timeLeft > 0 ){
                 timeLeft -= Time.deltaTime;
 
                 if(timeLeft <= 0){
                   pistolShoot();
+                  ARclip -= 1;
                   Camera.shake(2f, 1f, .1f);
                   timeLeft = timeCounter;
                  }
@@ -155,11 +169,22 @@ public class Shooting : MonoBehaviour
     void PlaceGunInPlayerHand(GameObject GunPrefab){
         Destroy(gunInstance);
         ReloadTimebar.SetTime(0);
-        RpgFireRate = 0;
-        sniperFireRate = 0;
+        RpgFireRate = 1;
+        sniperFireRate = 1;
         firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         gunInstance = Instantiate(GunPrefab,firepointPos.transform,false);
+	}
+    int reloadGun(float reloadTime, int MaxClipSize){
+     for(float i = reloadTime; i >= 0 ; i-= Time.deltaTime){
+        if(i <= .1){
+            return MaxClipSize;  
+            break;
+		}
+        return 0;
+        
+	 }
+     return 0;
 	}
 
 
