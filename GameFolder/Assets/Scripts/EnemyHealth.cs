@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     public mobDrop gunDrop;
     public Dissolve dissolve;
     public Tint tint;
+    public Animator animator;
 
     void Start()
     {
@@ -28,6 +29,10 @@ public class EnemyHealth : MonoBehaviour
     {
        curHealth -= damage;
        tint.SetTintColor(new Color(1, 1, 1, 1f));
+       /*when shot while idling, the enemy will move away (start patrolling). */
+       if (animator != null)  {
+         animator.SetBool("isPatrolling", true);
+       }
        if(curHealth <= 0 && !hasDied){
         Die();
 	   }

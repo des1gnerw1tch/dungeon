@@ -27,7 +27,7 @@ public class goblinIdle : StateMachineBehaviour
       /* seen player? */
       if (Vector2.Distance(animator.transform.position, target.position) < lookRadius )
       {
-         animator.SetBool("followingPlayer", true);
+         //animator.SetBool("followingPlayer", true);
       }
     }
 

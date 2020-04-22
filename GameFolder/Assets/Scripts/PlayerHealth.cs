@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
-        
+
 
         if(enemy != null){
             TakeDamage(10);
