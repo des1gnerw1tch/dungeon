@@ -9,6 +9,7 @@ TagManager:
   - Cave
   - Coin
   - Interactable
+  - lootData
   layers:
   - Default
   - TransparentFX
