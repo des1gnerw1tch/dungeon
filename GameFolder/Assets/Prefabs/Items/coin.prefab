@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6136061618869464649}
   - component: {fileID: 6136061618869464662}
   - component: {fileID: 6136061618869464651}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: coin
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -95,9 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41aa1659bfcd09440a556e84c4c790a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCount: {fileID: 7889069773932988614, guid: 9754bf4d4ffac2a479ce3ca62f91e9a4,
-    type: 3}
-  coins: 0
 --- !u!70 &6136061618869464651
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
