@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8247079406849632719}
-  - component: {fileID: 8247079406849632716}
+  - component: {fileID: 9040440001880212294}
   m_Layer: 0
   m_Name: SpiderSpawner
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8247079406849632716
+--- !u!114 &9040440001880212294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1578111181576999759, guid: 330ea06ecb1f9874c8210203a8da00cf, type: 3}
   spawnTime: 1
-  max: 5
+  max: 30
   numAlive: 0
