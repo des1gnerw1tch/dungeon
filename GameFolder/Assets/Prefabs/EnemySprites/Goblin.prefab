@@ -176,6 +176,8 @@ MonoBehaviour:
   RPGdropPrefab: {fileID: 0}
   SnipeDropPrefab: {fileID: 0}
   HealthPrefab: {fileID: 0}
+  CoinPrefab: {fileID: 6136061618869464663, guid: 08b7e28cdc8e2bc46a2bdd69c7818e8f,
+    type: 3}
 --- !u!114 &819445978010323823
 MonoBehaviour:
   m_ObjectHideFlags: 0

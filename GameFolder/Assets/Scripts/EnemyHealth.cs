@@ -47,7 +47,7 @@ public class EnemyHealth : MonoBehaviour
             gunDrop.SpiderDrop(transform.position);
             break;
           case "Goblin":
-            //gunDrop.
+            gunDrop.GoblinDrop(transform.position);
             break;
         }
 

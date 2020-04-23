@@ -87,7 +87,7 @@ public class Shooting : MonoBehaviour
          }
         if (Input.GetButton("Fire1") && ARclip > 0)
         {
-            Debug.Log(timeLeft);
+            
             if(timeLeft > 0 ){
                 timeLeft -= Time.deltaTime;
 
