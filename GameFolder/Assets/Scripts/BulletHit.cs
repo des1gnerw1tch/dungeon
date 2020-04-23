@@ -6,6 +6,7 @@ public class BulletHit : MonoBehaviour
 {
     public GameObject hitEffect;
     public int damage = 20;
+    public int knockback = 1;
     //void OnCollisionEnter2D(Collision2D collision)
     //{
         //GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);

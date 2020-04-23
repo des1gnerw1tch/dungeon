@@ -53,4 +53,15 @@ public class EnemyHealth : MonoBehaviour
 
 	   }
 
+     //knockback effect.
+     void OnTriggerEnter2D(Collider2D coll) {
+       if (coll.gameObject.tag == "Pistol")  {
+         Vector2 difference = transform.position - coll.transform.position;
+         //difference *= coll.gameObject.knockback;
+         transform.position = new Vector2(transform.position.x + difference.x, transform.position.y + difference.y);
+         Debug.Log("Knocked Back");
+       }
+
+     }
+
 }
