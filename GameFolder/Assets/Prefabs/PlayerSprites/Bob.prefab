@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5493401359268361210}
   - component: {fileID: 184997451201820118}
   - component: {fileID: 1922524453}
+  - component: {fileID: -6251366582329960402}
   m_Layer: 11
   m_Name: Bob
   m_TagString: Player
@@ -59,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1efe8ad3c7e3c43249381519330d2cf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 4845827712778815830, guid: 886d06661c033b84e965e631534e5d4a,
     type: 3}
@@ -182,6 +183,7 @@ MonoBehaviour:
   showGun: 0
   gunInstance: {fileID: 0}
   timeCounter: 0.2
+  ARreloadTime: 5
   ReloadTimebar: {fileID: 0}
   playerHealthScript: {fileID: 5493401359268361209}
   hasHealed: 0
@@ -261,6 +263,18 @@ MonoBehaviour:
   canvasSlot2: {fileID: 0}
   canvasSlot3: {fileID: 0}
   canvasSlot4: {fileID: 0}
+--- !u!114 &-6251366582329960402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b273f41915149b19d177619729dad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8747800943320054309
 GameObject:
   m_ObjectHideFlags: 0

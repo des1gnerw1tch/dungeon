@@ -10,10 +10,12 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    public Tint body;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        body = GetComponent<Tint>();
         healthBar.SetMaxHealth(maxHealth);
     }
 
@@ -29,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        body.SetTintColor(new Color (1, 0, 0, 1f));
 
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
