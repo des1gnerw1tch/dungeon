@@ -8,9 +8,9 @@ public class Chest : MonoBehaviour
     private Transform target;
     private IsNeerInteractable IsNeerInteractableScript;
     public mobDrop loot;
-    private Animator animator;
+    public Animator animator;
     public bool isActive = true;
-    // Start is called before the first frame update
+    // Start is called before the first frame update!!!!
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

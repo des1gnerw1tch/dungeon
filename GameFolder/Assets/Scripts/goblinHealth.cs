@@ -3,6 +3,7 @@
 public class goblinHealth : MonoBehaviour
 {
     // Start is called before the first frame update
+    /*
     public float maxHealth = 100;
     private float curHealth;
     private bool hasDied = false;
@@ -33,6 +34,6 @@ public class goblinHealth : MonoBehaviour
         hasDied = true;
         dissolve.play(2f);
         //gunDrop.SpiderDrop(transform.position);
-    }
+    }*/
 
 }

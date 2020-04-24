@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4950131379623785325}
   - component: {fileID: 4206953965716023364}
   - component: {fileID: 9204024363953631717}
+  - component: {fileID: 8868467021749794044}
   m_Layer: 12
   m_Name: Sniper_Drop
   m_TagString: Untagged
@@ -126,3 +127,24 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: 5680257749058556840, guid: 360274db309696c4dbf1c139caca6887,
     type: 3}
+--- !u!50 &8868467021749794044
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946864283718346727}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

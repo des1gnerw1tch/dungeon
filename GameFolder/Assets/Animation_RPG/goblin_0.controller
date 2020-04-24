@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 2
   minWaitTime: 1
   maxWaitTime: 5
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 2
   minWaitTime: 1
   maxWaitTime: 5
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 2
   minWaitTime: 1
   maxWaitTime: 5
@@ -1333,8 +1333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  lookRadius: 8
+  speed: 3
+  lookRadius: 12
   atkRadius: 1.2
 --- !u!1102 &2708709101923167020
 AnimatorState:
@@ -1614,8 +1614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  lookRadius: 8
+  speed: 3
+  lookRadius: 12
   atkRadius: 1.25
 --- !u!1101 &4845107083337052325
 AnimatorStateTransition:
@@ -1682,8 +1682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  lookRadius: 8
+  speed: 3
+  lookRadius: 12
   atkRadius: 1
 --- !u!1101 &5978662101017901767
 AnimatorStateTransition:
@@ -1944,8 +1944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  lookRadius: 8
+  speed: 3
+  lookRadius: 12
   atkRadius: 1.25
 --- !u!1102 &8696521057738404163
 AnimatorState:
@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 2
   minWaitTime: 1
   maxWaitTime: 5

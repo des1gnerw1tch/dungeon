@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3364486417fa648ab6ae975ae7b656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
+  loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   isActive: 1
 --- !u!61 &2665790034282843314
 BoxCollider2D:

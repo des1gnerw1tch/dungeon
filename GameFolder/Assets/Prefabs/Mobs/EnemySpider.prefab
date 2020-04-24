@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1240484142}
   - component: {fileID: 548355550}
   - component: {fileID: 201534893368466052}
+  - component: {fileID: -8968078665230342497}
   m_Layer: 10
   m_Name: EnemySpider
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: -5406220460104578054, guid: 011a668b1f3d95846b5488a9ef520130,
     type: 3}
@@ -161,15 +162,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1222707490903898385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,10 +185,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   enemyID: Spider
-  hasDied: 0
   gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   dissolve: {fileID: 1240484142}
   tint: {fileID: 548355550}
+  animator: {fileID: 0}
 --- !u!114 &1240484142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissolveMat: {fileID: 2100000, guid: 19b2c3d4bbb924777ac3ac4a0e9cf681, type: 2}
-  isDissolving: 0
+  dissolveSpeed: 1
 --- !u!114 &548355550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,3 +241,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8968078665230342497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578111181576999759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db42f1420e2d14cd3a367620bcae3646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 971440345960506277}
   - component: {fileID: -4588460566304651333}
   - component: {fileID: -268078331398421724}
+  - component: {fileID: -5235608030274334757}
   m_Layer: 12
   m_Name: HealthPotion
   m_TagString: Untagged
@@ -125,3 +126,24 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: -6264513508659542294, guid: dbaab9aea1e233245ad50010a68d8d7a,
     type: 3}
+--- !u!50 &-5235608030274334757
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143954038635760408}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

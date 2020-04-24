@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2177524917881198641}
   - component: {fileID: 8247682188220123959}
   - component: {fileID: -6677500666373917982}
-  - component: {fileID: 6437016395578428586}
   - component: {fileID: 819445978010323823}
   - component: {fileID: 8017402406109829784}
+  - component: {fileID: -741415980469027085}
   m_Layer: 10
   m_Name: Goblin
   m_TagString: Untagged
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021560669, y: 0.084225714}
+  m_Offset: {x: -0.00073617697, y: 0.07803208}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5698452, y: 0.64683545}
+  m_Size: {x: 0.5004773, y: 0.6592227}
   m_EdgeRadius: 0
 --- !u!95 &2177524917881198641
 Animator:
@@ -160,24 +160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dissolveMat: {fileID: 2100000, guid: 19b2c3d4bbb924777ac3ac4a0e9cf681, type: 2}
   dissolveSpeed: 1
---- !u!114 &6437016395578428586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2177524917881198654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8af708e40593a4d85d018e2c813675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ARdropPrefab: {fileID: 0}
-  RPGdropPrefab: {fileID: 0}
-  SnipeDropPrefab: {fileID: 0}
-  HealthPrefab: {fileID: 0}
-  CoinPrefab: {fileID: 6136061618869464663, guid: 08b7e28cdc8e2bc46a2bdd69c7818e8f,
-    type: 3}
 --- !u!114 &819445978010323823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 300
   enemyID: Goblin
-  gunDrop: {fileID: 6437016395578428586}
+  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   dissolve: {fileID: -6677500666373917982}
   tint: {fileID: 8247682188220123959}
   animator: {fileID: 2177524917881198641}
@@ -217,3 +199,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-741415980469027085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db42f1420e2d14cd3a367620bcae3646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

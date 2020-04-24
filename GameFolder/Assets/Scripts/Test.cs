@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public Tint tint;
-    void Start()
-    {
 
+    void Start()  {
+      
     }
-
     // Update is called once per frame
-    void Update()
-    {
-      if (Input.GetKeyDown(KeyCode.T))  {
-        tint.SetTintColor(new Color(1, 1, 1, 1f));
-      }
-    }
+
 }

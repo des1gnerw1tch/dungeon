@@ -28,4 +28,8 @@ public class BulletHit : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public int GetKnockback() {
+      return(knockback);
+    }
+
 }

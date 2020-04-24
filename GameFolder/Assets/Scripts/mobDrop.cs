@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class mobDrop : MonoBehaviour
+
 {
 	public GameObject ARdropPrefab;
 	public GameObject RPGdropPrefab;
 	public GameObject SnipeDropPrefab;
 	public GameObject HealthPrefab;
 	public GameObject CoinPrefab;
-	Vector3 offset;
+	private Vector2 force;
+
 	public void SpiderDrop(Vector3 pos){
 		float num = Random.Range(0,100);
         if(num <= 10){
@@ -18,25 +20,38 @@ public class mobDrop : MonoBehaviour
             Instantiate(HealthPrefab, pos, Quaternion.identity);
 		}
 	}
+
 	public void GoblinDrop(Vector3 pos){
 		Instantiate(CoinPrefab, pos, Quaternion.identity);
 	}
 
 	public void ChestDrop(Vector3 pos){
-		
-		offset.Set(pos.x + Random.Range(-3,3), pos.y + 2f, 0f);
-		Instantiate(CoinPrefab, offset, Quaternion.identity);
+		GameObject obj;
+		Rigidbody2D objRB;
+
+		//initial coin
+		obj = Instantiate(CoinPrefab, pos, Quaternion.identity);
+		objRB = obj.GetComponent<Rigidbody2D>();
+		force.Set(Random.Range(-3, 3), Random.Range(-3, 3));
+		objRB.AddForce(force, ForceMode2D.Impulse);
+
 		float num = Random.Range(0,100);
         if(num <= 10){
-            Instantiate(ARdropPrefab, offset, Quaternion.identity);
+            obj = Instantiate(ARdropPrefab, pos, Quaternion.identity);
+
 		}else if(num <= 20 && num > 10){
-            Instantiate(HealthPrefab, offset, Quaternion.identity);
+            obj = Instantiate(HealthPrefab, pos, Quaternion.identity);
 		}else if(num <= 40 && num > 20){
-			Instantiate(CoinPrefab, offset, Quaternion.identity);
+			obj = Instantiate(CoinPrefab, pos, Quaternion.identity);
 		}else if(num <= 50 && num > 40){
-			Instantiate(SnipeDropPrefab, offset, Quaternion.identity);
+			obj = Instantiate(SnipeDropPrefab, pos, Quaternion.identity);
 		}else if(num <= 55 && num > 50){
-			Instantiate(RPGdropPrefab, offset, Quaternion.identity);
+			obj = Instantiate(RPGdropPrefab, pos, Quaternion.identity);
 		}
+		//getting second drop !!!
+
+		objRB = obj.GetComponent<Rigidbody2D>();
+		force.Set(Random.Range(-10, 10), Random.Range(-10, 10));
+		objRB.AddForce(force, ForceMode2D.Impulse);
 	}
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update!!
     public float maxHealth = 100;
     private float curHealth;
     public string enemyID;
@@ -50,18 +50,10 @@ public class EnemyHealth : MonoBehaviour
             gunDrop.GoblinDrop(transform.position);
             break;
         }
+      }
 
-	   }
 
-     //knockback effect.
-     void OnTriggerEnter2D(Collider2D coll) {
-       if (coll.gameObject.tag == "Pistol")  {
-         Vector2 difference = transform.position - coll.transform.position;
-         //difference *= coll.gameObject.knockback;
-         transform.position = new Vector2(transform.position.x + difference.x, transform.position.y + difference.y);
-         Debug.Log("Knocked Back");
-       }
 
-     }
+
 
 }

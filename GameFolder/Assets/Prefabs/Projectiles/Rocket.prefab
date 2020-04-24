@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1251848517865836534}
   m_Layer: 13
   m_Name: Rocket
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129681771
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 1849283593710663635, guid: 497b18c166723fc4ca12ec5d6f572738,
     type: 3}
@@ -119,7 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 1879529914316796876, guid: fe835a59d77713c4c956daaef37e30d2,
     type: 3}
-  damage: 100
+  damage: 200
+  knockback: 500
 --- !u!50 &6529720103189452511
 Rigidbody2D:
   serializedVersion: 4
