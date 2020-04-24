@@ -164,6 +164,7 @@ MonoBehaviour:
   firePoint: {fileID: 8747800943585440480}
   bulletPrefab: {fileID: 2195576620641826499, guid: 6895a62060eaac74a8248e27a423ba83,
     type: 3}
+  ARbulletPrefab: {fileID: 0}
   rocketPrefab: {fileID: 2248193845924477178, guid: 38ea37cf83e552e41ae706fc6ba23703,
     type: 3}
   sniperbulletPrefab: {fileID: 2195576620641826499, guid: 77d2f1284e6832846820a1dda1b4b84c,
@@ -184,7 +185,11 @@ MonoBehaviour:
   gunInstance: {fileID: 0}
   timeCounter: 0.2
   ARreloadTime: 5
+  ARreloadcounter: 0
   ReloadTimebar: {fileID: 0}
+  ReloadingText: {fileID: 0}
+  bulletsLeftsGameObject: {fileID: 0}
+  bulletsLeft: {fileID: 0}
   playerHealthScript: {fileID: 5493401359268361209}
   hasHealed: 0
 --- !u!114 &5493401359268361209
@@ -202,6 +207,7 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   healthBar: {fileID: 0}
+  body: {fileID: 0}
 --- !u!114 &5493401359268361210
 MonoBehaviour:
   m_ObjectHideFlags: 0

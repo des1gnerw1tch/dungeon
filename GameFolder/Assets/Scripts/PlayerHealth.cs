@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
 		    }
         healthBar.SetHealth(currentHealth);
         if(currentHealth > maxHealth){
-            currentHealth = maxHealth;  
+            currentHealth = maxHealth;
 		}
     }
 
