@@ -23,11 +23,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed",Mathf.Abs(movement.y));
         animator.SetFloat("HSpeed", Mathf.Abs(movement.x));
 
-
+        movement = movement.normalized;
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     void FixedUpdate()
     {
+        
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
