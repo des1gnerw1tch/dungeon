@@ -11,12 +11,14 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
     public Tint body;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         body = GetComponent<Tint>();
         healthBar.SetMaxHealth(maxHealth);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -45,5 +47,20 @@ public class PlayerHealth : MonoBehaviour
         if(enemy != null){
             TakeDamage(10);
 		        }
+    }
+
+    public void SetKnockback(int knockback, Transform other) {
+      GetComponent<PlayerMovement>().enabled = false;
+      int thrust = knockback;
+      Vector2 difference = transform.position - other.transform.position;
+      difference = difference.normalized * thrust;
+      rb.AddForce(difference, ForceMode2D.Impulse);
+      Debug.Log("Player knocked back with " + knockback + " amount of force!" +
+      "difference" + difference + " thrust : " + thrust);
+      Invoke ("startMovement", .3f);
+    }
+
+    void startMovement()  {
+      GetComponent<PlayerMovement>().enabled = true;
     }
 }

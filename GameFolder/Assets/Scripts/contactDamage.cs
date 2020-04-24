@@ -5,6 +5,7 @@ public class contactDamage : MonoBehaviour
     // Start is called before the first frame update
     private PlayerHealth player;
     public int damage;
+    public int knockback;
     void Start()
     {
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
@@ -14,6 +15,7 @@ public class contactDamage : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)  {
       if (coll.gameObject.CompareTag("Player")) {
       player.TakeDamage(damage);
+      player.SetKnockback(knockback, transform);
       }
     }
 }
