@@ -243,7 +243,7 @@ public class Shooting : MonoBehaviour
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         gunInstance = Instantiate(GunPrefab,firepointPos.transform,false);
 	}
-    int reloadGun(float reloadTime, int MaxClipSize){
+    /*int reloadGun(float reloadTime, int MaxClipSize){
      for(float i = reloadTime; i >= 0 ; i-= Time.deltaTime){
         if(i <= .1){
             return MaxClipSize;  
@@ -253,7 +253,7 @@ public class Shooting : MonoBehaviour
         
 	 }
      return 0;
-	}
+	}*/
 
 
 

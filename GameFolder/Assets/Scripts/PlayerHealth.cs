@@ -26,6 +26,9 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("GameOver");
 		    }
         healthBar.SetHealth(currentHealth);
+        if(currentHealth > maxHealth){
+            currentHealth = maxHealth;  
+		}
     }
 
     public void TakeDamage(int damage)
