@@ -30,14 +30,9 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if(currentHealth > maxHealth){
             currentHealth = maxHealth;
-		}
+		        }
     }
-    //this is for knockback, will start movement again once finished knocking back
-    void FixedUpdate()  {
-      if (rb.velocity.magnitude < 1 )  {
-        startMovement();
-      }
-    }
+    
 
     public void TakeDamage(int damage)
     {
@@ -62,10 +57,15 @@ public class PlayerHealth : MonoBehaviour
       Vector2 difference = transform.position - other.transform.position;
       difference = difference.normalized * thrust;
       rb.AddForce(difference, ForceMode2D.Impulse);
-      Debug.Log("Player knocked back with " + knockback + " amount of force!" +
-      "difference" + difference + " thrust : " + thrust  + " velocity of player " + rb.velocity.magnitude);
 
-      //Invoke ("startMovement", .3f);
+
+    }
+
+    //this is for knockback, will start movement again once finished knocking back
+    void FixedUpdate()  {
+      if (rb.velocity.magnitude < 1 )  {
+        startMovement();
+      }
     }
 
     void startMovement()  {

@@ -11,6 +11,7 @@ public class goblinAttack : StateMachineBehaviour
 
     public float atkCooldown = 2f;
     public int atkDamage = 10;
+    public int knockback = 0;
 
     private float timer;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -33,6 +34,7 @@ public class goblinAttack : StateMachineBehaviour
           timer -= Time.deltaTime;
         } else {
           player.TakeDamage(atkDamage);
+          player.SetKnockback(knockback, animator.transform);
           timer = atkCooldown;
         }
       }

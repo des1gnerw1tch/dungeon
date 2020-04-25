@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 604466057937721343}
   - component: {fileID: 604466057937721328}
   - component: {fileID: 8955579396229361437}
-  - component: {fileID: -3468472063407034077}
+  - component: {fileID: -2137491148908436289}
+  - component: {fileID: 8753819250902450554}
+  - component: {fileID: -332151393980073735}
+  - component: {fileID: 691583487979760042}
   m_Layer: 14
   m_Name: Rabbit
   m_TagString: Untagged
@@ -73,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -5362292703166988329, guid: 59a128c495af440f49fc1c08ee802ee7,
     type: 3}
@@ -119,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04611039, y: -0.20177364}
+  m_Offset: {x: -0.006904602, y: -0.04727459}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1557355, y: 0.176013}
+  m_Size: {x: 0.8613682, y: 0.71560764}
   m_EdgeRadius: 0
 --- !u!114 &604466057937721328
 MonoBehaviour:
@@ -157,8 +160,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -166,29 +169,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &-3468472063407034077
-BoxCollider2D:
+--- !u!114 &-2137491148908436289
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604466057937721332}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  enemyID: rabbit
+  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
+  dissolve: {fileID: -332151393980073735}
+  tint: {fileID: 691583487979760042}
+  animator: {fileID: 604466057937721331}
+--- !u!114 &8753819250902450554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604466057937721332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db42f1420e2d14cd3a367620bcae3646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-332151393980073735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604466057937721332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3df7dcba921641ecb0b9273cb669a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMat: {fileID: 2100000, guid: 19b2c3d4bbb924777ac3ac4a0e9cf681, type: 2}
+  dissolveSpeed: 1
+--- !u!114 &691583487979760042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604466057937721332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b273f41915149b19d177619729dad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
