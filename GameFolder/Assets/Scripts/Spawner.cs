@@ -11,6 +11,8 @@ public class Spawner : MonoBehaviour
     private float spawnTimeCounter;
     public int max;
     public int numAlive = 0;
+    public float xDimension = 50f;
+    public float yDimension = 50f;
     private EnemyHealth healthScript;
 
     Vector3 offset;
@@ -25,7 +27,7 @@ public class Spawner : MonoBehaviour
     {
 
 
-        pos.Set(Random.Range(transform.position.x-50f, transform.position.x + 50f), Random.Range(transform.position.y-50f, transform.position.y + 50f));
+        pos.Set(Random.Range(transform.position.x-xDimension, transform.position.x + xDimension), Random.Range(transform.position.y - yDimension, transform.position.y + yDimension));
         if (Vector2.Distance(pos, target.position) > 10)  {
           GameObject Spider = Instantiate(prefab, pos, Quaternion.identity);
           numAlive++;

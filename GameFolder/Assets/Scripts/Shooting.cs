@@ -177,7 +177,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
           {
               if(playerHealthScript.currentHealth < playerHealthScript.maxHealth){
-                playerHealthScript.currentHealth += 10;
+                playerHealthScript.currentHealth += 20;
                 Destroy(gunInstance);
                 hasHealed = true;
 		       }

@@ -101,6 +101,7 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: 6311861153967998136, guid: 379013b4a97ed6746abc912343dd8b19,
     type: 3}
+  ID: RPG
 --- !u!61 &2374213417929340248
 BoxCollider2D:
   m_ObjectHideFlags: 0
