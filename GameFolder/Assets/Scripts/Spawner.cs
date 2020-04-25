@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//using UnityEngine.CoreModule;
 
 public class Spawner : MonoBehaviour
 {
@@ -14,7 +14,8 @@ public class Spawner : MonoBehaviour
     public float xDimension = 50f;
     public float yDimension = 50f;
     private EnemyHealth healthScript;
-
+    public Color GizmosColor = new Color(0.5f, 0.5f, 0.5f, 0.2f);
+    Vector3 spawnRadius;
     Vector3 offset;
     Vector2 pos;
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class Spawner : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         healthScript = prefab.GetComponent<EnemyHealth>();
+        spawnRadius.Set(xDimension,yDimension,0f);
     }
     void Spawn()
     {
@@ -40,13 +42,17 @@ public class Spawner : MonoBehaviour
 
 
 	}
-
+    void OnDrawGizmos()
+    {
+        Gizmos.color = GizmosColor;
+        Gizmos.DrawCube(transform.position,spawnRadius);
+    }
     // Update is called once per frame
     void Update()
     {
 
-
-
+        
+        
         if(spawnTimeCounter > 0){
               spawnTimeCounter -= Time.deltaTime;
 		}

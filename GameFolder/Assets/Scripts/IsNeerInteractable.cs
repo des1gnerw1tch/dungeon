@@ -16,24 +16,29 @@ public class IsNeerInteractable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isNeerInteractable){
+        /*if(isNeerInteractable){
             InteractText.text = "Press E to interact.";
 		}else{
             InteractText.text = "";
-		}
+		}*/
     }
     void OnTriggerEnter2D(Collider2D other){
         Chest ChestScript = other.GetComponent<Chest>();
+        Shop ShopScript = other.GetComponent<Shop>();
+        if(ShopScript != null){
+            isNeerInteractable = true;
+            InteractText.text = "It costs " + ShopScript.cost + " coins to buy a " + ShopScript.ShopID + "\nPress E to buy";
+		}
         if(ChestScript != null) {
             if(ChestScript.isActive){
-                isNeerInteractable = true;         
+                InteractText.text = "Press E to interact.";
 			}
 		}
 		
 	}
     void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.tag == "Interactable"){
-              isNeerInteractable = false;
+              InteractText.text = "";
 		}
 	}
 }

@@ -11,7 +11,7 @@ public class mobDrop : MonoBehaviour
 	public GameObject HealthPrefab;
 	public GameObject CoinPrefab;
 	private Vector2 force;
-
+	private PlayerMoney PlayerMoneyScript;
 	public void SpiderDrop(Vector3 pos){
 		float num = Random.Range(0,100);
         if(num <= 10){
@@ -53,5 +53,54 @@ public class mobDrop : MonoBehaviour
 		objRB = obj.GetComponent<Rigidbody2D>();
 		force.Set(Random.Range(-10, 10), Random.Range(-10, 10));
 		objRB.AddForce(force, ForceMode2D.Impulse);
+	}
+	public void ShopDrop(string ID, int cost,Vector3 pos){
+		GameObject obj;
+		Rigidbody2D objRB;
+		PlayerMoneyScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMoney>();
+
+		if(ID == "AR" && PlayerMoneyScript.coins >= cost){
+			obj = Instantiate(ARdropPrefab, pos, Quaternion.identity);
+			PlayerMoneyScript.coins -= cost;
+
+			objRB = obj.GetComponent<Rigidbody2D>();
+			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
+			objRB.AddForce(force, ForceMode2D.Impulse);
+			
+
+		}
+		if(ID == "RPG" && PlayerMoneyScript.coins >= cost){
+			obj = Instantiate(RPGdropPrefab, pos, Quaternion.identity);
+			PlayerMoneyScript.coins -= cost;
+
+			objRB = obj.GetComponent<Rigidbody2D>();
+			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
+			objRB.AddForce(force, ForceMode2D.Impulse);
+			
+
+		}
+		if(ID == "Sniper" && PlayerMoneyScript.coins >= cost){
+			obj = Instantiate(SnipeDropPrefab, pos, Quaternion.identity);
+			PlayerMoneyScript.coins -= cost;
+
+			objRB = obj.GetComponent<Rigidbody2D>();
+			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
+			objRB.AddForce(force, ForceMode2D.Impulse);
+			
+
+		}
+		if(ID == "HealthPotion" && PlayerMoneyScript.coins >= cost){
+			obj = Instantiate(HealthPrefab, pos, Quaternion.identity);
+			PlayerMoneyScript.coins -= cost;
+
+			objRB = obj.GetComponent<Rigidbody2D>();
+			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
+			objRB.AddForce(force, ForceMode2D.Impulse);
+			
+
+		}
+
+
+		
 	}
 }
