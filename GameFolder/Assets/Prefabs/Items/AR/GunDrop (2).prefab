@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8816895071248745646}
   - component: {fileID: -6829855724580259092}
   - component: {fileID: -7384479361563826826}
+  - component: {fileID: -1601248207856386998}
   m_Layer: 12
   m_Name: GunDrop (2)
   m_TagString: Untagged
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023487091, y: -0.03523016}
+  m_Offset: {x: 0.010404229, y: 0.023062885}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.57723045, y: 0.36584568}
+  m_Size: {x: 1.0083282, y: 0.52581275}
   m_EdgeRadius: 0
 --- !u!114 &-6829855724580259092
 MonoBehaviour:
@@ -162,3 +163,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &-1601248207856386998
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065080744441535801}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012643218, y: 0.020590305}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.97471344, y: 0.3874371}
+  m_EdgeRadius: 0
