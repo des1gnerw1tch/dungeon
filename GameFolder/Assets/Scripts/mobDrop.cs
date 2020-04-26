@@ -10,6 +10,7 @@ public class mobDrop : MonoBehaviour
 	public GameObject SnipeDropPrefab;
 	public GameObject HealthPrefab;
 	public GameObject CoinPrefab;
+	public GameObject torch;
 	private Vector2 force;
 	private PlayerMoney PlayerMoneyScript;
 	public void SpiderDrop(Vector3 pos){

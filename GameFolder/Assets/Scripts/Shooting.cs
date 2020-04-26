@@ -19,6 +19,7 @@ public class Shooting : MonoBehaviour
     public GameObject RPGPrefab;
     public GameObject SniperPrefab;
     public GameObject healthPrefab;
+    public GameObject torchPrefab;
     private Transform firepointPos;
     [HideInInspector]public bool showGun = false;
     [HideInInspector]public GameObject gunInstance;
@@ -34,7 +35,7 @@ public class Shooting : MonoBehaviour
     private int RPGclip;
     private int MaxRPGclip = 1;
     private int sniperClip;
-    private int maxSniperClip = 1;
+    private int maxSniperClip = 2;
     public ReloadTimebarScript ReloadTimebar;
 
     public GameObject ReloadingText;
@@ -146,6 +147,8 @@ public class Shooting : MonoBehaviour
         if((Input.GetKey("r") && sniperClip != maxSniperClip)|| sniperClip <= 0 ){
 
             if( sniperFireRate > 0 ){
+                    bulletsLeftsGameObject.SetActive(false);
+                    sniperClip = 0;
                     sniperFireRate -= Time.deltaTime;
                     ReloadTimebar.SetTime(sniperFireRate);
                     ReloadingText.SetActive(true);
@@ -153,10 +156,11 @@ public class Shooting : MonoBehaviour
                         ReloadingText.SetActive(false);
                         sniperClip = maxSniperClip;
                         bulletsLeft.text = "" +sniperClip;
+                        bulletsLeftsGameObject.SetActive(true);
 		            }
             }
         }
-        if (Input.GetButtonDown("Fire1") && sniperClip >= 0)
+        if (Input.GetButtonDown("Fire1") && sniperClip > 0)
         {
             ReloadingText.SetActive(false);
             sniperShoot();
@@ -183,6 +187,15 @@ public class Shooting : MonoBehaviour
 		       }
           }
         
+        break;
+      case "Torch":
+        bulletsLeftsGameObject.SetActive(false);
+        ReloadingText.SetActive(false);
+        ReloadTimebar.SetTime(0);
+        if(!showGun){
+            PlaceGunInPlayerHand(torchPrefab);
+            showGun = true;
+        }
         break;
       default:
         bulletsLeftsGameObject.SetActive(false);
