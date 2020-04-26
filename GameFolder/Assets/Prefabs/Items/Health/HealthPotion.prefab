@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: -6264513508659542294, guid: dbaab9aea1e233245ad50010a68d8d7a,
     type: 3}
+  ID: 
 --- !u!50 &-5235608030274334757
 Rigidbody2D:
   serializedVersion: 4
