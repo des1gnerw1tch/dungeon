@@ -24,7 +24,7 @@ public class Chest : MonoBehaviour
     {
         if((Vector2.Distance(transform.position, target.position) < 3) && isActive){
               if(Input.GetKey("e")){
-                Invoke("dropLoot", 1f);
+                Invoke("dropLoot", .2f);
 
                 animator.SetTrigger("open");
                 isActive = false;

@@ -11,8 +11,8 @@ public class Spawner : MonoBehaviour
     private float spawnTimeCounter;
     public int max;
     public int numAlive = 0;
-    public float xDimension = 50f;
-    public float yDimension = 50f;
+    public float xRadius = 15f;
+    public float yRadius = 15f;
     private EnemyHealth healthScript;
     public Color GizmosColor = new Color(0.5f, 0.5f, 0.5f, 0.2f);
     Vector3 spawnRadius;
@@ -23,13 +23,13 @@ public class Spawner : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         healthScript = prefab.GetComponent<EnemyHealth>();
-        spawnRadius.Set(xDimension,yDimension,0f);
+        spawnRadius.Set(xRadius,yRadius,0f);
     }
     void Spawn()
     {
 
 
-        pos.Set(Random.Range(transform.position.x-xDimension, transform.position.x + xDimension), Random.Range(transform.position.y - yDimension, transform.position.y + yDimension));
+        pos.Set(Random.Range(transform.position.x-xRadius, transform.position.x + xRadius), Random.Range(transform.position.y - yRadius, transform.position.y + yRadius));
         if (Vector2.Distance(pos, target.position) > 10)  {
           GameObject Spider = Instantiate(prefab, pos, Quaternion.identity);
           numAlive++;
@@ -44,15 +44,16 @@ public class Spawner : MonoBehaviour
 	}
     void OnDrawGizmos()
     {
+        spawnRadius.Set(xRadius,yRadius,0f);
         Gizmos.color = GizmosColor;
-        Gizmos.DrawCube(transform.position,spawnRadius);
+        Gizmos.DrawCube(transform.position, spawnRadius * 2);
     }
     // Update is called once per frame
     void Update()
     {
 
-        
-        
+
+
         if(spawnTimeCounter > 0){
               spawnTimeCounter -= Time.deltaTime;
 		}
