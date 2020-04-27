@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkRadius: 1
   atkCooldown: 0.125
-  atkDamage: 40
+  atkDamage: 15
   knockback: 3
 --- !u!1101 &-6014238269478392322
 AnimatorStateTransition:
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkRadius: 1.25
   atkCooldown: 0.125
-  atkDamage: 40
+  atkDamage: 15
   knockback: 3
 --- !u!1101 &-1336492363634558071
 AnimatorStateTransition:
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkRadius: 1.4
   atkCooldown: 0.125
-  atkDamage: 40
+  atkDamage: 15
   knockback: 3
 --- !u!1102 &1315965071877083234
 AnimatorState:
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   lookRadius: 12
   atkRadius: 1.4
 --- !u!1102 &2708709101923167020
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkRadius: 1.25
   atkCooldown: 0.125
-  atkDamage: 40
+  atkDamage: 15
   knockback: 3
 --- !u!1102 &3745954988591002331
 AnimatorState:
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   lookRadius: 12
   atkRadius: 1.25
 --- !u!1101 &4845107083337052325
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   lookRadius: 12
   atkRadius: 1
 --- !u!1101 &5978662101017901767
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   lookRadius: 12
   atkRadius: 1.25
 --- !u!1102 &8696521057738404163
