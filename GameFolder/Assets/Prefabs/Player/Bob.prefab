@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 6903378669057283929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8747800943585440480}
   - {fileID: 8747800943320054310}
@@ -181,6 +181,7 @@ MonoBehaviour:
     type: 3}
   healthPrefab: {fileID: 357245384828748845, guid: e5349e32b4fcacb4792517029f21c7b7,
     type: 3}
+  torchPrefab: {fileID: 0}
   showGun: 0
   gunInstance: {fileID: 0}
   timeCounter: 0.2

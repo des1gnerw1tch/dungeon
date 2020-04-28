@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-
     void Awake()
     {
       GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");

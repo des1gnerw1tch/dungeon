@@ -8,7 +8,7 @@ public class Chest : MonoBehaviour
     private Transform target;
     private IsNeerInteractable IsNeerInteractableScript;
     public mobDrop loot;
-    public Animator animator;
+    private Animator animator;
     public bool isActive = true;
     // Start is called before the first frame update!!!!
     void Start()
@@ -26,11 +26,14 @@ public class Chest : MonoBehaviour
               if(Input.GetKey("e")){
                 Invoke("dropLoot", .2f);
 
-                animator.SetTrigger("open");
+                animator.SetBool("open", true);
                 isActive = false;
 		      }
 		}
 
+    if (!isActive)  {
+      animator.SetBool("open", true);
+    }
     }
 
     void dropLoot() {

@@ -12,7 +12,6 @@ public class Inventory : MonoBehaviour
 
     void Start() {
       item = new string[5];
-      Debug.Log(item[0]);
     }
 
 }
