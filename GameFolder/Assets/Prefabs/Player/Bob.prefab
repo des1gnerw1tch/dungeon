@@ -19,6 +19,9 @@ GameObject:
   - component: {fileID: 184997451201820118}
   - component: {fileID: 1922524453}
   - component: {fileID: -6251366582329960402}
+  - component: {fileID: 1756797237}
+  - component: {fileID: 1756797247}
+  - component: {fileID: 1756797248}
   m_Layer: 11
   m_Name: Bob
   m_TagString: Player
@@ -35,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 6903378669057283929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8747800943585440480}
   - {fileID: 8747800943320054310}
@@ -164,7 +167,8 @@ MonoBehaviour:
   firePoint: {fileID: 8747800943585440480}
   bulletPrefab: {fileID: 2195576620641826499, guid: 6895a62060eaac74a8248e27a423ba83,
     type: 3}
-  ARbulletPrefab: {fileID: 0}
+  ARbulletPrefab: {fileID: 2195576620641826499, guid: 713a76ad30fe1534d8ec37a9a6fb210f,
+    type: 3}
   rocketPrefab: {fileID: 2248193845924477178, guid: 38ea37cf83e552e41ae706fc6ba23703,
     type: 3}
   sniperbulletPrefab: {fileID: 2195576620641826499, guid: 77d2f1284e6832846820a1dda1b4b84c,
@@ -181,11 +185,12 @@ MonoBehaviour:
     type: 3}
   healthPrefab: {fileID: 357245384828748845, guid: e5349e32b4fcacb4792517029f21c7b7,
     type: 3}
-  torchPrefab: {fileID: 0}
+  torchPrefab: {fileID: 9088534354078598734, guid: a6d508b355b0ccd48b303ad8560b142f,
+    type: 3}
   showGun: 0
   gunInstance: {fileID: 0}
   timeCounter: 0.2
-  ARreloadTime: 5
+  ARreloadTime: 3
   ARreloadcounter: 0
   ReloadTimebar: {fileID: 0}
   ReloadingText: {fileID: 0}
@@ -205,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f04e7b73560fad40a03cf8e5046beac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
   body: {fileID: 0}
@@ -242,9 +247,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0014787018, y: 0.05471036}
-  m_Size: {x: 0.39807886, y: 0.39807886}
-  m_Direction: 0
+  m_Offset: {x: -0.085648604, y: 0.005846476}
+  m_Size: {x: 0.6770422, y: 0.4536657}
+  m_Direction: 1
 --- !u!114 &1922524453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +287,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b273f41915149b19d177619729dad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1756797237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87910856d66d4904aa10f1cfeebf7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1756797247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0468b9e232a24e24785052f7b17b0c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 1000
+  CoinCountText: {fileID: 0}
+--- !u!114 &1756797248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b6ca2984fe7904292155a968632da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNeerInteractable: 0
+  InteractText: {fileID: 0}
 --- !u!1 &8747800943320054309
 GameObject:
   m_ObjectHideFlags: 0

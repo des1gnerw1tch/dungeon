@@ -51,19 +51,19 @@ public class Shooting : MonoBehaviour
         ARreloadcounter = ARreloadTime;
         ReloadingText.SetActive(false);
         bulletsLeftsGameObject.SetActive(false);
-        
+
         RPGclip = MaxRPGclip;
         sniperClip = maxSniperClip;
 	}
     // Update is called once per frame
     void Update()
     {
-        
+
     switch (whatGunIsEquippedString)  {
       //--------------------------------
-      
+
       case "AR":
-        
+
         bulletsLeftsGameObject.SetActive(true);
         bulletsLeft.text = "" + ARclip;
         if((Input.GetKey("r") && ARclip != MaxARclip)|| ARclip <= 0 ){
@@ -88,7 +88,7 @@ public class Shooting : MonoBehaviour
          }
         if (Input.GetButton("Fire1") && ARclip > 0)
         {
-            
+
             if(timeLeft > 0 ){
                 timeLeft -= Time.deltaTime;
 
@@ -123,7 +123,7 @@ public class Shooting : MonoBehaviour
                   RPGclip = MaxRPGclip;
                   bulletsLeft.text = "" +RPGclip;
 		      }
-              
+
             }
         }
         if (Input.GetButtonDown("Fire1") && RPGclip > 0)
@@ -132,7 +132,7 @@ public class Shooting : MonoBehaviour
             Camera.shake(3f, .1f, .2f);
             RpgFireRate = 2;
             RPGclip -= 1;
-            
+
         }
         break;
         //-----------------------------------
@@ -186,7 +186,7 @@ public class Shooting : MonoBehaviour
                 hasHealed = true;
 		       }
           }
-        
+
         break;
       case "Torch":
         bulletsLeftsGameObject.SetActive(false);
@@ -202,7 +202,7 @@ public class Shooting : MonoBehaviour
         ReloadingText.SetActive(false);
         ReloadTimebar.SetTime(0);
         if(!showGun){
-            
+
           Destroy(gunInstance);
           }
           if (Input.GetButtonDown("Fire1"))
@@ -259,11 +259,11 @@ public class Shooting : MonoBehaviour
     /*int reloadGun(float reloadTime, int MaxClipSize){
      for(float i = reloadTime; i >= 0 ; i-= Time.deltaTime){
         if(i <= .1){
-            return MaxClipSize;  
+            return MaxClipSize;
             break;
 		}
         return 0;
-        
+
 	 }
      return 0;
 	}*/

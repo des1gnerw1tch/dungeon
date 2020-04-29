@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ea59ba1a5b548d2a4946b862662c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 1
+  atkRadius: 0.75
   atkCooldown: 0.125
   atkDamage: 15
   knockback: 3
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ea59ba1a5b548d2a4946b862662c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 1.25
+  atkRadius: 1
   atkCooldown: 0.125
   atkDamage: 15
   knockback: 3
@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ea59ba1a5b548d2a4946b862662c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 1.4
+  atkRadius: 1.1
   atkCooldown: 0.125
   atkDamage: 15
   knockback: 3
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   lookRadius: 12
-  atkRadius: 1.4
+  atkRadius: 1.1
 --- !u!1102 &2708709101923167020
 AnimatorState:
   serializedVersion: 5
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ea59ba1a5b548d2a4946b862662c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 1.25
+  atkRadius: 1
   atkCooldown: 0.125
   atkDamage: 15
   knockback: 3
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   lookRadius: 12
-  atkRadius: 1.25
+  atkRadius: 1
 --- !u!1101 &4845107083337052325
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   lookRadius: 12
-  atkRadius: 1
+  atkRadius: 0.75
 --- !u!1101 &5978662101017901767
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   lookRadius: 12
-  atkRadius: 1.25
+  atkRadius: 1
 --- !u!1102 &8696521057738404163
 AnimatorState:
   serializedVersion: 5

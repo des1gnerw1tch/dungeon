@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
-    public Tint body;
+    private Tint body;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
 		        }
     }
-    
+
 
     public void TakeDamage(int damage)
     {
