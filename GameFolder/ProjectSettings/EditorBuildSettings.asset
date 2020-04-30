@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GunShop.unity
     guid: 032015a8190a041cdb130762d88a1b15
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: eedb39a7af59c4fa6a5f956293b82a9d
   m_configObjects: {}
