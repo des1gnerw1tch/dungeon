@@ -7,6 +7,7 @@ public class BulletHit : MonoBehaviour
     public GameObject hitEffect;
     public int damage = 20;
     public int knockback = 1;
+    public string hitSound;
     //void OnCollisionEnter2D(Collision2D collision)
     //{
         //GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
@@ -17,8 +18,22 @@ public class BulletHit : MonoBehaviour
     /* when bullet hits enemy*/
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
 
+        switch (hitSound) {
+          case "RPG":
+            FindObjectOfType<AudioManager>().Play("rocketLand");
+            break;
+          case null:
+            return;
+        }
+        /*if (hitSound == null)  {
+          return;
+
+        } else if (hitSound == "RPG") {
+          FindObjectOfType<AudioManager>().Play("rocketLand");
+        }*/
+
+        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
         if(enemy != null) {
             enemy.TakeDamage(damage);
 		}

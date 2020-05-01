@@ -49,7 +49,11 @@ public class EnemyHealth : MonoBehaviour
             gunDrop.SpiderDrop(transform.position);
             break;
           case "Goblin":
+            FindObjectOfType<AudioManager>().Play("goblinDeath");
             gunDrop.GoblinDrop(transform.position);
+            break;
+          case "Slime":
+            gunDrop.SlimeDrop(transform.position);
             break;
         }
       }

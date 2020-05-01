@@ -13,6 +13,7 @@ public class mobDrop : MonoBehaviour
 	public GameObject torch;
 	private Vector2 force;
 	private PlayerMoney PlayerMoneyScript;
+
 	public void SpiderDrop(Vector3 pos){
 		float num = Random.Range(0,100);
         if(num <= 10){
@@ -24,6 +25,22 @@ public class mobDrop : MonoBehaviour
 
 	public void GoblinDrop(Vector3 pos){
 		Instantiate(CoinPrefab, pos, Quaternion.identity);
+	}
+
+	public void SlimeDrop(Vector3 pos)	{
+		float num = Random.Range(0,100);
+		if (num >= 0 && num <= 50)	{
+			Instantiate(CoinPrefab, pos, Quaternion.identity);
+		}
+		else if (num > 50 && num <= 90)	{
+			Instantiate(CoinPrefab, pos, Quaternion.identity);
+			Instantiate(CoinPrefab, pos, Quaternion.identity);
+		}
+		else if (num > 90 && num <= 100)	{
+			Instantiate(CoinPrefab, pos, Quaternion.identity);
+			Instantiate(CoinPrefab, pos, Quaternion.identity);
+			Instantiate(CoinPrefab, pos, Quaternion.identity);
+		}
 	}
 
 	public void ChestDrop(Vector3 pos){
@@ -67,7 +84,7 @@ public class mobDrop : MonoBehaviour
 			objRB = obj.GetComponent<Rigidbody2D>();
 			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
 			objRB.AddForce(force, ForceMode2D.Impulse);
-			
+
 
 		}
 		if(ID == "RPG" && PlayerMoneyScript.coins >= cost){
@@ -77,7 +94,7 @@ public class mobDrop : MonoBehaviour
 			objRB = obj.GetComponent<Rigidbody2D>();
 			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
 			objRB.AddForce(force, ForceMode2D.Impulse);
-			
+
 
 		}
 		if(ID == "Sniper" && PlayerMoneyScript.coins >= cost){
@@ -87,7 +104,7 @@ public class mobDrop : MonoBehaviour
 			objRB = obj.GetComponent<Rigidbody2D>();
 			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
 			objRB.AddForce(force, ForceMode2D.Impulse);
-			
+
 
 		}
 		if(ID == "HealthPotion" && PlayerMoneyScript.coins >= cost){
@@ -97,11 +114,11 @@ public class mobDrop : MonoBehaviour
 			objRB = obj.GetComponent<Rigidbody2D>();
 			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
 			objRB.AddForce(force, ForceMode2D.Impulse);
-			
+
 
 		}
 
 
-		
+
 	}
 }
