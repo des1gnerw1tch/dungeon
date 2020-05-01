@@ -34,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
          animator.SetBool("isPatrolling", true);
        }
        if(curHealth <= 0 && !hasDied){
+
         Die();
 	   }
     }
@@ -44,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
 
         switch(enemyID) {
           case "Spider":
+            FindObjectOfType<AudioManager>().Play("spiderDeath");
             gunDrop.SpiderDrop(transform.position);
             break;
           case "Goblin":
