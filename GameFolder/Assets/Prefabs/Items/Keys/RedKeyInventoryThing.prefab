@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 63cfcf0ce55c3dc4c961f6bf082ea2ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46a791e8e3606e9418dc4bfef6ea7d5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -102,5 +102,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPrefab: {fileID: 1584912078675273951, guid: 1ee15097a1a31554ca2644a155321485,
     type: 3}
-  GunType: RedKey
+  GunType: BlueKey
   gunInstance: {fileID: 0}

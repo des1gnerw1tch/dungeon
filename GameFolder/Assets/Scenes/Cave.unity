@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -47669,6 +47669,8 @@ MonoBehaviour:
   teleportToSetPosition: 0
   posX: 0
   posY: 0
+  NeedsKey: 0
+  neededKey: 
 --- !u!4 &1119824592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7084186771576309052, guid: 00580ab32933a4878afe556db6a630a2,
@@ -48417,6 +48419,8 @@ MonoBehaviour:
   teleportToSetPosition: 1
   posX: 6.122
   posY: -5.74
+  NeedsKey: 1
+  neededKey: BlueKey
 --- !u!61 &1681623339
 BoxCollider2D:
   m_ObjectHideFlags: 0

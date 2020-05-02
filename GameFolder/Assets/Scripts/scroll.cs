@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scroll : MonoBehaviour
 {
-    private int activeSlot = 0;
+    [HideInInspector]public int activeSlot = 0;
     private int lastSlot;
     public RectTransform indicatorLoc;
     public RectTransform slot0;

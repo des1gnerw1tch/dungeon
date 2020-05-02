@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
     public GameObject SniperPrefab;
     public GameObject healthPrefab;
     public GameObject torchPrefab;
-    public GameObject RedKeyPrefab;
+    public GameObject BlueKeyPrefab;
     private Transform firepointPos;
     [HideInInspector]public bool showGun = false;
     [HideInInspector]public GameObject gunInstance;
@@ -198,12 +198,12 @@ public class Shooting : MonoBehaviour
             showGun = true;
         }
         break;
-      case "RedKey":
+      case "BlueKey":
         bulletsLeftsGameObject.SetActive(false);
         ReloadingText.SetActive(false);
         ReloadTimebar.SetTime(0);
         if(!showGun){
-            PlaceGunInPlayerHand(RedKeyPrefab);
+            PlaceGunInPlayerHand(BlueKeyPrefab);
             showGun = true;
         }
         break;
