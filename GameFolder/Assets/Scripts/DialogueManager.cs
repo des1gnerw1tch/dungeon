@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
+    public Animator animator;
+
     private Queue<string> sentances;
 
 
@@ -17,16 +19,18 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue){
+
+        animator.SetBool("IsOpen", true);
         
         nameText.text = dialogue.name;
         sentances.Clear();
 
         foreach(string sentance in dialogue.sentances){
             sentances.Enqueue(sentance);  
-            DisplayNextSentance();
+            
 		}
 
-        
+        DisplayNextSentance();
 	}
     public void DisplayNextSentance(){
         if(sentances.Count == 0){
@@ -34,9 +38,19 @@ public class DialogueManager : MonoBehaviour
             return;
 		}
         string sentance = sentances.Dequeue();
-        dialogueText.text = sentance;
+        //dialogueText.text = sentance;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentance));
     }
+
+    IEnumerator TypeSentence(string sentance){
+        dialogueText.text = "";
+        foreach(char letter in sentance.ToCharArray()){
+            dialogueText.text += letter;
+            yield return null;
+		}
+	}
     void EndDialogue(){
-        Debug.Log("End of convo.");
+        animator.SetBool("IsOpen", false);
 	}
 }

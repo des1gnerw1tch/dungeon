@@ -9,6 +9,7 @@ public class Shooting : MonoBehaviour
     public GameObject ARbulletPrefab;
     public GameObject rocketPrefab;
     public GameObject sniperbulletPrefab;
+    public GameObject FireballPrefab;
     public shakeCamera Camera;
     //private EquippedGun isGunEquipped;
     [HideInInspector]public string whatGunIsEquippedString;
@@ -21,6 +22,7 @@ public class Shooting : MonoBehaviour
     public GameObject healthPrefab;
     public GameObject torchPrefab;
     public GameObject BlueKeyPrefab;
+    public GameObject SpellBookPrefab;
     private Transform firepointPos;
     [HideInInspector]public bool showGun = false;
     [HideInInspector]public GameObject gunInstance;
@@ -189,6 +191,20 @@ public class Shooting : MonoBehaviour
           }
 
         break;
+      case "SpellBook":
+        bulletsLeftsGameObject.SetActive(false);
+        ReloadingText.SetActive(false);
+        ReloadTimebar.SetTime(0);
+        if(!showGun){
+            PlaceGunInPlayerHand(SpellBookPrefab);
+            showGun = true;
+        }
+        if (Input.GetButtonDown("Fire1"))
+          {
+              fireBallShoot();
+          }
+
+        break;
       case "Torch":
         bulletsLeftsGameObject.SetActive(false);
         ReloadingText.SetActive(false);
@@ -252,6 +268,12 @@ public class Shooting : MonoBehaviour
         Camera.shake(2f, 1f, .1f);
 
     }
+    void fireBallShoot(){
+        GameObject fireBall = Instantiate(FireballPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = fireBall.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * (bulletForce * 1f), ForceMode2D.Impulse);
+        Destroy(fireBall,2f);
+	}
     void RPGshoot(){
         GameObject Rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = Rocket.GetComponent<Rigidbody2D>();
