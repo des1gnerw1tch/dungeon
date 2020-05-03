@@ -40,15 +40,6 @@ public class PlayerHealth : MonoBehaviour
         body.SetTintColor(new Color (1, 0, 0, 1f));
 
     }
-    void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
-
-
-        if(enemy != null){
-            TakeDamage(10);
-		        }
-    }
 
     public void SetKnockback(int knockback, Transform other) {
 
