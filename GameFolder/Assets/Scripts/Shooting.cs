@@ -271,7 +271,7 @@ public class Shooting : MonoBehaviour
     void fireBallShoot(){
         GameObject fireBall = Instantiate(FireballPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = fireBall.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * (bulletForce * 1f), ForceMode2D.Impulse);
+        rb.AddForce(firePoint.up * (8f), ForceMode2D.Impulse);
         Destroy(fireBall,2f);
 	}
     void RPGshoot(){
