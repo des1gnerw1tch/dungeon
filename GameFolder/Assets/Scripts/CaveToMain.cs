@@ -27,16 +27,20 @@ public class CaveToMain : MonoBehaviour
               if(neededKey == playerShootingScript.whatGunIsEquippedString){
                 if (playSound)
                   FindObjectOfType<AudioManager>().Play("door");
-                SceneManager.LoadScene(sceneToLoad);
+
                 if (teleportToSetPosition)  {
                 Vector2 newPosition = new Vector2(posX, posY);
                 player.position = newPosition;
                 }
+
+                FindObjectOfType<DialogueManager>().EndDialogue();
+                SceneManager.LoadScene(sceneToLoad);
 		      }else{
 
 			  }
 
 		  }else{
+            FindObjectOfType<DialogueManager>().EndDialogue();
             SceneManager.LoadScene(sceneToLoad);
             if (playSound)
               FindObjectOfType<AudioManager>().Play("door");
