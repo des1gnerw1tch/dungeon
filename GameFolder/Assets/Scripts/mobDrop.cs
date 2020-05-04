@@ -84,7 +84,6 @@ public class mobDrop : MonoBehaviour
 		if(ID == "AR" && PlayerMoneyScript.coins >= cost){
 			obj = Instantiate(ARdropPrefab, pos, Quaternion.identity);
 			PlayerMoneyScript.coins -= cost;
-			FindObjectOfType<AudioManager>().Play("coin");
 			objRB = obj.GetComponent<Rigidbody2D>();
 			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
 			objRB.AddForce(force, ForceMode2D.Impulse);
@@ -120,7 +119,7 @@ public class mobDrop : MonoBehaviour
 			objRB.AddForce(force, ForceMode2D.Impulse);
 
 
-		} 
+		}
 
 	}
 

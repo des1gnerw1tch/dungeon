@@ -28,11 +28,12 @@ public class Shop : MonoBehaviour
                 loot.ShopDrop(ShopID, cost, transform.position);
                 if (boughtDialogue != null) {
                   boughtDialogue.TriggerDialogue();
+                  FindObjectOfType<AudioManager>().Play("coin");
                 }
               } else	{
             			FindObjectOfType<AudioManager>().Play("negative");
                   if (noMoneyDialogue != null)  {
-                  noMoneyDialogue.TriggerDialogue();
+                    noMoneyDialogue.TriggerDialogue();
                   }
             	}
 
