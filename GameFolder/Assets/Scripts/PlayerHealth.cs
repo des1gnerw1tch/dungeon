@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
     private Tint body;
     private Rigidbody2D rb;
+    public shakeCamera Camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,8 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         body.SetTintColor(new Color (1, 0, 0, 1f));
+        Camera.shake(5f, 2f, .3f);
+        FindObjectOfType<AudioManager>().Play("playerHurt");
 
     }
 

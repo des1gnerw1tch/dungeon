@@ -53,6 +53,7 @@ public class EnemyHealth : MonoBehaviour
             gunDrop.GoblinDrop(transform.position);
             break;
           case "Slime":
+            FindObjectOfType<AudioManager>().Play("slimeDeath");
             gunDrop.SlimeDrop(transform.position);
             break;
         }

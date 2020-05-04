@@ -24,11 +24,15 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("HSpeed", Mathf.Abs(movement.x));
 
         movement = movement.normalized;
+        /*if (Input.GetAxisRaw("Horizontal") != 0
+        || Input.GetAxisRaw("Vertical") != 0)  {
+          FindObjectOfType<AudioManager>().Play("footsteps");
+        }*/
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     void FixedUpdate()
     {
-        
+
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
