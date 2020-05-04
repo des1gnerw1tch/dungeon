@@ -13,6 +13,7 @@ public class CaveToMain : MonoBehaviour
     public float posY;
     public bool NeedsKey;
     public string neededKey;
+    public bool playSound;
     // Start is called before the first frame update
 
     void Start()  {
@@ -24,7 +25,8 @@ public class CaveToMain : MonoBehaviour
         if(hitInfo.gameObject.tag == "Player"){
           if(NeedsKey){
               if(neededKey == playerShootingScript.whatGunIsEquippedString){
-                FindObjectOfType<AudioManager>().Play("door");
+                if (playSound)
+                  FindObjectOfType<AudioManager>().Play("door");
                 SceneManager.LoadScene(sceneToLoad);
                 if (teleportToSetPosition)  {
                 Vector2 newPosition = new Vector2(posX, posY);
@@ -36,6 +38,8 @@ public class CaveToMain : MonoBehaviour
 
 		  }else{
             SceneManager.LoadScene(sceneToLoad);
+            if (playSound)
+              FindObjectOfType<AudioManager>().Play("door");
             if (teleportToSetPosition){
             Vector2 newPosition = new Vector2(posX, posY);
                 player.position = newPosition;
