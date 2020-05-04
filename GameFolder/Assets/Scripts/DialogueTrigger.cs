@@ -10,4 +10,19 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue(){
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
 	}
+    public void EndTalk(){
+        FindObjectOfType<DialogueManager>().EndDialogue();
+	}
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Player")){
+            TriggerDialogue();
+		}
+        
+	}
+    void OnTriggerExit2D(Collider2D other){
+        if(other.CompareTag("Player")){
+            EndTalk();
+		}
+
+	}
 }
