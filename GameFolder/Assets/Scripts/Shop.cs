@@ -9,6 +9,8 @@ public class Shop : MonoBehaviour
     private Transform target;
     private PlayerMoney PlayerMoneyScript;
     public mobDrop loot;
+    public DialogueTrigger noMoneyDialogue;
+    public DialogueTrigger boughtDialogue;
     //HealthDrops ID is "HealthPotion". the others are the same as the Gun ID in the inventory so Sniper,RPG, AR.
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,20 @@ public class Shop : MonoBehaviour
     {
         if(Vector2.Distance(transform.position, target.position) < 3){
             if(Input.GetKeyDown("e")){
+              if (PlayerMoneyScript.coins >= cost) {
                 loot.ShopDrop(ShopID, cost, transform.position);
-		    }
+                if (boughtDialogue != null) {
+                  boughtDialogue.TriggerDialogue();
+                }
+              } else	{
+            			FindObjectOfType<AudioManager>().Play("negative");
+                  if (noMoneyDialogue != null)  {
+                  noMoneyDialogue.TriggerDialogue();
+                  }
+            	}
+
+		        }
 		}
-        
+
     }
 }

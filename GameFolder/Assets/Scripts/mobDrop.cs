@@ -14,6 +14,7 @@ public class mobDrop : MonoBehaviour
 	private Vector2 force;
 	private PlayerMoney PlayerMoneyScript;
 
+	/*--------------Mob Drops-------------*/
 	public void SpiderDrop(Vector3 pos){
 		float num = Random.Range(0,100);
         if(num <= 10){
@@ -43,6 +44,7 @@ public class mobDrop : MonoBehaviour
 		}
 	}
 
+	/*----------Chest Drops---------------*/
 	public void ChestDrop(Vector3 pos){
 		GameObject obj;
 		Rigidbody2D objRB;
@@ -72,6 +74,8 @@ public class mobDrop : MonoBehaviour
 		force.Set(Random.Range(-10, 10), Random.Range(-10, 10));
 		objRB.AddForce(force, ForceMode2D.Impulse);
 	}
+
+	/*--------------Shop Drops------------*/
 	public void ShopDrop(string ID, int cost,Vector3 pos){
 		GameObject obj;
 		Rigidbody2D objRB;
@@ -80,14 +84,14 @@ public class mobDrop : MonoBehaviour
 		if(ID == "AR" && PlayerMoneyScript.coins >= cost){
 			obj = Instantiate(ARdropPrefab, pos, Quaternion.identity);
 			PlayerMoneyScript.coins -= cost;
-
+			FindObjectOfType<AudioManager>().Play("coin");
 			objRB = obj.GetComponent<Rigidbody2D>();
 			force.Set(Random.Range(-10, 10), Random.Range(2, 4));
 			objRB.AddForce(force, ForceMode2D.Impulse);
 
 
 		}
-		if(ID == "RPG" && PlayerMoneyScript.coins >= cost){
+		else if(ID == "RPG" && PlayerMoneyScript.coins >= cost){
 			obj = Instantiate(RPGdropPrefab, pos, Quaternion.identity);
 			PlayerMoneyScript.coins -= cost;
 
@@ -97,7 +101,7 @@ public class mobDrop : MonoBehaviour
 
 
 		}
-		if(ID == "Sniper" && PlayerMoneyScript.coins >= cost){
+		else if(ID == "Sniper" && PlayerMoneyScript.coins >= cost){
 			obj = Instantiate(SnipeDropPrefab, pos, Quaternion.identity);
 			PlayerMoneyScript.coins -= cost;
 
@@ -107,7 +111,7 @@ public class mobDrop : MonoBehaviour
 
 
 		}
-		if(ID == "HealthPotion" && PlayerMoneyScript.coins >= cost){
+		else if(ID == "HealthPotion" && PlayerMoneyScript.coins >= cost){
 			obj = Instantiate(HealthPrefab, pos, Quaternion.identity);
 			PlayerMoneyScript.coins -= cost;
 
@@ -116,9 +120,8 @@ public class mobDrop : MonoBehaviour
 			objRB.AddForce(force, ForceMode2D.Impulse);
 
 
-		}
-
-
+		} 
 
 	}
+
 }
