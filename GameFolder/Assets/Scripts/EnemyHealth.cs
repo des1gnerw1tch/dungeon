@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
 
     Vector2 pos;
     private bool hasDied = false;
+    public float dissolveSpeed = 2f;
 
     //scripts
     public mobDrop gunDrop;
@@ -40,8 +41,12 @@ public class EnemyHealth : MonoBehaviour
     }
     void Die()
     {
+
+        GetComponent<Collider2D>().enabled = false;
         hasDied = true;
-        dissolve.play(2f);
+        dissolve.play(dissolveSpeed);
+        animator.SetBool("isDead", true);
+
 
         switch(enemyID) {
           case "Spider":

@@ -6,7 +6,7 @@ public class Dissolve : MonoBehaviour
     public Material dissolveMat;
     private bool isDissolving;
     private float fade = 1;
-    public float dissolveSpeed = 1;
+    private float dissolveSpeed = 1;
 
     // Start is called before the first frame update
     void Start()

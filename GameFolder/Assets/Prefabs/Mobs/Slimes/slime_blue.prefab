@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3201938507299034738}
   - component: {fileID: 8395191371706052385}
-  - component: {fileID: 6695813139638133933}
   - component: {fileID: -5263030413089737966}
   - component: {fileID: 1799803367512190153}
   - component: {fileID: 7457081918282346333}
@@ -91,32 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6695813139638133933
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811510162841372}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0022468567, y: -0.12359238}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8786545, y: 0.626976}
-  m_EdgeRadius: 0
 --- !u!50 &-5263030413089737966
 Rigidbody2D:
   serializedVersion: 4
@@ -182,7 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissolveMat: {fileID: 2100000, guid: 280d14694767a4a8ab3178efc099cd57, type: 2}
-  dissolveSpeed: 1
 --- !u!114 &185791327706787919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   enemyID: Slime
+  dissolveSpeed: 1
   gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   dissolve: {fileID: -2705612947987810502}
   tint: {fileID: 7457081918282346333}
@@ -225,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711143b3d762341b7acb334a5ef7ace7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 2
   knockback: 10
 --- !u!58 &3431413052702944343
 CircleCollider2D:

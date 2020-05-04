@@ -26,12 +26,7 @@ public class BulletHit : MonoBehaviour
           case null:
             return;
         }
-        /*if (hitSound == null)  {
-          return;
-
-        } else if (hitSound == "RPG") {
-          FindObjectOfType<AudioManager>().Play("rocketLand");
-        }*/
+        
 
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
         if(enemy != null) {
