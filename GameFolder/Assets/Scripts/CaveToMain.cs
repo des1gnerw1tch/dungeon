@@ -14,6 +14,8 @@ public class CaveToMain : MonoBehaviour
     public bool NeedsKey;
     public string neededKey;
     public bool playSound;
+    public Animator transition;
+    public float transitionTime = 1f;
     // Start is called before the first frame update
 
     void Start()  {
@@ -34,14 +36,14 @@ public class CaveToMain : MonoBehaviour
                 }
 
                 FindObjectOfType<DialogueManager>().EndDialogue();
-                SceneManager.LoadScene(sceneToLoad);
+                StartCoroutine(LoadLevel(sceneToLoad));
 		      }else{
 
 			  }
 
 		  }else{
             FindObjectOfType<DialogueManager>().EndDialogue();
-            SceneManager.LoadScene(sceneToLoad);
+            StartCoroutine(LoadLevel(sceneToLoad));
             if (playSound)
               FindObjectOfType<AudioManager>().Play("door");
             if (teleportToSetPosition){
@@ -53,4 +55,11 @@ public class CaveToMain : MonoBehaviour
         }
 
     }
+    IEnumerator LoadLevel(string levelIndex){
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
+	}
 }
