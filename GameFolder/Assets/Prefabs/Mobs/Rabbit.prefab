@@ -182,7 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  enemyID: rabbit
+  enemyID: Rabbit
+  dissolveSpeed: 2
   gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   dissolve: {fileID: -332151393980073735}
   tint: {fileID: 691583487979760042}
@@ -212,7 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissolveMat: {fileID: 2100000, guid: 280d14694767a4a8ab3178efc099cd57, type: 2}
-  dissolveSpeed: 1
 --- !u!114 &691583487979760042
 MonoBehaviour:
   m_ObjectHideFlags: 0

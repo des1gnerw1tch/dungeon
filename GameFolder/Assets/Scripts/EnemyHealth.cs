@@ -47,22 +47,8 @@ public class EnemyHealth : MonoBehaviour
         dissolve.play(dissolveSpeed);
         animator.SetBool("isDead", true);
         FindObjectOfType<DropManager>().Drop(enemyID, transform.position);
+        FindObjectOfType<AudioManager>().Play(enemyID);
 
-        switch(enemyID) {
-          case "Spider":
-            FindObjectOfType<AudioManager>().Play("spiderDeath");
-            gunDrop.SpiderDrop(transform.position);
-            break;
-          case "Goblin":
-            FindObjectOfType<AudioManager>().Play("goblinDeath");
-            gunDrop.GoblinDrop(transform.position);
-            break;
-          case "Slime":
-            FindObjectOfType<AudioManager>().Play("slimeDeath");
-            //gunDrop.SlimeDrop(transform.position);
-            //FindObjectOfType<DropManager>().Drop("slime", transform.position);
-            break;
-        }
       }
 
 
