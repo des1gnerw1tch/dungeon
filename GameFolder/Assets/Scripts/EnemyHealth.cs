@@ -46,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
         hasDied = true;
         dissolve.play(dissolveSpeed);
         animator.SetBool("isDead", true);
-
+        FindObjectOfType<DropManager>().Drop(enemyID, transform.position);
 
         switch(enemyID) {
           case "Spider":
@@ -59,7 +59,8 @@ public class EnemyHealth : MonoBehaviour
             break;
           case "Slime":
             FindObjectOfType<AudioManager>().Play("slimeDeath");
-            gunDrop.SlimeDrop(transform.position);
+            //gunDrop.SlimeDrop(transform.position);
+            //FindObjectOfType<DropManager>().Drop("slime", transform.position);
             break;
         }
       }

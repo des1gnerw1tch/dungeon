@@ -46,15 +46,19 @@ public class mobDrop : MonoBehaviour
 
 	/*----------Chest Drops---------------*/
 	public void ChestDrop(Vector3 pos){
-		GameObject obj;
+		GameObject obj = null;
 		Rigidbody2D objRB;
 
-		//initial coin
-		obj = Instantiate(CoinPrefab, pos, Quaternion.identity);
-		objRB = obj.GetComponent<Rigidbody2D>();
-		force.Set(Random.Range(-3, 3), Random.Range(-3, 3));
-		objRB.AddForce(force, ForceMode2D.Impulse);
+		//initial coins
+		float numCoins = Random.Range(2,6);
+		for (int i = 0; i < numCoins; i++ )	{
+			obj = Instantiate(CoinPrefab, pos, Quaternion.identity);
+			objRB = obj.GetComponent<Rigidbody2D>();
+			force.Set(Random.Range(-3, 3), Random.Range(-3, 3));
+			objRB.AddForce(force, ForceMode2D.Impulse);
+		}
 
+		//other drops
 		float num = Random.Range(0,100);
         if(num <= 10){
             obj = Instantiate(ARdropPrefab, pos, Quaternion.identity);
@@ -68,11 +72,12 @@ public class mobDrop : MonoBehaviour
 		}else if(num <= 55 && num > 50){
 			obj = Instantiate(RPGdropPrefab, pos, Quaternion.identity);
 		}
-		//getting second drop !!!
 
+		//getting second drop !!!
 		objRB = obj.GetComponent<Rigidbody2D>();
 		force.Set(Random.Range(-10, 10), Random.Range(-10, 10));
 		objRB.AddForce(force, ForceMode2D.Impulse);
+
 	}
 
 	/*--------------Shop Drops------------*/
