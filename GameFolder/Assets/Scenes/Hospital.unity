@@ -3673,6 +3673,7 @@ MonoBehaviour:
   posY: 23.5
   NeedsKey: 0
   neededKey: 
+  playSound: 1
 --- !u!4 &1703230735
 Transform:
   m_ObjectHideFlags: 0

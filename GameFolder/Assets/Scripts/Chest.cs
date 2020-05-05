@@ -38,6 +38,7 @@ public class Chest : MonoBehaviour
 
     void dropLoot() {
       loot.ChestDrop(transform.position);
+      FindObjectOfType<AudioManager>().Play("chest");
     }
 
 }

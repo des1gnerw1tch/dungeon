@@ -394,6 +394,7 @@ MonoBehaviour:
   posY: 9.85
   NeedsKey: 0
   neededKey: 
+  playSound: 1
 --- !u!4 &253921841
 Transform:
   m_ObjectHideFlags: 0

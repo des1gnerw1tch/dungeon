@@ -21,13 +21,13 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue){
 
         animator.SetBool("IsOpen", true);
-        
+
         nameText.text = dialogue.name;
         sentances.Clear();
 
         foreach(string sentance in dialogue.sentances){
-            sentances.Enqueue(sentance);  
-            
+            sentances.Enqueue(sentance);
+
 		}
 
         DisplayNextSentance();
@@ -38,6 +38,7 @@ public class DialogueManager : MonoBehaviour
             return;
 		}
         string sentance = sentances.Dequeue();
+        FindObjectOfType<AudioManager>().Play("next");
         //dialogueText.text = sentance;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentance));
@@ -53,4 +54,12 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue(){
         animator.SetBool("IsOpen", false);
 	}
+
+  void Update() {
+    if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Space key was pressed.");
+            DisplayNextSentance();
+        }
+  }
 }
