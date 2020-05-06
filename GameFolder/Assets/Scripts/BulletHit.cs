@@ -26,16 +26,17 @@ public class BulletHit : MonoBehaviour
           case null:
             return;
         }
-        
+
 
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
         if(enemy != null) {
             enemy.TakeDamage(damage);
 		}
-
+    if (hitEffect != null)  {
         GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
         Destroy(effect, .2f);
         Destroy(gameObject);
+      }
     }
 
     public int GetKnockback() {

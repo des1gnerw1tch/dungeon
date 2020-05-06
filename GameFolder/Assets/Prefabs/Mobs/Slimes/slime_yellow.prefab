@@ -151,7 +151,6 @@ MonoBehaviour:
   maxHealth: 60
   enemyID: Slime
   dissolveSpeed: 2
-  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   dissolve: {fileID: -2705612947987810502}
   tint: {fileID: 7457081918282346333}
   animator: {fileID: 3448756612755345158}
@@ -179,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711143b3d762341b7acb334a5ef7ace7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 2
   knockback: 10
 --- !u!58 &3431413052702944343
 CircleCollider2D:
