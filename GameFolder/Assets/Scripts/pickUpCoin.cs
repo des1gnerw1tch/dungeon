@@ -18,7 +18,7 @@ public class pickUpCoin : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other){
         if  (other.CompareTag("Player")){
-            PlayerMoneyScript.coins += 10;
+            PlayerMoneyScript.coins += 1;
             FindObjectOfType<AudioManager>().Play("coin");
             Destroy(gameObject);
         }

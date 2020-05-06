@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopID: AR
-  cost: 100
+  cost: 20
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &118298631
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopID: Sniper
-  cost: 150
+  cost: 20
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &1180270374
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopID: RPG
-  cost: 200
+  cost: 30
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &1418780650

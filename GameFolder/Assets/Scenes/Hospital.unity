@@ -3299,8 +3299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopID: HealthPotion
-  cost: 50
-  loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
+  cost: 5
   noMoneyDialogue: {fileID: 1344608732}
   boughtDialogue: {fileID: 1409145548}
 --- !u!4 &527586108
