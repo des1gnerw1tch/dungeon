@@ -25,6 +25,7 @@ public class Shop : MonoBehaviour
             if(Input.GetKeyDown("e")){
               if (PlayerMoneyScript.coins >= cost) {
                 FindObjectOfType<DropManager>().Drop(ShopID, transform.position);
+                PlayerMoneyScript.coins -= cost;
                 if (boughtDialogue != null) {
                   boughtDialogue.TriggerDialogue();
                   FindObjectOfType<AudioManager>().Play("coin");
