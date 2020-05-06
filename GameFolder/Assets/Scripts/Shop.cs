@@ -8,7 +8,6 @@ public class Shop : MonoBehaviour
     public int cost;
     private Transform target;
     private PlayerMoney PlayerMoneyScript;
-    public mobDrop loot;
     public DialogueTrigger noMoneyDialogue;
     public DialogueTrigger boughtDialogue;
     //HealthDrops ID is "HealthPotion". the others are the same as the Gun ID in the inventory so Sniper,RPG, AR.
@@ -25,7 +24,7 @@ public class Shop : MonoBehaviour
         if(Vector2.Distance(transform.position, target.position) < 3){
             if(Input.GetKeyDown("e")){
               if (PlayerMoneyScript.coins >= cost) {
-                loot.ShopDrop(ShopID, cost, transform.position);
+                FindObjectOfType<DropManager>().Drop(ShopID, transform.position);
                 if (boughtDialogue != null) {
                   boughtDialogue.TriggerDialogue();
                   FindObjectOfType<AudioManager>().Play("coin");

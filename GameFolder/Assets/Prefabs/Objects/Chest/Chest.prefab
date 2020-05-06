@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
+  chestID: BasicChest
   isActive: 1
 --- !u!61 &2665790034282843314
 BoxCollider2D:

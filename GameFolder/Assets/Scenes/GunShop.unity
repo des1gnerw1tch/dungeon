@@ -210,7 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopID: AR
   cost: 100
-  loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &118298631
@@ -850,7 +849,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopID: Sniper
   cost: 150
-  loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &1180270374
@@ -1012,7 +1010,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopID: RPG
   cost: 200
-  loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &1418780650

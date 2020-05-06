@@ -14,7 +14,6 @@ public class EnemyHealth : MonoBehaviour
     public float dissolveSpeed = 2f;
 
     //scripts
-    public mobDrop gunDrop;
     public Dissolve dissolve;
     public Tint tint;
     public Animator animator;

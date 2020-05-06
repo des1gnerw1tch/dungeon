@@ -7,7 +7,7 @@ public class Chest : MonoBehaviour
 {
     private Transform target;
     private IsNeerInteractable IsNeerInteractableScript;
-    public mobDrop loot;
+    public string chestID;
     private Animator animator;
     public bool isActive = true;
     // Start is called before the first frame update!!!!
@@ -16,7 +16,6 @@ public class Chest : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         IsNeerInteractableScript = GameObject.FindGameObjectWithTag("Player").GetComponent<IsNeerInteractable>();
         animator = GetComponent<Animator>();
-        loot = GameObject.FindGameObjectWithTag("lootData").GetComponent<mobDrop>();
     }
 
     // Update is called once per frame
@@ -37,7 +36,7 @@ public class Chest : MonoBehaviour
     }
 
     void dropLoot() {
-      loot.ChestDrop(transform.position);
+      FindObjectOfType<DropManager>().Drop(chestID, transform.position);
       FindObjectOfType<AudioManager>().Play("chest");
     }
 
