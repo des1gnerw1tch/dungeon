@@ -20,6 +20,7 @@ public class ItemManager : MonoBehaviour
     [HideInInspector]public GameObject itemInstance;
 
     public Gun[] guns;
+    public Item[] items;
     Gun activeGun;
 
     private bool isWaiting = false;
