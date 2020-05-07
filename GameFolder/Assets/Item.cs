@@ -4,8 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Item {
-    public bool isUsable;
-    public bool destroyOnUse;
+    public string name; 
     public GameObject item;
     public bool isHealthPotion;
 }

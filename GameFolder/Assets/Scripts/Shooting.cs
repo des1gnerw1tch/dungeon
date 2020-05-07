@@ -187,7 +187,7 @@ public class Shooting : MonoBehaviour
                 playerHealthScript.currentHealth += 20;
                 Destroy(gunInstance);
                 hasHealed = true;
-		       }
+		      }
           }
 
         break;

@@ -10,7 +10,7 @@ public class ItemManager : MonoBehaviour
     public Inventory inventory;
     public scroll scrollScript;
     public shakeCamera Camera;
-
+    public PlayerHealth playerHealthScript;
     //canvas stuff
     public GameObject ReloadingText;
     public GameObject bulletsLeftsGameObject;
@@ -19,9 +19,11 @@ public class ItemManager : MonoBehaviour
     private string itemString;
     [HideInInspector]public GameObject itemInstance;
 
+
     public Gun[] guns;
     public Item[] items;
     Gun activeGun;
+    Item activeItem;
 
     private bool isWaiting = false;
 
@@ -30,6 +32,7 @@ public class ItemManager : MonoBehaviour
     {
       ReloadingText.SetActive(false);
       bulletsLeft.text = null;
+
     }
 
     // Update is called once per frame
@@ -43,9 +46,17 @@ public class ItemManager : MonoBehaviour
 
             itemString = inventory.item[scrollScript.activeSlot];
             activeGun = Array.Find(guns, gun => gun.name == itemString);
-            PlaceGunInPlayerHand(activeGun.objInHand);
+            if(activeGun != null){
+                PlaceGunInPlayerHand(activeGun.objInHand);
+			}
+            
+            activeItem = Array.Find(items, item => item.name == itemString);
+            if(activeItem != null){
+                ItemInPlayerHand(activeItem.item);
+			}
+            
 
-        } else {
+        }else {
           //if no gun is equipped
           itemString = null;
           ReloadingText.SetActive(false);
@@ -55,7 +66,7 @@ public class ItemManager : MonoBehaviour
       }
       //handles shoot calling
 
-      if (itemString != null) {
+      if (itemString != null && activeGun != null) {
         //full auto
         if (activeGun.fullAuto) {
 
@@ -71,9 +82,18 @@ public class ItemManager : MonoBehaviour
 
         }
     }
+    if (itemString != null && activeItem != null) {
+        //is a health potion
+        if (activeItem.isHealthPotion) {
+
+          if (Input.GetButton("Fire1")) {
+            UseHealthPotion();
+          }
+        } 
+    }
 
     //handles reload button
-    if (itemString != null) {
+    if (itemString != null && activeGun != null) {
       if ((Input.GetKeyDown("r") && !isWaiting && activeGun.currentAmmo != activeGun.maxAmmo) || (Input.GetButtonDown("Fire1") && activeGun.currentAmmo <= 0 && !isWaiting )) {
         StartCoroutine(Reload());
       }
@@ -89,6 +109,15 @@ public class ItemManager : MonoBehaviour
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         itemInstance = Instantiate(GunPrefab,firepointPos.transform,false);
         bulletsLeft.text = "" + activeGun.currentAmmo;
+        isWaiting = false;
+	}
+    void ItemInPlayerHand(GameObject ItemPrefab){
+        Destroy(itemInstance);
+        ReloadingText.SetActive(false);
+        Transform  firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
+        Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
+        itemInstance = Instantiate(ItemPrefab,firepointPos.transform,false);
+        bulletsLeft.text = null;
         isWaiting = false;
 	}
 
@@ -129,6 +158,14 @@ public class ItemManager : MonoBehaviour
       bulletsLeft.text = "" + activeGun.currentAmmo;
     }
 
+  }
+  void UseHealthPotion(){
+      if(playerHealthScript.currentHealth < playerHealthScript.maxHealth){
+        playerHealthScript.currentHealth += 20;
+        Destroy(itemInstance);
+        scrollScript.activeCanvasSlot.DestroyItem();
+        inventory.item[scrollScript.activeSlot] = null;
+      }
   }
 
 }

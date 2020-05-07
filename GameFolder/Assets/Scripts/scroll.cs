@@ -92,12 +92,12 @@ public class scroll : MonoBehaviour
             activeCanvasSlot.DropItem();
             //destroyGun.DropGun();
           }
-          if(shootingScript.hasHealed && inventory.item[activeSlot] != null){
+          /*if(shootingScript.hasHealed && inventory.item[activeSlot] != null){
               inventory.item[activeSlot] = null;
               shootingScript.showGun = false;
               activeCanvasSlot.DestroyItem();
               shootingScript.hasHealed = false;
-		  }
+		  }*/
 
 
     }

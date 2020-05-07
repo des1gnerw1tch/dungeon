@@ -100,7 +100,7 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: 2910785641566691694, guid: 2154d25ec8ba75a48b2c0c21859a7458,
     type: 3}
-  ID: RedKey
+  ID: 
 --- !u!61 &8252249495362486186
 BoxCollider2D:
   m_ObjectHideFlags: 0
