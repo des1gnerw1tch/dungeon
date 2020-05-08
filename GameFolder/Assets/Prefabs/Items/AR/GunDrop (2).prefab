@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8772869837468716729}
   - component: {fileID: 9099985516162702484}
   - component: {fileID: 8816895071248745646}
-  - component: {fileID: -6829855724580259092}
   - component: {fileID: -7384479361563826826}
   - component: {fileID: -1601248207856386998}
   m_Layer: 12
@@ -101,8 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1777170430896820844, guid: d4d4cda4b8fc197479fc0fc02956b347,
     type: 3}
-  equippedGun: {fileID: 1546274493841503555, guid: d4d4cda4b8fc197479fc0fc02956b347,
-    type: 3}
   inventoryID: AR
 --- !u!61 &8816895071248745646
 BoxCollider2D:
@@ -130,18 +127,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0083282, y: 0.52581275}
   m_EdgeRadius: 0
---- !u!114 &-6829855724580259092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3065080744441535801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91fcbc88863c5d648982fc0717d61a8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &-7384479361563826826
 Rigidbody2D:
   serializedVersion: 4

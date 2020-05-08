@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6888061370476436922}
   - component: {fileID: 2150380531869550194}
   - component: {fileID: 2738937751571863498}
-  - component: {fileID: 6311861153967998136}
   m_Layer: 5
   m_Name: RPGInventoryThing
   m_TagString: Untagged
@@ -62,6 +61,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -89,19 +89,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 6246492608094845224, guid: 5bb89a4486516cc4b904ea8f7ab025c1, type: 3}
---- !u!114 &6311861153967998136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6427746124770674087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00109eaae99d07544a76193a113b2853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GunPrefab: {fileID: 5230449497779319931, guid: 1af24089edfe6ff4dabbe60af1d74c1c,
-    type: 3}
-  GunType: RPG
-  gunInstance: {fileID: 0}

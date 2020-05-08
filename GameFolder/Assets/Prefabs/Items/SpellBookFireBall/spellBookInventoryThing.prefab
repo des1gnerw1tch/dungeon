@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4602969924388320948}
   - component: {fileID: 3684941565713798230}
   - component: {fileID: -719204196304042667}
-  - component: {fileID: -8160250016203126909}
   m_Layer: 5
   m_Name: spellBookInventoryThing
   m_TagString: Untagged
@@ -89,19 +88,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 2839659968609529476, guid: d492162dc30317d4b8092606780719e9, type: 3}
---- !u!114 &-8160250016203126909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011984905168220515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00109eaae99d07544a76193a113b2853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GunPrefab: {fileID: 4550580942858836870, guid: 8167bbfd8f44be948aa828f4c1115d21,
-    type: 3}
-  GunType: SpellBook
-  gunInstance: {fileID: 0}

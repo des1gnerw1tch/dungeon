@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2666248752390942262}
   - component: {fileID: 5211706120437408739}
   - component: {fileID: 2925204170001519626}
-  - component: {fileID: 7921879566156756120}
   m_Layer: 5
   m_Name: TorchInventoryThing
   m_TagString: Untagged
@@ -62,6 +61,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -88,19 +88,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 6664457313544151400, guid: 4a45c51957ebeaf4daddb4bfb8e253ef, type: 3}
---- !u!114 &7921879566156756120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8189077957429019201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00109eaae99d07544a76193a113b2853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GunPrefab: {fileID: 9088534354078598734, guid: a6d508b355b0ccd48b303ad8560b142f,
-    type: 3}
-  GunType: Torch
-  gunInstance: {fileID: 0}
