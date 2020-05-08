@@ -172,7 +172,7 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: 7921879566156756120, guid: ff166ac2d0a33d745a0bb490bb295037,
     type: 3}
-  ID: Torch
+  inventoryID: Torch
 --- !u!61 &-8469053041904352315
 BoxCollider2D:
   m_ObjectHideFlags: 0

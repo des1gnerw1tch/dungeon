@@ -128,7 +128,7 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: 5680257749058556840, guid: 360274db309696c4dbf1c139caca6887,
     type: 3}
-  ID: Sniper
+  inventoryID: Sniper
 --- !u!50 &8868467021749794044
 Rigidbody2D:
   serializedVersion: 4

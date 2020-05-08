@@ -4,26 +4,15 @@ using UnityEngine;
 
 public class DestroyGun : MonoBehaviour
 {
-    private Shooting shootingScript;
-    // Start is called before the first frame update
-    void Start()
-    {
-        shootingScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
-    }
-    public void DropGun()
+      public void DropGun()
     {
 
           foreach(Transform child in transform){
             if (child.gameObject != null) {
               GameObject.Destroy(child.gameObject);
-              shootingScript.whatGunIsEquippedString = "";
+
           }
         }
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

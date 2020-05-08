@@ -12,7 +12,6 @@ public class scroll : MonoBehaviour
     public RectTransform slot2;
     public RectTransform slot3;
     public RectTransform slot4;
-    private Shooting shootingScript;
     public Inventory inventory;
     private DestroyGun destroyGun;
     public Slot activeCanvasSlot;
@@ -24,7 +23,6 @@ public class scroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      shootingScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
       destroyGun = GameObject.FindGameObjectWithTag("FirePoint").GetComponent<DestroyGun>();
       lastSlot = activeSlot;
     }
@@ -76,28 +74,19 @@ public class scroll : MonoBehaviour
         }
 
 
-          //equips gun from bob shooting script
-          shootingScript.whatGunIsEquippedString = inventory.item[activeSlot];
+
 
           //makes sure that gun dissapears
           if (lastSlot != activeSlot) {
-            shootingScript.showGun = false;
             lastSlot = activeSlot;
           }
           //drop, janky
           if (Input.GetKeyDown("q") && inventory.item[activeSlot] != null)  {
             inventory.item[activeSlot] = null;
-            shootingScript.showGun = false;
             //only drops the top item
             activeCanvasSlot.DropItem();
-            //destroyGun.DropGun();
           }
-          /*if(shootingScript.hasHealed && inventory.item[activeSlot] != null){
-              inventory.item[activeSlot] = null;
-              shootingScript.showGun = false;
-              activeCanvasSlot.DestroyItem();
-              shootingScript.hasHealed = false;
-		  }*/
+
 
 
     }

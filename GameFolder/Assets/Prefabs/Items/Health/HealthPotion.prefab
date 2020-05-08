@@ -127,7 +127,7 @@ MonoBehaviour:
     type: 3}
   equippedGun: {fileID: -6264513508659542294, guid: dbaab9aea1e233245ad50010a68d8d7a,
     type: 3}
-  ID: 
+  inventoryID: HealthPotion
 --- !u!50 &-5235608030274334757
 Rigidbody2D:
   serializedVersion: 4
