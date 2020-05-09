@@ -148,6 +148,7 @@ public class ItemManager : MonoBehaviour
           rb.AddForce(bullet.transform.up * activeGun.bulletForce, ForceMode2D.Impulse);
           Destroy(bullet, activeGun.bulletLifetime);
         }
+        FindObjectOfType<AudioManager>().Play("Shotgun");
       }
 
       Camera.shake(activeGun.shakeIntensity, 1f, .1f);
