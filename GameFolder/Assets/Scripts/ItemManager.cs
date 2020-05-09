@@ -49,12 +49,12 @@ public class ItemManager : MonoBehaviour
             if(activeGun != null){
                 PlaceGunInPlayerHand(activeGun.objInHand);
 			}
-            
+
             activeItem = Array.Find(items, item => item.name == itemString);
             if(activeItem != null){
                 ItemInPlayerHand(activeItem.item);
 			}
-            
+
 
         }else {
           //if no gun is equipped
@@ -89,7 +89,7 @@ public class ItemManager : MonoBehaviour
           if (Input.GetButton("Fire1")) {
             UseHealthPotion();
           }
-        } 
+        }
     }
 
     //handles reload button
@@ -129,11 +129,27 @@ public class ItemManager : MonoBehaviour
       bulletsLeft.text = "" + activeGun.currentAmmo;
       isWaiting = true;
       Transform  firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
-      GameObject bullet = Instantiate(activeGun.bullet, firepointPos.position, firepointPos.rotation);
-      Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-      rb.AddForce(firepointPos.up * activeGun.bulletForce, ForceMode2D.Impulse);
-      Destroy(bullet,1f);
+      //Type of gun, and instantiates bullet/bullets
+      if (!activeGun.isShotgun) {
+        GameObject bullet = Instantiate(activeGun.bullet, firepointPos.position, firepointPos.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+        rb.AddForce(bullet.transform.up * activeGun.bulletForce, ForceMode2D.Impulse);
+        Destroy(bullet, activeGun.bulletLifetime);
+      } else {
+        for (int i = -2; i <= 2; i++)  {
+          //Vector3 offsetRot = new Vector3(0, 0, i);
+          GameObject bullet = Instantiate(activeGun.bullet, firepointPos.position, firepointPos.rotation);
+          bullet.transform.Rotate(0, 0, i * activeGun.bulletSpread, Space.Self);
+          Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+          //rb.AddForce(firepointPos.up * activeGun.bulletForce, ForceMode2D.Impulse);
+          rb.AddForce(bullet.transform.up * activeGun.bulletForce, ForceMode2D.Impulse);
+          Destroy(bullet, activeGun.bulletLifetime);
+        }
+      }
+
       Camera.shake(activeGun.shakeIntensity, 1f, .1f);
       if (activeGun.currentAmmo <= 0) {
         StartCoroutine(Reload());
