@@ -26,7 +26,7 @@ public class ItemManager : MonoBehaviour
     Item activeItem;
 
     private bool isWaiting = false;
-
+    private bool deSlomo;
     private int currentAmmo;
     void Start()
     {
@@ -64,8 +64,8 @@ public class ItemManager : MonoBehaviour
           bulletsLeft.text = null;
         }
       }
-      //handles shoot calling
 
+      //handles shoot calling
       if (itemString != null && activeGun != null) {
         //full auto
         if (activeGun.fullAuto) {
@@ -81,6 +81,19 @@ public class ItemManager : MonoBehaviour
           }
 
         }
+
+        //focus mlode (slomo) ?
+        if(Input.GetMouseButton(1)) {
+          Debug.Log("Right click pressed");
+          deSlomo = false;
+          Time.timeScale = 0.5f;
+        } else {
+          if (!deSlomo) {
+          Time.timeScale = 1f;
+          deSlomo = true;
+          }
+        }
+
     }
     if (itemString != null && activeItem != null) {
         //is a health potion
