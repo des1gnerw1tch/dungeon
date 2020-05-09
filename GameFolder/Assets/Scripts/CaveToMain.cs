@@ -8,6 +8,7 @@ public class CaveToMain : MonoBehaviour
 {
     public string sceneToLoad;
     private Transform player;
+    private GameObject playerObject;
     //private Shooting playerShootingScript;
     private Inventory inventory;
     public bool teleportToSetPosition = false;
@@ -22,8 +23,8 @@ public class CaveToMain : MonoBehaviour
 
     void Start()  {
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+      playerObject =   GameObject.FindGameObjectWithTag("Player");
       inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-      //playerShootingScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
     }
     void OnTriggerEnter2D(Collider2D hitInfo) {
 
@@ -34,11 +35,6 @@ public class CaveToMain : MonoBehaviour
               if(index > -1){
                 if (playSound)
                   FindObjectOfType<AudioManager>().Play("door");
-
-                if (teleportToSetPosition)  {
-                Vector2 newPosition = new Vector2(posX, posY);
-                player.position = newPosition;
-                }
 
                 FindObjectOfType<DialogueManager>().EndDialogue();
                 StartCoroutine(LoadLevel(sceneToLoad));
@@ -51,10 +47,6 @@ public class CaveToMain : MonoBehaviour
             StartCoroutine(LoadLevel(sceneToLoad));
             if (playSound)
               FindObjectOfType<AudioManager>().Play("door");
-            if (teleportToSetPosition){
-            Vector2 newPosition = new Vector2(posX, posY);
-                player.position = newPosition;
-		    }
 
           }
         }
@@ -62,9 +54,15 @@ public class CaveToMain : MonoBehaviour
     }
     IEnumerator LoadLevel(string levelIndex){
         transition.SetTrigger("Start");
-
+        playerObject.GetComponent<PlayerHealth>().enabled = false;
+        playerObject.GetComponent<PlayerMovement>().enabled = false;
         yield return new WaitForSeconds(transitionTime);
-
+        if (teleportToSetPosition)  {
+          Vector2 newPosition = new Vector2(posX, posY);
+          player.position = newPosition;
+        }
+        playerObject.GetComponent<PlayerHealth>().enabled = true;
+        //playerObject.GetComponent<PlayerMovement>().enabled = true;
         SceneManager.LoadScene(levelIndex);
 	}
 }
