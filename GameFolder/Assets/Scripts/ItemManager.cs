@@ -65,7 +65,7 @@ public class ItemManager : MonoBehaviour
         }
       }
 
-      //handles shoot calling
+      //handles shoot calling and slomo
       if (itemString != null && activeGun != null) {
         //full auto
         if (activeGun.fullAuto) {
@@ -84,14 +84,24 @@ public class ItemManager : MonoBehaviour
 
         //focus mlode (slomo) ?
         if(Input.GetMouseButton(1)) {
-          Debug.Log("Right click pressed");
+
           deSlomo = false;
           Time.timeScale = 0.5f;
         } else {
-          if (!deSlomo) {
-          Time.timeScale = 1f;
-          deSlomo = true;
-          }
+            if (!deSlomo) {
+              Time.timeScale = 1f;
+              deSlomo = true;
+            }
+        }
+
+        if(Input.GetMouseButtonDown(1)) {
+          FindObjectOfType<AudioManager>().Stop("focusEnd");
+          FindObjectOfType<AudioManager>().Play("focusStart");
+        }
+
+        if(Input.GetMouseButtonUp(1)) {
+          FindObjectOfType<AudioManager>().Stop("focusStart");
+          FindObjectOfType<AudioManager>().Play("focusEnd");
         }
 
     }

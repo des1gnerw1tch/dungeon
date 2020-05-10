@@ -512,7 +512,7 @@ MonoBehaviour:
   posY: 9.85
   NeedsKey: 0
   neededKey: 
-  playSound: 1
+  playSound: 0
   transition: {fileID: 128880050}
   transitionTime: 1
 --- !u!4 &253921841
@@ -1088,8 +1088,11 @@ MonoBehaviour:
     - Hello there!
     - Having trouble in those caves, eh young fella? These weapons should help you
       out.
-    - 'But be careful, ok? I have heard of monsters of all kinds down there... Always
-      watch your back. '
+    - I have heard there are treasures of all kinds down there*laughs*
+    - 'We all know those are just fairytales. The people of the town haven''t been
+      down there in ages. '
+    - If you do go down there, be careful! I heard there are some *cough* ... I can't
+      say. Just stay safe, okay?
 --- !u!61 &1542420283
 BoxCollider2D:
   m_ObjectHideFlags: 0

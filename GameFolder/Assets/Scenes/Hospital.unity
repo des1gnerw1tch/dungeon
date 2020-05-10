@@ -3790,7 +3790,7 @@ MonoBehaviour:
   posY: 23.5
   NeedsKey: 0
   neededKey: 
-  playSound: 1
+  playSound: 0
   transition: {fileID: 2028015825}
   transitionTime: 1
 --- !u!4 &1703230735
