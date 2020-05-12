@@ -159,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissolveMat: {fileID: 2100000, guid: 280d14694767a4a8ab3178efc099cd57, type: 2}
-  dissolveSpeed: 1
 --- !u!114 &819445978010323823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,12 +171,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 125
+  maxHealth: 75
   enemyID: Goblin
-  gunDrop: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
+  dissolveSpeed: 2
   dissolve: {fileID: -6677500666373917982}
   tint: {fileID: 8247682188220123959}
   animator: {fileID: 2177524917881198641}
+  isBoss: 0
 --- !u!50 &8017402406109829784
 Rigidbody2D:
   serializedVersion: 4
