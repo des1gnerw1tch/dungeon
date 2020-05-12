@@ -224,6 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minion: {fileID: 0}
+  minion: {fileID: 2177524917881198654, guid: a5d7e5ac1462b43dbbaacd7db2d2173d, type: 3}
   minsPerSpawn: 3
   spawnInterval: 10
