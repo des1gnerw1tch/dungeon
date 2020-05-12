@@ -60,6 +60,7 @@ public class EnemyHealth : MonoBehaviour
     void killMinions()  {
       EnemyHealth[] minions = Object.FindObjectsOfType<EnemyHealth>();
       Spawner[] spawners = Object.FindObjectsOfType<Spawner>();
+      GetComponent<MinionSpawn>().enabled = false;
       foreach (EnemyHealth minion in minions) {
         minion.Die();
       }
