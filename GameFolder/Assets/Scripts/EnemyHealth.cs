@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public Tint tint;
     public Animator animator;
     public bool isBoss;
+    public GameObject portalToEnable;
 
     //boss stuff
 
@@ -52,6 +53,8 @@ public class EnemyHealth : MonoBehaviour
           FindObjectOfType<AudioManager>().Play(enemyID);
           if (isBoss) {
             killMinions();
+            //lets you go through door at the end
+            portalToEnable.SetActive(true);
           }
         }
 

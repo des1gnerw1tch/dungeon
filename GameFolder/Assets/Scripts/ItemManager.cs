@@ -167,7 +167,6 @@ public class ItemManager : MonoBehaviour
           bullet.transform.Rotate(0, 0, i * activeGun.bulletSpread, Space.Self);
           Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-          //rb.AddForce(firepointPos.up * activeGun.bulletForce, ForceMode2D.Impulse);
           rb.AddForce(bullet.transform.up * activeGun.bulletForce, ForceMode2D.Impulse);
           Destroy(bullet, activeGun.bulletLifetime);
         }
@@ -186,12 +185,13 @@ public class ItemManager : MonoBehaviour
   }
 
   IEnumerator Reload() {
-
+    FindObjectOfType<AudioManager>().Play("reload");
     string initial = activeGun.name;
     ReloadingText.SetActive(true);
     isWaiting = true;
     yield return new WaitForSeconds(activeGun.reloadTime);
     if (initial == activeGun.name) {
+      FindObjectOfType<AudioManager>().Play("reloadComplete");
       activeGun.currentAmmo = activeGun.maxAmmo;
       isWaiting = false;
       ReloadingText.SetActive(false);

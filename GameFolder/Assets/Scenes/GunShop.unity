@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopID: RPG
-  cost: 30
+  cost: 50
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
 --- !u!61 &1418780650

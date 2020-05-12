@@ -26,8 +26,8 @@ public class PickUp : MonoBehaviour
 
                     Instantiate(itemButton, inventory.slots[i].transform,false);
                     Destroy(gameObject);
-                    //inventory.item[i] = equippedGun.GunType;
                     inventory.item[i] = inventoryID;
+                    FindObjectOfType<AudioManager>().Play("pickUpItem");
 
                     break;
 				}
