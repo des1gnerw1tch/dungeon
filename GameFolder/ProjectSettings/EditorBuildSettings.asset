@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlueDungeon.unity
     guid: 61a8b995a1829412cb25526056caa135
+  - enabled: 1
+    path: Assets/Scenes/GoblinBossFight.unity
+    guid: b8bf73dd06daf4099bf9d4e4378e3cd8
   m_configObjects: {}

@@ -10,7 +10,6 @@ public class chestSpawn : MonoBehaviour
     {
       float num = Random.Range(0f, 1f);
       if (num < chanceOfSpawn)  {
-        Debug.Log(transform.position);
         Instantiate(chestPrefab, transform.position, Quaternion.identity);
       }
     }

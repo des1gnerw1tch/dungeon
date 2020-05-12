@@ -201,7 +201,8 @@ public class ItemManager : MonoBehaviour
   }
   void UseHealthPotion(){
       if(playerHealthScript.currentHealth < playerHealthScript.maxHealth){
-        playerHealthScript.currentHealth += 20;
+        FindObjectOfType<AudioManager>().Play("gulp");
+        playerHealthScript.currentHealth += 30;
         Destroy(itemInstance);
         scrollScript.activeCanvasSlot.DestroyItem();
         inventory.item[scrollScript.activeSlot] = null;

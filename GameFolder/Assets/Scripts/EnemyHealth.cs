@@ -17,6 +17,9 @@ public class EnemyHealth : MonoBehaviour
     public Dissolve dissolve;
     public Tint tint;
     public Animator animator;
+    public bool isBoss;
+
+    //boss stuff
 
     void Start()
     {
@@ -38,17 +41,33 @@ public class EnemyHealth : MonoBehaviour
         Die();
 	   }
     }
-    void Die()
+    public void Die()
     {
-
-        GetComponent<Collider2D>().enabled = false;
-        hasDied = true;
-        dissolve.play(dissolveSpeed);
-        animator.SetBool("isDead", true);
-        FindObjectOfType<DropManager>().Drop(enemyID, transform.position);
-        FindObjectOfType<AudioManager>().Play(enemyID);
+        if (!hasDied) {
+          GetComponent<Collider2D>().enabled = false;
+          hasDied = true;
+          dissolve.play(dissolveSpeed);
+          animator.SetBool("isDead", true);
+          FindObjectOfType<DropManager>().Drop(enemyID, transform.position);
+          FindObjectOfType<AudioManager>().Play(enemyID);
+          if (isBoss) {
+            killMinions();
+          }
+        }
 
       }
+
+    void killMinions()  {
+      EnemyHealth[] minions = Object.FindObjectsOfType<EnemyHealth>();
+      Spawner[] spawners = Object.FindObjectsOfType<Spawner>();
+      foreach (EnemyHealth minion in minions) {
+        minion.Die();
+      }
+      foreach (Spawner spawner in spawners) {
+        spawner.enabled = false;
+      }
+
+    }
 
 
 

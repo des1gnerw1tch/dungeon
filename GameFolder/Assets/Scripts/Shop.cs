@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    /*The shop ID should match the string of the item that it wants to drop*/
     public string ShopID;
     public int cost;
     private Transform target;
