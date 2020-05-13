@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6248544645436674847}
   m_Layer: 13
   m_Name: Purp Fireball Projectile_0
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,11 +171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3e5df1bf4c5bd44a2f926fa8e19039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 8660191419251044891, guid: 97480823efe0ded4c90e9cda9500bc48,
-    type: 3}
-  damage: 20
-  knockback: 1
+  hitEffect: {fileID: 0}
+  damage: 10
+  knockback: 50
   hitSound: 
+  isPiercing: 1
 --- !u!50 &7030127122113010486
 Rigidbody2D:
   serializedVersion: 4

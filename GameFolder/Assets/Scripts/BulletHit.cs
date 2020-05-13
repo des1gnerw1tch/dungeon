@@ -8,6 +8,7 @@ public class BulletHit : MonoBehaviour
     public int damage = 20;
     public int knockback = 1;
     public string hitSound;
+    public bool isPiercing;
     //void OnCollisionEnter2D(Collision2D collision)
     //{
         //GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
@@ -31,12 +32,21 @@ public class BulletHit : MonoBehaviour
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
         if(enemy != null) {
             enemy.TakeDamage(damage);
-		}
+		     } else {
+           if (isPiercing)  {
+             Destroy(gameObject);
+           }
+         }
     if (hitEffect != null)  {
-        GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-        Destroy(effect, .2f);
+      GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+      Destroy(effect, .2f);
+    }
+      if (!isPiercing)  {
         Destroy(gameObject);
       }
+
+
+
     }
 
     public int GetKnockback() {
