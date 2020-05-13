@@ -159,6 +159,7 @@ public class ItemManager : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         rb.AddForce(bullet.transform.up * activeGun.bulletForce, ForceMode2D.Impulse);
+        FindObjectOfType<AudioManager>().Play(activeGun.name);
         Destroy(bullet, activeGun.bulletLifetime);
       } else {
         for (int i = -2; i <= 2; i++)  {
@@ -170,7 +171,7 @@ public class ItemManager : MonoBehaviour
           rb.AddForce(bullet.transform.up * activeGun.bulletForce, ForceMode2D.Impulse);
           Destroy(bullet, activeGun.bulletLifetime);
         }
-        FindObjectOfType<AudioManager>().Play("Shotgun");
+        FindObjectOfType<AudioManager>().Play(activeGun.name);
       }
 
       Camera.shake(activeGun.shakeIntensity, 1f, .1f);

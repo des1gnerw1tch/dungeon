@@ -228,3 +228,4 @@ MonoBehaviour:
   minion: {fileID: 2177524917881198654, guid: a5d7e5ac1462b43dbbaacd7db2d2173d, type: 3}
   minsPerSpawn: 3
   spawnInterval: 8
+  spawnSound: goblinChant

@@ -6,6 +6,7 @@ public class MinionSpawn : MonoBehaviour
     public GameObject minion;
     public int minsPerSpawn;
     public float spawnInterval;
+    public string spawnSound;
     private float counter;
 
     void Start()
@@ -33,6 +34,7 @@ public class MinionSpawn : MonoBehaviour
         Animator animator = instance.GetComponent<Animator>();
         animator.SetBool("isPatrolling", true);
       }
+      FindObjectOfType<AudioManager>().Play(spawnSound);
 
     }
 }

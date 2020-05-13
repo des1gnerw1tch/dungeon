@@ -54,7 +54,9 @@ public class EnemyHealth : MonoBehaviour
           if (isBoss) {
             killMinions();
             //lets you go through door at the end
-            portalToEnable.SetActive(true);
+            if (portalToEnable != null)
+              portalToEnable.SetActive(true);
+              
           }
         }
 
