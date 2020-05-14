@@ -14,6 +14,7 @@ TagManager:
   - Weapon
   - Drops
   - Portal
+  - EnemyHealthBar
   layers:
   - Default
   - TransparentFX

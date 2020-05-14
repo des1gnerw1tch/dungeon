@@ -19,12 +19,25 @@ public class EnemyHealth : MonoBehaviour
     public Animator animator;
     public bool isBoss;
     public GameObject portalToEnable;
+    private EnemyHealthBar EnemyHealthBarScript;
+    private GameObject enemyhealthBarCanvasImage;
 
     //boss stuff
 
     void Start()
     {
+        EnemyHealthBarScript = GameObject.FindGameObjectWithTag("EnemyHealthBar").GetComponent<EnemyHealthBar>();
+        enemyhealthBarCanvasImage = GameObject.FindGameObjectWithTag("EnemyHealthBar");
         curHealth = maxHealth;
+        if (isBoss)
+        {
+            if(EnemyHealthBarScript != null)
+            {
+                EnemyHealthBarScript.SetEnemyMaxHealth(maxHealth);
+            }
+            
+        }
+        
         pos.Set(0f, 0f);
     }
 
@@ -32,6 +45,16 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
        curHealth -= damage;
+       if (isBoss)
+       {
+           enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 1;
+
+           if (EnemyHealthBarScript != null)
+           {
+                EnemyHealthBarScript.SetEnemyHealth(curHealth);
+           }
+       }
+       
        tint.SetTintColor(new Color(1, 1, 1, 1f));
        /*when shot while idling, the enemy will move away (start patrolling). */
        if (animator != null)  {
@@ -53,6 +76,7 @@ public class EnemyHealth : MonoBehaviour
           FindObjectOfType<AudioManager>().Play(enemyID);
           if (isBoss) {
             killMinions();
+            enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
             //lets you go through door at the end
             if (portalToEnable != null)
               portalToEnable.SetActive(true);
