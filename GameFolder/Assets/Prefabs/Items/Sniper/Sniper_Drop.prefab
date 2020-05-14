@@ -74,8 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1529948243
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: -7040960777665541239, guid: c6be27595a91e2c43afb47c1cc36df01,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62769d65695d0f9439793d6324634cd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,8 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 153160888118910108, guid: 360274db309696c4dbf1c139caca6887,
-    type: 3}
-  equippedGun: {fileID: 5680257749058556840, guid: 360274db309696c4dbf1c139caca6887,
     type: 3}
   inventoryID: Sniper
 --- !u!50 &8868467021749794044
