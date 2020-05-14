@@ -31,10 +31,9 @@ public class EnemyHealth : MonoBehaviour
         curHealth = maxHealth;
         if (isBoss)
         {
-            if(EnemyHealthBarScript != null)
-            {
-                EnemyHealthBarScript.SetEnemyMaxHealth(maxHealth);
-            }
+            
+            EnemyHealthBarScript.SetEnemyMaxHealth(maxHealth);
+            
             
         }
         
@@ -47,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
        curHealth -= damage;
        if (isBoss)
        {
-           enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 1;
+           //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 1;
 
            if (EnemyHealthBarScript != null)
            {
@@ -61,7 +60,7 @@ public class EnemyHealth : MonoBehaviour
          animator.SetBool("isPatrolling", true);
        }
        if(curHealth <= 0 && !hasDied){
-
+        //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
         Die();
 	   }
     }
@@ -76,7 +75,7 @@ public class EnemyHealth : MonoBehaviour
           FindObjectOfType<AudioManager>().Play(enemyID);
           if (isBoss) {
             killMinions();
-            enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
+            //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
             //lets you go through door at the end
             if (portalToEnable != null)
               portalToEnable.SetActive(true);

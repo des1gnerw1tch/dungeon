@@ -8,6 +8,7 @@ public class EnemyHealthBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    public Animator animator;
 
     public void SetEnemyMaxHealth(float health)
     {
@@ -19,8 +20,13 @@ public class EnemyHealthBar : MonoBehaviour
 
     public void SetEnemyHealth(float health)
     {
-        slider.value = health;
 
+        slider.value = health;
+        animator.SetBool("IsEnemy",false);
+        if(health <= 0)
+        {
+            animator.SetBool("IsEnemy", true);
+        }
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
