@@ -20,6 +20,8 @@ public class Gun {
     public bool fullAuto;
     public float bulletSpread;
     public bool isShotgun;
+    public bool HasAnimation;
+    //public Animator animator;
 
 
 }

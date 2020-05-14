@@ -71,13 +71,38 @@ public class ItemManager : MonoBehaviour
         if (activeGun.fullAuto) {
 
           if (Input.GetButton("Fire1") && !isWaiting) {
-            StartCoroutine(Shoot());
+                StartCoroutine(Shoot());
+                    if (activeGun.HasAnimation){
+                        //activeGun.animator.SetBool("IsShooting", true);
+                        //start animation;
+                    }
+          }
+          else
+          {
+                    if (activeGun.HasAnimation)
+                    {
+                        //activeGun.animator.SetBool("IsShooting", false);
+                        //start animation;
+                    }
           }
           //semi auto
         } else {
 
           if (Input.GetButtonDown("Fire1") && !isWaiting) {
             StartCoroutine(Shoot());
+                    if (activeGun.HasAnimation)
+                    {
+                        //activeGun.animator.SetBool("IsShooting", true);
+                        //start animation;
+                    }
+          }
+          else
+          {
+                    if (activeGun.HasAnimation)
+                    {
+                        //activeGun.animator.SetBool("IsShooting", false);
+                        //start animation;
+                    }
           }
 
         }
