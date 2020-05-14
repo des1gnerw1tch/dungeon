@@ -40,7 +40,7 @@ public class CaveToMain : MonoBehaviour
                 StartCoroutine(LoadLevel(sceneToLoad));
 		           }else{
                  /*executed when key is not found!*/
-			         }
+			       }
 
 		  }else{
             FindObjectOfType<DialogueManager>().EndDialogue();

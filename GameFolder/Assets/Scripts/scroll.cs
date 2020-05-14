@@ -86,6 +86,31 @@ public class scroll : MonoBehaviour
             //only drops the top item
             activeCanvasSlot.DropItem();
           }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+            activeSlot = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+            activeSlot = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+            activeSlot = 2;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+            activeSlot = 3;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+            activeSlot = 4;
+        }
 
 
 
