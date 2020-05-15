@@ -46,7 +46,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.452
-  m_Color: {r: 0.79215693, g: 0.31764707, b: 0.08235294, a: 1}
+  m_Color: {r: 0.7735849, g: 0.5467228, b: 0.43422925, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d5328315b21e636ab953645f845f799e1bb1af757
@@ -169,8 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 8189077957429019201, guid: ff166ac2d0a33d745a0bb490bb295037,
-    type: 3}
-  equippedGun: {fileID: 7921879566156756120, guid: ff166ac2d0a33d745a0bb490bb295037,
     type: 3}
   inventoryID: Torch
 --- !u!61 &-8469053041904352315
