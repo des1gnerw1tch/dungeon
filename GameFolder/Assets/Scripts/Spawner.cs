@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
     {
         spawnRadius.Set(xRadius,yRadius,0f);
         Gizmos.color = GizmosColor;
-        Gizmos.DrawCube(transform.position, spawnRadius * 2);
+        Gizmos.DrawWireCube(transform.position, spawnRadius * 2);
     }
     // Update is called once per frame
     void Update()
