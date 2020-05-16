@@ -62,6 +62,8 @@ public class ItemManager : MonoBehaviour
           ReloadingText.SetActive(false);
           Destroy(itemInstance);
           bulletsLeft.text = null;
+          activeGun = null;
+          activeItem = null;
         }
       }
 
@@ -216,12 +218,14 @@ public class ItemManager : MonoBehaviour
     ReloadingText.SetActive(true);
     isWaiting = true;
     yield return new WaitForSeconds(activeGun.reloadTime);
-    if (initial == activeGun.name) {
-      FindObjectOfType<AudioManager>().Play("reloadComplete");
-      activeGun.currentAmmo = activeGun.maxAmmo;
-      isWaiting = false;
-      ReloadingText.SetActive(false);
-      bulletsLeft.text = "" + activeGun.currentAmmo;
+    if (activeGun != null)  {
+      if (initial == activeGun.name) {
+        FindObjectOfType<AudioManager>().Play("reloadComplete");
+        activeGun.currentAmmo = activeGun.maxAmmo;
+        isWaiting = false;
+        ReloadingText.SetActive(false);
+        bulletsLeft.text = "" + activeGun.currentAmmo;
+      }
     }
 
   }
