@@ -121,6 +121,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &40600971
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 120.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 99.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247832805613239026, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_Name
+      value: Globe (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00351edf99040463e89f0e5a38f7f83a, type: 3}
 --- !u!1 &90877824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2211,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &607455086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 77.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 131.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247832805613239026, guid: 00351edf99040463e89f0e5a38f7f83a,
+        type: 3}
+      propertyPath: m_Name
+      value: Globe (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00351edf99040463e89f0e5a38f7f83a, type: 3}
 --- !u!1001 &609326132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55545,6 +55683,55 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1513469716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513469718}
+  - component: {fileID: 1513469717}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1513469717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513469716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c7183bbb354c4443aa82b8f064eb363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mage: {fileID: 3774206487288976030}
+  mageDialogueTrigger: {fileID: 3774206487288976029}
+  magePos: {fileID: 3774206487288976028}
+  gift: {fileID: 2839659968609529476, guid: d492162dc30317d4b8092606780719e9, type: 3}
+  numOfGlobes: 0
+  numCompleted: 0
+--- !u!4 &1513469718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513469716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 139.37306, y: 108.107025, z: -1954.2119}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541276351
 GameObject:
   m_ObjectHideFlags: 0
@@ -77747,54 +77934,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Mage '
       objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[1]
-      value: This place used to be filled with our kind
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[2]
-      value: 'Now, our hideout has been abandoned and taken over by slimes. It hurts
-        me to see it like this. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.name
-      value: (unknown)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[0]
-      value: 'Cold world, isn''t it? '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[3]
-      value: 'There is some hope for us, though. Just as with everything, there is
-        always another chance at redemption. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[4]
-      value: 'You need to power the ancient globes. Right now, they are shining a
-        bright yellow. This is the symbol of the slimes. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[5]
-      value: 'Turn each sparkling globe back into darkness, as they should be, and
-        then come back to me. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617432930214273480, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[6]
-      value: 'I''ll have a special reward for you. '
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c5be1b54df8f4b78bbd378a0e30344b, type: 3}
+--- !u!4 &3774206487288976028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3774206488288140241, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3774206487288976027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &3774206487288976029 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6507018243532670201, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3774206487288976027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3774206487288976030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3774206488288140252, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3774206487288976027}
+  m_PrefabAsset: {fileID: 0}

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 3774206488288140241}
   - component: {fileID: 3774206488288140242}
   - component: {fileID: 3774206488288140243}
+  - component: {fileID: 6507018243532670201}
   - component: {fileID: 4602319535379232396}
+  - component: {fileID: 3774206487288976030}
   m_Layer: 0
   m_Name: 'Mage '
   m_TagString: Untagged
@@ -29,8 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children:
-  - {fileID: 5617432930214273482}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,6 +104,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6507018243532670201
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3774206488288140252}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008274764, y: -0.56441206}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.56971174, y: 0.23114264}
+  m_EdgeRadius: 0
 --- !u!61 &4602319535379232396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,118 +156,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5753559, y: 0.83014226}
   m_EdgeRadius: 0
---- !u!1001 &8158216544538103236
-PrefabInstance:
+--- !u!114 &3774206487288976030
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3774206488288140241}
-    m_Modifications:
-    - target: {fileID: 4378325421220457484, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457484, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: dialogue.name
-      value: Hello Friend
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457484, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: dialogue.sentances.Array.data[0]
-      value: 'Cold world. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457484, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: NPC
-      value: 
-      objectReference: {fileID: 3774206488288140243}
-    - target: {fileID: 4378325421220457485, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_Name
-      value: WalkInMonologue
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457487, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.014318734
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457487, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.6075341
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457487, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.6423102
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378325421220457487, guid: 15b8112ab9c784a899c562e855b4d8c8,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.2602402
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 15b8112ab9c784a899c562e855b4d8c8, type: 3}
---- !u!4 &5617432930214273482 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4378325421220457486, guid: 15b8112ab9c784a899c562e855b4d8c8,
-    type: 3}
-  m_PrefabInstance: {fileID: 8158216544538103236}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3774206488288140252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 3774206488288140243}
+  dialogue:
+    name: (unknown)
+    sentances:
+    - 'Cold world, isn''t it? '
+    - This place used to be filled with our kind.
+    - 'Now, our hideout has been abandoned and taken over by slimes. It hurts me
+      to see it like this. '
+    - 'There is some hope for us, though. Just as with everything, there is always
+      another chance at redemption. '
+    - 'You need to power the ancient globes. Right now, they are shining a bright
+      yellow. This is the symbol of the slimes. '
+    - 'Turn each sparkling globe back into darkness, as they should be, and then
+      come back to me. '
+    - 'I''ll have a special reward for you. '
