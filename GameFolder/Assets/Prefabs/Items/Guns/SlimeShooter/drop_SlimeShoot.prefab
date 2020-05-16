@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8392582628599004821}
   - component: {fileID: 1083335338157462639}
   - component: {fileID: 4662233152844949953}
+  - component: {fileID: -3343882496042139585}
   m_Layer: 12
   m_Name: drop_SlimeShoot
   m_TagString: Untagged
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03352517, y: 0.039910987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.93294966, y: 0.8052343}
   m_EdgeRadius: 0
 --- !u!50 &1083335338157462639
 Rigidbody2D:
@@ -125,7 +126,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.4
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -147,3 +148,29 @@ MonoBehaviour:
   itemButton: {fileID: 5411605247203422836, guid: 3e9e60ed05e434ba6829a97fc5eedf31,
     type: 3}
   inventoryID: SlimeShooter
+--- !u!61 &-3343882496042139585
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373100728862361412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.044700205, y: 0.028735787}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6743268, y: 0.46359718}
+  m_EdgeRadius: 0
