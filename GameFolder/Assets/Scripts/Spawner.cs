@@ -35,7 +35,6 @@ public class Spawner : MonoBehaviour
           numAlive++;
 
         } else {
-          Debug.Log("Spawned inside the player :(");
           Spawn();
         }
 

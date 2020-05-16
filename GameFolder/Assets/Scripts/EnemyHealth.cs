@@ -31,12 +31,12 @@ public class EnemyHealth : MonoBehaviour
         curHealth = maxHealth;
         if (isBoss)
         {
-            
+
             EnemyHealthBarScript.SetEnemyMaxHealth(maxHealth);
-            
-            
+
+
         }
-        
+
         pos.Set(0f, 0f);
     }
 
@@ -53,7 +53,7 @@ public class EnemyHealth : MonoBehaviour
                 EnemyHealthBarScript.SetEnemyHealth(curHealth);
            }
        }
-       
+
        tint.SetTintColor(new Color(1, 1, 1, 1f));
        /*when shot while idling, the enemy will move away (start patrolling). */
        if (animator != null)  {
@@ -79,7 +79,7 @@ public class EnemyHealth : MonoBehaviour
             //lets you go through door at the end
             if (portalToEnable != null)
               portalToEnable.SetActive(true);
-              
+
           }
         }
 
@@ -96,6 +96,10 @@ public class EnemyHealth : MonoBehaviour
         spawner.enabled = false;
       }
 
+    }
+
+    public float GetHealth()  {
+      return curHealth;
     }
 
 
