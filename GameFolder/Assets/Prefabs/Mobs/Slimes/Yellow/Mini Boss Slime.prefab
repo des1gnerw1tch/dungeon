@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
-  enemyID: Slime
+  enemyID: BigSlime
   dissolveSpeed: 0.5
   dissolve: {fileID: -2705612947987810502}
   tint: {fileID: 7457081918282346333}

@@ -38,6 +38,7 @@ public class Globe : MonoBehaviour
               if (!activated){
                 activated = true;
                 Invoke("Summon", 2.0f);
+                FindObjectOfType<AudioManager>().Play("globeSummon");
               }
             }
 		    }
