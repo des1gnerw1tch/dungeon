@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa3830e11339401d8d237ea323db1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minion: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8, type: 3}
+  minion: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac, type: 3}
   miniBoss: {fileID: 3811510162841372, guid: 048ff042f6b644c5bbe4dce452c54eed, type: 3}
   numMinions: 10
   globeLight: {fileID: 2178747669296557116}

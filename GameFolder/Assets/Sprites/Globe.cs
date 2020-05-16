@@ -59,9 +59,11 @@ public class Globe : MonoBehaviour
         globeLight.color = purple;
         bossDefeated = true;
         LevelManager level = FindObjectOfType<LevelManager>();
-        level.numCompleted++;
-        if (level.numCompleted >= level.numOfGlobes)  {
-          level.CompleteLevel();
+        if (level != null)  {
+          level.numCompleted++;
+          if (level.numCompleted >= level.numOfGlobes)  {
+            level.CompleteLevel();
+          }
         }
       }
 }
