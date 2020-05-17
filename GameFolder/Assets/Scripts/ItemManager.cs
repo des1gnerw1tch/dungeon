@@ -15,6 +15,8 @@ public class ItemManager : MonoBehaviour
     public GameObject ReloadingText;
     public GameObject bulletsLeftsGameObject;
     public Text bulletsLeft;
+    public Text maxAmmoText;
+    public Text UIName;
 
     private string itemString;
     [HideInInspector]public GameObject itemInstance;
@@ -32,7 +34,7 @@ public class ItemManager : MonoBehaviour
     {
       ReloadingText.SetActive(false);
       bulletsLeft.text = null;
-
+      maxAmmoText.text = null;
     }
 
     // Update is called once per frame
@@ -62,6 +64,8 @@ public class ItemManager : MonoBehaviour
           ReloadingText.SetActive(false);
           Destroy(itemInstance);
           bulletsLeft.text = null;
+          maxAmmoText.text = null;
+          UIName.text = null;
           activeGun = null;
           activeItem = null;
         }
@@ -109,7 +113,7 @@ public class ItemManager : MonoBehaviour
 
         }
 
-        //focus mlode (slomo) ?
+        //focus mode (slomo) ?
         if(Input.GetMouseButton(1)) {
 
           deSlomo = false;
@@ -159,6 +163,8 @@ public class ItemManager : MonoBehaviour
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         itemInstance = Instantiate(GunPrefab,firepointPos.transform,false);
         bulletsLeft.text = "" + activeGun.currentAmmo;
+        maxAmmoText.text = "" + activeGun.maxAmmo;
+        UIName.text = activeGun.name;
         isWaiting = false;
 	}
     void ItemInPlayerHand(GameObject ItemPrefab){
@@ -168,6 +174,8 @@ public class ItemManager : MonoBehaviour
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         itemInstance = Instantiate(ItemPrefab,firepointPos.transform,false);
         bulletsLeft.text = null;
+        maxAmmoText.text = null;
+        UIName.text = activeItem.name;
         isWaiting = false;
 	}
 
