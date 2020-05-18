@@ -35,13 +35,21 @@ public class skeletonAttack : StateMachineBehaviour
       if (timer > 0)  {
         timer -= Time.deltaTime;
       } else {
-        //player.TakeDamage(atkDamage);
-      //  player.SetKnockback(knockback, animator.transform);
+
         Vector3 pos = new Vector3(animator.transform.position.x, animator.transform.position.y, 0f);
         GameObject instance = Instantiate(projectile, pos, Quaternion.identity);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-        Debug.Log((target.position - animator.transform.position).normalized * 100);
-        rb.AddForce((target.position - animator.transform.position).normalized * 10, ForceMode2D.Impulse);
+
+        //push the projectile
+        Vector3 force = (target.position - animator.transform.position).normalized * 10;
+        //make sure bullet is facing the right direction
+        if (target.position.x - animator.transform.position.x >=0)  {
+          instance.transform.Rotate(0, 0, (Mathf.Atan(force.y / force.x)) * Mathf.Rad2Deg + 90, Space.Self);
+        } else {
+          instance.transform.Rotate(0, 0, (Mathf.Atan(force.y / force.x)) * Mathf.Rad2Deg + 270, Space.Self);
+        }
+
+        rb.AddForce(force, ForceMode2D.Impulse);
 
         timer = atkCooldown;
       }
