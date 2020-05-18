@@ -38,10 +38,10 @@ public class skeletonAttack : StateMachineBehaviour
         //player.TakeDamage(atkDamage);
       //  player.SetKnockback(knockback, animator.transform);
         Vector3 pos = new Vector3(animator.transform.position.x, animator.transform.position.y, 0f);
-        Instantiate(projectile, pos, Quaternion.identity);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        GameObject instance = Instantiate(projectile, pos, Quaternion.identity);
+        Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
         Debug.Log((target.position - animator.transform.position).normalized * 100);
-        rb.AddForce((target.position - animator.transform.position).normalized * 100, ForceMode2D.Impulse);
+        rb.AddForce((target.position - animator.transform.position).normalized * 10, ForceMode2D.Impulse);
 
         timer = atkCooldown;
       }
