@@ -7,6 +7,7 @@ public class SpawnerManager : MonoBehaviour
     Spawner[] spawners;
     EnemyHealth[] enemies;
     public int maxEnemies;
+    public int currentEnemies;
     void Start()
     {
         spawners = FindObjectsOfType<Spawner>();
@@ -16,6 +17,7 @@ public class SpawnerManager : MonoBehaviour
     void Update()
     {
       enemies = FindObjectsOfType<EnemyHealth>();
+      currentEnemies = enemies.Length;
       if (enemies.Length >= maxEnemies) {
         foreach(Spawner s in spawners)  {
           s.enabled = false;

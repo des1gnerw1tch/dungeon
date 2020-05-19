@@ -62,6 +62,7 @@ public class Globe : MonoBehaviour
         LevelManager level = FindObjectOfType<LevelManager>();
         if (level != null)  {
           level.numCompleted++;
+          level.UpdateText();
           if (level.numCompleted >= level.numOfGlobes)  {
             level.CompleteLevel();
           }
