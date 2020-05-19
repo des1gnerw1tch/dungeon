@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SlimeDungeon.unity
     guid: c6f58352cfd6e4291a999c98afaf4c3a
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: a7d196dd4ef740d43926ea6bee856c89
   m_configObjects: {}
