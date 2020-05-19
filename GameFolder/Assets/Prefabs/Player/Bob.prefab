@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8747800943941732919}
   - component: {fileID: 8747800943941732924}
   - component: {fileID: 8747800943941732918}
-  - component: {fileID: 8747800943941732922}
   - component: {fileID: 5493401359268361209}
   - component: {fileID: 5493401359268361210}
   - component: {fileID: 184997451201820118}
@@ -152,52 +151,6 @@ MonoBehaviour:
   rb: {fileID: 8747800943941732919}
   cam: {fileID: 0}
   animator: {fileID: 8747800943941732924}
---- !u!114 &8747800943941732922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903378669057283929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d27af9c2b7aae684db4a4b4579e0e84d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 8747800943585440480}
-  bulletPrefab: {fileID: 2195576620641826499, guid: 6895a62060eaac74a8248e27a423ba83,
-    type: 3}
-  ARbulletPrefab: {fileID: 2195576620641826499, guid: 713a76ad30fe1534d8ec37a9a6fb210f,
-    type: 3}
-  rocketPrefab: {fileID: 2248193845924477178, guid: 38ea37cf83e552e41ae706fc6ba23703,
-    type: 3}
-  sniperbulletPrefab: {fileID: 2195576620641826499, guid: 77d2f1284e6832846820a1dda1b4b84c,
-    type: 3}
-  Camera: {fileID: 0}
-  whatGunIsEquippedString: 
-  bulletForce: 30
-  rocketForce: 8
-  ARPrefab: {fileID: 8415564807121775683, guid: 1e93c0a6f85db954ebea18dc1d857082,
-    type: 3}
-  RPGPrefab: {fileID: 5230449497779319931, guid: 1af24089edfe6ff4dabbe60af1d74c1c,
-    type: 3}
-  SniperPrefab: {fileID: 4305675573630898345, guid: a66112ccfa6e2614293ecd6981486e26,
-    type: 3}
-  healthPrefab: {fileID: 357245384828748845, guid: e5349e32b4fcacb4792517029f21c7b7,
-    type: 3}
-  torchPrefab: {fileID: 9088534354078598734, guid: a6d508b355b0ccd48b303ad8560b142f,
-    type: 3}
-  showGun: 0
-  gunInstance: {fileID: 0}
-  timeCounter: 0.2
-  ARreloadTime: 3
-  ARreloadcounter: 0
-  ReloadTimebar: {fileID: 0}
-  ReloadingText: {fileID: 0}
-  bulletsLeftsGameObject: {fileID: 0}
-  bulletsLeft: {fileID: 0}
-  playerHealthScript: {fileID: 5493401359268361209}
-  hasHealed: 0
 --- !u!114 &5493401359268361209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,8 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   healthBar: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!114 &5493401359268361210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc66e5f4f8704bf5a456c3579dda086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeSlot: 0
   indicatorLoc: {fileID: 0}
   slot0: {fileID: 0}
   slot1: {fileID: 0}
@@ -310,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0468b9e232a24e24785052f7b17b0c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 1000
+  coins: 0
   CoinCountText: {fileID: 0}
 --- !u!114 &1756797248
 MonoBehaviour:
