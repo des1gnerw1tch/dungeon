@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 782626355235590283}
   - component: {fileID: 3431413052702944343}
   - component: {fileID: 3448756612755345158}
+  - component: {fileID: 9111583968179781995}
   m_Layer: 10
   m_Name: slime_yellow
   m_TagString: Untagged
@@ -154,6 +155,8 @@ MonoBehaviour:
   dissolve: {fileID: -2705612947987810502}
   tint: {fileID: 7457081918282346333}
   animator: {fileID: 3448756612755345158}
+  isBoss: 0
+  portalToEnable: {fileID: 0}
 --- !u!114 &-4596567544541554235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +218,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9111583968179781995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811510162841372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22cf8975eb4145a66e5625782ac9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
