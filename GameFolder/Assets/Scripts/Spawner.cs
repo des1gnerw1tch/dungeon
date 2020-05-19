@@ -35,7 +35,8 @@ public class Spawner : MonoBehaviour
           numAlive++;
 
         } else {
-          Spawn();
+          //causes stack overflow? 
+        //  Spawn();
         }
 
 

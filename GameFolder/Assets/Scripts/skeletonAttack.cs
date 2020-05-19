@@ -19,7 +19,6 @@ public class skeletonAttack : StateMachineBehaviour
     target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     timer = 0;
-    Debug.Log("started attack");
   }
 
 
