@@ -44,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
        curHealth -= damage;
+       FindObjectOfType<AudioManager>().Play("enemyHurt");
        if (isBoss)
        {
            //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 1;

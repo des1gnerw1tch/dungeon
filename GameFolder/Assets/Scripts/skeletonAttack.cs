@@ -50,6 +50,7 @@ public class skeletonAttack : StateMachineBehaviour
         rb.AddForce(force, ForceMode2D.Impulse);
 
         timer = atkCooldown;
+        FindObjectOfType<AudioManager>().Play("pft");
       }
     }
 
