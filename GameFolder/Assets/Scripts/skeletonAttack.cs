@@ -10,6 +10,7 @@ public class skeletonAttack : StateMachineBehaviour
   private PlayerHealth player;
   public GameObject projectile;
   public float projectileSpeed;
+  public string audio;
 
   public float atkCooldown = 2f;
 
@@ -50,7 +51,9 @@ public class skeletonAttack : StateMachineBehaviour
         rb.AddForce(force, ForceMode2D.Impulse);
 
         timer = atkCooldown;
-        FindObjectOfType<AudioManager>().Play("pft");
+        if (audio != null)  {
+          FindObjectOfType<AudioManager>().Play(audio);
+        }
       }
     }
 

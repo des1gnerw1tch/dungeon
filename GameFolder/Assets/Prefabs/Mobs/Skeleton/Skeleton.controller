@@ -1354,10 +1354,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 6.5
+  atkRadius: 8.5
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 13
+  audio: pft
   atkCooldown: 1
 --- !u!1101 &-4606822580324936330
 AnimatorStateTransition:
@@ -1672,10 +1673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 6.5
+  atkRadius: 8.5
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 13
+  audio: pft
   atkCooldown: 1
 --- !u!1102 &-2869096443042315118
 AnimatorState:
@@ -2432,8 +2434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 6.5
+  lookRadius: 12
+  atkRadius: 8.5
 --- !u!1101 &-515159427558120789
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -2471,10 +2473,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 6.5
+  atkRadius: 8.5
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 13
+  audio: pft
   atkCooldown: 1
 --- !u!114 &-264033164897153967
 MonoBehaviour:
@@ -3760,8 +3763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 6.5
+  lookRadius: 12
+  atkRadius: 8.5
 --- !u!1102 &4251646587352133738
 AnimatorState:
   serializedVersion: 5
@@ -4474,10 +4477,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 6.5
+  atkRadius: 8.5
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 13
+  audio: pft
   atkCooldown: 1
 --- !u!1101 &6004929749567087714
 AnimatorStateTransition:
@@ -5338,8 +5342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 6.5
+  lookRadius: 12
+  atkRadius: 8.5
 --- !u!1101 &8453225892039075435
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -5560,8 +5564,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 6.5
+  lookRadius: 12
+  atkRadius: 8.5
 --- !u!1101 &9050677338227680930
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
