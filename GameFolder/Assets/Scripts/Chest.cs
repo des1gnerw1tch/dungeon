@@ -26,6 +26,7 @@ public class Chest : MonoBehaviour
                 Invoke("dropLoot", .2f);
 
                 animator.SetBool("open", true);
+                GetComponent<Collider2D>().enabled = false;
                 isActive = false;
 		      }
 		}
