@@ -19,6 +19,7 @@ public class CaveToMain : MonoBehaviour
     public bool playSound;
     public Animator transition;
     public float transitionTime = 1f;
+    public bool continueMusic;
     // Start is called before the first frame update
 
     void Start()  {
@@ -63,6 +64,14 @@ public class CaveToMain : MonoBehaviour
         }
         playerObject.GetComponent<PlayerHealth>().enabled = true;
         //playerObject.GetComponent<PlayerMovement>().enabled = true;
+        if (!continueMusic) {
+          try {
+            FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
+          }
+          catch (NullReferenceException e){
+            //Debug.Log("No music found to stop");
+          }
+        }
         SceneManager.LoadScene(levelIndex);
 	}
 }

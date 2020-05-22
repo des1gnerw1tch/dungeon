@@ -24,6 +24,7 @@ public class MusicPlayer : MonoBehaviour
         } else {
           FindObjectOfType<AudioManager>().Play(themeName);
           playing = true;
+          return;
         }
       }
 
