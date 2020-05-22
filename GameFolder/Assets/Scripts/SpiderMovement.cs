@@ -32,7 +32,7 @@ public class SpiderMovement : MonoBehaviour
     {
       if (animator.GetBool("seenPlayer")) {
         Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
         rb.rotation = angle;
       }
     }
