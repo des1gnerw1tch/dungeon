@@ -16,6 +16,7 @@ public class SpawnerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      //very badly optimized i think
       enemies = FindObjectsOfType<EnemyHealth>();
       currentEnemies = enemies.Length;
       if (enemies.Length >= maxEnemies) {
