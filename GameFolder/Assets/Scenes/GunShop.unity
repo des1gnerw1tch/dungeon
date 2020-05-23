@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 118298632}
   - component: {fileID: 118298631}
   - component: {fileID: 118298630}
+  - component: {fileID: 118298633}
   m_Layer: 12
   m_Name: ARshop
   m_TagString: Interactable
@@ -212,6 +213,7 @@ MonoBehaviour:
   cost: 20
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
+  costDialogue: {fileID: 118298633}
 --- !u!61 &118298631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -225,7 +227,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.343431, y: 0.61976004}
+  m_Offset: {x: 0.32523012, y: 0.33765078}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -236,7 +238,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23603344, y: 0.6592283}
+  m_Size: {x: 0.56364536, y: 1.2234468}
   m_EdgeRadius: 0
 --- !u!4 &118298632
 Transform:
@@ -252,6 +254,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &118298633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118298629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: 
+    sentances:
+    - 'Costs 20 coins to buy AR. Press E to buy. '
 --- !u!1 &128880049
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +934,7 @@ GameObject:
   - component: {fileID: 1180270375}
   - component: {fileID: 1180270374}
   - component: {fileID: 1180270373}
+  - component: {fileID: 1180270376}
   m_Layer: 12
   m_Name: SniperShop
   m_TagString: Interactable
@@ -935,9 +955,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5946864283718346727, guid: 33b158f4edb423c4e988bcf065604316, type: 3}
-  cost: 20
+  cost: 50
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
+  costDialogue: {fileID: 1180270376}
 --- !u!61 &1180270374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -951,7 +972,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5430021, y: 0.50525904}
+  m_Offset: {x: 0.5430021, y: 0.22314978}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -962,7 +983,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2858944, y: 0.59359264}
+  m_Size: {x: 0.64990807, y: 1.1578112}
   m_EdgeRadius: 0
 --- !u!4 &1180270375
 Transform:
@@ -978,6 +999,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180270376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180270372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: 
+    sentances:
+    - 'Costs 50 coins to buy Sniper. Press E to buy. '
 --- !u!1 &1344298560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1114,7 @@ GameObject:
   - component: {fileID: 1418780651}
   - component: {fileID: 1418780650}
   - component: {fileID: 1418780649}
+  - component: {fileID: 1418780652}
   m_Layer: 12
   m_Name: RPGshop
   m_TagString: Interactable
@@ -1096,9 +1135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6246492608094845224, guid: 5bb89a4486516cc4b904ea8f7ab025c1, type: 3}
-  cost: 50
+  cost: 100
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
+  costDialogue: {fileID: 1418780652}
 --- !u!61 &1418780650
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1112,7 +1152,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11894131, y: 0.44118643}
+  m_Offset: {x: 0.10074043, y: 0.14997625}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1123,7 +1163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23600578, y: 0.72173786}
+  m_Size: {x: 0.52721405, y: 1.3041582}
   m_EdgeRadius: 0
 --- !u!4 &1418780651
 Transform:
@@ -1139,6 +1179,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1418780652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418780648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: 
+    sentances:
+    - 'Costs 100 coins to buy RPG. Press E to buy. '
 --- !u!1 &1542420281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1251,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10887718, y: -0.30243874}
+  m_Offset: {x: 0.16135788, y: -0.4551859}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1205,7 +1262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0565834, y: 1.6048775}
+  m_Size: {x: 1.3710136, y: 1.9103718}
   m_EdgeRadius: 0
 --- !u!4 &1542420284
 Transform:
@@ -1232,6 +1289,7 @@ GameObject:
   - component: {fileID: 1645744499}
   - component: {fileID: 1645744501}
   - component: {fileID: 1645744500}
+  - component: {fileID: 1645744502}
   m_Layer: 12
   m_Name: Slime Shop
   m_TagString: Interactable
@@ -1269,6 +1327,7 @@ MonoBehaviour:
   cost: 0
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
+  costDialogue: {fileID: 1645744502}
 --- !u!61 &1645744501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1282,7 +1341,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19589043, y: 0.59488964}
+  m_Offset: {x: 0.15038872, y: 0.2945795}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1293,8 +1352,25 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25731277, y: 0.7089691}
+  m_Size: {x: 0.56672287, y: 1.3095894}
   m_EdgeRadius: 0
+--- !u!114 &1645744502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645744498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: 
+    sentances:
+    - 'Costs 0 coins to buy SlimeShooter. Press E to buy. '
 --- !u!1 &1813552924
 GameObject:
   m_ObjectHideFlags: 0

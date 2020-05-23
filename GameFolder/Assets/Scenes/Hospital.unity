@@ -3253,6 +3253,7 @@ GameObject:
   - component: {fileID: 527586108}
   - component: {fileID: 527586107}
   - component: {fileID: 527586106}
+  - component: {fileID: 527586109}
   m_Layer: 0
   m_Name: healthShop
   m_TagString: Interactable
@@ -3273,7 +3274,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010157347, y: -0.47741222}
+  m_Offset: {x: -0.075410485, y: -0.10662055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3284,7 +3285,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.1895213, y: 1.9548244}
+  m_Size: {x: 1.5084116, y: 1.2132411}
   m_EdgeRadius: 0
 --- !u!114 &527586107
 MonoBehaviour:
@@ -3302,6 +3303,7 @@ MonoBehaviour:
   cost: 5
   noMoneyDialogue: {fileID: 1344608732}
   boughtDialogue: {fileID: 1409145548}
+  costDialogue: {fileID: 527586109}
 --- !u!4 &527586108
 Transform:
   m_ObjectHideFlags: 0
@@ -3316,6 +3318,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527586109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527586105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: 
+    sentances:
+    - 'It costs 5 coins to buy a HealthPotion. Press E to buy. '
 --- !u!1 &808481802
 GameObject:
   m_ObjectHideFlags: 0

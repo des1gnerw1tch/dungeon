@@ -11,6 +11,8 @@ public class Shop : MonoBehaviour
     private PlayerMoney PlayerMoneyScript;
     public DialogueTrigger noMoneyDialogue;
     public DialogueTrigger boughtDialogue;
+    public DialogueTrigger costDialogue;
+    private bool dialogueTriggered;
     //HealthDrops ID is "HealthPotion". the others are the same as the Gun ID in the inventory so Sniper,RPG, AR.
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class Shop : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if(Vector2.Distance(transform.position, target.position) < 3){
             if(Input.GetKeyDown("e")){
               if (PlayerMoneyScript.coins >= cost) {
@@ -39,7 +41,38 @@ public class Shop : MonoBehaviour
             	}
 
 		        }
-		}
+		     }
+*/
+    }
 
+    void OnTriggerStay2D(Collider2D other) {
+      if (other.CompareTag("Player")) {
+            if(Input.GetKeyDown("e")){
+              if (PlayerMoneyScript.coins >= cost) {
+                Instantiate(prefab, transform.position, Quaternion.identity);
+                PlayerMoneyScript.coins -= cost;
+                if (boughtDialogue != null) {
+                  boughtDialogue.TriggerDialogue();
+                  FindObjectOfType<AudioManager>().Play("coin");
+                }
+              } else	{
+            			FindObjectOfType<AudioManager>().Play("negative");
+                  if (noMoneyDialogue != null)  {
+                    noMoneyDialogue.TriggerDialogue();
+                  }
+            	}
+
+		        }
+
+      }
+      if (!dialogueTriggered) {
+        costDialogue.TriggerDialogue();
+        dialogueTriggered = true;
+      }
+
+    }
+
+    void OnTriggerExit2D(Collider2D other)  {
+      FindObjectOfType<DialogueManager>().EndDialogue();
     }
 }
