@@ -26,8 +26,11 @@ public class ItemManager : MonoBehaviour
     public Item[] items;
     Gun activeGun;
     Item activeItem;
+    //åprivate Couroutine reload;
 
     private bool isWaiting = false;
+    private bool hasSwitched = false;
+    private bool isReloading = false;
     private bool deSlomo;
     private int currentAmmo;
     void Start()
@@ -68,6 +71,7 @@ public class ItemManager : MonoBehaviour
           UIName.text = null;
           activeGun = null;
           activeItem = null;
+          hasSwitched = true;
         }
       }
 
@@ -147,7 +151,7 @@ public class ItemManager : MonoBehaviour
     }
 
     //handles reload button
-    if (itemString != null && activeGun != null) {
+    if (itemString != null && activeGun != null &&!isReloading) {
       if ((Input.GetKeyDown("r") && !isWaiting && activeGun.currentAmmo != activeGun.maxAmmo) || (Input.GetButtonDown("Fire1") && activeGun.currentAmmo <= 0 && !isWaiting )) {
         StartCoroutine(Reload());
       }
@@ -166,6 +170,7 @@ public class ItemManager : MonoBehaviour
         maxAmmoText.text = "" + activeGun.maxAmmo;
         UIName.text = activeGun.name;
         isWaiting = false;
+        hasSwitched = true;
 	}
     void ItemInPlayerHand(GameObject ItemPrefab){
         Destroy(itemInstance);
@@ -177,6 +182,7 @@ public class ItemManager : MonoBehaviour
         maxAmmoText.text = null;
         UIName.text = activeItem.name;
         isWaiting = false;
+        hasSwitched = true;
 	}
 
 
@@ -210,7 +216,7 @@ public class ItemManager : MonoBehaviour
       }
 
       Camera.shake(activeGun.shakeIntensity, 1f, .1f);
-      if (activeGun.currentAmmo <= 0) {
+      if (activeGun.currentAmmo <= 0 && !isReloading) {
         StartCoroutine(Reload());
       } else {
         yield return new WaitForSeconds(1/activeGun.RPS);
@@ -225,9 +231,12 @@ public class ItemManager : MonoBehaviour
     string initial = activeGun.name;
     ReloadingText.SetActive(true);
     isWaiting = true;
+    hasSwitched = false;
+    isReloading = true;
     yield return new WaitForSeconds(activeGun.reloadTime);
+    isReloading = false;
     if (activeGun != null)  {
-      if (initial == activeGun.name) {
+      if (initial == activeGun.name && !hasSwitched) {
         FindObjectOfType<AudioManager>().Play("reloadComplete");
         activeGun.currentAmmo = activeGun.maxAmmo;
         isWaiting = false;
