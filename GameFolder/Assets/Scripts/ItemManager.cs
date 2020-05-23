@@ -26,7 +26,7 @@ public class ItemManager : MonoBehaviour
     public Item[] items;
     Gun activeGun;
     Item activeItem;
-    //åprivate Couroutine reload;
+    private Coroutine reload;
 
     private bool isWaiting = false;
     private bool hasSwitched = false;
@@ -72,6 +72,8 @@ public class ItemManager : MonoBehaviour
           activeGun = null;
           activeItem = null;
           hasSwitched = true;
+          if (reload != null)
+            StopCoroutine(reload);
         }
       }
 
@@ -153,7 +155,7 @@ public class ItemManager : MonoBehaviour
     //handles reload button
     if (itemString != null && activeGun != null &&!isReloading) {
       if ((Input.GetKeyDown("r") && !isWaiting && activeGun.currentAmmo != activeGun.maxAmmo) || (Input.GetButtonDown("Fire1") && activeGun.currentAmmo <= 0 && !isWaiting )) {
-        StartCoroutine(Reload());
+        reload = StartCoroutine(Reload());
       }
     }
 
@@ -171,6 +173,9 @@ public class ItemManager : MonoBehaviour
         UIName.text = activeGun.name;
         isWaiting = false;
         hasSwitched = true;
+        isReloading = false;
+        if (reload != null)
+          StopCoroutine(reload);
 	}
     void ItemInPlayerHand(GameObject ItemPrefab){
         Destroy(itemInstance);
@@ -183,6 +188,8 @@ public class ItemManager : MonoBehaviour
         UIName.text = activeItem.name;
         isWaiting = false;
         hasSwitched = true;
+        if (reload != null)
+          StopCoroutine(reload);
 	}
 
 
@@ -217,7 +224,7 @@ public class ItemManager : MonoBehaviour
 
       Camera.shake(activeGun.shakeIntensity, 1f, .1f);
       if (activeGun.currentAmmo <= 0 && !isReloading) {
-        StartCoroutine(Reload());
+        reload = StartCoroutine(Reload());
       } else {
         yield return new WaitForSeconds(1/activeGun.RPS);
         isWaiting = false;
