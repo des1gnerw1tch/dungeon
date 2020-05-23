@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     /*The shop ID should match the string of the item that it wants to drop*/
-    public string ShopID;
+    public GameObject prefab;
     public int cost;
     private Transform target;
     private PlayerMoney PlayerMoneyScript;
@@ -25,7 +25,7 @@ public class Shop : MonoBehaviour
         if(Vector2.Distance(transform.position, target.position) < 3){
             if(Input.GetKeyDown("e")){
               if (PlayerMoneyScript.coins >= cost) {
-                FindObjectOfType<DropManager>().Drop(ShopID, transform.position);
+                Instantiate(prefab, transform.position, Quaternion.identity);
                 PlayerMoneyScript.coins -= cost;
                 if (boughtDialogue != null) {
                   boughtDialogue.TriggerDialogue();

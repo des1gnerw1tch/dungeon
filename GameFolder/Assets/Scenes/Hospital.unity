@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopID: HealthPotion
+  prefab: {fileID: 143954038635760408, guid: 937bb5bbdf5f3eb4691f2e28bec14c57, type: 3}
   cost: 5
   noMoneyDialogue: {fileID: 1344608732}
   boughtDialogue: {fileID: 1409145548}
@@ -3547,6 +3547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
   dialogue:
     name: Dr. Kadowitz
     sentances:
@@ -3594,6 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
   dialogue:
     name: Dr. Kadowitz
     sentances:
@@ -3793,6 +3795,7 @@ MonoBehaviour:
   playSound: 0
   transition: {fileID: 2028015825}
   transitionTime: 1
+  continueMusic: 0
 --- !u!4 &1703230735
 Transform:
   m_ObjectHideFlags: 0

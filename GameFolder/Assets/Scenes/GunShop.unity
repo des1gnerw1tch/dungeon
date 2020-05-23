@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopID: AR
+  prefab: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636, type: 3}
   cost: 20
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
@@ -225,7 +225,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0503428, y: 0.15102768}
+  m_Offset: {x: 0.343431, y: 0.61976004}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -236,7 +236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5705519, y: 1.3020554}
+  m_Size: {x: 0.23603344, y: 0.6592283}
   m_EdgeRadius: 0
 --- !u!4 &118298632
 Transform:
@@ -245,12 +245,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118298629}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.16, y: 14.9, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.08, y: 14.92, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &128880049
 GameObject:
@@ -386,12 +386,12 @@ PrefabInstance:
     - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.47
+      value: 11.52
       objectReference: {fileID: 0}
     - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.2
+      value: 17.32
       objectReference: {fileID: 0}
     - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
         type: 3}
@@ -421,7 +421,7 @@ PrefabInstance:
     - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
         type: 3}
@@ -515,6 +515,7 @@ MonoBehaviour:
   playSound: 0
   transition: {fileID: 128880050}
   transitionTime: 1
+  continueMusic: 0
 --- !u!4 &253921841
 Transform:
   m_ObjectHideFlags: 0
@@ -527,8 +528,93 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &540214540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1601248207856386998, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752355653657553914, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_Name
+      value: slime drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772869837468716729, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3510705732219272317, guid: 1f20ee6239ccc4a9da5cda87075a4e1a,
+        type: 3}
+    - target: {fileID: 8816895071248745646, guid: 33dbfde07da1a4d4fbf796c8619a8636,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33dbfde07da1a4d4fbf796c8619a8636, type: 3}
 --- !u!1 &544333780
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,12 +677,12 @@ PrefabInstance:
     - target: {fileID: 1246446005186398566, guid: 33b158f4edb423c4e988bcf065604316,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.77
+      value: 16.9
       objectReference: {fileID: 0}
     - target: {fileID: 1246446005186398566, guid: 33b158f4edb423c4e988bcf065604316,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.24
+      value: 17.42
       objectReference: {fileID: 0}
     - target: {fileID: 1246446005186398566, guid: 33b158f4edb423c4e988bcf065604316,
         type: 3}
@@ -720,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
   dialogue:
     name: Scarlette
     sentances:
@@ -736,7 +823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1150315938
 PrefabInstance:
@@ -748,12 +835,12 @@ PrefabInstance:
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.29
+      value: 19.38
       objectReference: {fileID: 0}
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.15
+      value: 17.26
       objectReference: {fileID: 0}
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
@@ -783,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
@@ -847,7 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopID: Sniper
+  prefab: {fileID: 5946864283718346727, guid: 33b158f4edb423c4e988bcf065604316, type: 3}
   cost: 20
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
@@ -864,7 +951,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0503428, y: 0.15102768}
+  m_Offset: {x: 0.5430021, y: 0.50525904}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -875,7 +962,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5705519, y: 1.3020554}
+  m_Size: {x: 0.2858944, y: 0.59359264}
   m_EdgeRadius: 0
 --- !u!4 &1180270375
 Transform:
@@ -884,12 +971,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180270372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.72, y: 14.9, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.29, y: 15.13, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344298560
 GameObject:
@@ -1008,7 +1095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopID: RPG
+  prefab: {fileID: 6246492608094845224, guid: 5bb89a4486516cc4b904ea8f7ab025c1, type: 3}
   cost: 50
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
@@ -1025,7 +1112,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0503428, y: 0.15102768}
+  m_Offset: {x: 0.11894131, y: 0.44118643}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1036,7 +1123,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5705519, y: 1.3020554}
+  m_Size: {x: 0.23600578, y: 0.72173786}
   m_EdgeRadius: 0
 --- !u!4 &1418780651
 Transform:
@@ -1045,12 +1132,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418780648}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.05, y: 14.9, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.31, y: 15.17, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542420281
 GameObject:
@@ -1082,6 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
   dialogue:
     name: Scarlette
     sentances:
@@ -1131,8 +1219,82 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1645744498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645744499}
+  - component: {fileID: 1645744501}
+  - component: {fileID: 1645744500}
+  m_Layer: 12
+  m_Name: Slime Shop
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1645744499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645744498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.04, y: 15.03, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645744500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645744498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1373100728862361412, guid: d691ecf16f0964fa28c82d4783f6ab6d, type: 3}
+  cost: 0
+  noMoneyDialogue: {fileID: 1813552925}
+  boughtDialogue: {fileID: 889595413}
+--- !u!61 &1645744501
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645744498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.19589043, y: 0.59488964}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25731277, y: 0.7089691}
+  m_EdgeRadius: 0
 --- !u!1 &1813552924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
   dialogue:
     name: Scarlette
     sentances:
@@ -1179,7 +1342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846411727
 GameObject:
@@ -3936,7 +4099,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067436056
 GameObject:
@@ -4008,5 +4171,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

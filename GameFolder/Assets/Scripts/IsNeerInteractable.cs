@@ -10,7 +10,7 @@ public class IsNeerInteractable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,18 +23,19 @@ public class IsNeerInteractable : MonoBehaviour
 		}*/
     }
     void OnTriggerEnter2D(Collider2D other){
+      if (other.CompareTag("Player")) {
         Chest ChestScript = other.GetComponent<Chest>();
         Shop ShopScript = other.GetComponent<Shop>();
         if(ShopScript != null){
             isNeerInteractable = true;
-            InteractText.text = "It costs " + ShopScript.cost + " coins to buy a " + ShopScript.ShopID + "\nPress E to buy";
+            InteractText.text = "It costs " + ShopScript.cost + " coins to buy a " + ShopScript.prefab.GetComponent<PickUp>().inventoryID + "\nPress E to buy";
 		}
         if(ChestScript != null) {
             if(ChestScript.isActive){
                 InteractText.text = "Press E to interact.";
 			}
 		}
-		
+  }
 	}
     void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.tag == "Interactable"){
