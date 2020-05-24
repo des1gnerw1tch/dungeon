@@ -9,23 +9,30 @@ public class RunAwayWhenLight : StateMachineBehaviour
     private Vector2 Differance;
     private Vector2 Direction;
     private Transform target;
-    public float lookRad;
+    private ItemManager ItemManagerScript;
+
+    public float lookRad = 5;
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        ItemManagerScript = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemManager>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Player.Set(target.position.x, target.position.y);
+        /*Player.Set(target.position.x, target.position.y);
         LightRunner.Set(animator.transform.position.x, animator.transform.position.y);
         Differance = LightRunner - Player;
-        Differance = Differance.normalized;
-        if(Vector2.Distance(animator.transform.position, target.position) < lookRad)
+        Differance = Differance.normalized;*/
+        if((Vector2.Distance(animator.transform.position, target.position) < lookRad) && (ItemManagerScript.itemString == "Torch"))
         {
-
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, target.position, -5 * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("HasTorch", false);
         }
     }
 

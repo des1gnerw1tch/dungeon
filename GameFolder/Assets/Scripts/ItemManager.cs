@@ -18,7 +18,7 @@ public class ItemManager : MonoBehaviour
     public Text maxAmmoText;
     public Text UIName;
 
-    private string itemString;
+    [HideInInspector]public string itemString;
     [HideInInspector]public GameObject itemInstance;
 
 

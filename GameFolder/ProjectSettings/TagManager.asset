@@ -15,6 +15,7 @@ TagManager:
   - Drops
   - Portal
   - EnemyHealthBar
+  - ItemManager
   layers:
   - Default
   - TransparentFX

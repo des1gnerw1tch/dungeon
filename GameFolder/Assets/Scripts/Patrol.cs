@@ -9,7 +9,8 @@ public class Patrol : StateMachineBehaviour
     private float timer;
     public float radius = 5f;
     private Transform target;
-     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    
+    //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
       timer = Random.Range(6f, 10f);
@@ -17,6 +18,7 @@ public class Patrol : StateMachineBehaviour
       float y = Random.Range(animator.transform.position.y -100, animator.transform.position.y + 100);
       destination.Set(x, y);
       target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+      
     }
 
      //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -35,6 +37,7 @@ public class Patrol : StateMachineBehaviour
       {
          animator.SetBool("seenPlayer", true);
       }
+      
 
 
 

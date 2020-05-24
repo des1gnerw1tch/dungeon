@@ -6,17 +6,18 @@ public class FollowBehavior : StateMachineBehaviour
 {
 
     private Transform target;
-    public float spiderSpeed = 3f;
+    public float spiderSpeed = -3f;
     public float AttackDistance;
     public float radius = 5f;
-
+    public float lookRad = 5f;
+    private ItemManager ItemManagerScript;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
 
+        ItemManagerScript = GameObject.FindGameObjectWithTag("ItemManager").GetComponent<ItemManager>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -36,6 +37,10 @@ public class FollowBehavior : StateMachineBehaviour
         /*back to patrol*/
         if  (Vector2.Distance(animator.transform.position, target.position) > radius) {
           animator.SetBool("seenPlayer", false);
+        }
+        if ((Vector2.Distance(animator.transform.position, target.position) < lookRad) && (ItemManagerScript.itemString == "Torch"))
+        {
+            animator.SetBool("HasTorch", true);
         }
 
     }
