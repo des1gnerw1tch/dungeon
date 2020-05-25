@@ -80,7 +80,7 @@ public class scroll : MonoBehaviour
           if (lastSlot != activeSlot) {
             lastSlot = activeSlot;
           }
-          //drop, janky
+          
           if (Input.GetKeyDown("q") && inventory.item[activeSlot] != null)  {
             inventory.item[activeSlot] = null;
             //only drops the top item

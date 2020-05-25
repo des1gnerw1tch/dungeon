@@ -13,7 +13,6 @@ public class SlotOnClick : MonoBehaviour
     public void ClickToEquip(){
 
         scrollScript.activeSlot = slotNumber;
-        Debug.Log("clicked");
 	}
-  
+
 }
