@@ -12,24 +12,28 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform itemPos;
     private Slot slot;
     public Inventory inventory;
+    public DragInstance dragInstance;
 
     void Awake()  {
       slot = GetComponent<Slot>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
-      Debug.Log("begin drag");
-      item = this.transform.GetChild(0).gameObject;
-      itemPos = item.GetComponent<RectTransform>();
+      if (transform.childCount > 0)  {
+        dragInstance.itemDragging = this.transform.GetChild(0).gameObject;      
+      }
+      dragInstance.slotDragging = GetComponent<Slot>();
+
+
     }
 
     public void OnDrag(PointerEventData eventData) {
-      try {
+  /*    try {
         itemPos.anchoredPosition += eventData.delta/ (canvas.scaleFactor/2);
       }
       catch (MissingReferenceException e){
         //item was dropped when holding
-      }
+      }*/
 
     }
 
