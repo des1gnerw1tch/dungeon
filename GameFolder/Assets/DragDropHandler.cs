@@ -15,10 +15,12 @@ public class DragDropHandler : MonoBehaviour, IDropHandler
       Debug.Log("Dropped on slot " + GetComponent<Slot>().i);
       Debug.Log("Came from slot " + dragInstance.slotDragging.i);
       //inventory
-      string temp;
-      temp = inventory.item[dragInstance.slotDragging.i];
-      inventory.item[dragInstance.slotDragging.i] = inventory.item[GetComponent<Slot>().i];
-      inventory.item[GetComponent<Slot>().i] = temp;
+      if (inventory.item[dragInstance.slotDragging.i] != null)  {
+        string temp;
+        temp = inventory.item[dragInstance.slotDragging.i];
+        inventory.item[dragInstance.slotDragging.i] = inventory.item[GetComponent<Slot>().i];
+        inventory.item[GetComponent<Slot>().i] = temp;
+      }
 
 
       //ui

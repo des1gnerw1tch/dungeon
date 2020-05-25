@@ -28,12 +28,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         GameIsPaused = false;
+        FindObjectOfType<ItemManager>().enabled = true;
     }
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
+        FindObjectOfType<ItemManager>().enabled = false;
     }
     public void LoadMenu()
     {
@@ -47,4 +49,3 @@ public class PauseMenu : MonoBehaviour
 
     }
 }
-
