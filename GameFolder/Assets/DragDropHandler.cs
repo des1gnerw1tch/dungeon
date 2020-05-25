@@ -14,20 +14,26 @@ public class DragDropHandler : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)  {
       Debug.Log("Dropped on slot " + GetComponent<Slot>().i);
       Debug.Log("Came from slot " + dragInstance.slotDragging.i);
-      /*if (eventData.pointerDrag != null)  {
+      //inventory
+      string temp;
+      temp = inventory.item[dragInstance.slotDragging.i];
+      inventory.item[dragInstance.slotDragging.i] = inventory.item[GetComponent<Slot>().i];
+      inventory.item[GetComponent<Slot>().i] = temp;
 
-      }*/
-      Instantiate(dragInstance.itemDragging, transform, false);
-      dragInstance.slotDragging.transform.DetachChildren();
+
+      //ui
+      if (dragInstance.slotDragging.transform.childCount > 0) {
+        Instantiate(dragInstance.itemDragging, transform, false);
+        GameObject.Destroy(dragInstance.slotDragging.transform.GetChild(0).gameObject);
+      }
 
       //switches object, old slot
       if (transform.childCount > 1) {
         itemSwitching = this.transform.GetChild(0).gameObject;
         Instantiate(itemSwitching, dragInstance.slotDragging.transform, false);
-        itemSwitching.transform.parent = null;
+        GameObject.Destroy(itemSwitching);
       }
 
-      //dragInstance.slotDragging.transform.DetachChildren();
     }
 
 }
