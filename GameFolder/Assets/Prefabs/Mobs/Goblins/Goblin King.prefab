@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8017402406109829784}
   - component: {fileID: -741415980469027085}
   - component: {fileID: -1607134487483299486}
+  - component: {fileID: -9033608811590798709}
   - component: {fileID: -8693281510930512835}
   m_Layer: 10
   m_Name: Goblin King
@@ -227,7 +228,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 2177524917881198654, guid: a5d7e5ac1462b43dbbaacd7db2d2173d, type: 3}
-  minsPerSpawn: 3
+  minsPerSpawn: 2
+  spawnInterval: 8
+  spawnSound: goblinChant
+--- !u!114 &-9033608811590798709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minion: {fileID: 2177524917881198654, guid: 62a3503065d2e4a65916d0ff791cc3b2, type: 3}
+  minsPerSpawn: 2
   spawnInterval: 8
   spawnSound: goblinChant
 --- !u!114 &-8693281510930512835

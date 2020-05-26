@@ -9,7 +9,7 @@ public class WallDetector : MonoBehaviour
       animator = GetComponent<Animator>();
     }
     void OnCollisionStay2D(Collision2D other)  {
-      if (!(other.gameObject.CompareTag("Player"))) {
+      if (!(other.gameObject.CompareTag("Player")) && other.gameObject.GetComponent<EnemyHealth>() == null) {
         animator.SetBool("isPatrolling", false);
       }
     }
