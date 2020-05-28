@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3431413052702944343}
   - component: {fileID: 3448756612755345158}
   - component: {fileID: 3828199925622254375}
+  - component: {fileID: -7260798774517533593}
   m_Layer: 10
   m_Name: Mini Boss Slime
   m_TagString: Untagged
@@ -230,3 +231,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a22cf8975eb4145a66e5625782ac9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7260798774517533593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811510162841372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minion: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8, type: 3}
+  minsPerSpawn: 10
+  spawnInterval: 5
+  spawnSound: 

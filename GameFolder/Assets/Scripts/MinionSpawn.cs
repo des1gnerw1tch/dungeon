@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using System;
 
 public class MinionSpawn : MonoBehaviour
 {
@@ -34,7 +35,11 @@ public class MinionSpawn : MonoBehaviour
         Animator animator = instance.GetComponent<Animator>();
         animator.SetBool("isPatrolling", true);
       }
-      FindObjectOfType<AudioManager>().Play(spawnSound);
-
+      try {
+        FindObjectOfType<AudioManager>().Play(spawnSound);
+      }
+      catch(NullReferenceException e) {
+          
+      }
     }
 }
