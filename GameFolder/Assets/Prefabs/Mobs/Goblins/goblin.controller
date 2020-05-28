@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 1
+  maxWalkTime: 2
 --- !u!1102 &-8115137447729700781
 AnimatorState:
   serializedVersion: 5
@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 8
-  speed: 3
-  minWaitTime: 1
+  speed: 4
+  minWaitTime: 2
   maxWaitTime: 5
 --- !u!1102 &-7204029689711672216
 AnimatorState:
@@ -341,8 +341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 1
+  maxWalkTime: 2
 --- !u!1101 &-5861223578461767742
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -488,8 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 8
-  speed: 3
-  minWaitTime: 1
+  speed: 4
+  minWaitTime: 2
   maxWaitTime: 5
 --- !u!1101 &-4040904278707860835
 AnimatorStateTransition:
@@ -961,8 +961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 8
-  speed: 3
-  minWaitTime: 1
+  speed: 4
+  minWaitTime: 2
   maxWaitTime: 5
 --- !u!1101 &-349598831353122449
 AnimatorStateTransition:
@@ -1358,8 +1358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 1
+  maxWalkTime: 2
 --- !u!114 &2582940155887324051
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 8
   atkRadius: 1.1
 --- !u!1102 &2708709101923167020
@@ -1665,8 +1665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 1
+  maxWalkTime: 2
 --- !u!114 &4431246164083053873
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 8
   atkRadius: 1
 --- !u!1101 &4845107083337052325
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 8
   atkRadius: 0.75
 --- !u!1101 &5978662101017901767
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 8
   atkRadius: 1
 --- !u!1102 &8696521057738404163
@@ -2079,6 +2079,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 8
-  speed: 3
-  minWaitTime: 1
+  speed: 4
+  minWaitTime: 2
   maxWaitTime: 5
