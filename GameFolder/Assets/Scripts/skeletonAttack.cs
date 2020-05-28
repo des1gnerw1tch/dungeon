@@ -57,6 +57,27 @@ public class skeletonAttack : StateMachineBehaviour
       }
     }
 
+    //sets the animation direction the goblin should be attacking
+    float dx = target.position.x - animator.transform.position.x;
+    float dy = target.position.y - animator.transform.position.y;
+
+    //if horizontal is a good amount greater than vertical movement
+    if (Mathf.Abs(dx) > Mathf.Abs(dy))  {
+      if (dx > 0)  {
+        animator.SetTrigger("trigR");
+      } else {
+        animator.SetTrigger("trigL");
+      }
+    }
+    //if vertical movement is greater than horizontal movement
+    else {
+      if (dy > 0)  {
+        animator.SetTrigger("trigU");
+      } else  {
+        animator.SetTrigger("trigF");
+      }
+    }
+
   }
 
 
