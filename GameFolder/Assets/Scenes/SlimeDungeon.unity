@@ -188,6 +188,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1001 &40600971
@@ -235,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
         type: 3}
@@ -326,6 +332,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1 &90877824
@@ -2665,7 +2677,7 @@ PrefabInstance:
     - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
         type: 3}
@@ -55096,6 +55108,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1 &738919350
@@ -55408,6 +55426,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1 &804361319
@@ -55627,6 +55651,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1 &920852217
@@ -56186,7 +56216,7 @@ Transform:
   m_Children:
   - {fileID: 301787411}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1304716547
 GameObject:
@@ -56939,6 +56969,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1001 &1817424760
@@ -57008,6 +57044,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 2abef2f6ce53647c3be2b64adea4c017,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!1 &1861117296
@@ -79047,7 +79089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1982834571
 PrefabInstance:
@@ -79260,7 +79302,7 @@ PrefabInstance:
     - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3324903636556863145, guid: 00351edf99040463e89f0e5a38f7f83a,
         type: 3}
@@ -79329,7 +79371,7 @@ PrefabInstance:
     - target: {fileID: 3774206488288140241, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3774206488288140241, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
         type: 3}
