@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 100;
-    public int currentHealth;
+    public int currentHealth = 100;
 
     public HealthBar healthBar;
     private Tint body;
@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
         body = GetComponent<Tint>();
         healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
