@@ -11,6 +11,7 @@ public class GameSaveManager : MonoBehaviour
   public PlayerHealth playerHealth;
   public Inventory playerInventory;
   public ItemManager itemManager;
+  public PlayerMoney playerMoney;
   public Slot[] slots;
   public float saveInterval = 10f;
   private float counter;
@@ -38,7 +39,7 @@ public class GameSaveManager : MonoBehaviour
 
   //this is what saves the player data
     public void SavePlayer()  {
-      SaveSystem.SavePlayer(playerMovement, playerHealth, playerInventory);
+      SaveSystem.SavePlayer(playerMovement, playerHealth, playerInventory, playerMoney);
     }
 
 //Loads previous save
@@ -47,11 +48,11 @@ public class GameSaveManager : MonoBehaviour
       //loads health
       playerHealth.currentHealth = data.health;
       //loads position
-      Vector3 position;
+    /*  Vector3 position;
       position.x = data.position[0];
       position.y = data.position[1];
       position.z = data.position[2];
-      playerMovement.transform.position = position;
+      playerMovement.transform.position = position;*/
 
       //loads inventory
       for(int i = 0; i < 5; i++)  {
@@ -70,6 +71,9 @@ public class GameSaveManager : MonoBehaviour
         //checks if it is an item, if so instantiate
 
         playerInventory.isFull[i] = data.isFull[i];
+
+        //loads money
+        playerMoney.coins = data.coins;
       }
 
     }

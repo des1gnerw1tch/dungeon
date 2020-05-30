@@ -7,11 +7,12 @@ public class PlayerData {
 
   public int health;
   public float[] position;
-
+  //inventory
   public string[] item;
   public bool[] isFull;
+  public int coins;
 
-  public PlayerData (PlayerMovement playerMovement, PlayerHealth playerHealth, Inventory playerInventory) {
+  public PlayerData (PlayerMovement playerMovement, PlayerHealth playerHealth, Inventory playerInventory, PlayerMoney playerMoney) {
     //player health
     health = playerHealth.currentHealth;
 
@@ -27,6 +28,9 @@ public class PlayerData {
     for (int i = 0; i < 5; i++) {
       item[i] = playerInventory.item[i];
       isFull[i] = playerInventory.isFull[i];
+
+    //player money
+    coins = playerMoney.coins;
     }
 
 
