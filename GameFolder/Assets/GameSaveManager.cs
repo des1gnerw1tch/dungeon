@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSaveManager : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class GameSaveManager : MonoBehaviour
 
 //tries to load save
   void Start()  {
-    LoadPlayer();
+    //LoadPlayer();
+    if (LoadOnClick.loadFromSave) {
+      LoadPlayer();
+    }
     counter = saveInterval;
   }
 
@@ -35,12 +39,12 @@ public class GameSaveManager : MonoBehaviour
 //this is what loads the player data
     public void LoadPlayer()  {
       PlayerData data = SaveSystem.LoadPlayer();
-
       playerHealth.currentHealth = data.health;
       Vector3 position;
       position.x = data.position[0];
       position.y = data.position[1];
       position.z = data.position[2];
       playerMovement.transform.position = position;
+
     }
 }
