@@ -4,7 +4,9 @@ using UnityEngine;
 
 [System.Serializable]
 public class Item {
-    public string name; 
+    public string name;
     public GameObject item;
+    public GameObject canvasImage;
     public bool isHealthPotion;
+
 }

@@ -9,6 +9,7 @@ public class Gun {
 
     public GameObject objInHand;
     public GameObject bullet;
+    public GameObject canvasImage;
     public float shakeIntensity;
 
     public float reloadTime;
