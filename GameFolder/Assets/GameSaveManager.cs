@@ -41,7 +41,7 @@ public class GameSaveManager : MonoBehaviour
       SaveSystem.SavePlayer(playerMovement, playerHealth, playerInventory);
     }
 
-//this is what loads the player data
+//Loads previous save
     public void LoadPlayer()  {
       PlayerData data = SaveSystem.LoadPlayer();
       //loads health
