@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
@@ -39,8 +41,21 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
+
+        /*destroys all old objects, destroys animators first because there was a null problem
+        where animators were trying to access already deleted objects!*/
+        Animator[] animators = UnityEngine.Object.FindObjectsOfType<Animator>();
+        foreach(Animator anim in animators)  {
+          Destroy(anim.gameObject);
+        }
+
+        DontDestroy[] objects = UnityEngine.Object.FindObjectsOfType<DontDestroy>();
+        foreach(DontDestroy obj in objects)  {
+          Destroy(obj.gameObject);
+        }
+
+        SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()
     {

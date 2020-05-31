@@ -7,5 +7,6 @@ public class NewGameOnClick : MonoBehaviour
 {
     public void Click() {
       SceneManager.LoadScene("Main");
+      SaveSystem.DeletePlayer();
     }
 }
