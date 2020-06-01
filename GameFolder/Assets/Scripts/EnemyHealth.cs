@@ -89,12 +89,19 @@ public class EnemyHealth : MonoBehaviour
     void killMinions()  {
       EnemyHealth[] minions = Object.FindObjectsOfType<EnemyHealth>();
       Spawner[] spawners = Object.FindObjectsOfType<Spawner>();
-      GetComponent<MinionSpawn>().enabled = false;
+      MinionSpawn[] bossSpawners = GetComponents<MinionSpawn>();
+      //kills all minions
       foreach (EnemyHealth minion in minions) {
         minion.Die();
       }
+
+      //turns off spawners
       foreach (Spawner spawner in spawners) {
         spawner.enabled = false;
+      }
+      //turns off boss spawn minions
+      foreach (MinionSpawn script in bossSpawners) {
+        script.enabled = false;
       }
 
     }
