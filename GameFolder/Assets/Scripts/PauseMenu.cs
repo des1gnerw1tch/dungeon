@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameSaveManager GameManager;
 
     // Update is called once per frame
     void Update()
@@ -45,6 +46,7 @@ public class PauseMenu : MonoBehaviour
 
         /*destroys all old objects, destroys animators first because there was a null problem
         where animators were trying to access already deleted objects!*/
+        GameManager.SavePlayer();
         Animator[] animators = UnityEngine.Object.FindObjectsOfType<Animator>();
         foreach(Animator anim in animators)  {
           Destroy(anim.gameObject);
