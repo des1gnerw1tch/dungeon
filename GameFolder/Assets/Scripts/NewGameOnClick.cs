@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class NewGameOnClick : MonoBehaviour
 {
+    public static bool newGame = false;
     public void Click() {
       SceneManager.LoadScene("Main");
       SaveSystem.DeletePlayer();
+      newGame = true;
     }
 }

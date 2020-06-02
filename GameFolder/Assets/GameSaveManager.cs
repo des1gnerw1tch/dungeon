@@ -17,21 +17,21 @@ public class GameSaveManager : MonoBehaviour
   private float counter;
 
 //tries to load save
-  void Start()  {  
-    LoadPlayer();
+  void Start()  {
+  //  Player is loaded in the INVENTORY script on start
     counter = saveInterval;
   }
 
 //saves file every so seconds
   void Update() {
-  /*  if (counter > 0f)  {
+    if (counter > 0f)  {
       counter -= Time.deltaTime;
     } else {
       counter = saveInterval;
       SavePlayer();
       Debug.Log("Saved position and health");
 
-    }*/
+    }
   }
 
   //this is what saves the player data
