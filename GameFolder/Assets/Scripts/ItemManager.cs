@@ -11,6 +11,7 @@ public class ItemManager : MonoBehaviour
     public scroll scrollScript;
     public shakeCamera Camera;
     public PlayerHealth playerHealthScript;
+    public ItemBackboard itemBackboard;
     //canvas stuff
     public GameObject ReloadingText;
     public GameObject bulletsLeftsGameObject;
@@ -63,6 +64,7 @@ public class ItemManager : MonoBehaviour
           //if no gun is equipped
           itemString = null;
           ReloadingText.SetActive(false);
+          itemBackboard.UpdateImage(null);
           Destroy(itemInstance);
           bulletsLeft.text = null;
           maxAmmoText.text = null;
@@ -165,6 +167,7 @@ public class ItemManager : MonoBehaviour
         Transform  firepointPos = GameObject.FindGameObjectWithTag("FirePoint").transform;
         Vector2 Pos = new Vector2(firepointPos.position.x, firepointPos.position.y);
         itemInstance = Instantiate(GunPrefab,firepointPos.transform,false);
+        itemBackboard.UpdateImage(activeGun);
         bulletsLeft.text = "" + activeGun.currentAmmo;
         maxAmmoText.text = "" + activeGun.maxAmmo;
         UIName.text = activeGun.name;

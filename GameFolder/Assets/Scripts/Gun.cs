@@ -6,6 +6,7 @@ using UnityEngine;
 public class Gun {
 
     public string name;
+    public string rarity;
 
     public GameObject objInHand;
     public GameObject bullet;
