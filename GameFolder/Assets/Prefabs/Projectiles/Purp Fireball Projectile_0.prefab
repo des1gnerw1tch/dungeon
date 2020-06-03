@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  damage: 10
-  knockback: 50
+  damage: 30
+  knockback: 150
   hitSound: 
   isPiercing: 1
 --- !u!50 &7030127122113010486

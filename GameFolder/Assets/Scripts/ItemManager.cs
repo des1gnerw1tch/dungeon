@@ -184,6 +184,7 @@ public class ItemManager : MonoBehaviour
         bulletsLeft.text = null;
         maxAmmoText.text = null;
         UIName.text = activeItem.name;
+        itemBackboard.ShowItemBackboard(activeItem);
         isWaiting = false;
         if (reload != null)
           StopCoroutine(reload);
@@ -248,7 +249,7 @@ public class ItemManager : MonoBehaviour
   void UseHealthPotion(){
       if(playerHealthScript.currentHealth < playerHealthScript.maxHealth){
         FindObjectOfType<AudioManager>().Play("gulp");
-        playerHealthScript.currentHealth += 30;
+        playerHealthScript.currentHealth += 50;
         Destroy(itemInstance);
         scrollScript.activeCanvasSlot.DestroyItem();
         inventory.item[scrollScript.activeSlot] = null;
