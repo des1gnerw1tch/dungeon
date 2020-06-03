@@ -22,7 +22,7 @@ public class PickUp : MonoBehaviour
 			}
             for(int i = 0; i < inventory.slots.Length; i ++){
 
-                if(inventory.isFull[i] == false && !isDuplicate){
+                if(inventory.isFull[i] == false && !isDuplicate && i < 5){
                     inventory.isFull[i] = true;
 
                     Instantiate(itemButton, inventory.slots[i].transform,false);

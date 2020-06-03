@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
 
 
     void Start() {
-      item = new string[5];
+      item = new string[26];
 
       //if it is a new game, do not load
       if (!NewGameOnClick.newGame)  {
