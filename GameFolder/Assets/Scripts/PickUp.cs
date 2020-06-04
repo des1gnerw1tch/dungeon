@@ -15,7 +15,7 @@ public class PickUp : MonoBehaviour
         if  (other.CompareTag("Player")){
             bool isDuplicate = false;
             for(int j = 0; j < inventory.slots.Length; j ++){
-                if(inventory.item[j] == inventoryID && inventory.item[j] != "HealthPotion")
+                if(inventory.item[j] == inventoryID && inventory.item[j] != "HealthPotion" && inventory.item[j] != "Torch")
                 {
                     isDuplicate = true;
 				}
