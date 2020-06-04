@@ -52,7 +52,7 @@ public class GameSaveManager : MonoBehaviour
       playerMovement.transform.position = position;*/
 
       //loads inventory
-      for(int i = 0; i < 5; i++)  {
+      for(int i = 0; i < 26; i++)  {
         playerInventory.item[i] = data.item[i];
 
         //checks if item string is a gun

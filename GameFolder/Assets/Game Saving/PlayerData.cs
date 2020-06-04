@@ -23,9 +23,9 @@ public class PlayerData {
     position[2] = playerMovement.transform.position.z;
 
     //player inventory
-    item = new string[5];
-    isFull = new bool[5];
-    for (int i = 0; i < 5; i++) {
+    item = new string[26];
+    isFull = new bool[26];
+    for (int i = 0; i < 26; i++) {
       item[i] = playerInventory.item[i];
       isFull[i] = playerInventory.isFull[i];
 
