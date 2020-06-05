@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: a7d196dd4ef740d43926ea6bee856c89
+  - enabled: 1
+    path: Assets/Scenes/WizardHome.unity
+    guid: 3b8f0ab8ee43c498393c7513b757eb8d
   m_configObjects: {}
