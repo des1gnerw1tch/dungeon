@@ -79333,6 +79333,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[4]
+      value: 'You need to activate the ancient globes. Right now, they are shining
+        a bright yellow. This is the symbol of the slimes. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[7]
+      value: 'I''ll have a special reward for you. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[8]
+      value: 'I''ll have a special reward for you. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[3]
+      value: 'I am tethered to this dungeon by the power of the slimes. By helping
+        me, I could return home. '
+      objectReference: {fileID: 0}
     - target: {fileID: 3774206488288140241, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -14,7 +14,7 @@ public class Globe : MonoBehaviour
     private EnemyHealth bossHealth;
     private Animator animator;
 
-    private bool activated = false;
+    public bool activated = false;
     private bool bossDefeated = false;
     // Start is called before the first frame update
     void Start()

@@ -19,7 +19,7 @@ public class GameSaveManager : MonoBehaviour
 //tries to load save
   void Start()  {
   //  Player is loaded in the INVENTORY script on start
-    counter = saveInterval;
+    counter = 0;
   }
 
 //saves file every so seconds
@@ -29,7 +29,7 @@ public class GameSaveManager : MonoBehaviour
     } else {
       counter = saveInterval;
       SavePlayer();
-      Debug.Log("Saved position and health");
+      //Debug.Log("Saved position and health");
 
     }
   }
@@ -71,6 +71,9 @@ public class GameSaveManager : MonoBehaviour
 
         //loads money
         playerMoney.coins = data.coins;
+
+        //loads game progress
+        PlayerProgress.wizardFreed = data.wizardFreed;
       }
 
     }

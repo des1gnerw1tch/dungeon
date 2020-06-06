@@ -12,6 +12,9 @@ public class PlayerData {
   public bool[] isFull;
   public int coins;
 
+  //progress
+  public bool wizardFreed;
+
   public PlayerData (PlayerMovement playerMovement, PlayerHealth playerHealth, Inventory playerInventory, PlayerMoney playerMoney) {
     //player health
     health = playerHealth.currentHealth;
@@ -31,6 +34,9 @@ public class PlayerData {
 
     //player money
     coins = playerMoney.coins;
+
+    //player progress
+    wizardFreed = PlayerProgress.wizardFreed;
     }
 
 
