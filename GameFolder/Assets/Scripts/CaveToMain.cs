@@ -9,6 +9,7 @@ public class CaveToMain : MonoBehaviour
     public string sceneToLoad;
     private Transform player;
     private GameObject playerObject;
+    private VaultHolder vaultHolder;
     //private Shooting playerShootingScript;
     private Inventory inventory;
     public bool teleportToSetPosition = false;
@@ -26,6 +27,7 @@ public class CaveToMain : MonoBehaviour
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
       playerObject =   GameObject.FindGameObjectWithTag("Player");
       inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+      vaultHolder = FindObjectOfType<VaultHolder>();
     }
     void OnTriggerEnter2D(Collider2D hitInfo) {
 
@@ -54,6 +56,12 @@ public class CaveToMain : MonoBehaviour
 
     }
     IEnumerator LoadLevel(string levelIndex){
+        //vault bug solution
+        if (levelIndex == "Main") {
+          vaultHolder.EnableVault();
+        } else {
+          vaultHolder.DisableVault();
+        }
         transition.SetTrigger("Start");
         playerObject.GetComponent<PlayerHealth>().enabled = false;
         playerObject.GetComponent<PlayerMovement>().enabled = false;
