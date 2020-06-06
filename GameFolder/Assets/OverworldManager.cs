@@ -31,6 +31,5 @@ public class OverworldManager : MonoBehaviour
         portalCollider.enabled = false;
       }
 
-      Debug.Log("Scene UPdated");
     }
 }
