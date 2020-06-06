@@ -6,14 +6,7 @@ public class PlayerProgress : MonoBehaviour
 {
     [Header("NPC Progress")]
     public static bool wizardFreed = false;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+    public static void ResetStaticVariables()  {
+      wizardFreed = false;
     }
 }
