@@ -56,12 +56,9 @@ public class CaveToMain : MonoBehaviour
 
     }
     IEnumerator LoadLevel(string levelIndex){
-        //vault bug solution
-        if (levelIndex == "Main") {
-          vaultHolder.EnableVault();
-        } else {
-          vaultHolder.DisableVault();
-        }
+        //vault fix
+        vaultHolder.DisableVault();
+
         transition.SetTrigger("Start");
         playerObject.GetComponent<PlayerHealth>().enabled = false;
         playerObject.GetComponent<PlayerMovement>().enabled = false;
