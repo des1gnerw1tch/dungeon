@@ -6,7 +6,6 @@ public class OverworldManager : MonoBehaviour
 {
     public BoxCollider2D dialogueCollider;
     public BoxCollider2D portalCollider;
-    public VaultHolder vaultHolder;
     //public PlayerProgress progress;
     // Start is called before the first frame update
     void Start()
@@ -19,8 +18,6 @@ public class OverworldManager : MonoBehaviour
         dialogueCollider.enabled = true;
         portalCollider.enabled = false;
       }
-      vaultHolder = FindObjectOfType<VaultHolder>();
-      vaultHolder.EnableVault();
     }
 
     // Update is called once per frame
