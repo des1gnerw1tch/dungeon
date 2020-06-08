@@ -9,6 +9,7 @@ public class EnemyHealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
     public Animator animator;
+    public PlayerHealth PlayerHealthScript;
 
     public void SetEnemyMaxHealth(float health)
     {
@@ -23,7 +24,7 @@ public class EnemyHealthBar : MonoBehaviour
 
         slider.value = health;
         animator.SetBool("IsEnemy",false);
-        if(health <= 0)
+        if(health <= 0 || PlayerHealthScript.currentHealth <= 0)
         {
             animator.SetBool("IsEnemy", true);
         }
