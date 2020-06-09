@@ -14,6 +14,7 @@ public class PlayerData {
 
   //progress
   public bool wizardFreed;
+  public bool merchantFreed;
 
   public PlayerData (PlayerMovement playerMovement, PlayerHealth playerHealth, Inventory playerInventory, PlayerMoney playerMoney) {
     //player health
@@ -37,6 +38,7 @@ public class PlayerData {
 
     //player progress
     wizardFreed = PlayerProgress.wizardFreed;
+    merchantFreed = PlayerProgress.merchantFreed;
     }
 
 

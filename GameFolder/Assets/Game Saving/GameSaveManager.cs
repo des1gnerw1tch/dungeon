@@ -74,6 +74,7 @@ public class GameSaveManager : MonoBehaviour
 
         //loads game progress
         PlayerProgress.wizardFreed = data.wizardFreed;
+        PlayerProgress.merchantFreed = data.merchantFreed;
       }
 
     }
