@@ -6,10 +6,13 @@ public class tracyCaveBehavior : MonoBehaviour
 {
     [SerializeField] private GameObject DropPrefab;
     [SerializeField] private BoxCollider2D DialogueCollider;
+    private GameObject Player;
 
     [SerializeField] private int counter = 0;
+    public bool trig = false;
 
     void Start()  {
+      Player = FindObjectOfType<PlayerMovement>().gameObject;
       counter = 0;
     }
 
@@ -18,30 +21,29 @@ public class tracyCaveBehavior : MonoBehaviour
       if (other.CompareTag("Player")) {
         other.GetComponent<PlayerMovement>().moveSpeed = 0f;
         DialogueCollider.size = new Vector2(10, 10);
+        trig = true;
       }
 
     }
-    void OnTriggerStay2D(Collider2D other){
 
-      if(other.CompareTag("Player"))  {
-        //counter will go up whenever pressed space talking to homie
-          if (Input.GetKeyDown("space"))  {
-            counter += 1;
+    void Update() {
+      if (trig) {
+        if (Input.GetKeyDown(KeyCode.Space))  {
+          counter += 1;
 
-            //on 3rd dialogue
-            if (counter == 3) {
-              Instantiate(DropPrefab, other.transform.position, Quaternion.identity);
-            }
-
-            //on end of conversation, teleport to shop Scene
-            if (counter == 4) {
-              transform.GetChild(0).gameObject.SetActive(true);
-              other.GetComponent<PlayerMovement>().moveSpeed = 5f;
-              PlayerProgress.merchantFreed = true;
-            }
+          //on 3rd dialogue
+          if (counter == 3) {
+            Instantiate(DropPrefab, Player.transform.position, Quaternion.identity);
           }
-      }
 
+          //on end of conversation, teleport to shop Scene
+          if (counter == 4) {
+            transform.GetChild(0).gameObject.SetActive(true);
+            Player.GetComponent<PlayerMovement>().moveSpeed = 5f;
+            PlayerProgress.merchantFreed = true;
+          }
+        }
+    }
     }
 
 }
