@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealthBar : MonoBehaviour
 {
@@ -9,7 +10,13 @@ public class EnemyHealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
     public Animator animator;
-    public PlayerHealth PlayerHealthScript;
+    private PlayerHealth PlayerHealthScript;
+
+    void Start()
+    {
+        animator.SetBool("IsEnemy", true);
+        PlayerHealthScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+    }
 
     public void SetEnemyMaxHealth(float health)
     {
@@ -18,13 +25,21 @@ public class EnemyHealthBar : MonoBehaviour
 
         fill.color = gradient.Evaluate(1f);
     }
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "GoblinBossFight")
+        {
+            animator.SetBool("IsEnemy", true );
+        }
+    }
 
     public void SetEnemyHealth(float health)
     {
 
         slider.value = health;
         animator.SetBool("IsEnemy",false);
-        if(health <= 0 || PlayerHealthScript.currentHealth <= 0)
+        
+        if (health <= 0 || PlayerHealthScript.currentHealth <= 0)
         {
             animator.SetBool("IsEnemy", true);
         }
