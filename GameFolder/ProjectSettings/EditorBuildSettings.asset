@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tent.unity
     guid: 3679118bcc4c348dfa7f97aaae508df0
   - enabled: 1
-    path: Assets/Scenes/Mossy Dungeon/MossyDungeon.unity
+    path: Assets/Scenes/Mossy Dungeon/MDHub.unity
     guid: c7a37989839bd40019f237d9ff084f90
+  - enabled: 1
+    path: Assets/Scenes/Mossy Dungeon/MosDung1.unity
+    guid: 7329ecc274f4a4c47942765db89c62f2
   m_configObjects: {}
