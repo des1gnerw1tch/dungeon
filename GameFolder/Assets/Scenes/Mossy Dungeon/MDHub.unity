@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 199445158}
   - component: {fileID: 199445157}
   - component: {fileID: 199445156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Solid Tileset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 595584591}
   - component: {fileID: 595584593}
   - component: {fileID: 595584592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4023,7 +4023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 655531383}
   - component: {fileID: 655531382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4178,7 +4178,7 @@ GameObject:
   - component: {fileID: 1747796851}
   - component: {fileID: 1747796850}
   - component: {fileID: 1747796849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
