@@ -11,9 +11,4 @@ public class gameFrameRate : MonoBehaviour
       Application.targetFrameRate = maxFrameRate;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

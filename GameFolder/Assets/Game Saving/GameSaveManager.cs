@@ -55,17 +55,17 @@ public class GameSaveManager : MonoBehaviour
       for(int i = 0; i < 26; i++)  {
         playerInventory.item[i] = data.item[i];
 
-        //checks if item string is a gun
+        //checks if item string is a gun, if so instantiate canvas image
         Gun gunInstance = Array.Find(itemManager.guns, gun => gun.name == playerInventory.item[i]);
         if (gunInstance != null) {
           Instantiate(gunInstance.canvasImage, playerInventory.slots[i].transform, false);
-        } else {
+        } else { //checks if it is an item, if so instantiate
           Item itemInstance = Array.Find(itemManager.items, item => item.name == playerInventory.item[i]);
           if (itemInstance != null) {
             Instantiate(itemInstance.canvasImage, playerInventory.slots[i].transform, false);
           }
         }
-        //checks if it is an item, if so instantiate
+
 
         playerInventory.isFull[i] = data.isFull[i];
 
