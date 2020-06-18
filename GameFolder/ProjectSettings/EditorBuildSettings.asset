@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle/Arena.unity
     guid: 4683f8040ad9b1044922993a6c0429cc
+  - enabled: 1
+    path: Assets/Scenes/Mossy Dungeon/MosDung2.unity
+    guid: fb6dbb863572c484abe8be68b27acecd
   m_configObjects: {}

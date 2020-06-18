@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8247079406849632719}
   - component: {fileID: 9040440001880212294}
   m_Layer: 0
-  m_Name: SpiderSpawner
+  m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -47,3 +47,6 @@ MonoBehaviour:
   spawnTime: 1
   max: 30
   numAlive: 0
+  xRadius: 15
+  yRadius: 15
+  GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
