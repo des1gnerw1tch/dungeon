@@ -31,13 +31,13 @@ public class tracyCaveBehavior : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))  {
           counter += 1;
 
-          //on 3rd dialogue
-          if (counter == 3) {
+          //on 4th dialogue
+          if (counter == 4) {
             Instantiate(DropPrefab, Player.transform.position, Quaternion.identity);
           }
 
           //on end of conversation, teleport to shop Scene
-          if (counter == 4) {
+          if (counter == 5) {
             transform.GetChild(0).gameObject.SetActive(true);
             Player.GetComponent<PlayerMovement>().moveSpeed = 5f;
             PlayerProgress.merchantFreed = true;
