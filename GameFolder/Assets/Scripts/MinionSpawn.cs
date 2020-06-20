@@ -8,6 +8,8 @@ public class MinionSpawn : MonoBehaviour
     public int minsPerSpawn;
     public float spawnInterval;
     public string spawnSound;
+    public bool hasAnimation;
+    public Animator animator;
     private float counter;
 
     void Start()
@@ -39,7 +41,11 @@ public class MinionSpawn : MonoBehaviour
         FindObjectOfType<AudioManager>().Play(spawnSound);
       }
       catch(NullReferenceException e) {
-          
+
+      }
+      //this will set an animation to the thing that is spawning, if needed
+      if (animator != null) {
+        animator.SetTrigger("Spawn");
       }
     }
 }
