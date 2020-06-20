@@ -10,6 +10,9 @@ public class OverworldManager : MonoBehaviour
 
     public BoxCollider2D dialogueGunShop;
     public BoxCollider2D portalGunShop;
+
+    public BoxCollider2D dialogueHospital;
+    public BoxCollider2D portalHospital;
     //public PlayerProgress progress;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +20,6 @@ public class OverworldManager : MonoBehaviour
       UpdateScene();
     }
 
-    // Update is called once per frame
     public void UpdateScene()
     {
       //wizard
@@ -36,6 +38,15 @@ public class OverworldManager : MonoBehaviour
       } else {
         dialogueGunShop.enabled = true;
         portalGunShop.enabled = false;
+      }
+
+      //hospital
+      if (PlayerProgress.nurseFreed) {
+        dialogueHospital.enabled = false;
+        portalHospital.enabled = true;
+      } else {
+        dialogueHospital.enabled = true;
+        portalHospital.enabled = false;
       }
 
       }
