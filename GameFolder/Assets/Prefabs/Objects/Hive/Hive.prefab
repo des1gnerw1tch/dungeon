@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3277636165937893270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.71, y: 6.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minionSpawn: {fileID: 600423442}
-  spawnRadius: 6.78
+  health: {fileID: 47184095784892331}
+  spawnRadius: 6.96
   GizmosColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &600423442
 MonoBehaviour:
@@ -116,11 +117,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 6374451069617026663, guid: 057e6e3ae8efd445d8bf162a4b04256f, type: 3}
-  minsPerSpawn: 3
-  spawnInterval: 5
+  minsPerSpawn: 2
+  spawnInterval: 2
   spawnSound: 
-  hasAnimation: 0
   animator: {fileID: 2566242466193417055}
+  offsetX: 0
+  offsetY: -1
 --- !u!61 &5360999564080067924
 BoxCollider2D:
   m_ObjectHideFlags: 0

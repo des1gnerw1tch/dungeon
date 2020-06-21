@@ -8,9 +8,10 @@ public class MinionSpawn : MonoBehaviour
     public int minsPerSpawn;
     public float spawnInterval;
     public string spawnSound;
-    public bool hasAnimation;
     public Animator animator;
     private float counter;
+    [SerializeField] private float offsetX = 0;
+    [SerializeField] private float offsetY = 0;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class MinionSpawn : MonoBehaviour
 
     void Spawn()  {
       //spawns minions
-      Vector2 pos = transform.position;
+      Vector2 pos = new Vector2(transform.position.x + offsetX, + transform.position.y + offsetY);
       for (int i = minsPerSpawn; i > 0 ; i--) {
         GameObject instance = Instantiate(minion, pos, Quaternion.identity);
         Animator animator = instance.GetComponent<Animator>();

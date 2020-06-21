@@ -8,6 +8,10 @@ public class HiveController : MonoBehaviour
     private Transform target;
     public float spawnRadius;
     public Color GizmosColor = new Color(0.5f, 0.5f, 0.5f, 0.2f);
+    [SerializeField] private EnemyHealth health;
+    [SerializeField] private int minionsOnDeath;
+    private bool isDead = false;
+
     // Update is called once per frame
     void Start()  {
       target = FindObjectOfType<PlayerHealth>().GetComponent<Transform>();
@@ -20,6 +24,14 @@ public class HiveController : MonoBehaviour
         minionSpawn.enabled = true;
       } else {
         minionSpawn.enabled = false;
+      }
+
+      //this will spawn a couple bees on death
+      if (health.GetHealth() <= 0f && isDead == false) {
+        isDead = true;
+        Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
+        Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
+        Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);    
       }
     }
 
