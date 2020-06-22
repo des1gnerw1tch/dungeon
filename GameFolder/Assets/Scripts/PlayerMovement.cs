@@ -9,8 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
     public Animator animator;
-    public bool running = false;
-    public float stamina = 10f;
+    public bool dash = false;
+    public float dashCooldown = 0f;
+    public float dashLength = 1f;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -21,20 +22,6 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        //Still feels a little choppy, but also works, maybe fix camera while running?
-        if (Input.GetKey(KeyCode.LeftShift) && stamina>1f)
-        {
-            running = true;
-            stamina -= 1f;
-        }
-        else if (stamina > 10f)
-        {
-            stamina = 10f;
-        }
-        else
-        {
-            stamina += .4f;
-        }
         animator.SetFloat("Speed",Mathf.Abs(movement.y));
         animator.SetFloat("HSpeed", Mathf.Abs(movement.x));
 
@@ -43,18 +30,23 @@ public class PlayerMovement : MonoBehaviour
         || Input.GetAxisRaw("Vertical") != 0)  {
           FindObjectOfType<AudioManager>().Play("footsteps");
         }*/
+        //Dash Function
+        /*if(Input.GetKeyDown("left shift") && dashCooldown<=0f)
+        {
+            dashCooldown = 2f;
+            dash = true;
+        }
+        */
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     void FixedUpdate()
     {
-        if (running == true && stamina>1f){
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime * 2);
-            running = false;
+        /*while (dash == true) { 
+
         }
-        else
-        {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }
+        */
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        dashCooldown -= Time.fixedDeltaTime;
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg +90;
         rb.rotation = angle;
