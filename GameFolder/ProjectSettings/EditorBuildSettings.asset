@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mossy Dungeon/MosDung2.unity
     guid: fb6dbb863572c484abe8be68b27acecd
+  - enabled: 1
+    path: Assets/Scenes/Mossy Dungeon/MdBoss.unity
+    guid: b15f0acf8449144df9f25aa74d589b25
   m_configObjects: {}
