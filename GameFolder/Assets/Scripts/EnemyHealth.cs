@@ -71,7 +71,7 @@ public class EnemyHealth : MonoBehaviour
           GetComponent<Collider2D>().enabled = false;
           hasDied = true;
           dissolve.play(dissolveSpeed);
-          animator.SetBool("isDead", true);
+          animator.SetTrigger("isDead");
           FindObjectOfType<DropManager>().Drop(enemyID, transform.position);
           FindObjectOfType<AudioManager>().Play(enemyID);
           if (isBoss) {

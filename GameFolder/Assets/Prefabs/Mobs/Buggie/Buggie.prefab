@@ -19,7 +19,8 @@ GameObject:
   - component: {fileID: 2893820300167295680}
   - component: {fileID: 5262042104940372741}
   - component: {fileID: 7641505591515928455}
-  m_Layer: 0
+  - component: {fileID: 1060543810}
+  m_Layer: 10
   m_Name: Buggie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,3 +231,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1060543810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851798882778273196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4b43e64475744f8a3c1eb2595aedf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 851798882778273197}
+  rb: {fileID: 7641505591515928455}
