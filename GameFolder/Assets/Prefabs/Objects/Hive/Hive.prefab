@@ -101,9 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minionSpawn: {fileID: 600423442}
-  health: {fileID: 47184095784892331}
   spawnRadius: 6.96
   GizmosColor: {r: 1, g: 0, b: 0, a: 1}
+  health: {fileID: 47184095784892331}
+  minionsOnDeath: 0
 --- !u!114 &600423442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,8 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 6374451069617026663, guid: 057e6e3ae8efd445d8bf162a4b04256f, type: 3}
-  minsPerSpawn: 2
-  spawnInterval: 2
+  minsPerSpawn: 1
+  spawnInterval: 0.5
   spawnSound: 
   animator: {fileID: 2566242466193417055}
   offsetX: 0
@@ -164,6 +165,7 @@ MonoBehaviour:
   maxHealth: 100
   enemyID: Hive
   dissolveSpeed: 1
+  tintOnStart: 1
   dissolve: {fileID: -6171479181860555288}
   tint: {fileID: -5955737055157354304}
   animator: {fileID: 2566242466193417055}

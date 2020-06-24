@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
     Vector2 pos;
     private bool hasDied = false;
     public float dissolveSpeed = 2f;
+    [SerializeField] private bool tintOnStart = false;
 
     //scripts
     public Dissolve dissolve;
@@ -38,6 +39,12 @@ public class EnemyHealth : MonoBehaviour
         }
 
         pos.Set(0f, 0f);
+
+        //tints on start
+        if (tintOnStart)  {
+          tint.SetTintColor(new Color(1, 1, 1, 1f));
+          tint.SetTintFadeSpeed(2f);
+        }
     }
 
     // Update is called once per frame
@@ -54,7 +61,8 @@ public class EnemyHealth : MonoBehaviour
                 EnemyHealthBarScript.SetEnemyHealth(curHealth);
            }
        }
-
+       //as soon as shot, will tint. Makes sure to set tint fade speed to correctly
+       tint.SetTintFadeSpeed(6f);
        tint.SetTintColor(new Color(1, 1, 1, 1f));
        /*when shot while idling, the enemy will move away (start patrolling). */
        if (animator != null)  {
