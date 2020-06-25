@@ -10,6 +10,8 @@ public class Arena : MonoBehaviour
     public GameObject WaveUI;
     public bool lootgiven = false;
     public bool WaveCompleted = true;
+    public DialogueActivator DialogueActivatorScript;
+    public GameObject DialogueNextWave;
     // Start is called before the first frame update
     void OnTriggerStay2D(Collider2D other)
     {
@@ -28,6 +30,8 @@ public class Arena : MonoBehaviour
                 int num = counter + 1;
                 WaveText.text = "Wave " + num;
                 lootgiven = true;
+                DialogueActivatorScript.ChangeDialogue();
+                DialogueNextWave.SetActive(false);
             }
             
             WaveUI.SetActive(true);
@@ -41,6 +45,7 @@ public class Arena : MonoBehaviour
             if(counter < Spawners.Length - 1)
             {
                 Spawners[counter].SetActive(false);
+                DialogueNextWave.SetActive(true);
                 counter += 1;
                 WaveCompleted = true;
                 
