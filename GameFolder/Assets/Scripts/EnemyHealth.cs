@@ -14,11 +14,13 @@ public class EnemyHealth : MonoBehaviour
     public float dissolveSpeed = 2f;
     [SerializeField] private bool tintOnStart = false;
 
+
     //scripts
     public Dissolve dissolve;
     public Tint tint;
     public Animator animator;
     public bool isBoss;
+    [SerializeField] private bool stopMusicOnDeath = false;
     public GameObject portalToEnable;
     private EnemyHealthBar EnemyHealthBarScript;
     private GameObject enemyhealthBarCanvasImage;
@@ -84,6 +86,9 @@ public class EnemyHealth : MonoBehaviour
           FindObjectOfType<AudioManager>().Play(enemyID);
           if (isBoss) {
             killMinions();
+            //kill music
+              if (stopMusicOnDeath)
+                FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
             //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
             //lets you go through door at the end
             if (portalToEnable != null)

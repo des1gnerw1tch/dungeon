@@ -1689,9 +1689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 1
-  speed: 6
-  minWaitTime: 2
-  maxWaitTime: 3
+  speed: 11
+  minWaitTime: 1
+  maxWaitTime: 1.5
 --- !u!1102 &6104381345410379561
 AnimatorState:
   serializedVersion: 5

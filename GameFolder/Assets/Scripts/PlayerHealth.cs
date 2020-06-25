@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -31,6 +32,15 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("Main");
             Vector3 reset = new Vector3(24.35f, 22.94f, 0f);
             transform.position = reset;
+
+            //tries to stop music
+            try {
+              FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
+            }
+            catch (NullReferenceException e){
+                //Debug.Log("No music found to stop");
+            }
+
 		    }
         healthBar.SetHealth(currentHealth);
         if(currentHealth > maxHealth){
