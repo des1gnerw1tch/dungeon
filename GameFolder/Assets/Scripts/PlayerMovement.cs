@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    /*note: moveSpeed is changed to 5f after talking with some NPC's, when changing moveSpeed,
+    you will need to change the move speed in the NPC's scripts too*/
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        /*while (dash == true) { 
+        /*while (dash == true) {
 
         }
         */
