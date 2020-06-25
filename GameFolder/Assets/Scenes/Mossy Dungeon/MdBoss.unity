@@ -6742,7 +6742,7 @@ PrefabInstance:
     - target: {fileID: 3921428132169830072, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
       propertyPath: m_Name
-      value: Teleporter to Main
+      value: Teleporter to Hospital
       objectReference: {fileID: 0}
     - target: {fileID: 3921428132169830072, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
@@ -6767,12 +6767,22 @@ PrefabInstance:
     - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
       propertyPath: posX
-      value: -7.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
       propertyPath: posY
-      value: 26.86
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: Hospital
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
+        type: 3}
+      propertyPath: playSound
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3921428132169830078, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
