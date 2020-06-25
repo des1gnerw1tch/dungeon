@@ -20,10 +20,13 @@ public class Arena : MonoBehaviour
                 Spawners[counter].SetActive(true);
                 lootgiven = false;
                 WaveCompleted = false;
+
             }
             else
             {
                 FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
+                int num = counter + 1;
+                WaveText.text = "Wave " + num;
                 lootgiven = true;
             }
             
@@ -40,8 +43,7 @@ public class Arena : MonoBehaviour
                 Spawners[counter].SetActive(false);
                 counter += 1;
                 WaveCompleted = true;
-                int num = counter + 1;
-                WaveText.text = "Wave " + num;
+                
                 //FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
                 //Spawn loot at the tree
                 //Spawners[counter].SetActive(true);
@@ -49,7 +51,7 @@ public class Arena : MonoBehaviour
             else
             {
                 Debug.Log("end of Arena");
-                FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
+                //FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
                 WaveUI.SetActive(false);
             }
             
