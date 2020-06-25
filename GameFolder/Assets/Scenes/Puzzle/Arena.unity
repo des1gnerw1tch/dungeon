@@ -1116,7 +1116,7 @@ RectTransform:
   m_Children:
   - {fileID: 24904469}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1172,6 +1172,56 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!1 &401544496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401544497}
+  - component: {fileID: 401544498}
+  m_Layer: 0
+  m_Name: GoblinWave (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401544497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401544496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.55, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1038895738}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &401544498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401544496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10, type: 3}
+  spawnTime: 5
+  max: 5
+  numAlive: 0
+  xRadius: 1
+  yRadius: 2
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &411509567
 GameObject:
@@ -1433,7 +1483,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -1641,7 +1691,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -1745,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -1977,7 +2027,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -2021,6 +2071,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d67280dcbcd45bf94bc2ccd7da28b0, type: 3}
+--- !u!1 &738179572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738179573}
+  - component: {fileID: 738179574}
+  m_Layer: 0
+  m_Name: GoblinWave (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738179573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738179572}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.6999989, y: -10.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1038895738}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &738179574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738179572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10, type: 3}
+  spawnTime: 5
+  max: 5
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &741975139
 GameObject:
   m_ObjectHideFlags: 0
@@ -11517,7 +11617,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -13957,7 +14057,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -14151,6 +14251,60 @@ MonoBehaviour:
   xRadius: 2
   yRadius: 1
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!1 &1038895736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038895738}
+  - component: {fileID: 1038895737}
+  m_Layer: 0
+  m_Name: SkeletonRangeGob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1038895737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038895736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10, type: 3}
+  spawnTime: 5
+  max: 5
+  numAlive: 0
+  xRadius: 1
+  yRadius: 2
+  GizmosColor: {r: 0.4339178, g: 0.46226418, b: 0.436266, a: 0.2}
+--- !u!4 &1038895738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038895736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.13, y: 2.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1239260594}
+  - {fileID: 401544497}
+  - {fileID: 2092017348}
+  - {fileID: 738179573}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1046101337
 GameObject:
   m_ObjectHideFlags: 0
@@ -14355,6 +14509,56 @@ MonoBehaviour:
   xRadius: 2
   yRadius: 1
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!1 &1239260593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239260594}
+  - component: {fileID: 1239260595}
+  m_Layer: 0
+  m_Name: GoblinWave (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1239260594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239260593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30.13, y: -13.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1038895738}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239260595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239260593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2177524917881198654, guid: 62a3503065d2e4a65916d0ff791cc3b2, type: 3}
+  spawnTime: 5
+  max: 5
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1249888515
 GameObject:
   m_ObjectHideFlags: 0
@@ -14459,8 +14663,11 @@ MonoBehaviour:
   - {fileID: 28848845}
   - {fileID: 1620632885}
   - {fileID: 1912147950}
+  - {fileID: 1038895736}
   WaveText: {fileID: 668906485}
   WaveUI: {fileID: 24904468}
+  lootgiven: 0
+  WaveCompleted: 1
 --- !u!114 &1323399268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14564,7 +14771,7 @@ PrefabInstance:
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5324765611189452987, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -15086,7 +15293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608928044
 GameObject:
@@ -15202,7 +15409,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620632885
 GameObject:
@@ -15917,4 +16124,54 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!1 &2092017347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092017348}
+  - component: {fileID: 2092017349}
+  m_Layer: 0
+  m_Name: GoblinWave (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092017348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092017347}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -22.3, y: 7.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1038895738}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2092017349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092017347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2177524917881198654, guid: 62a3503065d2e4a65916d0ff791cc3b2, type: 3}
+  spawnTime: 5
+  max: 5
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
