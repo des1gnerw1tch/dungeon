@@ -42,7 +42,7 @@ public class Arena : MonoBehaviour
                 WaveCompleted = true;
                 int num = counter + 1;
                 WaveText.text = "Wave " + num;
-                FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
+                //FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
                 //Spawn loot at the tree
                 //Spawners[counter].SetActive(true);
             }
