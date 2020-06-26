@@ -10,9 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
     public Animator animator;
-    public bool dash = false;
-    public float dashCooldown = 0f;
-    public float dashLength = 1f;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -47,9 +44,13 @@ public class PlayerMovement : MonoBehaviour
         }
         */
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        dashCooldown -= Time.fixedDeltaTime;
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg +90;
         rb.rotation = angle;
+    }
+
+    public Vector2 getMovement()
+    {
+        return movement;
     }
 }
