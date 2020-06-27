@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
     public int numAlive = 0;
     public float xRadius = 15f;
     public float yRadius = 15f;
+    public float minDistanceFromPlayer = 10f;
     private EnemyHealth healthScript;
     public Color GizmosColor = new Color(0.5f, 0.5f, 0.5f, 0.2f);
     Vector3 spawnRadius;
@@ -30,12 +31,12 @@ public class Spawner : MonoBehaviour
 
 
         pos.Set(Random.Range(transform.position.x-xRadius, transform.position.x + xRadius), Random.Range(transform.position.y - yRadius, transform.position.y + yRadius));
-        if (Vector2.Distance(pos, target.position) > 10)  {
+        if (Vector2.Distance(pos, target.position) > minDistanceFromPlayer)  {
           GameObject Spider = Instantiate(prefab, pos, Quaternion.identity);
           numAlive++;
 
         } else {
-          //causes stack overflow? 
+          //causes stack overflow?
         //  Spawn();
         }
 
