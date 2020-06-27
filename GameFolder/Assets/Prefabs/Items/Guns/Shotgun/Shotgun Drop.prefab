@@ -153,6 +153,7 @@ MonoBehaviour:
   itemButton: {fileID: 606589321781777275, guid: 9aa3bd6c43c2349b9bf68d790f101789,
     type: 3}
   inventoryID: Shotgun
+  wasDropped: 0
 --- !u!50 &-2978485589496194453
 Rigidbody2D:
   serializedVersion: 4
@@ -165,7 +166,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
