@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 1756797237}
   - component: {fileID: 1756797247}
   - component: {fileID: 1756797248}
+  - component: {fileID: 269727511}
   m_Layer: 11
   m_Name: Bob
   m_TagString: Player
@@ -151,6 +152,9 @@ MonoBehaviour:
   rb: {fileID: 8747800943941732919}
   cam: {fileID: 0}
   animator: {fileID: 8747800943941732924}
+  dash: 0
+  dashCooldown: 0
+  dashLength: 1
 --- !u!114 &5493401359268361209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,14 +183,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c3bf8a2678a414ba8fe1de6ac6ab2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFull: 0000000000
+  isFull: 0000000000000000000000000000000000000000000000000000
   slots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   item: []
+  overworldScene: {fileID: 0}
 --- !u!70 &184997451201820118
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,6 +307,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNeerInteractable: 0
   InteractText: {fileID: 0}
+--- !u!114 &269727511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3b42fc1a1b9435495883c39f5cd498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8747800943320054309
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,13 +329,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8747800943320054310}
   - component: {fileID: 8747800943320054311}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: MinimapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8747800943320054310
 Transform:
   m_ObjectHideFlags: 0
@@ -305,13 +343,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8747800943320054309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 3061497130140870276}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!212 &8747800943320054311
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -330,7 +368,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348,10 +386,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1422465503
+  m_SortingLayer: 3
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: f24ce6ed61c1acb48b7e382dc2888cff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 090089488dc5f7a498b03645acabdbef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
