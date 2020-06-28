@@ -120,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023477793, y: -0.7038044}
+  m_Offset: {x: -0.0026876777, y: -0.7023967}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5580876, y: 0.68816113}
+  m_Size: {x: 0.61595917, y: 0.55026495}
   m_EdgeRadius: 0
 --- !u!61 &4585883349814839376
 BoxCollider2D:
@@ -175,11 +175,14 @@ MonoBehaviour:
   dialogue:
     name: Mr. Tracy
     sentances:
-    - 'Thank the heavens you found me! It''s dark in here, I haven''t been able to
-      find my way out. '
+    - 'Thank the heavens you found me! It''s dark in there, I barely made it out
+      alive. '
+    - 'I went in with Dr. Kadowitz, we lost each other. Unfortunately, she is still
+      in there... '
     - 'Can you please guide me back to my shop? '
-    - 'I''ll have weapons in there ready for purchase to aid your journey. '
-    - And take this as a gift. Use it wisely my friend!
+    - 'I''ll have weapons in there ready for purchase. Maybe you can help find our
+      nurse and bring her home. '
+    - Take this as a gift. These are dark times right now. Use it wisely my friend.
 --- !u!114 &2088422284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DropPrefab: {fileID: 3065080744441535801, guid: 33dbfde07da1a4d4fbf796c8619a8636,
     type: 3}
+  DialogueCollider: {fileID: 2088422283}
+  counter: 0
+  trig: 0
 --- !u!1001 &59959296
 PrefabInstance:
   m_ObjectHideFlags: 0
