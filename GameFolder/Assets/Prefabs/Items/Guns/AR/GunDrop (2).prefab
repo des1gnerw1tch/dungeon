@@ -101,7 +101,6 @@ MonoBehaviour:
   itemButton: {fileID: 1777170430896820844, guid: d4d4cda4b8fc197479fc0fc02956b347,
     type: 3}
   inventoryID: AR
-  wasDropped: 0
 --- !u!61 &8816895071248745646
 BoxCollider2D:
   m_ObjectHideFlags: 0

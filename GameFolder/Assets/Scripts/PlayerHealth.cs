@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(currentHealth <= 0){
             //SceneManager.LoadScene("GameOver");
-            currentHealth = maxHealth / 4;
+            currentHealth = maxHealth;
             SceneManager.LoadScene("Main");
             Vector3 reset = new Vector3(24.35f, 22.94f, 0f);
             transform.position = reset;

@@ -75,12 +75,6 @@ public class GameSaveManager : MonoBehaviour
         //loads game progress
         PlayerProgress.wizardFreed = data.wizardFreed;
         PlayerProgress.merchantFreed = data.merchantFreed;
-        PlayerProgress.nurseFreed = data.nurseFreed;
-
-        PlayerProgress.hasBlueKey = data.hasBlueKey;
-        PlayerProgress.hasPurpleKey = data.hasPurpleKey;
-        PlayerProgress.hasBrownKey = data.hasBrownKey;
-        PlayerProgress.hasCrystalKey = data.hasCrystalKey;
       }
 
     }

@@ -4,26 +4,15 @@ using UnityEngine;
 
 public class PlayerProgress : MonoBehaviour
 {
-    //NPC Progress
+    [Header("NPC Progress")]
     public static bool wizardFreed = false;
     public static bool merchantFreed = false;
     public static bool nurseFreed = false;
-
-    //key progress
-    public static bool hasBlueKey;
-    public static bool hasPurpleKey;
-    public static bool hasBrownKey;
-    public static bool hasCrystalKey;
 
     //when game is running, these variables will always stay. this resets them
     public static void ResetStaticVariables()  {
       wizardFreed = false;
       merchantFreed = false;
       nurseFreed = false;
-
-      hasBlueKey = false;
-      hasPurpleKey = false;
-      hasBrownKey = false;
-      hasCrystalKey = false;
     }
 }

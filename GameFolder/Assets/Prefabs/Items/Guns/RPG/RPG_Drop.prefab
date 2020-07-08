@@ -100,8 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 6427746124770674087, guid: 379013b4a97ed6746abc912343dd8b19,
     type: 3}
+  equippedGun: {fileID: 6311861153967998136, guid: 379013b4a97ed6746abc912343dd8b19,
+    type: 3}
   inventoryID: RPG
-  wasDropped: 0
 --- !u!61 &2374213417929340248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0

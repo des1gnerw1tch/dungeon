@@ -148,7 +148,6 @@ MonoBehaviour:
   itemButton: {fileID: 5411605247203422836, guid: d240f996bd0e14df9ab8dff5ca48a6e3,
     type: 3}
   inventoryID: Glick
-  wasDropped: 0
 --- !u!61 &6302650298956719216
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameSaveManager GameManager;
-    public GameObject[] keys;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +36,6 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        ShowKeys();
         Time.timeScale = 0;
         GameIsPaused = true;
         FindObjectOfType<ItemManager>().enabled = false;
@@ -65,34 +63,6 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quitting game... ");
         Application.Quit();
-
-    }
-
-    void ShowKeys() {
-
-      if (PlayerProgress.hasBlueKey)  {
-        keys[0].SetActive(true);
-      } else {
-        keys[0].SetActive(false);
-      }
-
-      if (PlayerProgress.hasPurpleKey)  {
-        keys[1].SetActive(true);
-      } else {
-        keys[1].SetActive(false);
-      }
-
-      if (PlayerProgress.hasBrownKey)  {
-        keys[2].SetActive(true);
-      } else {
-        keys[2].SetActive(false);
-      }
-
-      if (PlayerProgress.hasCrystalKey)  {
-        keys[3].SetActive(true);
-      } else {
-        keys[3].SetActive(false);
-      }
 
     }
 }
