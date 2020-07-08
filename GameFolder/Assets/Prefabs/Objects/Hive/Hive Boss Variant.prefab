@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 600423442, guid: ff0a65d40543d40e5b34b19697217f99, type: 3}
       propertyPath: spawnInterval
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 600423442, guid: ff0a65d40543d40e5b34b19697217f99, type: 3}
       propertyPath: minsPerSpawn
