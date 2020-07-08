@@ -126,6 +126,7 @@ MonoBehaviour:
   itemButton: {fileID: 4348595976051347297, guid: dbaab9aea1e233245ad50010a68d8d7a,
     type: 3}
   inventoryID: HealthPotion
+  wasDropped: 0
 --- !u!50 &-5235608030274334757
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +140,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

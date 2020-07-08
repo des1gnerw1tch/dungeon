@@ -126,6 +126,7 @@ MonoBehaviour:
   itemButton: {fileID: 153160888118910108, guid: 360274db309696c4dbf1c139caca6887,
     type: 3}
   inventoryID: Sniper
+  wasDropped: 0
 --- !u!50 &8868467021749794044
 Rigidbody2D:
   serializedVersion: 4

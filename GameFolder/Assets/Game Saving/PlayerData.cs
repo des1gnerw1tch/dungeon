@@ -12,9 +12,15 @@ public class PlayerData {
   public bool[] isFull;
   public int coins;
 
-  //progress
+  //PlayerProgress saving
   public bool wizardFreed;
   public bool merchantFreed;
+  public bool nurseFreed;
+  //key progress
+  public bool hasBlueKey;
+  public bool hasPurpleKey;
+  public bool hasBrownKey;
+  public bool hasCrystalKey;
 
   public PlayerData (PlayerMovement playerMovement, PlayerHealth playerHealth, Inventory playerInventory, PlayerMoney playerMoney) {
     //player health
@@ -39,6 +45,13 @@ public class PlayerData {
     //player progress
     wizardFreed = PlayerProgress.wizardFreed;
     merchantFreed = PlayerProgress.merchantFreed;
+    nurseFreed = PlayerProgress.nurseFreed;
+
+    //key progress
+    hasBlueKey = PlayerProgress.hasBlueKey;
+    hasPurpleKey = PlayerProgress.hasPurpleKey;
+    hasBrownKey = PlayerProgress.hasBrownKey;
+    hasCrystalKey = PlayerProgress.hasCrystalKey;
     }
 
 

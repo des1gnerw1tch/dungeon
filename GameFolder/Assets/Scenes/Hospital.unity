@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6680741}
   - component: {fileID: 6680742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edge Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 475541457}
   - component: {fileID: 475541459}
   - component: {fileID: 475541458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3410,7 +3410,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - Hey fella! How ar e you feeling today?
+    - Hey fella! How are you feeling today?
     - 'It costs 5 coins to buy a HealthPotion. Press E to buy. '
 --- !u!1 &808481802
 GameObject:
@@ -3753,7 +3753,7 @@ GameObject:
   - component: {fileID: 1688283016}
   - component: {fileID: 1688283015}
   - component: {fileID: 1688283014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3942,7 +3942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1718056164}
   - component: {fileID: 1718056163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

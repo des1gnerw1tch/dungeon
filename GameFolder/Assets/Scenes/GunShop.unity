@@ -195,7 +195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &118298633
 MonoBehaviour:
@@ -2333,7 +2333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &553705225
 PrefabInstance:
@@ -2452,6 +2452,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4238884132447474379, guid: 5e825915b07f3e8499021e8666d898f7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1373100728862361412, guid: 5e825915b07f3e8499021e8666d898f7,
         type: 3}
       propertyPath: m_Name
@@ -2841,7 +2846,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1150315938
 PrefabInstance:
@@ -2996,7 +3001,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1180270376
 MonoBehaviour:
@@ -3306,14 +3311,10 @@ MonoBehaviour:
   dialogue:
     name: Mr. Tracy
     sentances:
-    - Hello there!
-    - Having trouble in those caves, eh young fella? These weapons should help you
-      out.
-    - I have heard there are treasures of all kinds down there*laughs*
-    - 'We all know those are just fairytales. The people of the town haven''t been
-      down there in ages. '
-    - If you do go down there, be careful! I heard there are some *cough* ... I can't
-      say. Just stay safe, okay?
+    - We got weapons of all types here.
+    - Unfortunately they are a bit outdated though... The dungeons though...
+    - They have weapons of all kinds down there. More than you can imagine
+    - You have just got to be careful, okay?
 --- !u!61 &1542420283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3385,7 +3386,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1645744500
 MonoBehaviour:
@@ -3539,7 +3540,7 @@ Transform:
   - {fileID: 1899753789}
   - {fileID: 355893923}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899753788
 GameObject:
