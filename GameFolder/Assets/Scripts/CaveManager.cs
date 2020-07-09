@@ -5,17 +5,30 @@ using UnityEngine;
 public class CaveManager : MonoBehaviour
 {
     public GameObject merchantNPC;
+
+    public GameObject PurpleDungeonPortal;
+    public GameObject PurpleDungeonDialogue;
     // Start is called before the first frame update
     void Start()
     {
       UpdateScene();
     }
 
-    void UpdateScene()  {
+    public void UpdateScene()  {
+
       if (PlayerProgress.merchantFreed) {
         merchantNPC.SetActive(false);
       } else {
         merchantNPC.SetActive(true);
+      }
+
+      //dungeon unlocks
+      if (PlayerProgress.hasPurpleKey)  {
+        PurpleDungeonPortal.SetActive(true);
+        PurpleDungeonDialogue.SetActive(false);
+      } else {
+        PurpleDungeonPortal.SetActive(false);
+        PurpleDungeonDialogue.SetActive(true);
       }
     }
 }
