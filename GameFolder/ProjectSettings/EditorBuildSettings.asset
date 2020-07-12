@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlchemistHome.unity
     guid: 6f22d1693186c41968efbe6c385aff6e
+  - enabled: 1
+    path: Assets/Scenes/CrystalCove.unity
+    guid: ac12aca89a44147a998f1e500e617f28
   m_configObjects: {}
