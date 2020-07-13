@@ -13,6 +13,9 @@ public class OverworldManager : MonoBehaviour
 
     public BoxCollider2D dialogueHospital;
     public BoxCollider2D portalHospital;
+
+    public BoxCollider2D dialogueAlchemist;
+    public BoxCollider2D portalAlchemist;
     //public PlayerProgress progress;
     // Start is called before the first frame update
     void Start()
@@ -47,6 +50,15 @@ public class OverworldManager : MonoBehaviour
       } else {
         dialogueHospital.enabled = true;
         portalHospital.enabled = false;
+      }
+
+      //alchemist
+      if (PlayerProgress.alchemistFreed)  {
+        dialogueAlchemist.enabled = false;
+        portalAlchemist.enabled = true;
+      } else {
+        dialogueAlchemist.enabled = true;
+        portalAlchemist.enabled = false;
       }
 
       }

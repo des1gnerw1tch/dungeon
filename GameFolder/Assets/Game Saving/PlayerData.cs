@@ -16,6 +16,7 @@ public class PlayerData {
   public bool wizardFreed;
   public bool merchantFreed;
   public bool nurseFreed;
+  public bool alchemistFreed;
   //key progress
   public bool hasBlueKey;
   public bool hasPurpleKey;
@@ -46,6 +47,7 @@ public class PlayerData {
     wizardFreed = PlayerProgress.wizardFreed;
     merchantFreed = PlayerProgress.merchantFreed;
     nurseFreed = PlayerProgress.nurseFreed;
+    alchemistFreed = PlayerProgress.alchemistFreed;
 
     //key progress
     hasBlueKey = PlayerProgress.hasBlueKey;

@@ -8,6 +8,7 @@ public class FreeNurse : MonoBehaviour
     void Start()
     {
         PlayerProgress.nurseFreed = true;
+        FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 
 

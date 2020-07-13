@@ -15,7 +15,6 @@ public class DamagePop : MonoBehaviour
       tmp.text = damage + "";
       if (critical) {
         tmp.color = critHitColor;
-        Debug.Log("Test");
       }
     }
 }
