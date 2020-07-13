@@ -147,6 +147,8 @@ MonoBehaviour:
   hitEffect: {fileID: 3958167721768742269, guid: 8403d4a92065e49cdb7608dd3ac744fa,
     type: 3}
   damage: 5
+  damageUncertainty: 0
+  criticalChance: 0.031
   knockback: 50
   hitSound: 
   isPiercing: 0

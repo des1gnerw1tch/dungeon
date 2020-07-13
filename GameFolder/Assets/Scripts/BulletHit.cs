@@ -37,7 +37,7 @@ public class BulletHit : MonoBehaviour
             int realDamage = damage + (Random.Range(-damageUncertainty, damageUncertainty + 1));
             float chance = Random.Range(0f, 1f);
             bool critical = false;
-            if (chance <= criticalChance) {
+            if (chance < criticalChance) {
               realDamage = realDamage * 2;
               critical = true;
             }

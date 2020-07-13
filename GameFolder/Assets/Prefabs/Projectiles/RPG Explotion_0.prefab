@@ -118,8 +118,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
   damage: 200
+  damageUncertainty: 20
+  criticalChance: 0
   knockback: 300
   hitSound: 
+  isPiercing: 0
 --- !u!58 &6484257561627956079
 CircleCollider2D:
   m_ObjectHideFlags: 0

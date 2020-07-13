@@ -173,6 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
   damage: 30
+  damageUncertainty: 2
+  criticalChance: 0
   knockback: 150
   hitSound: 
   isPiercing: 1
