@@ -53,7 +53,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool critical)
     {
        curHealth -= damage;
        FindObjectOfType<AudioManager>().Play("enemyHurt");
@@ -76,7 +76,8 @@ public class EnemyHealth : MonoBehaviour
        /*instantiates damage pop up*/
        Vector2 pos = new Vector2(transform.position.x + 49.6355f + Random.Range(-1f, 1f), transform.position.y -47.0451f + Random.Range(-1f, 1f));
        DamagePop popUp = Instantiate(damagePopUp, pos, Quaternion.identity).GetComponent<DamagePop>();
-       popUp.SetDamage(damage);
+        popUp.SetDamage(damage, critical);
+       //kills enemy
        if(curHealth <= 0 && !hasDied){
         //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
         Die();

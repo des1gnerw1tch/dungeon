@@ -6,6 +6,9 @@ public class BulletHit : MonoBehaviour
 {
     public GameObject hitEffect;
     public int damage = 20;
+    public int damageUncertainty;
+    [Range(0f, 1f)]
+    public float criticalChance;
     public int knockback = 1;
     public string hitSound;
     public bool isPiercing;
@@ -31,7 +34,14 @@ public class BulletHit : MonoBehaviour
 
         EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
         if(enemy != null) {
-            enemy.TakeDamage(damage);
+            int realDamage = damage + (Random.Range(-damageUncertainty, damageUncertainty + 1));
+            float chance = Random.Range(0f, 1f);
+            bool critical = false;
+            if (chance <= criticalChance) {
+              realDamage = realDamage * 2;
+              critical = true;
+            }
+            enemy.TakeDamage(realDamage, critical);
 		     } else {
            if (isPiercing)  {
              Destroy(gameObject);
