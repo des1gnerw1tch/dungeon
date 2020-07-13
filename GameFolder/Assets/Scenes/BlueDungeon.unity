@@ -58960,13 +58960,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: GoblinBossFight
   teleportToSetPosition: 1
-  posX: 0
-  posY: 0
+  posX: 0.099999
+  posY: 3
   NeedsKey: 0
   neededKey: 
   playSound: 1
   transition: {fileID: 1697472044}
   transitionTime: 1
+  continueMusic: 0
 --- !u!61 &484166383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60814,6 +60815,7 @@ MonoBehaviour:
   playSound: 0
   transition: {fileID: 1697472044}
   transitionTime: 1
+  continueMusic: 0
 --- !u!61 &1556016496
 BoxCollider2D:
   m_ObjectHideFlags: 0

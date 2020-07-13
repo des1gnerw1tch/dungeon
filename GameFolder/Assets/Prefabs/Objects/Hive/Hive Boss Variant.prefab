@@ -19,6 +19,12 @@ PrefabInstance:
       propertyPath: minsPerSpawn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 47184095784892331, guid: ff0a65d40543d40e5b34b19697217f99,
+        type: 3}
+      propertyPath: damagePopUp
+      value: 
+      objectReference: {fileID: 3143137803910608348, guid: 9c763aa2b62da41709570ebaea7e2c46,
+        type: 3}
     - target: {fileID: 2067427647925096064, guid: ff0a65d40543d40e5b34b19697217f99,
         type: 3}
       propertyPath: m_LocalPosition.x

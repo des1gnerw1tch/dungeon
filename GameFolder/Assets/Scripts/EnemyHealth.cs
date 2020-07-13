@@ -25,6 +25,9 @@ public class EnemyHealth : MonoBehaviour
     private EnemyHealthBar EnemyHealthBarScript;
     private GameObject enemyhealthBarCanvasImage;
 
+    //Damage Indicator
+    public GameObject damagePopUp;
+
     //boss stuff
 
     void Start()
@@ -70,6 +73,10 @@ public class EnemyHealth : MonoBehaviour
        if (animator != null)  {
          animator.SetBool("isPatrolling", true);
        }
+       /*instantiates damage pop up*/
+       Vector2 pos = new Vector2(transform.position.x + 49.6355f + Random.Range(-1f, 1f), transform.position.y -47.0451f + Random.Range(-1f, 1f));
+       DamagePop popUp = Instantiate(damagePopUp, pos, Quaternion.identity).GetComponent<DamagePop>();
+       popUp.SetDamage(damage);
        if(curHealth <= 0 && !hasDied){
         //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
         Die();

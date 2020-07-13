@@ -153,11 +153,15 @@ MonoBehaviour:
   maxHealth: 300
   enemyID: BigSlime
   dissolveSpeed: 0.5
+  tintOnStart: 0
   dissolve: {fileID: -2705612947987810502}
   tint: {fileID: 7457081918282346333}
   animator: {fileID: 3448756612755345158}
   isBoss: 0
-  portalToEnable: {fileID: 0}
+  stopMusicOnDeath: 0
+  objectsToEnable: []
+  damagePopUp: {fileID: 3143137803910608348, guid: 9c763aa2b62da41709570ebaea7e2c46,
+    type: 3}
 --- !u!114 &-4596567544541554235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,3 +251,6 @@ MonoBehaviour:
   minsPerSpawn: 10
   spawnInterval: 5
   spawnSound: 
+  animator: {fileID: 0}
+  offsetX: 0
+  offsetY: 0
