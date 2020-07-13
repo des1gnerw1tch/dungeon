@@ -456,6 +456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2232500335104863717, guid: be23fe728bc664d7784fb08f5d9ddc6b,
         type: 3}
+      propertyPath: objectsToEnable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232500335104863717, guid: be23fe728bc664d7784fb08f5d9ddc6b,
+        type: 3}
       propertyPath: portalToEnable
       value: 
       objectReference: {fileID: 1372868707}
@@ -464,6 +469,11 @@ PrefabInstance:
       propertyPath: tintOnStart
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2232500335104863717, guid: be23fe728bc664d7784fb08f5d9ddc6b,
+        type: 3}
+      propertyPath: objectsToEnable.Array.data[0]
+      value: 
+      objectReference: {fileID: 1372868707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be23fe728bc664d7784fb08f5d9ddc6b, type: 3}
 --- !u!1 &494668098 stripped

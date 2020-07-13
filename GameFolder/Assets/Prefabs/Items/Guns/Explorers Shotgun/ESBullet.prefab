@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 8660191419251044891, guid: 97480823efe0ded4c90e9cda9500bc48,
     type: 3}
-  damage: 20
+  damage: 2000
   knockback: 200
   hitSound: 
-  isPiercing: 0
+  isPiercing: 1

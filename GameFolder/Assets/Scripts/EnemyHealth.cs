@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
     public Animator animator;
     public bool isBoss;
     [SerializeField] private bool stopMusicOnDeath = false;
-    public GameObject portalToEnable;
+    public GameObject[] objectsToEnable;
     private EnemyHealthBar EnemyHealthBarScript;
     private GameObject enemyhealthBarCanvasImage;
 
@@ -91,8 +91,11 @@ public class EnemyHealth : MonoBehaviour
                 FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
             //enemyhealthBarCanvasImage.GetComponent<CanvasGroup>().alpha = 0;
             //lets you go through door at the end
-            if (portalToEnable != null)
-              portalToEnable.SetActive(true);
+            if (objectsToEnable.Length != 0) {
+              foreach(GameObject obj in objectsToEnable)  {
+                obj.SetActive(true);
+              }
+            }
 
           }
         }
