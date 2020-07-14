@@ -40,7 +40,6 @@ public class EnemyHealth : MonoBehaviour
 
             EnemyHealthBarScript.SetEnemyMaxHealth(maxHealth);
 
-
         }
 
         pos.Set(0f, 0f);
