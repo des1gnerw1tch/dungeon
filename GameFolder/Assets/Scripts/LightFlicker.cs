@@ -10,12 +10,16 @@ public class LightFlicker : MonoBehaviour
     [SerializeField] private float maxFrequency;
     [SerializeField] private float lowFlickerTime;
     [SerializeField] private float maxFlickerTime;
+    [SerializeField] private float lowIntensity = .5f;
+    [SerializeField] private float highIntensity = 1f;
+    private float baseIntensity;
 
     private float counter;
     private float flickerTime;
     private bool isFlickering = false;
 
     void Start()  {
+        baseIntensity = light.intensity;
         counter = Random.Range(lowFrequency, maxFrequency);
         flickerTime = Random.Range(lowFlickerTime, maxFlickerTime);
     }
@@ -32,7 +36,7 @@ public class LightFlicker : MonoBehaviour
         }
         if (counter <= 0f) {
           isFlickering = false;
-          light.intensity = 1.5f;
+          light.intensity = baseIntensity;
           counter = Random.Range(lowFrequency, maxFrequency);
           flickerTime = Random.Range(lowFlickerTime, maxFlickerTime);
           //return;
@@ -44,6 +48,6 @@ public class LightFlicker : MonoBehaviour
     }
 
     void Flicker() {
-      light.intensity = Random.Range(.5f, 1f);
+      light.intensity = Random.Range(lowIntensity, highIntensity);
     }
 }
