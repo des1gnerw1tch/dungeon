@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 3958167721768742269, guid: 8403d4a92065e49cdb7608dd3ac744fa,
     type: 3}
-  damage: 5
+  damage: 10
   damageUncertainty: 0
   criticalChance: 0.106
   knockback: 2
