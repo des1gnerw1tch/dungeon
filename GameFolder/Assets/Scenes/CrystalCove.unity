@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2177524917881198654, guid: a5d7e5ac1462b43dbbaacd7db2d2173d, type: 3}
+  prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 1
   max: 15
   numAlive: 0
@@ -463,6 +463,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &198644175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198644177}
+  - component: {fileID: 198644176}
+  m_Layer: 0
+  m_Name: GameObject (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &198644176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198644175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
+  spawnTime: 1
+  max: 15
+  numAlive: 0
+  xRadius: 10
+  yRadius: 2
+  minDistanceFromPlayer: 10
+  GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.2}
+--- !u!4 &198644177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198644175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 75.2, y: -10.78, z: -316.3789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210112918
 GameObject:
@@ -3350,7 +3401,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 22
-      m_TileSpriteIndex: 22
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3539,7 +3590,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 20
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3674,7 +3725,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 19
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4943,25 +4994,25 @@ Tilemap:
   - m_RefCount: 5
     m_Data: {fileID: 5766197293826772217, guid: 89867138d67564f47a6b446c859983f5,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -6152852543865492429, guid: 572976fc39d27495bb5eac4e1861a772,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2007007629340002072, guid: 572976fc39d27495bb5eac4e1861a772,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3264575871437929102, guid: 89867138d67564f47a6b446c859983f5,
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2841800658586829046, guid: 572976fc39d27495bb5eac4e1861a772,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -6152852543865492429, guid: 572976fc39d27495bb5eac4e1861a772,
-      type: 3}
-  - m_RefCount: 1
     m_Data: {fileID: -4705601796353403635, guid: 89867138d67564f47a6b446c859983f5,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -3264575871437929102, guid: 89867138d67564f47a6b446c859983f5,
-      type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 5449519303766655716, guid: 89867138d67564f47a6b446c859983f5,
       type: 3}
@@ -13767,6 +13818,57 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &885105630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885105632}
+  - component: {fileID: 885105631}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &885105631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885105630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
+  spawnTime: 0.2
+  max: 30
+  numAlive: 0
+  xRadius: 4
+  yRadius: 2
+  minDistanceFromPlayer: 10
+  GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.2}
+--- !u!4 &885105632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885105630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 105.52, y: 12.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &937499576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32855,7 +32957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2177524917881198654, guid: a5d7e5ac1462b43dbbaacd7db2d2173d, type: 3}
+  prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 0.2
   max: 30
   numAlive: 0
@@ -32906,7 +33008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1578111181576999759, guid: 330ea06ecb1f9874c8210203a8da00cf, type: 3}
+  prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 1
   max: 10
   numAlive: 0

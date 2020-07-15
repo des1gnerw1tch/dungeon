@@ -27,7 +27,7 @@ public class EnemyHealthBar : MonoBehaviour
     }
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "GoblinBossFight")
+        if (SceneManager.GetActiveScene().name != "GoblinBossFight" && SceneManager.GetActiveScene().name != "MdBoss")
         {
             animator.SetBool("IsEnemy", true );
         }

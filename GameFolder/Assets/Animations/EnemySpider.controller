@@ -460,6 +460,7 @@ MonoBehaviour:
   spiderSpeed: 7
   AttackDistance: 2
   radius: 20
+  lookRad: 5
 --- !u!1101 &8235189629309999892
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
