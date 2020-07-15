@@ -117,12 +117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3e5df1bf4c5bd44a2f926fa8e19039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 5188681442708854697, guid: bd8d5f68d737e3c4db978e7bebbbef60,
+  hitEffect: {fileID: 5055324094546648325, guid: b542e7c75e72d9446ad2737a9a53bb51,
     type: 3}
   damage: 5
+  damageUncertainty: 0
+  criticalChance: 0
   knockback: 8
   hitSound: 
   isPiercing: 0
+  IsTeleporter: 1
 --- !u!50 &-6644470345004150258
 Rigidbody2D:
   serializedVersion: 4

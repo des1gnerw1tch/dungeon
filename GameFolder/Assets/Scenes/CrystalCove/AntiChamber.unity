@@ -3090,7 +3090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173390378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.75, y: 7.83, z: 0}
+  m_LocalPosition: {x: -3.55, y: 7.83, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3113,6 +3113,7 @@ MonoBehaviour:
     name: William Strand
     sentances:
     - Help, help. You there come help me :(
+    - 'Shoot the lock. Quick before more of those awfull hounds return. '
     - 'Shoot the lock. Quick before more of those awfull hounds return. '
 --- !u!61 &173390383
 BoxCollider2D:
@@ -5551,7 +5552,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3ff2121c84a7c90428620e436675414f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7684,7 +7685,7 @@ GameObject:
   - component: {fileID: 1939255540}
   - component: {fileID: 1939255539}
   m_Layer: 0
-  m_Name: 3rd door To Crystal gauntlet
+  m_Name: 1st door To Crystal gauntlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7725,7 +7726,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0870409, y: 0.3372836}
+  m_Offset: {x: -0.12935615, y: 0.3372836}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7736,7 +7737,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3481636, y: 0.32543278}
+  m_Size: {x: 1.4327941, y: 0.32543278}
   m_EdgeRadius: 0
 --- !u!4 &1939255541
 Transform:

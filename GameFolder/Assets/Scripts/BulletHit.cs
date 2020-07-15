@@ -12,11 +12,15 @@ public class BulletHit : MonoBehaviour
     public int knockback = 1;
     public string hitSound;
     public bool isPiercing;
+    public bool IsTeleporter;
+    public static int teleportationCounter;
+    public Teleport TeleportScript;
+    public Vector3[] positions;
     //void OnCollisionEnter2D(Collision2D collision)
     //{
-        //GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-        //Destroy(effect, .2f);
-        //Destroy(gameObject);
+    //GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+    //Destroy(effect, .2f);
+    //Destroy(gameObject);
     //}
 
     /* when bullet hits enemy*/
@@ -48,8 +52,30 @@ public class BulletHit : MonoBehaviour
            }
          }
     if (hitEffect != null)  {
-      GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-      Destroy(effect, .2f);
+      
+            if (IsTeleporter && teleportationCounter < 2)
+            {
+                
+                Quaternion rotation = Quaternion.Euler(-57.9f, 0, 180);
+                GameObject portal = Instantiate(hitEffect, transform.position, rotation);
+                if (teleportationCounter == 0) {
+                    FindObjectOfType<Teleport>().position1 = transform.position;
+                    
+                }
+                if (teleportationCounter == 1)
+                {
+                    FindObjectOfType<Teleport>().position2 = transform.position;
+                   
+                }
+                teleportationCounter = teleportationCounter + 1;
+                
+
+            }
+            else
+            {
+                GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+                Destroy(effect, .2f);
+            }
     }
       if (!isPiercing)  {
         Destroy(gameObject);
@@ -61,6 +87,14 @@ public class BulletHit : MonoBehaviour
 
     public int GetKnockback() {
       return(knockback);
+    }
+    void Update()
+    {
+        if (FindObjectOfType<Teleport>().Counter > 0)
+        {
+            teleportationCounter = 0;
+            FindObjectOfType<Teleport>().Counter = 0;
+        }
     }
 
 }
