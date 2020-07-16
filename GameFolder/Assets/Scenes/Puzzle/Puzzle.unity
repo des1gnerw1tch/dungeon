@@ -458,6 +458,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 45
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.7319687, g: 0.08495018, b: 0.7830189, a: 0.2}
 --- !u!4 &74947662
 Transform:
@@ -77904,7 +77905,7 @@ MonoBehaviour:
   NeedsKey: 0
   neededKey: 
   playSound: 0
-  transition: {fileID: 0}
+  transition: {fileID: 179371882}
   transitionTime: 1
   continueMusic: 0
 --- !u!4 &681913550
@@ -78284,6 +78285,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 50
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.7319687, g: 0.08495018, b: 0.7830189, a: 0.2}
 --- !u!4 &791732924
 Transform:
@@ -127365,6 +127367,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 50
   yRadius: 3
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.7319687, g: 0.08495018, b: 0.7830189, a: 0.2}
 --- !u!4 &1713696605
 Transform:

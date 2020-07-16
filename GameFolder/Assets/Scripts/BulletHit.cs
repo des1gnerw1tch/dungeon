@@ -53,11 +53,12 @@ public class BulletHit : MonoBehaviour
          }
     if (hitEffect != null)  {
       
-            if (IsTeleporter && teleportationCounter < 2)
+            if (IsTeleporter)
             {
                 
                 Quaternion rotation = Quaternion.Euler(-57.9f, 0, 180);
                 GameObject portal = Instantiate(hitEffect, transform.position, rotation);
+                Destroy(portal, 10f);
                 if (teleportationCounter == 0) {
                     FindObjectOfType<Teleport>().position1 = transform.position;
                     
@@ -68,6 +69,10 @@ public class BulletHit : MonoBehaviour
                    
                 }
                 teleportationCounter = teleportationCounter + 1;
+                if(teleportationCounter >= 2)
+                {
+                    teleportationCounter = 0;
+                }
                 
 
             }

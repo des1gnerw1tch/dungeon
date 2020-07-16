@@ -11,10 +11,10 @@ public class ActivatePath : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !ShouldDrop)
         {
             TileMapActivate.SetActive(true);
-            if (TileMapaDeactivate != null) { 
+            /*if (TileMapaDeactivate != null) { 
                 TileMapaDeactivate.SetActive(false);
             }
             
@@ -22,10 +22,32 @@ public class ActivatePath : MonoBehaviour
             {
                 FindObjectOfType<DropManager>().Drop("WhiteGauntlet", transform.position);
                 hasDropped = true;
-            }
+            }*/
             
         }
         
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (Input.GetKey("e"))
+            {
+                TileMapActivate.SetActive(true);
+                if (TileMapaDeactivate != null)
+                {
+                    TileMapaDeactivate.SetActive(false);
+                }
+
+                if (!hasDropped && ShouldDrop)
+                {
+                    FindObjectOfType<DropManager>().Drop("WhiteGauntlet", transform.position);
+                    hasDropped = true;
+                }
+            }
+            
+
+        }
     }
     void Start()
     {

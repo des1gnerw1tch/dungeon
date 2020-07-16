@@ -13,7 +13,7 @@ public class Teleportation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offset.Set(0, 2, 0);
+        offset.Set(0, 1.2f, 0);
         counterID += 1;
         id = counterID;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -28,17 +28,20 @@ public class Teleportation : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             
-            if(id == 1)
-            {
-                player.position = FindObjectOfType<Teleport>().position2 - offset;
-            }
-            if(id == 2)
+            
+            if(id % 2 == 0)
             {
                 player.position = FindObjectOfType<Teleport>().position1- offset;
             }
+            else
+            {
+                player.position = FindObjectOfType<Teleport>().position2 - offset;
+            }
             
-            FindObjectOfType<Teleport>().Counter += 1;
-            //Destroy(gameObject);
+            
+            //FindObjectOfType<Teleport>().Counter += 1;
+            
+            
             
         }
     }
