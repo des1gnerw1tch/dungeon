@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public bool dash = false;
     public float dashCooldown = 0f;
-    public float dashLength = 1f;
+    public float dashLength = 3f;
+    public float dashTime = 0f;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -32,24 +33,38 @@ public class PlayerMovement : MonoBehaviour
           FindObjectOfType<AudioManager>().Play("footsteps");
         }*/
         //Dash Function
-        /*if(Input.GetKeyDown("left shift") && dashCooldown<=0f)
+        /*if(Input.GetKey(KeyCode.LeftShift) /*&& dashCooldown<=0f)
         {
-            dashCooldown = 2f;
-            dash = true;
-        }
-        */
+            rb.AddForce(-transform.up * (moveSpeed*100));
+            //dashCooldown = 2f;
+            //dash = true;
+        }*/
+        
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     void FixedUpdate()
     {
-        /*while (dash == true) {
-
+        /*if (dash == true) {
+            if (dashLength > 0f)
+            {
+                //rb.AddForce(transform.up * (moveSpeed));
+                //dashLength -= (Time.fixedDeltaTime);
+            }
+            else
+            {
+                dash = false;
+                dashLength = 3f;
+            }
+        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (dashCooldown > 0f)
+        {
+            dashCooldown -= Time.fixedDeltaTime;
         }
         */
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        dashCooldown -= Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);
         Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg +90;
-        rb.rotation = angle;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90;
+        rb.rotation = angle; 
     }
 }
