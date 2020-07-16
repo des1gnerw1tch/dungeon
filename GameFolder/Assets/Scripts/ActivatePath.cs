@@ -8,12 +8,18 @@ public class ActivatePath : MonoBehaviour
     public GameObject TileMapaDeactivate;
     public static bool hasDropped = false;
     public bool ShouldDrop;
+    public bool IgnorePlayer;
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player") && !ShouldDrop)
+        if(other.CompareTag("Player") && !ShouldDrop && !IgnorePlayer)
         {
             TileMapActivate.SetActive(true);
+            if(TileMapaDeactivate != null)
+            {
+                TileMapaDeactivate.SetActive(false);
+            }
+            
             /*if (TileMapaDeactivate != null) { 
                 TileMapaDeactivate.SetActive(false);
             }
@@ -23,7 +29,11 @@ public class ActivatePath : MonoBehaviour
                 FindObjectOfType<DropManager>().Drop("WhiteGauntlet", transform.position);
                 hasDropped = true;
             }*/
-            
+
+        }if(other.CompareTag("CrystalShot") && !ShouldDrop && IgnorePlayer)
+        {
+            TileMapActivate.SetActive(true);
+            TileMapaDeactivate.SetActive(false);
         }
         
     }

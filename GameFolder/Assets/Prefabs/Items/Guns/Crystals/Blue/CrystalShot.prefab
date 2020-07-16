@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5176181889226096728}
   m_Layer: 13
   m_Name: CrystalShot
-  m_TagString: Untagged
+  m_TagString: CrystalShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,9 +100,14 @@ MonoBehaviour:
   hitEffect: {fileID: 3958167721768742269, guid: 8403d4a92065e49cdb7608dd3ac744fa,
     type: 3}
   damage: 50
+  damageUncertainty: 0
+  criticalChance: 0
   knockback: 1
   hitSound: 
   isPiercing: 1
+  IsTeleporter: 0
+  TeleportScript: {fileID: 0}
+  positions: []
 --- !u!50 &3688007907911508788
 Rigidbody2D:
   serializedVersion: 4

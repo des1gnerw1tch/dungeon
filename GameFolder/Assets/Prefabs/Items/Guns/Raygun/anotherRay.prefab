@@ -126,6 +126,8 @@ MonoBehaviour:
   hitSound: 
   isPiercing: 0
   IsTeleporter: 1
+  TeleportScript: {fileID: 0}
+  positions: []
 --- !u!50 &-6644470345004150258
 Rigidbody2D:
   serializedVersion: 4
@@ -160,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031071268, y: -0.00055989623}
+  m_Offset: {x: 0.031071275, y: 0.619648}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -171,5 +173,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19447847, y: 1.0011199}
+  m_Size: {x: 0.31821942, y: 2.467167}
   m_EdgeRadius: 0
