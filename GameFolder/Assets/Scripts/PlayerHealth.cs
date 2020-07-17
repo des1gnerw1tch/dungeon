@@ -16,8 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public shakeCamera Camera;
 
     public bool regenEffect;
-    private int regenTime = 7; //this effects how long it takes to regen health under effect
-    private int counter;
+    private int regenTime = 15; //this effects how long it takes to regen health under effect
+    private float counter;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
 		      }
           //regeneration effect
           if (regenEffect && currentHealth < maxHealth)  {
-            counter += 1;
+            counter += Time.deltaTime * 1000;
             if (counter >= regenTime)  {
               currentHealth += 1;
               counter = 0;
