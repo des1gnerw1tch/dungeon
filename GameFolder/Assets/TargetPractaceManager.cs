@@ -6,11 +6,12 @@ public class TargetPractaceManager : MonoBehaviour
 {
     public int numTurn;
     public bool isWaiting;
+    public bool secondHalf;
     void Update()
     {
         if (isWaiting)
         {
-            Debug.Log(numTurn);
+           
         }
         else
         {
@@ -28,7 +29,10 @@ public class TargetPractaceManager : MonoBehaviour
     {
         // suspend execution for 5 seconds
         isWaiting = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1.5f);
+        secondHalf = true;
+        yield return new WaitForSeconds(.5f);
+        secondHalf = false;
         isWaiting = false;
         numTurn = Random.Range(0, 5);
     }

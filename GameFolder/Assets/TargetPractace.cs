@@ -7,7 +7,7 @@ public class TargetPractace : MonoBehaviour
     public GameObject lights;
     public TargetPractaceManager TargetPractaceManagerScript;
     public static int counter;
-    public static bool IsLit;
+    public bool IsLit;
     public int ID;
     //public int randomNumber;
     void OnTriggerEnter2D(Collider2D other)
@@ -15,7 +15,12 @@ public class TargetPractace : MonoBehaviour
         if (other.CompareTag("CrystalShot") && IsLit)
         {
             counter++;
-            Debug.Log("counter");
+            Debug.Log(counter);
+        }
+        if(other.CompareTag("CrystalShot") && !IsLit)
+        {
+            counter = 0;
+            Debug.Log("you hit the wrong crystal restart " + counter);
         }
     }
     public void LightSpawn(GameObject lightSpawn) {
@@ -26,13 +31,15 @@ public class TargetPractace : MonoBehaviour
     {
         //Invoke("ChooseNumber", 2f);
         //Debug.Log(randomNumber);
-        if(TargetPractaceManagerScript.numTurn == ID){
+        if(TargetPractaceManagerScript.numTurn == ID && !TargetPractaceManagerScript.secondHalf){
             lights.SetActive(true);
+            IsLit = true;
             //IsLit = true;
         }
         else
         {
             lights.SetActive(false);
+            IsLit = false;
         }
     }
     //public void ChooseNumber(){
