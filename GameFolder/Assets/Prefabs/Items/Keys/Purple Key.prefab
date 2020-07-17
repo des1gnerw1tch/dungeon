@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4745906996912619089}
   - component: {fileID: 4745906996912619090}
   - component: {fileID: 4745906996912619119}
+  - component: {fileID: 6900924858030060286}
   m_Layer: 12
   m_Name: Purple Key
   m_TagString: Untagged
@@ -123,3 +124,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyColor: Purple
+--- !u!50 &6900924858030060286
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745906996912619091}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 10
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

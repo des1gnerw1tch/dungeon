@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public Collider2D mageDialogueTrigger;
     public Transform magePos;
     public GameObject gift;
+    public GameObject gift1;
     public Text progressText;
 
     [HideInInspector]
@@ -42,7 +43,10 @@ public class LevelManager : MonoBehaviour
       mageDialogueTrigger.enabled = false;
       Vector3 pos = new Vector3(magePos.position.x, magePos.position.y - 2f, 0f);
       Instantiate(gift, pos, Quaternion.identity);
+      Instantiate(gift1, pos, Quaternion.identity);
       PlayerProgress.wizardFreed = true;
+      PlayerProgress.hasBlueKey = true;
+      FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 
     public void UpdateText()  {

@@ -56357,6 +56357,7 @@ MonoBehaviour:
   mageDialogueTrigger: {fileID: 3774206487288976029}
   magePos: {fileID: 3774206487288976028}
   gift: {fileID: 2839659968609529476, guid: d492162dc30317d4b8092606780719e9, type: 3}
+  gift1: {fileID: 4745906996912619091, guid: 80f73e965b3a040e9b39d11aa8775970, type: 3}
   progressText: {fileID: 807900712}
   numOfGlobes: 0
   numCompleted: 0
@@ -79092,6 +79093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 579588676653281202, guid: 6edf67349087745f99085bd56ae3c4fb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edf67349087745f99085bd56ae3c4fb, type: 3}
