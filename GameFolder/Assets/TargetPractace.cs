@@ -17,6 +17,7 @@ public class TargetPractace : MonoBehaviour
             counter++;
             Debug.Log(counter);
         }
+        
         if(other.CompareTag("CrystalShot") && !IsLit)
         {
             counter = 0;
