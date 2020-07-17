@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cfd59861e83a04c9d5d28b59dca502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 4348595976051347297, guid: dbaab9aea1e233245ad50010a68d8d7a,
+  itemButton: {fileID: 4348595976051347297, guid: 6c697708ce5714d7a8e2a56f41124f27,
     type: 3}
   inventoryID: SpeedPotion
   wasDropped: 0
