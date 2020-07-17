@@ -11,5 +11,5 @@ public class Item {
     public bool isHealthPotion;
     public bool isSpeedPotion;
     public bool isRegenPotion;
-
+    public bool isFocusPotion;
 }

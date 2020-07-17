@@ -76,4 +76,17 @@ public class PlayerMovement : MonoBehaviour
     void StopSpeedBoost() {
       moveSpeed = 5f;
     }
+
+    public void StartSlowMode() {
+      Time.timeScale = .5f;
+      moveSpeed = 10f;
+      Invoke("StopSlowMode", 8f);
+      FindObjectOfType<AudioManager>().Play("focusStart");
+    }
+
+    void StopSlowMode() {
+      Time.timeScale = 1f;
+      moveSpeed = 5f;
+      FindObjectOfType<AudioManager>().Play("focusEnd");
+    }
 }

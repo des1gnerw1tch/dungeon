@@ -119,27 +119,7 @@ public class ItemManager : MonoBehaviour
 
         }
 
-        //focus mode (slomo) ?
-        if(Input.GetMouseButton(1)) {
 
-          deSlomo = false;
-          Time.timeScale = 0.5f;
-        } else {
-            if (!deSlomo) {
-              Time.timeScale = 1f;
-              deSlomo = true;
-            }
-        }
-
-        if(Input.GetMouseButtonDown(1)) {
-          FindObjectOfType<AudioManager>().Stop("focusEnd");
-          FindObjectOfType<AudioManager>().Play("focusStart");
-        }
-
-        if(Input.GetMouseButtonUp(1)) {
-          FindObjectOfType<AudioManager>().Stop("focusStart");
-          FindObjectOfType<AudioManager>().Play("focusEnd");
-        }
 
     }
     if (itemString != null && activeItem != null) {
@@ -162,6 +142,12 @@ public class ItemManager : MonoBehaviour
         if (activeItem.isRegenPotion) {
           if (Input.GetButton("Fire1")) {
             UseRegenPotion();
+          }
+        }
+        //FOCUS POTION
+        if (activeItem.isFocusPotion) {
+          if (Input.GetButton("Fire1")) {
+            UseFocusPotion();
           }
         }
     }
@@ -275,6 +261,11 @@ public class ItemManager : MonoBehaviour
 
     void UseRegenPotion() {
       playerHealthScript.StartRegen();
+      ConsumeItem();
+    }
+
+    void UseFocusPotion() {
+      PlayerMovementScript.StartSlowMode();
       ConsumeItem();
     }
 
