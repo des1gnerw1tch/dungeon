@@ -11,6 +11,7 @@ public class ItemManager : MonoBehaviour
     public scroll scrollScript;
     public shakeCamera Camera;
     public PlayerHealth playerHealthScript;
+    public PlayerMovement PlayerMovementScript;
     public ItemBackboard itemBackboard;
     //canvas stuff
     public GameObject ReloadingText;
@@ -255,5 +256,9 @@ public class ItemManager : MonoBehaviour
         inventory.item[scrollScript.activeSlot] = null;
       }
   }
+  void UseSpeedPotion()
+    {
+        PlayerMovementScript.moveSpeed = 8f;
+    }
 
 }
