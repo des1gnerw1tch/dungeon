@@ -9,5 +9,6 @@ public class Item {
     public GameObject item;
     public GameObject canvasImage;
     public bool isHealthPotion;
+    public bool isSpeedPotion;
 
 }

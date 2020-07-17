@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             //dashCooldown = 2f;
             //dash = true;
         }*/
-        
+
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     void FixedUpdate()
@@ -65,6 +65,15 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90;
-        rb.rotation = angle; 
+        rb.rotation = angle;
+    }
+
+    public void SpeedBoost() {
+      moveSpeed = 10f;
+      Invoke("StopSpeedBoost", 10f);
+    }
+
+    void StopSpeedBoost() {
+      moveSpeed = 5f;
     }
 }

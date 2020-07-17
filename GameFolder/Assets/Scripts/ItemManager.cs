@@ -150,6 +150,13 @@ public class ItemManager : MonoBehaviour
             UseHealthPotion();
           }
         }
+
+        //SPEED POTION
+        if (activeItem.isSpeedPotion) {
+          if (Input.GetButton("Fire1")) {
+            UseSpeedPotion();
+          }
+        }
     }
 
     //handles reload button
@@ -251,14 +258,18 @@ public class ItemManager : MonoBehaviour
       if(playerHealthScript.currentHealth < playerHealthScript.maxHealth){
         FindObjectOfType<AudioManager>().Play("gulp");
         playerHealthScript.currentHealth += 50;
-        Destroy(itemInstance);
-        scrollScript.activeCanvasSlot.DestroyItem();
-        inventory.item[scrollScript.activeSlot] = null;
+        ConsumeItem();
       }
   }
-  void UseSpeedPotion()
-    {
-        PlayerMovementScript.moveSpeed = 8f;
+  void UseSpeedPotion() {
+        PlayerMovementScript.SpeedBoost();
+        ConsumeItem();
     }
+    
+  void ConsumeItem()  {
+    Destroy(itemInstance);
+    scrollScript.activeCanvasSlot.DestroyItem();
+    inventory.item[scrollScript.activeSlot] = null;
+  }
 
 }
