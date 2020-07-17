@@ -157,6 +157,13 @@ public class ItemManager : MonoBehaviour
             UseSpeedPotion();
           }
         }
+
+        //REGENERATION POTION
+        if (activeItem.isRegenPotion) {
+          if (Input.GetButton("Fire1")) {
+            UseRegenPotion();
+          }
+        }
     }
 
     //handles reload button
@@ -265,7 +272,12 @@ public class ItemManager : MonoBehaviour
         PlayerMovementScript.SpeedBoost();
         ConsumeItem();
     }
-    
+
+    void UseRegenPotion() {
+      playerHealthScript.StartRegen();
+      ConsumeItem();
+    }
+
   void ConsumeItem()  {
     Destroy(itemInstance);
     scrollScript.activeCanvasSlot.DestroyItem();

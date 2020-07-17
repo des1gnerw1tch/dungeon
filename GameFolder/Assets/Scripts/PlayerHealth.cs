@@ -14,6 +14,10 @@ public class PlayerHealth : MonoBehaviour
     private Tint body;
     private Rigidbody2D rb;
     public shakeCamera Camera;
+
+    public bool regenEffect;
+    private int regenTime = 7; //this effects how long it takes to regen health under effect
+    private int counter;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +49,15 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if(currentHealth > maxHealth){
             currentHealth = maxHealth;
-		        }
+		      }
+          //regeneration effect
+          if (regenEffect && currentHealth < maxHealth)  {
+            counter += 1;
+            if (counter >= regenTime)  {
+              currentHealth += 1;
+              counter = 0;
+            }
+          }
     }
 
 
@@ -78,5 +90,15 @@ public class PlayerHealth : MonoBehaviour
 
     void startMovement()  {
       GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    public void StartRegen()  {
+      counter = 0;
+      regenEffect = true;
+      Invoke("StopRegen", 15f);
+    }
+
+    void StopRegen()  {
+      regenEffect = false;
     }
 }
