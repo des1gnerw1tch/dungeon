@@ -11,13 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     public Animator animator;
     public bool dash = false;
-    public float dashCooldown = 0f;
-    public float dashLength = 3f;
-    public float dashTime = 0f;
+    public float dashCooldown;
+    public float dashLength;
+    public float startDashLength;
 
     Vector2 movement;
     Vector2 mousePos;
 
+    Vector2 dashDir;
 
     // Update is called once per frame
     void Update()
@@ -33,36 +34,39 @@ public class PlayerMovement : MonoBehaviour
           FindObjectOfType<AudioManager>().Play("footsteps");
         }*/
         //Dash Function
-        /*if(Input.GetKey(KeyCode.LeftShift) /*&& dashCooldown<=0f)
+        if(Input.GetKey(KeyCode.LeftShift) && dashCooldown<=0f)
         {
-            rb.AddForce(-transform.up * (moveSpeed*100));
-            //dashCooldown = 2f;
-            //dash = true;
-        }*/
+            dashDir = movement;
+            dashCooldown = 2f;
+            dash = true;
+        }
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     void FixedUpdate()
     {
-        /*if (dash == true) {
+        if (dash == true) {
             if (dashLength > 0f)
             {
-                //rb.AddForce(transform.up * (moveSpeed));
-                //dashLength -= (Time.fixedDeltaTime);
+                rb.velocity = dashDir * moveSpeed*3;
+                dashLength -= (Time.fixedDeltaTime);
             }
             else
             {
                 dash = false;
-                dashLength = 3f;
+                dashLength = startDashLength;
             }
         }
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        else
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
         if (dashCooldown > 0f)
         {
             dashCooldown -= Time.fixedDeltaTime;
         }
-        */
-        rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);
+        
+        //rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90;
         rb.rotation = angle;
