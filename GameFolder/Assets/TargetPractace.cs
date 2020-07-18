@@ -15,6 +15,7 @@ public class TargetPractace : MonoBehaviour
         if (other.CompareTag("CrystalShot") && IsLit)
         {
             counter++;
+            TargetPractaceManagerScript.UInum = counter;
             Debug.Log(counter);
         }
         
@@ -42,6 +43,14 @@ public class TargetPractace : MonoBehaviour
             lights.SetActive(false);
             IsLit = false;
         }
+
+        if(counter > 9)
+        {
+            TargetPractaceManagerScript.isDone = true;
+            TargetPractaceManagerScript.isWaiting = true;
+            lights.SetActive(true);
+        }
+
     }
     //public void ChooseNumber(){
      //   randomNumber = Random.Range(0, 5); 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TargetPractaceManager : MonoBehaviour
 {
@@ -8,23 +9,33 @@ public class TargetPractaceManager : MonoBehaviour
     public bool isWaiting;
     public bool secondHalf;
     public float seconds = 1.7f;
+    public GameObject Water;
+    public GameObject Tiles;
+    public bool isDone = false;
+
+    public int UInum;
+
+    public Text text;
     void Update()
     {
-        if (isWaiting)
-        {
-           
-        }
-        else
+        if (!isWaiting && !isDone)
         {
             StartCoroutine(ChooseNumber());
         }
-        
+        if (isDone)
+        {
+            Water.SetActive(false);
+            Tiles.SetActive(true);
+
+        }
+
         /*Debug.Log(randomNumber);
         if (randomNumber == ID)
         {
             LightSpawn(ligthts);
             IsLit = true;
         }*/
+        text.text = UInum + "/10";
     }
     IEnumerator ChooseNumber()
     {
