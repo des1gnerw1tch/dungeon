@@ -10,6 +10,7 @@ public class DeathInventory : MonoBehaviour
     private ItemManager itemManager;
     [SerializeField] private GameObject[] slots;
     public bool[] slotSelected;
+    private int numSelected;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class DeathInventory : MonoBehaviour
       itemManager = FindObjectOfType<ItemManager>();
       PlaceInventoryUI();
       DisablePlayer();
+      numSelected = 0;
     }
 
     /*places the inventory images on slots*/
@@ -47,6 +49,22 @@ public class DeathInventory : MonoBehaviour
     }
 
     public void SlotClick(int i)  {
-      Debug.Log(i);
+      //new selection, max not reached
+      if (numSelected < 2 && !slotSelected[i])  {
+        slotSelected[i] = true;
+        numSelected++;
+        slots[i].GetComponent<Animator>().SetBool("SlotSelected", true);
+        //play largining animation
+      }
+
+      //click old slot
+      else if (slotSelected[i]) {
+        slotSelected[i] = false;
+        numSelected--;
+        slots[i].GetComponent<Animator>().SetBool("SlotSelected", false);
+        //play smalling animation
+      }
+
+      Debug.Log(numSelected);
     }
 }

@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 548423907}
   - component: {fileID: 548423906}
   - component: {fileID: 548423909}
+  - component: {fileID: 548423910}
   m_Layer: 5
   m_Name: Slot (2)
   m_TagString: Untagged
@@ -527,6 +528,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 2
   deathInventory: {fileID: 788572364}
+--- !u!95 &548423910
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548423904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b7b6ab04fe80460387703ed5a7554b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &788572363
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +610,7 @@ GameObject:
   - component: {fileID: 905758688}
   - component: {fileID: 905758687}
   - component: {fileID: 905758690}
+  - component: {fileID: 905758691}
   m_Layer: 5
   m_Name: Slot (0)
   m_TagString: Untagged
@@ -721,6 +742,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 0
   deathInventory: {fileID: 788572364}
+--- !u!95 &905758691
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905758685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b7b6ab04fe80460387703ed5a7554b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1178898308
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +889,7 @@ GameObject:
   - component: {fileID: 1461058427}
   - component: {fileID: 1461058426}
   - component: {fileID: 1461058429}
+  - component: {fileID: 1461058430}
   m_Layer: 5
   m_Name: Slot (1)
   m_TagString: Untagged
@@ -980,6 +1021,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 1
   deathInventory: {fileID: 788572364}
+--- !u!95 &1461058430
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461058424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b7b6ab04fe80460387703ed5a7554b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1530718676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1127,7 @@ GameObject:
   - component: {fileID: 1586395070}
   - component: {fileID: 1586395069}
   - component: {fileID: 1586395072}
+  - component: {fileID: 1586395073}
   m_Layer: 5
   m_Name: Slot (4)
   m_TagString: Untagged
@@ -1198,6 +1259,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 4
   deathInventory: {fileID: 788572364}
+--- !u!95 &1586395073
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586395067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b7b6ab04fe80460387703ed5a7554b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1888225740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1291,7 @@ GameObject:
   - component: {fileID: 1888225743}
   - component: {fileID: 1888225742}
   - component: {fileID: 1888225745}
+  - component: {fileID: 1888225746}
   m_Layer: 5
   m_Name: Slot (3)
   m_TagString: Untagged
@@ -1342,6 +1423,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 3
   deathInventory: {fileID: 788572364}
+--- !u!95 &1888225746
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888225740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b7b6ab04fe80460387703ed5a7554b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2071546420
 GameObject:
   m_ObjectHideFlags: 0
