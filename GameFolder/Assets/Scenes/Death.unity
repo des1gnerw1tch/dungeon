@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -396,13 +396,14 @@ GameObject:
   - component: {fileID: 459962097}
   - component: {fileID: 459962096}
   - component: {fileID: 459962095}
+  - component: {fileID: 459962098}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459962094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -465,7 +466,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 459962096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 459962098}
+        m_MethodName: Continue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &459962096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,6 +515,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459962093}
   m_CullTransparentMesh: 0
+--- !u!114 &459962098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459962093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4533b1cc631424e9649e6572f71902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathInventory: {fileID: 788572364}
 --- !u!1 &548423904
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +727,9 @@ MonoBehaviour:
   - {fileID: 548423904}
   - {fileID: 1888225740}
   - {fileID: 1586395067}
+  continueButton: {fileID: 459962093}
   slotSelected: 0000000000
+  objects: []
 --- !u!4 &788572365
 Transform:
   m_ObjectHideFlags: 0
@@ -1048,8 +1075,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1178898311}
   - component: {fileID: 1178898310}
-  - component: {fileID: 1178898309}
   - component: {fileID: 1178898312}
+  - component: {fileID: 1178898309}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera

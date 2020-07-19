@@ -9,8 +9,10 @@ public class DeathInventory : MonoBehaviour
     private Inventory inventory;
     private ItemManager itemManager;
     [SerializeField] private GameObject[] slots;
+    [SerializeField] GameObject continueButton;
     public bool[] slotSelected;
     private int numSelected;
+    public DontDestroy[] objects;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +42,13 @@ public class DeathInventory : MonoBehaviour
       }
 
     }
-    /*this temporarily disables all of the objects with "do not destroy"*/
+    /*this temporarily disables all of the objects with "do not destroy" EXCEPT AudioManager*/
     void DisablePlayer()  {
-      DontDestroy[] objects = FindObjectsOfType<DontDestroy>();
+      objects = FindObjectsOfType<DontDestroy>();
       foreach (DontDestroy obj in objects)  {
-        obj.gameObject.SetActive(false);
+        if (obj.gameObject.GetComponent<AudioManager>() == null)  {
+          obj.gameObject.SetActive(false);
+        }
       }
     }
 
@@ -65,6 +69,12 @@ public class DeathInventory : MonoBehaviour
         //play smalling animation
       } else {
         //two already clicked
+      }
+
+      if (numSelected == 2) {
+        continueButton.SetActive(true);
+      } else {
+        continueButton.SetActive(false);
       }
 
       Debug.Log(numSelected);
