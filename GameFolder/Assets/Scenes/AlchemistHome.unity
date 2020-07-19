@@ -1311,10 +1311,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 579588676172314746, guid: 6edf67349087745f99085bd56ae3c4fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 579588676469227004, guid: 6edf67349087745f99085bd56ae3c4fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 579588676653281202, guid: 6edf67349087745f99085bd56ae3c4fb,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 579588676653281203, guid: 6edf67349087745f99085bd56ae3c4fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edf67349087745f99085bd56ae3c4fb, type: 3}
@@ -1411,7 +1426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603813539}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.51, y: 1.36, z: 1}
+  m_LocalPosition: {x: 2.36, y: 1.36, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1430,7 +1445,7 @@ GameObject:
   - component: {fileID: 679654886}
   - component: {fileID: 679654885}
   m_Layer: 12
-  m_Name: Regeneration Shop (1)
+  m_Name: Regeneration Shop
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1504,7 +1519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679654884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.35, y: 1.36, z: 1}
+  m_LocalPosition: {x: -0.56, y: 1.36, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

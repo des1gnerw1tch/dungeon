@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public float dashCooldown;
     public float dashLength;
     public float startDashLength;
+    [SerializeField] private Animator speedEffectIcon;
+    public float speedBoostLength = 10f;
+    [SerializeField] private Animator focusEffectIcon;
+    public float focusEffectLength = 8f;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -65,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCooldown -= Time.fixedDeltaTime;
         }
-        
+
         //rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90;
@@ -74,23 +78,37 @@ public class PlayerMovement : MonoBehaviour
 
     public void SpeedBoost() {
       moveSpeed = 10f;
-      Invoke("StopSpeedBoost", 10f);
+      speedEffectIcon.gameObject.SetActive(true);
+      Invoke("StopSpeedBoost", speedBoostLength);
+      Invoke("WarnBoostEnd", speedBoostLength - 3f);
     }
 
     void StopSpeedBoost() {
       moveSpeed = 5f;
+      speedEffectIcon.gameObject.SetActive(false);
+    }
+
+    void WarnBoostEnd() {
+      speedEffectIcon.SetTrigger("Warning");
     }
 
     public void StartSlowMode() {
       Time.timeScale = .5f;
       moveSpeed = 10f;
-      Invoke("StopSlowMode", 8f);
+      focusEffectIcon.gameObject.SetActive(true);
+      Invoke("StopSlowMode", focusEffectLength);
+      Invoke("WarnFocusEnd", focusEffectLength - 3f);
       FindObjectOfType<AudioManager>().Play("focusStart");
     }
 
     void StopSlowMode() {
       Time.timeScale = 1f;
       moveSpeed = 5f;
+      focusEffectIcon.gameObject.SetActive(false);
       FindObjectOfType<AudioManager>().Play("focusEnd");
+    }
+
+    void WarnFocusEnd() {
+      focusEffectIcon.SetTrigger("Warning");
     }
 }

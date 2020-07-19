@@ -15,8 +15,12 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D rb;
     public shakeCamera Camera;
 
-    public bool regenEffect;
-    private int regenTime = 15; //this effects how long it takes to regen health under effect
+    [SerializeField]
+    private float regenDuration = 15f;
+    [SerializeField]
+    private Animator regenEffectIcon;
+    private bool regenEffect;
+    private int regenTime = 15; //this effects how long it takes to regen health under effect. lower regen time = faster healing
     private float counter;
     // Start is called before the first frame update
     void Start()
@@ -95,10 +99,18 @@ public class PlayerHealth : MonoBehaviour
     public void StartRegen()  {
       counter = 0;
       regenEffect = true;
-      Invoke("StopRegen", 15f);
+      regenEffectIcon.gameObject.SetActive(true);
+      Invoke("StopRegen", regenDuration);
+      Invoke("WarnBoostEnd", regenDuration - 3f);
     }
 
     void StopRegen()  {
       regenEffect = false;
+      regenEffectIcon.gameObject.SetActive(false);
+    }
+
+    void WarnBoostEnd() {
+      regenEffect = false;
+      regenEffectIcon.SetTrigger("Warning");
     }
 }
