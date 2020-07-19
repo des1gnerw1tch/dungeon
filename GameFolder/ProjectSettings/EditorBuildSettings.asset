@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CrystalCove/2ndDoor.unity
     guid: 44bcb883845212743aa41b9c108c4efc
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 635739746e41c425b8ded8b4fb720e89
   m_configObjects: {}

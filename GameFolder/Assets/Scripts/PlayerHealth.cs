@@ -35,11 +35,11 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         if(currentHealth <= 0){
-            //SceneManager.LoadScene("GameOver");
-            currentHealth = maxHealth / 4;
-            SceneManager.LoadScene("Main");
-            Vector3 reset = new Vector3(24.35f, 22.94f, 0f);
-            transform.position = reset;
+            SceneManager.LoadScene("Death");
+            //currentHealth = maxHealth / 4;
+            //SceneManager.LoadScene("Main");
+            //Vector3 reset = new Vector3(24.35f, 22.94f, 0f);
+            //transform.position = reset;
 
             //tries to stop music
             try {
