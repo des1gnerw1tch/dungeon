@@ -63,6 +63,8 @@ public class DeathInventory : MonoBehaviour
         numSelected--;
         slots[i].GetComponent<Animator>().SetBool("SlotSelected", false);
         //play smalling animation
+      } else {
+        //two already clicked
       }
 
       Debug.Log(numSelected);
