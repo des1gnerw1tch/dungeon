@@ -19,8 +19,8 @@ public class DeathInventory : MonoBehaviour
 
       inventory = FindObjectOfType<Inventory>();
       itemManager = FindObjectOfType<ItemManager>();
-      DisablePlayer(); //switched placeinventoryui and disable player order 
       PlaceInventoryUI();
+      DisablePlayer(); 
       numSelected = 0;
     }
 
