@@ -8,9 +8,9 @@ public class destroyOnContact : MonoBehaviour
   private GameObject hitEffect;
 
     void OnCollisionEnter2D(Collision2D other)  {
-      Destroy(gameObject);
       if (hitEffect != null)  {
-        Instantiate(hitEffect, transform);
+        Instantiate(hitEffect, transform.position, Quaternion.identity);
       }
+      Destroy(gameObject);
     }
 }
