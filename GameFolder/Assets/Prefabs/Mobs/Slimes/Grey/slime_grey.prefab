@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  knockback: 15
+  knockback: 30
 --- !u!58 &3431413052702944343
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 100
   enemyID: Slime
   dissolveSpeed: 2
   tintOnStart: 0
@@ -213,7 +213,7 @@ Animator:
   m_GameObject: {fileID: 3811510162841372}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e91406e2214f414684c949cd17fe13a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 73293d65d96fc4745b00abf481a242cf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

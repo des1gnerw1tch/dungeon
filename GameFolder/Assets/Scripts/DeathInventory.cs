@@ -20,7 +20,7 @@ public class DeathInventory : MonoBehaviour
       inventory = FindObjectOfType<Inventory>();
       itemManager = FindObjectOfType<ItemManager>();
       PlaceInventoryUI();
-      DisablePlayer(); 
+      DisablePlayer();
       numSelected = 0;
     }
 
@@ -77,6 +77,5 @@ public class DeathInventory : MonoBehaviour
         continueButton.SetActive(false);
       }
 
-      Debug.Log(numSelected);
     }
 }

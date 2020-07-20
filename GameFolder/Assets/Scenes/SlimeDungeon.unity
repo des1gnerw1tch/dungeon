@@ -1880,7 +1880,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Grey Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -1981,7 +1981,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -2001,7 +2001,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Yellow Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -2102,7 +2102,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -2593,7 +2593,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Grey Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -2694,7 +2694,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -2786,7 +2786,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Yellow Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -2887,7 +2887,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -55701,7 +55701,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Yellow Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -55802,7 +55802,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -56069,7 +56069,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Yellow Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -56170,7 +56170,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -56561,7 +56561,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Yellow Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -56662,7 +56662,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -78871,7 +78871,7 @@ PrefabInstance:
     - target: {fileID: 8247079406849632717, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: m_Name
-      value: Skeleton Spawner
+      value: Grey Slime Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8247079406849632719, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
@@ -78972,7 +78972,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10,
+      objectReference: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}

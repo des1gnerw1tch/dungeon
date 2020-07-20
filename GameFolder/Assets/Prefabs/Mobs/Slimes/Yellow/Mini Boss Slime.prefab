@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 3448756612755345158}
   - component: {fileID: 3828199925622254375}
   - component: {fileID: -7260798774517533593}
+  - component: {fileID: 8386345864507989002}
   m_Layer: 10
   m_Name: Mini Boss Slime
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1343179526369027782, guid: 3656053adb7df454697941265c73c3d5,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3709545, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 500
   enemyID: BigSlime
   dissolveSpeed: 0.5
   tintOnStart: 0
@@ -242,14 +243,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3811510162841372}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8, type: 3}
-  minsPerSpawn: 10
+  minsPerSpawn: 2
   spawnInterval: 5
+  spawnSound: 
+  animator: {fileID: 0}
+  offsetX: 0
+  offsetY: 0
+--- !u!114 &8386345864507989002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811510162841372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minion: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac, type: 3}
+  minsPerSpawn: 2
+  spawnInterval: 8
   spawnSound: 
   animator: {fileID: 0}
   offsetX: 0
