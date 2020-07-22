@@ -60,6 +60,9 @@ TagManager:
   - name: Drops
     uniqueID: 1529948243
     locked: 0
+  - name: Enemy Bullets
+    uniqueID: 2328868073
+    locked: 0
   - name: Sprites
     uniqueID: 2872501793
     locked: 0
