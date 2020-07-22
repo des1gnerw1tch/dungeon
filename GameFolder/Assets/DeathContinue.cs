@@ -9,6 +9,8 @@ public class DeathContinue : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private DeathInventory deathInventory;
+    [SerializeField]
+    private CaveToMain caveToMain;
 
     public void Continue() {
       EnablePlayer();
@@ -25,6 +27,7 @@ public class DeathContinue : MonoBehaviour
         }
       }
       SceneManager.LoadScene("Main");
+
       //player.GetComponent<PlayerHealth>().currentHealth = 20;
       //Debug.Log(player.GetComponent<PlayerHealth>().currentHealth);
       //currentHealth = maxHealth / 4;

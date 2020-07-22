@@ -79,4 +79,8 @@ public class CaveToMain : MonoBehaviour
         }
         SceneManager.LoadScene(levelIndex);
 	}
+
+  public void TransitionToScene(string level) {
+    StartCoroutine(LoadLevel(level));
+  }
 }

@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     private Tint body;
     private Rigidbody2D rb;
     public shakeCamera Camera;
+    public CaveToMain deathTransition;
 
     [SerializeField]
     private float regenDuration = 15f;
@@ -35,7 +36,9 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         if(currentHealth <= 0){
-            SceneManager.LoadScene("Death");
+            //SceneManager.LoadScene("Death");
+
+            deathTransition.TransitionToScene("Death");
             //currentHealth = maxHealth / 4;
             //SceneManager.LoadScene("Main");
             //Vector3 reset = new Vector3(24.35f, 22.94f, 0f);
