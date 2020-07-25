@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
             dashDir = movement;
             dashCooldown = 2f;
             dash = true;
+            animator.SetBool("Dash", true);
         }
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -59,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 dash = false;
                 dashLength = startDashLength;
+                animator.SetBool("Dash", false);
             }
         }
         else
