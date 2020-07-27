@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class NewGameOnClick : MonoBehaviour
 {
     public static bool newGame = false;
+    [SerializeField]
+    private MenuManager menuManager;
+
+    [SerializeField]
+    private float delay;
+
     public void Click() {
-      SceneManager.LoadScene("Main");
+      menuManager.NewGame(delay);
       SaveSystem.DeletePlayer();
       newGame = true;
     }

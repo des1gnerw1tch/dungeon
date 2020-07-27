@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class LoadOnClick : MonoBehaviour
 {
+
+    [SerializeField]
+    private MenuManager menuManager;
+    [SerializeField]
+    private float delay;
+
+
     public void Click()  {
-      SceneManager.LoadScene("Main");
+      menuManager.PlaySave(delay);
     }
+
+
 }
