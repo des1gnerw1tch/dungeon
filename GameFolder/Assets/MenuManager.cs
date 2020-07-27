@@ -52,6 +52,18 @@ public class MenuManager : MonoBehaviour
 
   IEnumerator _GoToSettings(float _delay) {
     yield return new WaitForSeconds(_delay);
+    settingsUI.SetActive(true);
+  }
+
+  public void SettingsToMain(float delay) {
+    animator.SetTrigger("SettingsToMain");
+    settingsUI.SetActive(false);
+    StartCoroutine(_SettingsToMain(delay));
+  }
+
+  IEnumerator _SettingsToMain(float _delay) {
+    yield return new WaitForSeconds(_delay);
+    mainUI.SetActive(true);
   }
 
 }
