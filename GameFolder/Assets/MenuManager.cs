@@ -11,6 +11,9 @@ public class MenuManager : MonoBehaviour
   [SerializeField]
   private GameObject mainUI;
 
+  [SerializeField]
+  private GameObject settingsUI;
+
   public void PlaySave(float delay)  {
     StartCoroutine(_PlaySave(delay));
   }
@@ -39,6 +42,16 @@ public class MenuManager : MonoBehaviour
   public void QuitGame()  {
     Debug.Log("Quitting Game");
     Application.Quit();
+  }
+
+  public void GoToSettings(float delay)  {
+    animator.SetTrigger("Settings");
+    mainUI.SetActive(false);
+    StartCoroutine(_GoToSettings(delay));
+  }
+
+  IEnumerator _GoToSettings(float _delay) {
+    yield return new WaitForSeconds(_delay);
   }
 
 }
