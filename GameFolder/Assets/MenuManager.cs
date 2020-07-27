@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class MenuManager : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class MenuManager : MonoBehaviour
     animator.SetTrigger("NewGame");
     yield return new WaitForSeconds(_delay);
     SceneManager.LoadScene("Main");
+  }
+
+  public void QuitGame()  {
+    Debug.Log("Quitting Game");
+    Application.Quit();
   }
 
 }
