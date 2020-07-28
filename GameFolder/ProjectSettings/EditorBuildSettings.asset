@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LavaCave.unity
     guid: 3eba7c35f317d4bb7954448e468274f5
+  - enabled: 1
+    path: Assets/Scenes/CrystalCove/3rdDoor.unity
+    guid: d41689989d7e0e94bac34b9a84410813
   m_configObjects: {}
