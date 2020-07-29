@@ -39,7 +39,7 @@ public class PlayerData {
     for (int i = 0; i < 26; i++) {
       item[i] = playerInventory.item[i];
       isFull[i] = playerInventory.isFull[i];
-
+    }
     //player money
     coins = playerMoney.coins;
 
@@ -54,7 +54,7 @@ public class PlayerData {
     hasPurpleKey = PlayerProgress.hasPurpleKey;
     hasBrownKey = PlayerProgress.hasBrownKey;
     hasCrystalKey = PlayerProgress.hasCrystalKey;
-    }
+
 
 
 

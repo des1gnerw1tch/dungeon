@@ -20,6 +20,7 @@ public class GameSaveManager : MonoBehaviour
   void Start()  {
   //  Player is loaded in the INVENTORY script on start
     counter = 0;
+    Debug.Log("Music " + PlayerSettings.music + " Sound Effects " + PlayerSettings.soundEffects + " Fancy Lighting " + PlayerSettings.fancyGraphics);
   }
 
 //saves file every so seconds

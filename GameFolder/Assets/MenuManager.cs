@@ -14,6 +14,15 @@ public class MenuManager : MonoBehaviour
   [SerializeField]
   private GameObject settingsUI;
 
+  void Start()  {
+    //load settings data on start of menu
+    SettingsData data = SaveSystem.LoadSettings();
+    PlayerSettings.music = data.music;
+    PlayerSettings.soundEffects = data.soundEffects;
+    PlayerSettings.fancyGraphics = data.fancyGraphics;
+
+  }
+
   public void PlaySave(float delay)  {
     StartCoroutine(_PlaySave(delay));
   }

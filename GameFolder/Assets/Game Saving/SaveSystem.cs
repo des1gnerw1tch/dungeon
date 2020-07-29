@@ -31,7 +31,7 @@ public static class SaveSystem {
       return data;
 
     } else {
-      Debug.LogError("Save file not found in " + path);
+      Debug.LogError("Player Save file not found in " + path);
       return null;
     }
 
@@ -39,6 +39,40 @@ public static class SaveSystem {
 
   public static void DeletePlayer() {
     string path = Application.persistentDataPath + "/player.fun";
+    File.Delete(path);
+  }
+
+  //Settings Load
+  public static void SaveSettings() {
+    BinaryFormatter formatter = new BinaryFormatter();
+    //type of file doesn't matter, Application.persistentDataPath makes it work on all operating systems
+    string path = Application.persistentDataPath + "/stx.lab";
+    FileStream stream = new FileStream(path, FileMode.Create);
+
+    SettingsData data = new SettingsData();
+
+    formatter.Serialize(stream, data);
+    stream.Close();
+  }
+
+  public static SettingsData LoadSettings() {
+    string path = Application.persistentDataPath + "/stx.lab";
+    if (File.Exists(path))  {
+      BinaryFormatter formatter = new BinaryFormatter();
+      FileStream stream = new FileStream(path, FileMode.Open);
+
+      SettingsData data = formatter.Deserialize(stream) as SettingsData;
+      stream.Close();
+      return data;
+
+    } else {
+      Debug.LogError("Settings Save file not found in " + path);
+      return null;
+    }
+  }
+
+  public static void ResetSettings()  {
+    string path = Application.persistentDataPath + "/stx.lab";
     File.Delete(path);
   }
 }
