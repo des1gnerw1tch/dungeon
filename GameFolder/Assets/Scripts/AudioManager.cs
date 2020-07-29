@@ -17,13 +17,26 @@ public class AudioManager : MonoBehaviour
       }
     }
 
-    // Update is called once per frame
+    //this is for sound effects
     public void Play(string name) {
-      Sound s = Array.Find(sounds, sound => sound.name == name);
-      /*if (s.source = null)  {
-        return;
-      }*/
-      s.source.Play();
+      if (PlayerSettings.soundEffects)  {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        /*if (s.source = null)  {
+          return;
+        }*/
+        s.source.Play();
+      }
+    }
+
+    //this is to play music
+    public void PlayTheme(string name) {
+      if (PlayerSettings.music)  {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        /*if (s.source = null)  {
+          return;
+        }*/
+        s.source.Play();
+      }
     }
 
     public void Stop(string name) {

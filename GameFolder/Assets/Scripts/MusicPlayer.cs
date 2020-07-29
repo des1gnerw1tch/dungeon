@@ -17,14 +17,14 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      //will play music after timeBeforeStart is reached
       if (!playing) {
         if (counter > 0)  {
           counter-= Time.deltaTime;
         } else {
-          FindObjectOfType<AudioManager>().Play(themeName);
-          playing = true;
-          return;
+            FindObjectOfType<AudioManager>().PlayTheme(themeName);
+            playing = true;
+            return;
         }
       }
 
