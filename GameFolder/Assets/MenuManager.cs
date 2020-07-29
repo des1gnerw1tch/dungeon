@@ -14,6 +14,9 @@ public class MenuManager : MonoBehaviour
   [SerializeField]
   private GameObject settingsUI;
 
+  [SerializeField]
+  private AudioManager audioManager;
+
   void Start()  {
     //load settings data on start of menu
     SettingsData data = SaveSystem.LoadSettings();
@@ -73,6 +76,10 @@ public class MenuManager : MonoBehaviour
   IEnumerator _SettingsToMain(float _delay) {
     yield return new WaitForSeconds(_delay);
     mainUI.SetActive(true);
+  }
+
+  public void makeClickSound()  {
+    audioManager.Play("select");
   }
 
 }
