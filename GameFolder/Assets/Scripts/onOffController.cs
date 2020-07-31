@@ -54,10 +54,14 @@ public class onOffController : MonoBehaviour
         musicOn.SetActive(false);
         musicOff.SetActive(true);
         PlayerSettings.music = false;
+        //will stop current menu music
+        FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
       } else {
         musicOn.SetActive(true);
         musicOff.SetActive(false);
         PlayerSettings.music = true;
+        //will start menu music up
+        FindObjectOfType<AudioManager>().PlayTheme(FindObjectOfType<MusicPlayer>().themeName);
       }
       SaveSystem.SaveSettings();
 
