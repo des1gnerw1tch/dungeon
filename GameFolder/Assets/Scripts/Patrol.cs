@@ -32,12 +32,12 @@ public class Patrol : StateMachineBehaviour
         animator.SetBool("isMoving", false);
       }
 
-      /* seen player? */
-      if (Vector2.Distance(animator.transform.position, target.position) < radius )
-      {
-         animator.SetBool("seenPlayer", true);
-      }
-      
+        /* seen player? */
+        if (Vector2.Distance(animator.transform.position, target.position) < radius)
+        {
+            animator.SetBool("seenPlayer", true);
+        }
+
 
 
 
