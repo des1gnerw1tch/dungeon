@@ -20,6 +20,11 @@ public class GameSaveManager : MonoBehaviour
   void Start()  {
   //  Player is loaded in the INVENTORY script on start
     counter = 0;
+  //loading settings data
+    SettingsData data = SaveSystem.LoadSettings();
+    PlayerSettings.music = data.music;
+    PlayerSettings.soundEffects = data.soundEffects;
+    PlayerSettings.fancyGraphics = data.fancyGraphics;
     Debug.Log("Music " + PlayerSettings.music + " Sound Effects " + PlayerSettings.soundEffects + " Fancy Lighting " + PlayerSettings.fancyGraphics);
   }
 
