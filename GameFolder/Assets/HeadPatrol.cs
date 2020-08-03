@@ -38,14 +38,15 @@ public class HeadPatrol : StateMachineBehaviour
         
         if (Vector2.Distance(animator.transform.position, target.position) < radius)
         {
+            animator.SetFloat("Speed", 1); 
             float dy = target.position.y - animator.transform.position.y;
             if (dy > 0)
             {
-                animator.SetBool("seenPlayerUp", true);
+                animator.SetFloat("Vertical", 1);
             }
             else
             {
-                animator.SetBool("seenPlayerDown", true);
+                animator.SetFloat("Vertical", -1);
             }
 
         }
