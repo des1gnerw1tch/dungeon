@@ -40,14 +40,14 @@ public class HeadPatrol : StateMachineBehaviour
         {
             animator.SetFloat("Speed", 1); 
             float dy = target.position.y - animator.transform.position.y;
-            if (dy > 0)
+            /*if (dy > 0)
             {
                 animator.SetFloat("Vertical", 1);
             }
             else
             {
                 animator.SetFloat("Vertical", -1);
-            }
+            }*/
 
         }
 

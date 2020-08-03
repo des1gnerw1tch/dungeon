@@ -5,6 +5,8 @@ using UnityEngine;
 public class HeadCheck : StateMachineBehaviour
 {
     private Transform target;
+    public float radius = 5;
+    public bool isConductor;
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -22,6 +24,10 @@ public class HeadCheck : StateMachineBehaviour
         else
         {
             animator.SetFloat("Vertical", -1);
+        }
+        if ((Vector2.Distance(animator.transform.position, target.position) > radius) && isConductor)
+        {
+            animator.SetFloat("Speed", 0);
         }
     }
 
