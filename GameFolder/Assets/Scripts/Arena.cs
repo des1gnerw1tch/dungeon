@@ -5,42 +5,63 @@ using UnityEngine.UI;
 public class Arena : MonoBehaviour
 {
     public GameObject[] Spawners;
+    public GameObject[] infiniteSpawner;
     private int counter = 0;
+    public int inCounter = 0;
     public Text WaveText;
     public GameObject WaveUI;
     public bool lootgiven = false;
     public bool WaveCompleted = true;
     public DialogueActivator DialogueActivatorScript;
     public GameObject DialogueNextWave;
+    public bool infiniteLoopActivated = false;
     // Start is called before the first frame update
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && Input.GetKey("e") && WaveCompleted)
         {
-            if(lootgiven)
+            
+            if (infiniteLoopActivated)
             {
-                Spawners[counter].SetActive(true);
-                lootgiven = false;
+                for (int i = 0; i < infiniteSpawner.Length; i++)
+                {
+                    infiniteSpawner[i].GetComponent<Spawner>().numAlive = 0;
+                    infiniteSpawner[i].GetComponent<Spawner>().max = inCounter;
+                    
+                }
+                FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
+                FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
                 WaveCompleted = false;
-
+                inCounter++;
+                WaveText.text = "Hard: Wave " + inCounter;
+                DialogueActivatorScript.ChangeDialogue();
             }
             else
             {
-                FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
-                int num = counter + 1;
-                WaveText.text = "Wave " + num;
-                lootgiven = true;
-                DialogueActivatorScript.ChangeDialogue();
-                DialogueNextWave.SetActive(false);
+                if (lootgiven)
+                {
+                    Spawners[counter].SetActive(true);
+                    lootgiven = false;
+                    WaveCompleted = false;
+
+                }
+                else
+                {
+                    FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
+                    int num = counter + 1;
+                    WaveText.text = "Easy: Wave " + num;
+                    lootgiven = true;
+                    DialogueActivatorScript.ChangeDialogue();
+                    DialogueNextWave.SetActive(false);
+                }
             }
-            
             WaveUI.SetActive(true);
         }
 
     }
     void Update()
     {
-        if(Spawners[counter].GetComponent<Spawner>().numAlive == Spawners[counter].GetComponent<Spawner>().max)
+        if((Spawners[counter].GetComponent<Spawner>().numAlive == Spawners[counter].GetComponent<Spawner>().max) && !infiniteLoopActivated)
         {
             if(counter < Spawners.Length - 1)
             {
@@ -55,10 +76,37 @@ public class Arena : MonoBehaviour
             }
             else
             {
-                Debug.Log("end of Arena");
+                Debug.Log("Switch");
+                infiniteLoopActivated = true;
                 //FindObjectOfType<DropManager>().Drop("ArenaEnd", transform.position);
-                WaveUI.SetActive(false);
+                
+                //DialogueNextWave.SetActive(false);
             }
+            
+            
+        }
+        if (infiniteLoopActivated)
+        {
+            if (WaveCompleted)
+            {
+                DialogueNextWave.SetActive(true);
+            }
+            else
+            {
+                DialogueNextWave.SetActive(false);
+            }
+                for (int i = 0; i < infiniteSpawner.Length; i++)
+                {
+                    infiniteSpawner[i].SetActive(true);
+                    
+                    if (infiniteSpawner[i].GetComponent<Spawner>().numAlive == infiniteSpawner[i].GetComponent<Spawner>().max)
+                    {
+                        WaveCompleted = true; 
+                    }
+                }
+            
+            
+            
             
         }
     }

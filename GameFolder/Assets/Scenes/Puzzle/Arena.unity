@@ -231,6 +231,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!4 &28848847
 Transform:
@@ -300,6 +301,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &92336607
 GameObject:
@@ -996,7 +998,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e89bf4492a2f64247aa1ebfd7cda7ce5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1172,6 +1174,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &401544496
 GameObject:
@@ -1222,6 +1225,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &411509567
 GameObject:
@@ -1272,6 +1276,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &424252000
 GameObject:
@@ -1322,6 +1327,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &431156594
 GameObject:
@@ -1372,6 +1378,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &510264513
 GameObject:
@@ -1422,6 +1429,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1001 &528099421
 PrefabInstance:
@@ -1562,6 +1570,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!4 &541165013
 Transform:
@@ -1630,6 +1639,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1001 &603047889
 PrefabInstance:
@@ -1966,6 +1976,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1001 &736117755
 PrefabInstance:
@@ -2120,6 +2131,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &741975139
 GameObject:
@@ -2216,6 +2228,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &781286443
 GameObject:
@@ -11710,6 +11723,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &847105766
 GameObject:
@@ -13928,6 +13942,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.4339178, g: 0.46226418, b: 0.436266, a: 0.2}
 --- !u!4 &893997758
 Transform:
@@ -14071,6 +14086,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1001 &1018969409
 PrefabInstance:
@@ -14225,6 +14241,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1029178663
 GameObject:
@@ -14275,6 +14292,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1031418366
 GameObject:
@@ -14400,6 +14418,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1038895736
 GameObject:
@@ -14436,6 +14455,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.4339178, g: 0.46226418, b: 0.436266, a: 0.2}
 --- !u!4 &1038895738
 Transform:
@@ -14504,6 +14524,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1064629672
 GameObject:
@@ -14540,6 +14561,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!4 &1064629674
 Transform:
@@ -14602,12 +14624,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac, type: 3}
+  prefab: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8, type: 3}
   spawnTime: 5
   max: 5
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1166018830
 GameObject:
@@ -14655,6 +14678,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1188386851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1188386853}
+  - component: {fileID: 1188386852}
+  m_Layer: 0
+  m_Name: GoblinWaveIn (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1188386852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188386851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1188386853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188386851}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.94, y: 0.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201718112
 GameObject:
@@ -14780,6 +14854,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1239260593
 GameObject:
@@ -14830,6 +14905,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1249888515
 GameObject:
@@ -14880,7 +14956,59 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
+--- !u!1 &1290616729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290616731}
+  - component: {fileID: 1290616730}
+  m_Layer: 0
+  m_Name: GoblinWaveIn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1290616730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290616729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2177524917881198654, guid: 62a3503065d2e4a65916d0ff791cc3b2, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1290616731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290616729}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.73, y: 5.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323399265
 GameObject:
   m_ObjectHideFlags: 0
@@ -14935,12 +15063,22 @@ MonoBehaviour:
   - {fileID: 1620632885}
   - {fileID: 1912147950}
   - {fileID: 1038895736}
+  infiniteSpawner:
+  - {fileID: 1290616729}
+  - {fileID: 1870384553}
+  - {fileID: 1906561332}
+  - {fileID: 1759705529}
+  - {fileID: 1188386851}
+  - {fileID: 1812127825}
+  - {fileID: 1383310017}
+  inCounter: 0
   WaveText: {fileID: 668906485}
   WaveUI: {fileID: 24904468}
   lootgiven: 0
   WaveCompleted: 1
   DialogueActivatorScript: {fileID: 1166018831}
   DialogueNextWave: {fileID: 1201718112}
+  infiniteLoopActivated: 0
 --- !u!61 &1323399269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15100,12 +15238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac, type: 3}
+  prefab: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8, type: 3}
   spawnTime: 5
   max: 5
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.4339178, g: 0.46226418, b: 0.436266, a: 0.2}
 --- !u!4 &1344865056
 Transform:
@@ -15124,6 +15263,57 @@ Transform:
   - {fileID: 278536742}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1383310017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383310019}
+  - component: {fileID: 1383310018}
+  m_Layer: 0
+  m_Name: GoblinWaveIn (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1383310018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383310017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1383310019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383310017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.66, y: 3.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1422888411
 GameObject:
@@ -15174,6 +15364,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1441817024
 GameObject:
@@ -15224,6 +15415,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1448019143
 GameObject:
@@ -15274,6 +15466,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1001 &1477878397
 PrefabInstance:
@@ -15428,6 +15621,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1534211029
 GameObject:
@@ -15478,6 +15672,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1589826296
 GameObject:
@@ -15600,6 +15795,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1610431653
 GameObject:
@@ -15702,6 +15898,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!4 &1620632887
 Transform:
@@ -15771,6 +15968,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1699903596
 GameObject:
@@ -15821,6 +16019,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1722269091
 GameObject:
@@ -15857,6 +16056,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!4 &1722269093
 Transform:
@@ -15926,6 +16126,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1734278492
 GameObject:
@@ -15976,6 +16177,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1734676243
 GameObject:
@@ -16026,7 +16228,59 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
+--- !u!1 &1759705529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759705531}
+  - component: {fileID: 1759705530}
+  m_Layer: 0
+  m_Name: GoblinWaveIn (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1759705530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759705529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1759705531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759705529}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.34, y: -7.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791616992
 GameObject:
   m_ObjectHideFlags: 0
@@ -16076,7 +16330,161 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
+--- !u!1 &1812127825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812127827}
+  - component: {fileID: 1812127826}
+  m_Layer: 0
+  m_Name: GoblinWaveIn (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1812127826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812127825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3811510162841372, guid: d49261019bac444b58ad4ec9de1560d8, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1812127827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812127825}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.69, y: -2.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1870384553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870384555}
+  - component: {fileID: 1870384554}
+  m_Layer: 0
+  m_Name: GoblinWaveIn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1870384554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870384553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1578111181576999759, guid: 330ea06ecb1f9874c8210203a8da00cf, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1870384555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870384553}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.54, y: -9.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1906561332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906561334}
+  - component: {fileID: 1906561333}
+  m_Layer: 0
+  m_Name: GoblinWaveIn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1906561333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906561332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4400031953322197816, guid: a681f054b0906465893205200ae7aa10, type: 3}
+  spawnTime: 5
+  max: 1
+  numAlive: 0
+  xRadius: 2
+  yRadius: 1
+  minDistanceFromPlayer: 5
+  GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!4 &1906561334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906561332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.88, y: -9.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912147950
 GameObject:
   m_ObjectHideFlags: 0
@@ -16112,6 +16520,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.4339178, g: 0.46226418, b: 0.436266, a: 0.2}
 --- !u!4 &1912147952
 Transform:
@@ -16180,6 +16589,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1952452714
 GameObject:
@@ -16230,6 +16640,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &1967376398
 GameObject:
@@ -16280,6 +16691,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.68171597, g: 0, b: 1, a: 0.2}
 --- !u!1 &1997992172
 GameObject:
@@ -16330,6 +16742,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &2088111398
 GameObject:
@@ -16380,6 +16793,7 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 1
   yRadius: 2
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
 --- !u!1 &2092017347
 GameObject:
@@ -16430,4 +16844,5 @@ MonoBehaviour:
   numAlive: 0
   xRadius: 2
   yRadius: 1
+  minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
