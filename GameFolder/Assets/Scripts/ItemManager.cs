@@ -19,6 +19,7 @@ public class ItemManager : MonoBehaviour
     public Text bulletsLeft;
     public Text maxAmmoText;
     public Text UIName;
+    public itemUIHover detailWindow;
 
     [HideInInspector]public string itemString;
     [HideInInspector]public GameObject itemInstance;
@@ -26,7 +27,8 @@ public class ItemManager : MonoBehaviour
 
     public Gun[] guns;
     public Item[] items;
-    Gun activeGun;
+    [HideInInspector]
+    public Gun activeGun;
     Item activeItem;
     private Coroutine reload;
 
@@ -175,6 +177,8 @@ public class ItemManager : MonoBehaviour
         isWaiting = false;
         if (reload != null)
           StopCoroutine(reload);
+        //updates weupon detail ui
+        detailWindow.updateDetailWindow();
 	}
     void ItemInPlayerHand(GameObject ItemPrefab){
         Destroy(itemInstance);
@@ -189,6 +193,8 @@ public class ItemManager : MonoBehaviour
         isWaiting = false;
         if (reload != null)
           StopCoroutine(reload);
+        //updates weupon detail ui
+        detailWindow.updateDetailWindow();
 	}
 
 

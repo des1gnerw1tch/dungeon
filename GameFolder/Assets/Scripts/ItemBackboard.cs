@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ItemBackboard : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class ItemBackboard : MonoBehaviour
     public Sprite specialBackboard;
     public Sprite majesticBackboard;
     public Text rarityText;
+
+
 
     public void UpdateImage(Gun gun) {
 
@@ -46,4 +49,8 @@ public class ItemBackboard : MonoBehaviour
       image.sprite = commonBackboard;
       rarityText.text = item.type;
     }
+
+
+
+
 }

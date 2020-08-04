@@ -20,6 +20,7 @@ public class scroll : MonoBehaviour
     public Slot canvasSlot2;
     public Slot canvasSlot3;
     public Slot canvasSlot4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class scroll : MonoBehaviour
           } else {
             activeSlot++;
           }
+
 
         }
         else if (Input.mouseScrollDelta.y >= .1)  {
@@ -80,7 +82,7 @@ public class scroll : MonoBehaviour
           if (lastSlot != activeSlot) {
             lastSlot = activeSlot;
           }
-          
+
           if (Input.GetKeyDown("q") && inventory.item[activeSlot] != null)  {
             inventory.item[activeSlot] = null;
             //only drops the top item
