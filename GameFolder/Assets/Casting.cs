@@ -21,7 +21,7 @@ public class Casting : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKey("e") && !started && itemManagerScript.activeGun == null && itemManagerScript.activeItem == null)
+            if (Input.GetKey("e") && !started && itemManagerScript.itemString == "EmptyBook") 
             {
                 Group(1,true,true);
                 started = true;
@@ -39,7 +39,6 @@ public class Casting : MonoBehaviour
             {
                 //Instantiate(spell, GameObject.FindGameObjectWithTag("Player").transform.position + move, Quaternion.identity);
             }
-            Panal.SetActive(false);
             started = false;
             Panal.GetComponent<LineJumper>().isSuccess = false;
             Panal.GetComponent<LineJumper>().clearLines();

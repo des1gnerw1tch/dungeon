@@ -275,10 +275,11 @@ public class ItemManager : MonoBehaviour
       ConsumeItem();
     }
 
-  void ConsumeItem()  {
+  public void ConsumeItem()  {
     Destroy(itemInstance);
     scrollScript.activeCanvasSlot.DestroyItem();
     inventory.item[scrollScript.activeSlot] = null;
   }
+    
 
 }

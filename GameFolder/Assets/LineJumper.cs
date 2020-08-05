@@ -12,6 +12,7 @@ public class LineJumper : MonoBehaviour
     private int curLines = 0;
     private bool wasFound;
     public string[] combo;
+    public GameObject[] EnchantmentDrops;
     public string playerAtempt = "";
     private string holder;
     public Material material;
@@ -99,6 +100,9 @@ public class LineJumper : MonoBehaviour
             if (combo[i] == playerAtempt)
             {
                 Debug.Log("Success");
+                GameObject.Find("ItemManager").GetComponent<ItemManager>().ConsumeItem();
+                Instantiate(EnchantmentDrops[i], GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+                
                 isSuccess = true;
             }
         }
