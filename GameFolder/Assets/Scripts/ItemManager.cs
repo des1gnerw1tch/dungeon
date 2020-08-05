@@ -29,7 +29,7 @@ public class ItemManager : MonoBehaviour
     public Item[] items;
     [HideInInspector]
     public Gun activeGun;
-    Item activeItem;
+    public Item activeItem;
     private Coroutine reload;
 
     private bool isWaiting = false;
