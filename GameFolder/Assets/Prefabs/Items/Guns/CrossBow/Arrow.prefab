@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3e5df1bf4c5bd44a2f926fa8e19039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 3958167721768742269, guid: 8403d4a92065e49cdb7608dd3ac744fa,
+  hitEffect: {fileID: 4419856995888367890, guid: 9108d03f947dcb148860b20003b70a85,
     type: 3}
   damage: 15
   damageUncertainty: 4
@@ -108,6 +108,7 @@ MonoBehaviour:
   IsTeleporter: 0
   TeleportScript: {fileID: 0}
   positions: []
+  destoryEffectTime: 5
 --- !u!50 &3688007907911508788
 Rigidbody2D:
   serializedVersion: 4

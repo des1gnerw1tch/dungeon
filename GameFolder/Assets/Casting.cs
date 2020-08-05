@@ -10,6 +10,7 @@ public class Casting : MonoBehaviour
     //public GameObject spell;
     public bool started = false;
     private ItemManager itemManagerScript;
+    public ParticleSystem system;
     
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,8 @@ public class Casting : MonoBehaviour
             if (started && Panal.GetComponent<LineJumper>().isSuccess)
             {
                 //Instantiate(spell, GameObject.FindGameObjectWithTag("Player").transform.position + move, Quaternion.identity);
-            }
+                system.Play();
+            } 
             started = false;
             Panal.GetComponent<LineJumper>().isSuccess = false;
             Panal.GetComponent<LineJumper>().clearLines();

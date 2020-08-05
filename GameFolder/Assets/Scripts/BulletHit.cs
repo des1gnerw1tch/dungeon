@@ -16,6 +16,7 @@ public class BulletHit : MonoBehaviour
     public static int teleportationCounter;
     public Teleport TeleportScript;
     public Vector3[] positions;
+    public float destoryEffectTime = .2f;
     //void OnCollisionEnter2D(Collision2D collision)
     //{
     //GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
@@ -79,7 +80,7 @@ public class BulletHit : MonoBehaviour
             else
             {
                 GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-                Destroy(effect, .2f);
+                Destroy(effect, destoryEffectTime);
             }
     }
       if (!isPiercing)  {
