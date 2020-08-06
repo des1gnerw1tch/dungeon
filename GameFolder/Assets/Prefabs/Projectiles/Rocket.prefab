@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 6914782410516041034, guid: 1f46a85e5d64eb94b975d6065d9d419a,
     type: 3}
+  altHitEffect: {fileID: 1879529914316796876, guid: fe835a59d77713c4c956daaef37e30d2,
+    type: 3}
   damage: 250
   damageUncertainty: 7
   criticalChance: 0.192

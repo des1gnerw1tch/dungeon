@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletHit : MonoBehaviour
 {
     public GameObject hitEffect;
+    public GameObject altHitEffect;
     public int damage = 20;
     public int damageUncertainty;
     [Range(0f, 1f)]
@@ -53,34 +54,38 @@ public class BulletHit : MonoBehaviour
            }
          }
     if (hitEffect != null)  {
-      
+
             if (IsTeleporter)
             {
-                
+
                 Quaternion rotation = Quaternion.Euler(-57.9f, 0, 180);
                 GameObject portal = Instantiate(hitEffect, transform.position, rotation);
                 Destroy(portal, 10f);
                 if (teleportationCounter == 0) {
                     FindObjectOfType<Teleport>().position1 = transform.position;
-                    
+
                 }
                 if (teleportationCounter == 1)
                 {
                     FindObjectOfType<Teleport>().position2 = transform.position;
-                   
+
                 }
                 teleportationCounter = teleportationCounter + 1;
                 if(teleportationCounter >= 2)
                 {
                     teleportationCounter = 0;
                 }
-                
+
 
             }
             else
             {
                 GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
                 Destroy(effect, destoryEffectTime);
+                if (altHitEffect != null)  {
+                  GameObject effect1 = Instantiate(altHitEffect, transform.position, transform.rotation);
+                  Destroy(effect1, destoryEffectTime);
+                }
             }
     }
       if (!isPiercing)  {

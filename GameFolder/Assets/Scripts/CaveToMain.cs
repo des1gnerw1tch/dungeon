@@ -69,14 +69,7 @@ public class CaveToMain : MonoBehaviour
         }
         playerObject.GetComponent<PlayerHealth>().enabled = true;
         //playerObject.GetComponent<PlayerMovement>().enabled = true;
-        if (!continueMusic) {
-          try {
-            FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
-          }
-          catch (NullReferenceException e){
-            //Debug.Log("No music found to stop");
-          }
-        }
+        
         SceneManager.LoadScene(levelIndex);
 	}
 

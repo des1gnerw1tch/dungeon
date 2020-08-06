@@ -41,7 +41,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879529914316796876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129681771
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 3
   m_Sprite: {fileID: -730814461320914078, guid: 3722f4b3115f71440863a5869e295664,
     type: 3}
@@ -93,7 +93,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879529914316796876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 84a035469ca41404ebb0dbfee56bf2b7, type: 2}
   m_CullingMode: 0
@@ -117,12 +117,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
+  altHitEffect: {fileID: 0}
   damage: 200
   damageUncertainty: 20
   criticalChance: 0
   knockback: 300
   hitSound: 
   isPiercing: 0
+  IsTeleporter: 0
+  TeleportScript: {fileID: 0}
+  positions: []
+  destoryEffectTime: 0.2
 --- !u!58 &6484257561627956079
 CircleCollider2D:
   m_ObjectHideFlags: 0
