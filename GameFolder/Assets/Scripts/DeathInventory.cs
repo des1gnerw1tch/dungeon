@@ -22,6 +22,10 @@ public class DeathInventory : MonoBehaviour
       PlaceInventoryUI();
       DisablePlayer();
       numSelected = 0;
+      
+      //this stops the song that was playing before
+      FindObjectOfType<AudioManager>().Stop(MusicPlayer.songPlaying);
+      MusicPlayer.songPlaying = null;
     }
 
     /*places the inventory images on slots*/
