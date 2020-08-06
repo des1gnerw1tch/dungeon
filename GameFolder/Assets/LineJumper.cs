@@ -26,7 +26,7 @@ public class LineJumper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GetComponent<CanvasGroup>().alpha == 1)
         {
 
 
@@ -101,7 +101,11 @@ public class LineJumper : MonoBehaviour
             {
                 Debug.Log("Success");
                 GameObject.Find("ItemManager").GetComponent<ItemManager>().ConsumeItem();
-                Instantiate(EnchantmentDrops[i], GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+                if(GetComponent<CanvasGroup>().alpha == 1)
+                {
+                    Instantiate(EnchantmentDrops[i], GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+                }
+                
                 
                 isSuccess = true;
             }
