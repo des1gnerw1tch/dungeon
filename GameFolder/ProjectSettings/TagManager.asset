@@ -57,9 +57,6 @@ TagManager:
   - name: Tilemap
     uniqueID: 1303079411
     locked: 0
-  - name: Drops
-    uniqueID: 1529948243
-    locked: 0
   - name: Enemy Bullets
     uniqueID: 2328868073
     locked: 0
@@ -71,6 +68,9 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 3784963909
+    locked: 0
+  - name: Drops
+    uniqueID: 1529948243
     locked: 0
   - name: UI
     uniqueID: 1475812027
