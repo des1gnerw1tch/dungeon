@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  lookRadius: 100
+  lookRadius: 1000
   atkRadius: 0
 --- !u!1102 &4948486737716972177
 AnimatorState:
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 100
+  lookRadius: 1000
   speed: 4
   minWaitTime: 1
   maxWaitTime: 5
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5df13b83d054cacbcd4dcde037dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 100
+  lookRadius: 1000
   minWalkTime: 2
   maxWalkTime: 3
 --- !u!1101 &6549798131485419448
