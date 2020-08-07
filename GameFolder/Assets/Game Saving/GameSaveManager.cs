@@ -25,7 +25,6 @@ public class GameSaveManager : MonoBehaviour
     PlayerSettings.music = data.music;
     PlayerSettings.soundEffects = data.soundEffects;
     PlayerSettings.fancyGraphics = data.fancyGraphics;
-    Debug.Log("Music " + PlayerSettings.music + " Sound Effects " + PlayerSettings.soundEffects + " Fancy Lighting " + PlayerSettings.fancyGraphics);
   }
 
 //saves file every so seconds
