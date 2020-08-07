@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float speedBoostLength = 10f;
     [SerializeField] private Animator focusEffectIcon;
     public float focusEffectLength = 8f;
+    public GameObject dashParts;
+    public Slider StaminaSlider;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StaminaSlider.value = dashCooldown;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Speed",Mathf.Abs(movement.y));
@@ -38,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
           FindObjectOfType<AudioManager>().Play("footsteps");
         }*/
         //Dash Function
-        if(Input.GetKey(KeyCode.LeftShift) && dashCooldown<=0f)
+        if(Input.GetKey(KeyCode.LeftShift) && dashCooldown >= 2f)
         {
             dashDir = movement;
-            dashCooldown = 2f;
+            dashCooldown = 0f;
             dash = true;
             animator.SetBool("Dash", true);
         }
@@ -54,7 +59,10 @@ public class PlayerMovement : MonoBehaviour
             if (dashLength > 0f)
             {
                 rb.velocity = dashDir * moveSpeed*3;
+                GameObject Temp = Instantiate(dashParts, transform.position, transform.rotation);
+                Destroy(Temp, 1);
                 dashLength -= (Time.fixedDeltaTime);
+
             }
             else
             {
@@ -67,9 +75,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
-        if (dashCooldown > 0f)
+        if (dashCooldown < 2f)
         {
-            dashCooldown -= Time.fixedDeltaTime;
+            dashCooldown += Time.fixedDeltaTime;
         }
 
         //rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);

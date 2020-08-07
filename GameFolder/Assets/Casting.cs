@@ -24,6 +24,7 @@ public class Casting : MonoBehaviour
         {
             if (Input.GetKey("e") && !started && itemManagerScript.itemString == "EmptyBook") 
             {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().moveSpeed = 0;
                 Group(1,true,true);
                 started = true;
             }
