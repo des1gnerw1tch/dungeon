@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 229911201}
   - component: {fileID: 229911203}
   - component: {fileID: 229911202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4402,6 +4402,7 @@ GameObject:
   - component: {fileID: 671729490}
   - component: {fileID: 671729492}
   - component: {fileID: 671729491}
+  - component: {fileID: 671729493}
   m_Layer: 8
   m_Name: Corners
   m_TagString: Untagged
@@ -5058,6 +5059,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &671729493
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671729489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &813926697
 GameObject:
   m_ObjectHideFlags: 0
@@ -13695,6 +13712,7 @@ GameObject:
   - component: {fileID: 1262903783}
   - component: {fileID: 1262903785}
   - component: {fileID: 1262903784}
+  - component: {fileID: 1262903786}
   m_Layer: 8
   m_Name: Solid Tilemap
   m_TagString: Untagged
@@ -16903,6 +16921,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1262903786
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262903782}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1298891611
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,7 +17199,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 22800
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

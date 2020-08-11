@@ -20,7 +20,7 @@ public class Check : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
         if (CheckPlayer)
         {
             pos.Set(target.position.x - animator.transform.position.x, target.position.y - animator.transform.position.y);
@@ -32,9 +32,9 @@ public class Check : StateMachineBehaviour
                 patrolArea = Random.Range(-patrolArea, patrolArea);
                 pos.Set(animator.transform.position.x + patrolArea, animator.transform.position.y + Random.Range(-patrolArea, patrolArea));
                 reachedPos = false;
-                Debug.Log(patrolArea);
+              //  Debug.Log(patrolArea);
             }
-            
+
             if (animator.transform.position.x == pos.x && animator.transform.position.y == pos.y)
             {
                 reachedPos = true;
@@ -77,7 +77,7 @@ public class Check : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
-    //    
+    //
     //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
