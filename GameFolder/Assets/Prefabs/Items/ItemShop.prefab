@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopID: HealthPotion
+  prefab: {fileID: 0}
   cost: 10
-  loot: {fileID: 3862044889143931942, guid: 029d24307462332478e96536b16ac2c4, type: 3}
+  noMoneyDialogue: {fileID: 0}
+  boughtDialogue: {fileID: 0}
+  costDialogue: {fileID: 0}

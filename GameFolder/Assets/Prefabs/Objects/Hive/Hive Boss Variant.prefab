@@ -85,5 +85,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hive Boss Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3277636165937893270, guid: ff0a65d40543d40e5b34b19697217f99,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0a65d40543d40e5b34b19697217f99, type: 3}
