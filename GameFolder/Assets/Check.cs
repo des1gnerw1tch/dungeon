@@ -5,6 +5,12 @@ using UnityEngine;
 public class Check : StateMachineBehaviour
 {
     private Transform target;
+    public bool CheckPlayer;
+    public int patrolWalkSpeed;
+    private bool reachedPos = true;
+    public int patrolArea = 5;
+    public int sightRange = 7;
+    Vector2 pos;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -14,16 +20,34 @@ public class Check : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        Vector2 pos = new Vector2(target.position.x - animator.transform.position.x, target.position.y - animator.transform.position.y);
-        /*if(pos.x < 0)
+        
+        if (CheckPlayer)
         {
-            animator.SetFloat("Horizontal", -1);
+            pos.Set(target.position.x - animator.transform.position.x, target.position.y - animator.transform.position.y);
         }
         else
         {
-            animator.SetFloat("Horizontal", 1);
-        }*/
+            if (reachedPos)
+            {
+                patrolArea = Random.Range(-patrolArea, patrolArea);
+                pos.Set(animator.transform.position.x + patrolArea, animator.transform.position.y + Random.Range(-patrolArea, patrolArea));
+                reachedPos = false;
+                Debug.Log(patrolArea);
+            }
+            
+            if (animator.transform.position.x == pos.x && animator.transform.position.y == pos.y)
+            {
+                reachedPos = true;
+            }
+            else
+            {
+                animator.transform.position = Vector2.MoveTowards(animator.transform.position, pos, patrolWalkSpeed * Time.deltaTime);
+            }
+            if (Vector2.Distance(animator.transform.position, target.position) < sightRange)
+            {
+                animator.SetBool("seenPlayer", true);
+            }
+        }
         if (pos.y < 0 && Mathf.Abs(pos.y) > Mathf.Abs(pos.x))
         {
             animator.SetFloat("Vertical", -1);
