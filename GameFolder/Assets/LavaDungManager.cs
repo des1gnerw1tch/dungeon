@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class LavaDungManager : MonoBehaviour
 {
-    [SerializeField] GameObject removableLava;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //BuildBridge();
-    }
+    [SerializeField]
+    private GameObject removableLava;
 
+    [SerializeField]
+    private DialogueTrigger noPowerDialogue;
+    [SerializeField]
+    private DialogueTrigger poweredDialogue;
+    public static bool powerOn = false;
 
-    void BuildBridge() {
-      removableLava.SetActive(false);
+    public void BuildBridge() {
+      if (powerOn)  {
+        removableLava.SetActive(false);
+        poweredDialogue.TriggerDialogue();
+      }
+      else  {
+        noPowerDialogue.TriggerDialogue();
+        FindObjectOfType<AudioManager>().Play("negative");
+      }
+
     }
 }
