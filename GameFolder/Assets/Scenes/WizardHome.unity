@@ -9096,12 +9096,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: Mage
+    name: Ecco
     sentances:
-    - Ah you found my enchanting table.
-    - If you have a empty book and you find the right combanation who knows what
-      you could do.
-    - Press e to enchant
+    - Press e to enchant empty book
 --- !u!61 &1701888286
 BoxCollider2D:
   m_ObjectHideFlags: 0
