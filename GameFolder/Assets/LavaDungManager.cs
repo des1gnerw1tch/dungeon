@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class LavaDungManager : MonoBehaviour
 {
-    [SerializeField] Animator camera;
+    [SerializeField] GameObject removableLava;
     // Start is called before the first frame update
     void Start()
     {
-        PanToFriend();
+        //BuildBridge();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-    void PanToFriend() {
-
+    void BuildBridge() {
+      removableLava.SetActive(false);
     }
 }
