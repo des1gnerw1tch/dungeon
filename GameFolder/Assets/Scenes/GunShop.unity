@@ -3588,9 +3588,10 @@ MonoBehaviour:
     name: Mr. Tracy
     sentances:
     - We got weapons of all types here.
-    - Unfortunately they are a bit outdated though... The dungeons though...
-    - They have weapons of all kinds down there. More than you can imagine
-    - You have just got to be careful, okay?
+    - Unfortunately they are a bit outdated.
+    - The dungeons have weapons of all kinds down there.
+    - Each area usually contains around 3 unique items, many of which can't be bought
+      at my shop.
 --- !u!61 &1542420283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5605,7 +5606,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d7e51caf4c02de441bbd2404738faa51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

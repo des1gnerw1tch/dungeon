@@ -41,6 +41,7 @@ public class tracyCaveBehavior : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             Player.GetComponent<PlayerMovement>().moveSpeed = 5f;
             PlayerProgress.merchantFreed = true;
+            FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
           }
         }
     }
