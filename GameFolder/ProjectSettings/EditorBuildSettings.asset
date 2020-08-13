@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lava/LavaDungeon.unity
     guid: 76ce2607808534687835105db15690bd
+  - enabled: 1
+    path: Assets/Scenes/Lava/ControlRoom.unity
+    guid: 445c017f683aa43dbb54349f06b31288
   m_configObjects: {}
