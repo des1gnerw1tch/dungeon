@@ -10,6 +10,7 @@ public class Check : StateMachineBehaviour
     private bool reachedPos = true;
     public int patrolArea = 5;
     public int sightRange = 7;
+    public GameObject treeplacement;
     Vector2 pos;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -27,17 +28,29 @@ public class Check : StateMachineBehaviour
         }
         else
         {
-            if (reachedPos)
+            if ((reachedPos  && Random.Range(0,200) == 4)|| !animator.GetBool("isPatrolling"))
             {
+                animator.speed = 1;
                 int area = Random.Range(-patrolArea, patrolArea);
                 pos.Set(animator.transform.position.x + area, animator.transform.position.y + Random.Range(-area, area));
+                pos.Set(pos.x - animator.transform.position.x , pos.y - animator.transform.position.y);
                 reachedPos = false;
+                animator.SetBool("isPatrolling",true);
                 //Debug.Log(patrolArea);
+            }
+            else
+            {
+                if (reachedPos)
+                {
+                    animator.speed =0;
+                }
+                
             }
 
             if (animator.transform.position.x == pos.x && animator.transform.position.y == pos.y)
             {
                 reachedPos = true;
+                
             }
             else
             {
