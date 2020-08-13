@@ -11,6 +11,9 @@ public class Generator : MonoBehaviour
     [SerializeField]
     private BoxCollider2D collider;
 
+    [SerializeField]
+    private GameObject alarmTrigger;
+
     void Start()  {
       if (LavaDungManager.powerOn)  {
         collider.enabled = false;
@@ -22,6 +25,7 @@ public class Generator : MonoBehaviour
           collider.enabled = false;
           onDialogue.TriggerDialogue();
           LavaDungManager.powerOn = true;
+          alarmTrigger.SetActive(true);
         }
       }
     }
