@@ -29,10 +29,10 @@ public class Check : StateMachineBehaviour
         {
             if (reachedPos)
             {
-                patrolArea = Random.Range(-patrolArea, patrolArea);
-                pos.Set(animator.transform.position.x + patrolArea, animator.transform.position.y + Random.Range(-patrolArea, patrolArea));
+                int area = Random.Range(-patrolArea, patrolArea);
+                pos.Set(animator.transform.position.x + area, animator.transform.position.y + Random.Range(-area, area));
                 reachedPos = false;
-              //  Debug.Log(patrolArea);
+                //Debug.Log(patrolArea);
             }
 
             if (animator.transform.position.x == pos.x && animator.transform.position.y == pos.y)
