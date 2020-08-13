@@ -5,20 +5,26 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
 
-    void Start()  {
-      if (LavaDungManager.powerOn)  {
-        Destroy(this.gameObject);
-      }
-    }
     [SerializeField]
     private DialogueTrigger onDialogue;
+
+    [SerializeField]
+    private BoxCollider2D collider;
+
+    void Start()  {
+      if (LavaDungManager.powerOn)  {
+        collider.enabled = false;
+      }
+    }
     void OnTriggerStay2D(Collider2D other)  {
       if (other.CompareTag("Player")) {
         if (Input.GetKeyDown("e"))  {
-          LavaDungManager.powerOn = true;
+          collider.enabled = false;
           onDialogue.TriggerDialogue();
-          Destroy(this.gameObject);
+          LavaDungManager.powerOn = true;
         }
       }
     }
+
+
 }

@@ -6,6 +6,8 @@ public class LavaDungManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject removableLava;
+    [SerializeField]
+    private GameObject panCam;
 
     [SerializeField]
     private DialogueTrigger noPowerDialogue;
@@ -13,6 +15,11 @@ public class LavaDungManager : MonoBehaviour
     private DialogueTrigger poweredDialogue;
     public static bool powerOn = false;
 
+    void Start()  {
+      if (!powerOn) {
+        panCam.SetActive(true);
+      }
+    }
     public void BuildBridge() {
       if (powerOn)  {
         removableLava.SetActive(false);
