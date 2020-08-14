@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 0.5
+  maxWalkTime: 1.5
 --- !u!1101 &-8898592683191245901
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1479,10 +1479,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 8.5
+  atkRadius: 7
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 13
+  projectileSpeed: 18
   audio: pft
   atkCooldown: 1
 --- !u!1101 &-4606822580324936330
@@ -1698,9 +1698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 3
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!1101 &-3747215797741773811
 AnimatorStateTransition:
@@ -1851,10 +1851,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 8.5
+  atkRadius: 7
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 13
+  projectileSpeed: 18
   audio: pft
   atkCooldown: 1
 --- !u!1102 &-2869096443042315118
@@ -2002,9 +2002,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 3
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!1102 &-2653324420234658720
 AnimatorState:
@@ -2278,8 +2278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 0.5
+  maxWalkTime: 1.5
 --- !u!1101 &-2057696631714294892
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -2647,8 +2647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 0.5
+  maxWalkTime: 1.5
 --- !u!1102 &-692190471614652353
 AnimatorState:
   serializedVersion: 5
@@ -2689,9 +2689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  lookRadius: 12
-  atkRadius: 8.5
+  speed: 5
+  lookRadius: 20
+  atkRadius: 7
 --- !u!1101 &-515159427558120789
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -2751,10 +2751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 8.5
+  atkRadius: 7
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 13
+  projectileSpeed: 18
   audio: pft
   atkCooldown: 1
 --- !u!114 &-264033164897153967
@@ -3723,8 +3723,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
-  minWalkTime: 2
-  maxWalkTime: 3
+  minWalkTime: 0.5
+  maxWalkTime: 1.5
 --- !u!114 &2724959420674210320
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3737,9 +3737,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 3
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!1102 &2730084430967696496
 AnimatorState:
@@ -3970,9 +3970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 12
   speed: 3
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!114 &3521540078992274639
 MonoBehaviour:
@@ -4162,9 +4162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  lookRadius: 12
-  atkRadius: 8.5
+  speed: 5
+  lookRadius: 20
+  atkRadius: 7
 --- !u!1102 &4251646587352133738
 AnimatorState:
   serializedVersion: 5
@@ -4877,10 +4877,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 8.5
+  atkRadius: 7
   projectile: {fileID: 9151130746491375280, guid: ae060697fa6d84f7484995011cbfd94b,
     type: 3}
-  projectileSpeed: 13
+  projectileSpeed: 18
   audio: pft
   atkCooldown: 1
 --- !u!1101 &6004929749567087714
@@ -5763,9 +5763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  lookRadius: 12
-  atkRadius: 8.5
+  speed: 5
+  lookRadius: 20
+  atkRadius: 7
 --- !u!1102 &8532439646935419444
 AnimatorState:
   serializedVersion: 5
@@ -5985,9 +5985,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  lookRadius: 12
-  atkRadius: 8.5
+  speed: 5
+  lookRadius: 20
+  atkRadius: 7
 --- !u!1101 &9050677338227680930
 AnimatorStateTransition:
   m_ObjectHideFlags: 3

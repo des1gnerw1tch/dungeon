@@ -13,6 +13,8 @@ public class LavaDungManager : MonoBehaviour
     private GameObject warningLight;
     [SerializeField]
     private Animator switchAnimator;
+    [SerializeField]
+    private GameObject[] skellyKnightSpawners;
 
     [SerializeField]
     private DialogueTrigger noPowerDialogue;
@@ -22,6 +24,7 @@ public class LavaDungManager : MonoBehaviour
 
     void Start()  {
       if (!powerOn) {
+        //this is when sirens are going off
         panCam.SetActive(true);
       } else {
         //if power is on
@@ -30,6 +33,10 @@ public class LavaDungManager : MonoBehaviour
           light.gameObject.SetActive(false);
         }
         warningLight.SetActive(true);
+        //turn on skelly knight spawners
+        foreach (GameObject spawner in skellyKnightSpawners)  {
+          spawner.SetActive(true);
+        }
 
       }
     }

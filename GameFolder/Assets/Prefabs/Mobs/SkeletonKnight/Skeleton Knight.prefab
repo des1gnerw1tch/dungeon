@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 1720112021953783384, guid: d13008cd304fe465ea28007c2ae02c20,
     type: 3}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 500
   enemyID: SkeletonKnight
   dissolveSpeed: 0.4
   tintOnStart: 0
