@@ -15,6 +15,10 @@ public class LavaDungManager : MonoBehaviour
     private Animator switchAnimator;
     [SerializeField]
     private GameObject[] skellyKnightSpawners;
+    [SerializeField]
+    private GameObject bigChest;
+    [SerializeField]
+    private GameObject happyMusicPlayer;
 
     [SerializeField]
     private DialogueTrigger noPowerDialogue;
@@ -26,6 +30,8 @@ public class LavaDungManager : MonoBehaviour
       if (!powerOn) {
         //this is when sirens are going off
         panCam.SetActive(true);
+        happyMusicPlayer.SetActive(true);
+        bigChest.SetActive(false);
       } else {
         //if power is on
         Light2D[] lights = FindObjectsOfType<Light2D>();
@@ -38,6 +44,7 @@ public class LavaDungManager : MonoBehaviour
           spawner.SetActive(true);
         }
 
+        bigChest.SetActive(true);
       }
     }
     public void BuildBridge() {

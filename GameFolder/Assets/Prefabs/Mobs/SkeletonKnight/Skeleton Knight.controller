@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5df13b83d054cacbcd4dcde037dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   minWalkTime: 1
   maxWalkTime: 2
 --- !u!1101 &-8898592683191245901
@@ -1698,9 +1698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   speed: 2
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!1101 &-3747215797741773811
 AnimatorStateTransition:
@@ -2002,9 +2002,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   speed: 2
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!1102 &-2653324420234658720
 AnimatorState:
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5df13b83d054cacbcd4dcde037dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   minWalkTime: 1
   maxWalkTime: 2
 --- !u!1101 &-2057696631714294892
@@ -2646,7 +2646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5df13b83d054cacbcd4dcde037dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   minWalkTime: 1
   maxWalkTime: 2
 --- !u!1102 &-692190471614652353
@@ -3722,7 +3722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5df13b83d054cacbcd4dcde037dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   minWalkTime: 1
   maxWalkTime: 2
 --- !u!114 &2724959420674210320
@@ -3737,9 +3737,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   speed: 2
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!1102 &2730084430967696496
 AnimatorState:
@@ -3970,9 +3970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   speed: 2
-  minWaitTime: 1
+  minWaitTime: 3
   maxWaitTime: 5
 --- !u!114 &3521540078992274639
 MonoBehaviour:

@@ -57,6 +57,9 @@ TagManager:
   - name: Tilemap
     uniqueID: 1303079411
     locked: 0
+  - name: Chest
+    uniqueID: 4262240125
+    locked: 0
   - name: Enemy Bullets
     uniqueID: 2328868073
     locked: 0
