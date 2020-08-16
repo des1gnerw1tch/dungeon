@@ -21,6 +21,8 @@ public class FriendBehaviour : MonoBehaviour
       other.GetComponent<PlayerMovement>().moveSpeed = 0f;
       DialogueCollider.size = new Vector2(10, 10);
       trig = true;
+      PlayerProgress.friendFreed = true;
+      FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 
   }

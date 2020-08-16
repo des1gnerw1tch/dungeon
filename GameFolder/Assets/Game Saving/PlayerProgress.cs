@@ -9,6 +9,7 @@ public class PlayerProgress : MonoBehaviour
     public static bool merchantFreed = false;
     public static bool nurseFreed = false;
     public static bool alchemistFreed = false;
+    public static bool friendFreed = false;
 
     //key progress
     public static bool hasBlueKey;
@@ -22,6 +23,7 @@ public class PlayerProgress : MonoBehaviour
       merchantFreed = false;
       nurseFreed = false;
       alchemistFreed = false;
+      friendFreed = false;
 
       hasBlueKey = false;
       hasPurpleKey = false;

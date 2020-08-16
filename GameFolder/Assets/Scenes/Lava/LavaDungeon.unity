@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -68516,6 +68516,7 @@ MonoBehaviour:
   - {fileID: 1547154285}
   bigChest: {fileID: 505795387}
   happyMusicPlayer: {fileID: 2106916843}
+  friend: {fileID: 2043896495}
   noPowerDialogue: {fileID: 1899696267}
   poweredDialogue: {fileID: 1762993627}
 --- !u!4 &1298891613

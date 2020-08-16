@@ -19,6 +19,8 @@ public class LavaDungManager : MonoBehaviour
     private GameObject bigChest;
     [SerializeField]
     private GameObject happyMusicPlayer;
+    [SerializeField]
+    private GameObject friend;
 
     [SerializeField]
     private DialogueTrigger noPowerDialogue;
@@ -27,13 +29,15 @@ public class LavaDungManager : MonoBehaviour
     public static bool powerOn = false;
 
     void Start()  {
+
       if (!powerOn) {
-        //this is when sirens are going off
-        panCam.SetActive(true);
+        //sirens not going off
+        if (!PlayerProgress.friendFreed)
+          panCam.SetActive(true);
         happyMusicPlayer.SetActive(true);
         bigChest.SetActive(false);
       } else {
-        //if power is on
+        //if power is on turn off all lights and turn on warning light
         Light2D[] lights = FindObjectsOfType<Light2D>();
         foreach (Light2D light in lights) {
           light.gameObject.SetActive(false);
@@ -46,6 +50,11 @@ public class LavaDungManager : MonoBehaviour
 
         bigChest.SetActive(true);
       }
+
+      if (PlayerProgress.friendFreed) {
+        friend.SetActive(false);
+      }
+
     }
     public void BuildBridge() {
       if (powerOn)  {

@@ -82,6 +82,7 @@ public class GameSaveManager : MonoBehaviour
         PlayerProgress.merchantFreed = data.merchantFreed;
         PlayerProgress.nurseFreed = data.nurseFreed;
         PlayerProgress.alchemistFreed = data.alchemistFreed;
+        PlayerProgress.friendFreed = data.friendFreed;
 
         PlayerProgress.hasBlueKey = data.hasBlueKey;
         PlayerProgress.hasPurpleKey = data.hasPurpleKey;
