@@ -15,6 +15,8 @@ public class AlarmTrigger : MonoBehaviour
     }
 
     public void triggerWarningLight() {
+      FindObjectOfType<AudioManager>().Stop("LavaTheme");
+      FindObjectOfType<AudioManager>().Play("siren");
       warningLight.SetActive(true);
       normalLight.SetActive(false);
     }

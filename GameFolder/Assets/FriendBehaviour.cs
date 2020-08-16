@@ -23,6 +23,7 @@ public class FriendBehaviour : MonoBehaviour
       trig = true;
       PlayerProgress.friendFreed = true;
       FindObjectOfType<GameSaveManager>().SavePlayer();
+      FindObjectOfType<AudioManager>().Stop("siren");
     }
 
   }

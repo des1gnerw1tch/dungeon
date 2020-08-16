@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         if(currentHealth <= 0){
+            FindObjectOfType<GameSaveManager>().SavePlayer();
             //transfers to our salvage feature
             deathTransition.TransitionToScene("Death");
 
@@ -47,6 +48,8 @@ public class PlayerHealth : MonoBehaviour
             catch (NullReferenceException e){
                 //Debug.Log("No music found to stop");
             }
+            //tries to stop siren noise
+            FindObjectOfType<AudioManager>().Stop("siren");
 
 		    }
         healthBar.SetHealth(currentHealth);
