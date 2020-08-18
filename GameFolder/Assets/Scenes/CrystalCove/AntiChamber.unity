@@ -3068,7 +3068,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 8181062881711523655, guid: b0ce85b1a84b698458a015f97c2683b3,
     type: 3}
@@ -5317,6 +5317,92 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1201342965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201342967}
+  - component: {fileID: 1201342966}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1201342966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201342965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACIn+sdR6UHcQIAAB4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWsPOLaB3lriOD3kY+p2cuEio8VoDBKjj9hOxv+9KwGGuFwQu293375d8Um40A3kRqqN4uxJMiDfJ8SdybfJ4HyEE91LseUf0GPeODOlA1GP+U0Nl2gPXZiWNRjF8x9iXzlwgEYreCFVvWZ7SKU2Gs0FrTSgS0njogWaPifkhK9p4kLOeJpH7vSBpySYXPCYgzCgRtDFLExW4SpaT4NlF7ScLQP3LOI+dhbfLaI4Rkzks1iRV7RugLmWhmSreV82niXuiUMPF9h0h3QN5rKquO4YE3NuvCIpbbTFfhHAOEUFPE2HL4HvS+PSjoNfikKD6eRR9HzPFQrZZiU/ZatuTfWh5fdOK+sJ3IVBNPe02rxP/0GmLetCyfqxLx0GrowpeX74Tc851WY0gbH5/it3K460OtBdBW8liGe5UdIKhk6jrAu1Gub3w+e1u7SE/DDYW6o3RtsM0vcD78fterh4AU5pxeudc80WrWFbSS+53xJQOJxfSNjvkO5SoNWx+KvhD92Pl61zPHClDbq6LoWjt5NWOShZe81cN9akUgnw5o50A4JW5vyKacztFG98o7I3ngfqrlVXvPP1t+UmxJsHfBDcuF7l8TosXcrjE+jyxZqKCxhIO8cz6pRKIdolG2vSh22tKmg+Cttbzr6uFgmKiCbJMorDIkoilkwB5quYAn6Eu7hgIfG7xwX2SavXlmgnD05NDMkF7ln/t5lsFG38wjNFjxv+UcsxQS4Kuc0VgHhpU1yZg8IqeDPZmnFUaAvGcOEHTj4zUsn8ACy71sx8q+uTUTQbsmSk4e/SOEtGUv9/yciFXP4BUEsDBBQAAAgIAACIn+v1ICJfbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSQZp5oqWlqbmFYZq5pXmKpW5qqpGZRWIqkGOYZJGWYqgUC1RfUlmQ6peYmwrRE5BYkpGWmZeSmZeu516UmeIOMlopthYAUEsBAi0AFAAACAgAAIif6x1HpQdxAgAAHgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAIif6/UgIl9sAAAAeAAAAAkAJAAAAAAAAAAAAAAAvgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &1201342967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201342965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.7625, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215440374
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,7 +8100,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
