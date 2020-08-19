@@ -59180,6 +59180,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &530620039 stripped
@@ -59646,6 +59652,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &871086432 stripped
@@ -59793,6 +59805,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &945450855 stripped
@@ -60061,6 +60079,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &1006697615 stripped
@@ -60344,6 +60368,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &1096011116 stripped
@@ -60846,6 +60876,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &1311988179 stripped
@@ -61217,6 +61253,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 7084186771576309055, guid: 00580ab32933a4878afe556db6a630a2,
+        type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 1536925610665632393, guid: 59d271a4f6b3346748dae542806858e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00580ab32933a4878afe556db6a630a2, type: 3}
 --- !u!4 &1652321570 stripped
