@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 5411605247203422836, guid: fe731044199494f009e34f972d4b2c94,
     type: 3}
-  inventoryID: Goblin Sachel
+  inventoryID: Goblin Satchel
   wasDropped: 0
 --- !u!61 &6302650298956719216
 BoxCollider2D:

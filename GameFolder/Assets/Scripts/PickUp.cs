@@ -30,6 +30,7 @@ public class PickUp : MonoBehaviour
                     Destroy(gameObject);
                     inventory.item[i] = inventoryID;
                     FindObjectOfType<AudioManager>().Play("pickUpItem");
+                    FindObjectOfType<GameSaveManager>().SavePlayer();
 
                     break;
 				}
