@@ -15,6 +15,9 @@ public class MenuManager : MonoBehaviour
   private GameObject settingsUI;
 
   [SerializeField]
+  private GameObject resetGameWarningUI;
+
+  [SerializeField]
   private AudioManager audioManager;
 
   void Start()  {
@@ -33,6 +36,7 @@ public class MenuManager : MonoBehaviour
 
   IEnumerator _PlaySave(float _delay) {
     mainUI.SetActive(false);
+    resetGameWarningUI.SetActive(false);
     animator.SetTrigger("PlaySave");
     yield return new WaitForSeconds(_delay);
     SceneManager.LoadScene("Main");
@@ -46,6 +50,7 @@ public class MenuManager : MonoBehaviour
 
   IEnumerator _NewGame(float _delay) {
     mainUI.SetActive(false);
+    resetGameWarningUI.SetActive(false);
     animator.SetTrigger("NewGame");
     yield return new WaitForSeconds(_delay);
     SceneManager.LoadScene("Main");
@@ -59,6 +64,7 @@ public class MenuManager : MonoBehaviour
   public void GoToSettings(float delay)  {
     animator.SetTrigger("Settings");
     mainUI.SetActive(false);
+    resetGameWarningUI.SetActive(false);
     StartCoroutine(_GoToSettings(delay));
   }
 
@@ -81,5 +87,7 @@ public class MenuManager : MonoBehaviour
   public void makeClickSound()  {
     audioManager.Play("select");
   }
+
+
 
 }
