@@ -305,6 +305,98 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a57d87702bb42febf1fe7eccd81621, type: 3}
+--- !u!1001 &122988475
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.699101
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1028527
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747291052977295871, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951866225856222193, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: m_Name
+      value: Friend NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[0]
+      value: I'm going to stay with you if that is ok
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[1]
+      value: 'We can have a sleepover every night!
+
+'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccb4f365f1523451284d9f6455e9be6b, type: 3}
+--- !u!1 &122988476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 951866225856222193, guid: ccb4f365f1523451284d9f6455e9be6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 122988475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &350687108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1202,7 +1294,7 @@ RectTransform:
   m_Children:
   - {fileID: 569036467}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1239,6 +1331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vaultHolder: {fileID: 0}
+  friendNPC: {fileID: 122988476}
 --- !u!4 &1054614418
 Transform:
   m_ObjectHideFlags: 0
@@ -1251,7 +1344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124033619
 GameObject:
@@ -1369,7 +1462,7 @@ Transform:
   m_Children:
   - {fileID: 366631978}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343616721
 GameObject:
@@ -2106,7 +2199,7 @@ Transform:
   m_Children:
   - {fileID: 2067110489}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1769646455
 GameObject:
