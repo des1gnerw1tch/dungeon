@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4745906996912619090}
   - component: {fileID: 4745906996912619119}
   - component: {fileID: 6900924858030060286}
+  - component: {fileID: 4466072912658220558}
   m_Layer: 12
   m_Name: Brown Key
   m_TagString: Untagged
@@ -124,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyColor: Brown
+  keyReceivedText: {fileID: 3143137803910608348, guid: ecf8fe0fbe3344e14bff8dc0cd61220d,
+    type: 3}
 --- !u!50 &6900924858030060286
 Rigidbody2D:
   serializedVersion: 4
@@ -145,3 +148,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &4466072912658220558
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745906996912619091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.014713049, y: 0.009196281}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9411473, y: 0.76091194}
+  m_EdgeRadius: 0
