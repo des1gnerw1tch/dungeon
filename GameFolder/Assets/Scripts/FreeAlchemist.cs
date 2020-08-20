@@ -8,6 +8,7 @@ public class FreeAlchemist : MonoBehaviour
     void Start()
     {
       PlayerProgress.alchemistFreed = true;
+      PlayerProgress.hasBrownKey = true;
       FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 
