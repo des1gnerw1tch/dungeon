@@ -13,6 +13,9 @@ public class CaveManager : MonoBehaviour
     private BoxCollider2D blueDungeonPortal;
     [SerializeField]
     private BoxCollider2D blueDungeonDialogue;
+
+    public GameObject LavaDungeonPortal;
+    public GameObject LavaDungeonDialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,14 @@ public class CaveManager : MonoBehaviour
       } else {
         blueDungeonPortal.enabled = false;
         blueDungeonDialogue.enabled = true;
+      }
+
+      if (PlayerProgress.hasBrownKey)  {
+        LavaDungeonPortal.SetActive(true);
+        LavaDungeonDialogue.SetActive(false);
+      } else {
+        LavaDungeonPortal.SetActive(false);
+        LavaDungeonDialogue.SetActive(true);
       }
     }
 }
