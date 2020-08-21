@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class ActivatePath : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class ActivatePath : MonoBehaviour
             {
                 TileMapaDeactivate.SetActive(false);
             }
-            
+
+            AstarPath.active.Scan();
             /*if (TileMapaDeactivate != null) { 
                 TileMapaDeactivate.SetActive(false);
             }
