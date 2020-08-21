@@ -133,6 +133,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpellBook _Drop
       objectReference: {fileID: 0}
+    - target: {fileID: 4775695409322529134, guid: d492162dc30317d4b8092606780719e9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c68c0f4f37dfb174f8bca37d88719ce6,
+        type: 3}
     - target: {fileID: 7170518217804481919, guid: d492162dc30317d4b8092606780719e9,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2296,7 +2302,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -8991,7 +8997,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'It costs 200 coins to buy Magic Book Press E to buy. '
+    - 'It costs 80 coins to buy Empty Book Press E to buy. '
 --- !u!114 &1697723247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9004,8 +9010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2839659968609529476, guid: d492162dc30317d4b8092606780719e9, type: 3}
-  cost: 200
+  prefab: {fileID: 2839659968609529476, guid: a0403b81de62e1e4d9d39df68021c26e, type: 3}
+  cost: 90
   noMoneyDialogue: {fileID: 452711287}
   boughtDialogue: {fileID: 2066614255}
   costDialogue: {fileID: 1697723246}
