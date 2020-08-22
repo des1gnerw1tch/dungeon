@@ -6,7 +6,15 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Animator NPC;
     public Dialogue dialogue;
+    public bool isStart = false;
 
+    public void Start()
+    {
+        if (isStart)
+        {
+            TriggerDialogue();
+        }
+    }
     public void TriggerDialogue(){
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         if (NPC != null)  {
