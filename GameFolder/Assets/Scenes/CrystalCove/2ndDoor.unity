@@ -888,6 +888,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 1437410090}
   ShouldDrop: 0
   IgnorePlayer: 1
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!4 &177599663
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,6 +1048,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 897125661}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &305778365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305778367}
+  - component: {fileID: 305778366}
+  m_Layer: 0
+  m_Name: HeadSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &305778366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305778365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7512750018533427859, guid: 31faf1ffbed016e4199f00781246b317, type: 3}
+  spawnTime: 5
+  max: 20
+  numAlive: 0
+  xRadius: 20
+  yRadius: 30
+  minDistanceFromPlayer: 10
+  GizmosColor: {r: 1, g: 1, b: 1, a: 0.2}
+--- !u!4 &305778367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305778365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7, y: -19.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &322587193
 GameObject:
@@ -1494,6 +1551,7 @@ MonoBehaviour:
     name: 
     sentances:
     - 'I wonder what happens if I shoot these crystals with the gauntlet.  '
+  isStart: 0
 --- !u!61 &526115471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1992,7 +2050,7 @@ GameObject:
   - component: {fileID: 677593981}
   - component: {fileID: 677593980}
   - component: {fileID: 677593979}
-  m_Layer: 4
+  m_Layer: 18
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80342,6 +80400,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 129279159}
   ShouldDrop: 0
   IgnorePlayer: 1
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!4 &699169434
 Transform:
   m_ObjectHideFlags: 0
@@ -80463,6 +80527,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 0}
   ShouldDrop: 0
   IgnorePlayer: 0
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!61 &809871655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80520,6 +80590,7 @@ MonoBehaviour:
     name: 
     sentances:
     - I Better shoot these too.
+  isStart: 0
 --- !u!1001 &842140247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80649,6 +80720,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 1090776877}
   ShouldDrop: 0
   IgnorePlayer: 1
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!4 &874777465
 Transform:
   m_ObjectHideFlags: 0
@@ -80939,6 +81016,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 0}
   ShouldDrop: 0
   IgnorePlayer: 0
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!61 &881549787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81192,7 +81275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACIn+svt0bsbwIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtyozAQ/BWXzusUOHGAve0Sx9lDHhVnKxcuMhqMykKi9IjtpPzvOxLYEO8J0T0z6ukZ+CJcmhZKq/RSc/aoGJCfE+LP5MdkIB9gTzdKrvgnnGLeObO1D6Ih5pVarhCPfZpRDVjNy19yI3xwhKCTvFK6WbAN5MpYg3BFhQGktLI+WyL0NSF7fEwzn3LA0yzxp088ZdHkiMcSpAU9hF5HVzdZlt3M0j5jejsLSJLEfeY0vorjZJ7eRtliGs1DGSdLQZsWmO9pqBZHcV9m3sVJbLcP8UyphOCm10rsoQ1e5LQ1DjvFAMYp9h4E+vga+Ka2vo9x8nNVGbC9MZoe7rhGC7uq5LfqfG2o2XbCPqhwQcB1HKVpkNXVffwvZBoHutKqeThdHUf+GlvzcvtKDyU1duT9GL77rt3JHRVbuhbwXoN8UkutnGRIWu18qjMwuxtez93lNZTbAe+kXoCuHTw/jTo6j2tyPAYD9rngzdpTVzcdsBIqWB72AzQO5w8KDttj+hKIehV/DbzRzXjNeuKea2OR6ruUXt5aOe1DySJ45rtxNldaQoB70S1IKuzhBcvYyylecKNrL5h76j+o/vKeO30nFykBHuKj6IJ6UbvzsEytdo9g6mdnBZcwiPbEE/qUKym7JRt7ckpbOV3RcpS2cZx9Xy0SVQnNsnmSxlWSJSybAsxuUwr4Eq/TisUk7B6X2CcVL53Q3h6cmhyKS9yz039mstS0DQvPNN0t+WejRpZzWalVqQHkc1fhLBw0XoIfJlswjgatwFouw7zJV0GEKrfAinOhInS62FtNi6FKQVr+oaxHCpKHH0tBjuT4D1BLAwQUAAAICAAAiJ/r9SAiX2wAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kkGaeaKlpam5hWGauaV5iqVuaqqRmUViKpBjmGSRlmKoFAtUX1JZkOqXmJsK0ROQWJKRlpmXkpmXrudelJniDjJaKbYWAFBLAQItABQAAAgIAACIn+svt0bsbwIAABcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACIn+v1ICJfbAAAAHgAAAAJACQAAAAAAAAAAAAAALwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcwMAAAAA
+    dataString: UEsDBBQAAAgIAACIn+tggXkIcQIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtyozAQ/BWXzmsXOE4we9sljrOHPCrOVi5cZDQYlYVE6RHbSfnfdyQgEO8J0T0z6ukZ+CRcmgYKq/Rac/agGJCfE+LP5MdkIO/hSHdKbvgH9DFvnNnKB9EQ80ItV4jHPs2oGqzmxS+5Ez44QtBJXipdr9gOMmWsQbikwgBSWlmfLRH6nJAjPqapTznhaZ740wee0mhyxmMB0oIeQq+i2SJN08V82WVMr+czBNIkibvMaTpb4Nt8eR2vptFNKONkIWjdAPM9DdXiKO7KJIsQJ7HdLsQzhRKCm04rsacmeJHRxjjsFAMYp9h7EOjjK+C7yvo+xslPZWnAdsZoerrlGi1sq5LfqvW1pmbfCnunwvl7rtKredzKb+s+/BcyjQNdalXf91fHkb/GVrzYv9BTQY0deT+Gb79rd/JAxZ5uBbxVIB/VWisnGZJWO5/qDMxvh9ev7rIKiv2At1IvQNcMnvej7gftezgHA46Z4PXWU7NFC2yECpaH/QCNw/mDgsP2mK4Eol7FXwOvdDdes46449pYpLoupZe3VU77ULIKnvlunM2UlhDgTnQDkgp7esYy9nKKF9zo2gvmjvoPqru84/rv5CIlwEN8FF1Qz+rwNSxTqcMDmOrJWcElDKI98Yg+ZUrKdsnMd9JnbZwuaTHK2jnOvm8WicqEpul1sozLJE1YOgWY3ywp4Eu8XZYsJmH1uMQ2qXhudXbu4NDkUFzimvW/mcla0ybsO9P0sOYftRrp47JUm0IDyKe2Qu+QAY2X4HfJVoyjPxuwlsswbvKZE6GKPbD8q1AeOl0drab5UCUnDX9X1iM5ycJ/JSdncv4HUEsDBBQAAAgIAACIn+v1ICJfbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSQZp5oqWlqbmFYZq5pXmKpW5qqpGZRWIqkGOYZJGWYqgUC1RfUlmQ6peYmwrRE5BYkpGWmZeSmZeu516UmeIOMlopthYAUEsBAi0AFAAACAgAAIif62CBeQhxAgAAFgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAIif6/UgIl9sAAAAeAAAAAkAJAAAAAAAAAAAAAAAvgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -98108,7 +98191,7 @@ GameObject:
   - component: {fileID: 1340339569}
   - component: {fileID: 1340339568}
   - component: {fileID: 1340339567}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: Solid Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101219,6 +101302,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 1187160367}
   ShouldDrop: 0
   IgnorePlayer: 1
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!4 &1667235004
 Transform:
   m_ObjectHideFlags: 0
@@ -101245,7 +101334,7 @@ GameObject:
   - component: {fileID: 1676240160}
   - component: {fileID: 1676240159}
   - component: {fileID: 1676240158}
-  m_Layer: 4
+  m_Layer: 17
   m_Name: WaterUnderPath (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102932,6 +103021,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 1846254054}
   ShouldDrop: 0
   IgnorePlayer: 1
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!4 &1938200067
 Transform:
   m_ObjectHideFlags: 0
@@ -103272,7 +103367,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -103675,13 +103770,13 @@ Tilemap:
       type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 7956746503878463794, guid: 5aa93bf0aa5682645983ac014315f37c,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 7252521607266069155, guid: 5aa93bf0aa5682645983ac014315f37c,
       type: 3}

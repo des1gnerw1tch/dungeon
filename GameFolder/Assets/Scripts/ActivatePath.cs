@@ -50,7 +50,8 @@ public class ActivatePath : MonoBehaviour
               PlayerProgress.blueCrystalDestroyed = true;
               Debug.Log(PlayerProgress.blueCrystalDestroyed);
               FindObjectOfType<GameSaveManager>().SavePlayer();
-            }
+              AstarPath.active.Scan();
+              }
             if (isGreenCrystal)  {
               PlayerProgress.greenCrystalDestroyed = true;
               FindObjectOfType<GameSaveManager>().SavePlayer();
