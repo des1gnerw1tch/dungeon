@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
     resetGameWarningUI.SetActive(false);
     animator.SetTrigger("NewGame");
     yield return new WaitForSeconds(_delay);
-    SceneManager.LoadScene("Main");
+    SceneManager.LoadScene("Start");
   }
 
   public void QuitGame()  {
