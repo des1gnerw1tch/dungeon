@@ -40,6 +40,8 @@ public class CaveToMain : MonoBehaviour
                   FindObjectOfType<AudioManager>().Play("door");
 
                 FindObjectOfType<DialogueManager>().EndDialogue();
+
+
                 StartCoroutine(LoadLevel(sceneToLoad));
 		           }else{
                  /*executed when key is not found!*/
@@ -47,6 +49,7 @@ public class CaveToMain : MonoBehaviour
 
 		  }else{
             FindObjectOfType<DialogueManager>().EndDialogue();
+            FindObjectOfType<AudioManager>().Stop("footsteps");
             StartCoroutine(LoadLevel(sceneToLoad));
             if (playSound)
               FindObjectOfType<AudioManager>().Play("door");
@@ -69,7 +72,7 @@ public class CaveToMain : MonoBehaviour
         }
         playerObject.GetComponent<PlayerHealth>().enabled = true;
         //playerObject.GetComponent<PlayerMovement>().enabled = true;
-        
+
         SceneManager.LoadScene(levelIndex);
 	}
 

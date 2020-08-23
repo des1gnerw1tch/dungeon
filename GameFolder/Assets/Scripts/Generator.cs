@@ -26,6 +26,7 @@ public class Generator : MonoBehaviour
           onDialogue.TriggerDialogue();
           LavaDungManager.powerOn = true;
           alarmTrigger.SetActive(true);
+          FindObjectOfType<AudioManager>().Play("powerOn");
         }
       }
     }

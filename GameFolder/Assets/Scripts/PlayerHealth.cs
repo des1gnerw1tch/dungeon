@@ -41,15 +41,16 @@ public class PlayerHealth : MonoBehaviour
             deathTransition.TransitionToScene("Death");
 
 
-            //tries to stop music
+            //tries to stop music / footsteps
             try {
               FindObjectOfType<AudioManager>().Stop(FindObjectOfType<MusicPlayer>().themeName);
             }
             catch (NullReferenceException e){
                 //Debug.Log("No music found to stop");
             }
-            //tries to stop siren noise
+            //tries to stop siren noise and footsteps
             FindObjectOfType<AudioManager>().Stop("siren");
+            FindObjectOfType<AudioManager>().Stop("footsteps");
 
 		    }
         healthBar.SetHealth(currentHealth);

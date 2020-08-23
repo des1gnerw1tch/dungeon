@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float focusEffectLength = 8f;
     public GameObject dashParts;
     public Slider StaminaSlider;
+    private bool footstepsPlaying = false;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -49,9 +50,19 @@ public class PlayerMovement : MonoBehaviour
             dashCooldown = 0f;
             dash = true;
             animator.SetBool("Dash", true);
+            FindObjectOfType<AudioManager>().Play("dash");
         }
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //start footstep noise
+        if ((movement.x != 0 || movement.y != 0) && !footstepsPlaying) {
+          FindObjectOfType<AudioManager>().Play("footsteps");
+          footstepsPlaying = true;
+          //end footstep noise
+        } else if (!(movement.x != 0 || movement.y != 0) && footstepsPlaying){
+          FindObjectOfType<AudioManager>().Stop("footsteps");
+          footstepsPlaying = false;
+        }
     }
     void FixedUpdate()
     {

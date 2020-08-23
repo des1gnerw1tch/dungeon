@@ -26,7 +26,7 @@ public class ActivatePath : MonoBehaviour
             {
                 TileMapaDeactivate.SetActive(false);
             }
-
+            Debug.Log("Scanned Path");
             AstarPath.active.Scan();
             /*if (TileMapaDeactivate != null) {
                 TileMapaDeactivate.SetActive(false);
