@@ -18,6 +18,9 @@ public class PlayerData {
   public bool nurseFreed;
   public bool alchemistFreed;
   public bool friendFreed;
+  public bool blueCrystalDestroyed;
+  public bool greenCrystalDestroyed;
+  public bool redCrystalDestroyed;
   //key progress
   public bool hasBlueKey;
   public bool hasPurpleKey;
@@ -51,6 +54,9 @@ public class PlayerData {
     alchemistFreed = PlayerProgress.alchemistFreed;
     friendFreed = PlayerProgress.friendFreed;
 
+    blueCrystalDestroyed = PlayerProgress.blueCrystalDestroyed;
+    greenCrystalDestroyed = PlayerProgress.greenCrystalDestroyed;
+    redCrystalDestroyed = PlayerProgress.redCrystalDestroyed;
     //key progress
     hasBlueKey = PlayerProgress.hasBlueKey;
     hasPurpleKey = PlayerProgress.hasPurpleKey;

@@ -10,6 +10,12 @@ public class ActivatePath : MonoBehaviour
     public static bool hasDropped = false;
     public bool ShouldDrop;
     public bool IgnorePlayer;
+    public string sound = null;
+    public bool shouldDestroy;
+    public bool isBlueCrystal;
+    public bool isRedCrystal;
+    public bool isGreenCrystal;
+    public string bulletTag = "CrystalShot";
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,22 +28,44 @@ public class ActivatePath : MonoBehaviour
             }
 
             AstarPath.active.Scan();
-            /*if (TileMapaDeactivate != null) { 
+            /*if (TileMapaDeactivate != null) {
                 TileMapaDeactivate.SetActive(false);
             }
-            
+
             if (!hasDropped && ShouldDrop)
             {
                 FindObjectOfType<DropManager>().Drop("WhiteGauntlet", transform.position);
                 hasDropped = true;
             }*/
 
-        }if(other.CompareTag("CrystalShot") && !ShouldDrop && IgnorePlayer)
+        }if(other.CompareTag(bulletTag) && !ShouldDrop && IgnorePlayer)
         {
             TileMapActivate.SetActive(true);
             TileMapaDeactivate.SetActive(false);
+            if (sound != null)
+              //FindObjectOfType<AudioManager>().Play(sound);
+
+            //saving variables
+            if (isBlueCrystal)  {
+              PlayerProgress.blueCrystalDestroyed = true;
+              Debug.Log(PlayerProgress.blueCrystalDestroyed);
+              FindObjectOfType<GameSaveManager>().SavePlayer();
+            }
+            if (isGreenCrystal)  {
+              PlayerProgress.greenCrystalDestroyed = true;
+              FindObjectOfType<GameSaveManager>().SavePlayer();
+            }
+            if (isRedCrystal)  {
+              PlayerProgress.redCrystalDestroyed = true;
+              FindObjectOfType<GameSaveManager>().SavePlayer();
+            }
+
+
+            if (shouldDestroy)  {
+              Destroy(this. gameObject);
+            }
         }
-        
+
     }
     void OnTriggerStay2D(Collider2D other)
     {
@@ -57,18 +85,18 @@ public class ActivatePath : MonoBehaviour
                     hasDropped = true;
                 }
             }
-            
+
 
         }
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

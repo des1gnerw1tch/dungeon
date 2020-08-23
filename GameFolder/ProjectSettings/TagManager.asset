@@ -17,6 +17,8 @@ TagManager:
   - EnemyHealthBar
   - ItemManager
   - CrystalShot
+  - GreenShot
+  - RedShot
   layers:
   - Default
   - TransparentFX

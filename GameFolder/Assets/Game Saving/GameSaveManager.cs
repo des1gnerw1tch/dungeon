@@ -88,6 +88,10 @@ public class GameSaveManager : MonoBehaviour
         PlayerProgress.hasPurpleKey = data.hasPurpleKey;
         PlayerProgress.hasBrownKey = data.hasBrownKey;
         PlayerProgress.hasCrystalKey = data.hasCrystalKey;
+
+        PlayerProgress.blueCrystalDestroyed = data.blueCrystalDestroyed;
+        PlayerProgress.greenCrystalDestroyed = data.greenCrystalDestroyed;
+        PlayerProgress.redCrystalDestroyed = data.redCrystalDestroyed;
       }
 
     }

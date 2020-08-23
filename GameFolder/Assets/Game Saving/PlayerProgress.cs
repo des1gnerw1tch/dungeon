@@ -17,6 +17,11 @@ public class PlayerProgress : MonoBehaviour
     public static bool hasBrownKey;
     public static bool hasCrystalKey;
 
+    //crystal dungeon progress
+    public static bool blueCrystalDestroyed = false;
+    public static bool greenCrystalDestroyed = false;
+    public static bool redCrystalDestroyed = false;
+
     //when game is running, these variables will always stay. this resets them
     public static void ResetStaticVariables()  {
       wizardFreed = false;
@@ -29,5 +34,9 @@ public class PlayerProgress : MonoBehaviour
       hasPurpleKey = false;
       hasBrownKey = false;
       hasCrystalKey = false;
+
+      blueCrystalDestroyed = false;
+      greenCrystalDestroyed = false;
+      redCrystalDestroyed = false;
     }
 }
