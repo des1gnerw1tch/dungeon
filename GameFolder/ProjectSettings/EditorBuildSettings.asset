@@ -83,4 +83,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lava/ControlRoom.unity
     guid: 445c017f683aa43dbb54349f06b31288
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 3b30c3a6f41102f49becd2bd51de128b
   m_configObjects: {}
