@@ -87,6 +87,7 @@ public class scroll : MonoBehaviour
             inventory.item[activeSlot] = null;
             //only drops the top item
             activeCanvasSlot.DropItem();
+            FindObjectOfType<AudioManager>().Play("dropItem");
           }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

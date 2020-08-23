@@ -262,16 +262,19 @@ public class ItemManager : MonoBehaviour
   }
   void UseSpeedPotion() {
         PlayerMovementScript.SpeedBoost();
+        FindObjectOfType<AudioManager>().Play("gulp");
         ConsumeItem();
     }
 
     void UseRegenPotion() {
       playerHealthScript.StartRegen();
+      FindObjectOfType<AudioManager>().Play("gulp");
       ConsumeItem();
     }
 
     void UseFocusPotion() {
       PlayerMovementScript.StartSlowMode();
+      FindObjectOfType<AudioManager>().Play("gulp");
       ConsumeItem();
     }
 
@@ -280,6 +283,6 @@ public class ItemManager : MonoBehaviour
     scrollScript.activeCanvasSlot.DestroyItem();
     inventory.item[scrollScript.activeSlot] = null;
   }
-    
+
 
 }
