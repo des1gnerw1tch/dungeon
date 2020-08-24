@@ -213,7 +213,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Costs 20 coins to buy AR. Press E to buy. '
+    - 'Costs 20 coins to buy an AR. Press E to buy. '
+  isStart: 0
 --- !u!1 &128880049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2377,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Costs 50 coins to buy SMG. Press E to buy. '
+    - 'Costs 50 coins to buy an SMG. Press E to buy. '
+  isStart: 0
 --- !u!114 &369512466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,6 +2679,7 @@ MonoBehaviour:
     name: Scarlette
     sentances:
     - Always good doing business with you.
+  isStart: 0
 --- !u!4 &889595414
 Transform:
   m_ObjectHideFlags: 0
@@ -2889,7 +2892,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Costs 50 coins to buy Shotgun. Press E to buy. '
+    - 'Costs 50 coins to buy a Shotgun. Press E to buy. '
+  isStart: 0
 --- !u!114 &1063401333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3118,7 +3122,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Costs 50 coins to buy Sniper. Press E to buy. '
+    - 'Costs 50 coins to buy a Sniper. Press E to buy. '
+  isStart: 0
 --- !u!1 &1236613106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,6 +3301,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236613106}
   m_CullTransparentMesh: 0
+--- !u!1 &1259076443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259076445}
+  - component: {fileID: 1259076444}
+  m_Layer: 0
+  m_Name: Music Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1259076444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259076443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07979f0ae9d624aedb68d8de9c5f3b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  themeName: overworld1
+  timeBeforeStart: 0
+--- !u!4 &1259076445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259076443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.165542, y: -16.810596, z: -2844.1172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344298560
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,6 +3526,7 @@ MonoBehaviour:
     name: 
     sentances:
     - 'Costs 100 coins to buy RPG. Press E to buy. '
+  isStart: 0
 --- !u!1001 &1524322030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3587,11 +3638,16 @@ MonoBehaviour:
   dialogue:
     name: Mr. Tracy
     sentances:
+    - 'Howdy! '
     - We got weapons of all types here.
-    - Unfortunately they are a bit outdated.
-    - The dungeons have weapons of all kinds down there.
+    - Unfortunately, uh,  they are a bit outdated.
+    - 'Say, in that cave! Oh, they have weapons of all kinds down there. The dungeons
+      have even better loot. '
     - Each area usually contains around 3 unique items, many of which can't be bought
       at my shop.
+    - Find them by breaking pots and opening chests. Be careful though, they don't
+      like it when you take their stuff! *chuckles
+  isStart: 0
 --- !u!61 &1542420283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3724,7 +3780,8 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Costs 0 coins to buy Pistol. Press E to buy. '
+    - 'Costs 0 coins to buy a Pistol. Press E to buy. '
+  isStart: 0
 --- !u!1 &1813552924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,6 +3817,7 @@ MonoBehaviour:
     sentances:
     - 'You don''t got the coins, my boy! Go get your bread up and then come back
       to me. '
+  isStart: 0
 --- !u!4 &1813552926
 Transform:
   m_ObjectHideFlags: 0
@@ -5606,7 +5664,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d7e51caf4c02de441bbd2404738faa51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
