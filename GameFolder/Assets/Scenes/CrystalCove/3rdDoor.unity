@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 0.5
-  max: 10
+  max: 25
   numAlive: 0
   xRadius: 1
   yRadius: 5
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 0.5
-  max: 10
+  max: 25
   numAlive: 0
   xRadius: 1
   yRadius: 5
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 0.5
-  max: 10
+  max: 35
   numAlive: 0
   xRadius: 1
   yRadius: 5
@@ -2423,8 +2423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3133652597347934792, guid: 0ce1dfcf8e6978e4483bcd1424818848, type: 3}
-  spawnTime: 6
-  max: 10
+  spawnTime: 3
+  max: 30
   numAlive: 0
   xRadius: 30
   yRadius: 5

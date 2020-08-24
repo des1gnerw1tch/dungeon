@@ -31,8 +31,9 @@ public class Check : StateMachineBehaviour
             if ((reachedPos  && Random.Range(0,70) == 4)|| !animator.GetBool("isPatrolling"))
             {
                 animator.speed = 1;
-                int area = Random.Range(-patrolArea, patrolArea);
-                pos.Set(animator.transform.position.x + area, animator.transform.position.y + Random.Range(-area, area));
+                int areax = Random.Range(-patrolArea, patrolArea);
+                int areay = Random.Range(-patrolArea, patrolArea);
+                pos.Set(animator.transform.position.x + areax, animator.transform.position.y + areay);
                 pos.Set(pos.x - animator.transform.position.x , pos.y - animator.transform.position.y);
                 reachedPos = false;
                 animator.SetBool("isPatrolling",true);
