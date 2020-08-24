@@ -240,7 +240,7 @@ PrefabInstance:
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
-      value: -1422465503
+      value: -129681771
       objectReference: {fileID: 0}
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -4726,7 +4726,7 @@ PrefabInstance:
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
-      value: -1422465503
+      value: -129681771
       objectReference: {fileID: 0}
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -4742,6 +4742,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[8]
       value: 1475812027
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[9]
+      value: -129681771
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d67280dcbcd45bf94bc2ccd7da28b0, type: 3}
@@ -12376,7 +12381,7 @@ PrefabInstance:
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
-      value: -1422465503
+      value: -129681771
       objectReference: {fileID: 0}
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -12843,7 +12848,7 @@ PrefabInstance:
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
-      value: -1422465503
+      value: -129681771
       objectReference: {fileID: 0}
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
@@ -13085,7 +13090,7 @@ PrefabInstance:
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
-      value: -1422465503
+      value: -129681771
       objectReference: {fileID: 0}
     - target: {fileID: 7569747380902003760, guid: c6d67280dcbcd45bf94bc2ccd7da28b0,
         type: 3}

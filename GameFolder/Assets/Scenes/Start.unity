@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1140,8 +1140,8 @@ MonoBehaviour:
     - We're the last ones left, my grandson...
     - I'm going to venture into the cave to try to free the others. If I don't return,
       know that you're the best grandson I'll ever have.
-    - We have our differences. I know I always get on you for drinking too much
-    - And you always bicker at me to get out the house and get some exercise *laughs
+    - We have our differences. I know I always get on you for drinking too much.
+    - And you always bicker at me to get out the house and get some exercise. *laughs
     - But we still love eachother. Love is when we accept eachothers imperfections.
     - 'If I don''t come back from that cave, the rest of Punyville will be in your
       hands. '
