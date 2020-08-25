@@ -13,7 +13,7 @@ public class WallDetector : MonoBehaviour
     void OnCollisionStay2D(Collision2D other)  {
       if (!(other.gameObject.CompareTag("Player")) && other.gameObject.GetComponent<EnemyHealth>() == null && !ShouldBounceOffSameType) {
         animator.SetBool("isPatrolling", false);
-      }else if (!other.gameObject.CompareTag("Player") && !isWaiting)
+      }else if (!other.gameObject.CompareTag("Player") && !isWaiting && ShouldBounceOffSameType)
       {
             animator.SetBool("isPatrolling", false);
             StartCoroutine(waitTime());
