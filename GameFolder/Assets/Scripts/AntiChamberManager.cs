@@ -23,6 +23,10 @@ public class AntiChamberManager : MonoBehaviour
     private GameObject Cage;
     [SerializeField]
     private GameObject FinalDialouge;
+    [SerializeField]
+    private GameObject grandpa;
+
+    private bool active = true;
 
     void Start()  {
       UpdateScene();
@@ -45,24 +49,32 @@ public class AntiChamberManager : MonoBehaviour
       if (PlayerProgress.redCrystalDestroyed)  {
         Destroy(redCrystal);
       }
+
+      if (PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)  {
+        active = false;
+        Cage.SetActive(false);
+        FinalDialouge.SetActive(false);
+        grandpa.SetActive(false);
+        ThirdDialouge.SetActive(false);
+      }
     }
     private void Update()
     {
-        if(PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed && PlayerProgress.blueCrystalDestroyed)
+        if(PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed && PlayerProgress.blueCrystalDestroyed && active)
         {
             Cage.SetActive(false);
             FinalDialouge.SetActive(true);
         }
         if (PlayerProgress.blueCrystalDestroyed && !PlayerProgress.greenCrystalDestroyed)
         {
-            
+
             FirstDialouge.SetActive(false);
             SecondDialouge.SetActive(true);
             ThirdDialouge.SetActive(false);
         }
-        if (PlayerProgress.greenCrystalDestroyed && PlayerProgress.blueCrystalDestroyed)
+        if (PlayerProgress.greenCrystalDestroyed && PlayerProgress.blueCrystalDestroyed && active)
         {
-            
+
             FirstDialouge.SetActive(false);
             SecondDialouge.SetActive(false);
             ThirdDialouge.SetActive(true);

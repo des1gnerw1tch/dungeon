@@ -16,6 +16,9 @@ public class OverworldManager : MonoBehaviour
 
     public BoxCollider2D dialogueAlchemist;
     public BoxCollider2D portalAlchemist;
+
+    public BoxCollider2D dialogueMansion;
+    public BoxCollider2D portalCredits;
     //public PlayerProgress progress;
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,15 @@ public class OverworldManager : MonoBehaviour
       } else {
         dialogueAlchemist.enabled = true;
         portalAlchemist.enabled = false;
+      }
+
+      //the mansion
+      if (PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)  {
+        dialogueMansion.enabled = false;
+        portalCredits.enabled = true;
+      } else {
+        dialogueMansion.enabled = true;
+        portalCredits.enabled = false;
       }
 
       }

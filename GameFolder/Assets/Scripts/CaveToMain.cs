@@ -21,6 +21,7 @@ public class CaveToMain : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     public bool continueMusic;
+    public bool isCredits;
     // Start is called before the first frame update
 
     void Start()  {
@@ -72,7 +73,17 @@ public class CaveToMain : MonoBehaviour
         }
         playerObject.GetComponent<PlayerHealth>().enabled = true;
         //playerObject.GetComponent<PlayerMovement>().enabled = true;
+        if (isCredits)  {
+          Animator[] animators = UnityEngine.Object.FindObjectsOfType<Animator>();
+          foreach(Animator anim in animators)  {
+            Destroy(anim.gameObject);
+          }
 
+          DontDestroy[] objects = UnityEngine.Object.FindObjectsOfType<DontDestroy>();
+          foreach(DontDestroy obj in objects)  {
+            Destroy(obj.gameObject);
+          }
+        }
         SceneManager.LoadScene(levelIndex);
 	}
 

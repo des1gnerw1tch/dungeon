@@ -3580,6 +3580,7 @@ MonoBehaviour:
   ThirdDialouge: {fileID: 801535706}
   Cage: {fileID: 1592980050}
   FinalDialouge: {fileID: 53707076}
+  grandpa: {fileID: 173390378}
 --- !u!1 &492923768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6018,6 +6019,7 @@ MonoBehaviour:
   transition: {fileID: 650980965}
   transitionTime: 1
   continueMusic: 0
+  isCredits: 0
 --- !u!61 &1238781353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6098,6 +6100,7 @@ MonoBehaviour:
   transition: {fileID: 650980965}
   transitionTime: 1
   continueMusic: 0
+  isCredits: 0
 --- !u!61 &1287909360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6328,6 +6331,7 @@ MonoBehaviour:
   transition: {fileID: 650980965}
   transitionTime: 1
   continueMusic: 0
+  isCredits: 0
 --- !u!61 &1344479955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6434,6 +6438,7 @@ MonoBehaviour:
   transition: {fileID: 650980965}
   transitionTime: 1
   continueMusic: 0
+  isCredits: 0
 --- !u!4 &1373388255
 Transform:
   m_ObjectHideFlags: 0
@@ -9536,6 +9541,7 @@ MonoBehaviour:
   transition: {fileID: 650980965}
   transitionTime: 1
   continueMusic: 0
+  isCredits: 0
 --- !u!61 &1939255540
 BoxCollider2D:
   m_ObjectHideFlags: 0
