@@ -998,7 +998,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e89bf4492a2f64247aa1ebfd7cda7ce5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11737,7 +11737,7 @@ GameObject:
   - component: {fileID: 847105769}
   - component: {fileID: 847105768}
   - component: {fileID: 847105770}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: solid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14056,6 +14056,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Press E to touch the tree.
+  isStart: 0
 --- !u!61 &911093934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14400,6 +14401,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Why is there a tree in the middle of this Cavern. I should go check it out.
+  isStart: 0
 --- !u!4 &1031418369
 Transform:
   m_ObjectHideFlags: 0
@@ -14810,6 +14812,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Press E to start next wave.
+  isStart: 0
 --- !u!4 &1201718114
 Transform:
   m_ObjectHideFlags: 0
@@ -16789,6 +16792,92 @@ MonoBehaviour:
   yRadius: 1
   minDistanceFromPlayer: 10
   GizmosColor: {r: 0.08085619, g: 0.745283, b: 0.13559045, a: 0.2}
+--- !u!1 &2043237098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043237100}
+  - component: {fileID: 2043237099}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2043237099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043237098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACIn+sXv9dPdQIAABwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWsP+AvTW0scpwcnmTidXLjIaDEaC4mRRGwn4//elYBA3BPivd3V27cLn4RLU0Fmld5ozraKAfk5Iu5Mfox68gHO9KDkjn9AF/PGmS1cEPUxL9RyhXjo0owqwWqe/ZIH4YIDBGvJc6XLNTtAoow1COdUGEBKK+uyJUKfI3LGxzh2KRc8TSN3+sBTHIyueMxAWtCD0PkkDqJ4sViPg0WbFDpoNl8tZwgu2/zFJJ4H4SyaRutxOPW1apkJWlbAXGN9ycW8rTNb+jCJLbcRrr1MCcFNq5fYS+X9SGhlauwWAxin2L8XGUycpgL4obCum2H6U54bsK09ml7uuEYjm7rkt2rcLak5Nsreqai9hFkYRI3+pu72v5Bx6Olcq/KhuzoM3DW24NnxhV4yauxgAkP4rlcfeo9OVBzpXsBbAfJRbbSqJUPS6tql1gamd/3rV3dJAdmxxxupN2Bd9aZ3A+/G7Xq4egPOieDl3ps5b4CdUN50vyWgcTx/ULDfIdOWQNSp+GvglR6Gy9YS91wbi1TbpXTy9qrWLpSsvWeum9omSkvwcCu6AkmFvTxjGXs7xRtucO0Nc0/dZ9Ve3nLd13KT4uE+PghuqGd1+hqWKdRpC6Z4qq3gEnrRjnhEnxIlZbNk5jvpsna1zmk2yDrUnH3fLBLkEY3jRbQK8yiOWDwGmC5XFPAl3K9yFhK/elxim1Q8Nzpbd3Bosi8ucc26n81oo2nl951petrwj1IN9HGZq12mAeRTU6FzyIDGS/DLZGvG0Z8dWMulHzf5TIlQ2RFY+lUo9Z2uz1bTtK+Skoq/K+uQlCT+75KSK7n+A1BLAwQUAAAICAAAiJ/r9SAiX2wAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kkGaeaKlpam5hWGauaV5iqVuaqqRmUViKpBjmGSRlmKoFAtUX1JZkOqXmJsK0ROQWJKRlpmXkpmXrudelJniDjJaKbYWAFBLAQItABQAAAgIAACIn+sXv9dPdQIAABwFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACIn+v1ICJfbAAAAHgAAAAJACQAAAAAAAAAAAAAAMICAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAeQMAAAAA
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &2043237100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043237098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088111398
 GameObject:
   m_ObjectHideFlags: 0

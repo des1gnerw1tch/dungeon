@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -2645485047962771172, guid: 8cb7abd71cb2e7e42a15a8e6d37e56ba,
     type: 3}
@@ -173,4 +173,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 570108586796792050, guid: b53570326e00dff45aa9cb8b6ffda2eb,
     type: 3}
-  inventoryID: RayGun
+  inventoryID: PortalGun
+  wasDropped: 0

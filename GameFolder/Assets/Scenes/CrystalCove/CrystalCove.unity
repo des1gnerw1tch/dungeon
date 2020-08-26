@@ -429,7 +429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &191386572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,11 +458,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191386571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.03676, y: 28.336773, z: 29.859375}
+  m_LocalPosition: {x: -13.610001, y: -6.799999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1180863346}
-  m_RootOrder: 1
+  m_Father: {fileID: 788279103}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198644175
 GameObject:
@@ -513,7 +513,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1180863346}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210112918
 GameObject:
@@ -2264,6 +2264,12 @@ MonoBehaviour:
   TileMapaDeactivate: {fileID: 218719254}
   ShouldDrop: 1
   IgnorePlayer: 0
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
 --- !u!61 &296402172
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2324,6 +2330,7 @@ MonoBehaviour:
     - There are two paths for you to return.
     - 'The long way will be the short in the end. '
     - Press E to open the paths. And Claim your reward.
+  isStart: 0
 --- !u!1 &305750285
 GameObject:
   m_ObjectHideFlags: 0
@@ -13890,6 +13897,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &788279100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 788279103}
+  - component: {fileID: 788279102}
+  - component: {fileID: 788279101}
+  m_Layer: 4
+  m_Name: 1stTripWire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &788279101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788279100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4740a2decc44d284994bfc15e8d5d3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TileMapActivate: {fileID: 191386571}
+  TileMapaDeactivate: {fileID: 0}
+  ShouldDrop: 0
+  IgnorePlayer: 0
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
+--- !u!61 &788279102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788279100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -4.835869}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 7.171036}
+  m_EdgeRadius: 0
+--- !u!4 &788279103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788279100}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 88.81, y: 14.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 191386573}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823398192
 GameObject:
   m_ObjectHideFlags: 0
@@ -14140,7 +14228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &885105631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14169,11 +14257,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885105630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.35676, y: 33.12677, z: 29.859375}
+  m_LocalPosition: {x: -2.1700058, y: 3.0599976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1180863346}
-  m_RootOrder: 3
+  m_Father: {fileID: 2029397692}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &937499576
 PrefabInstance:
@@ -14526,10 +14614,7 @@ Transform:
   m_LocalPosition: {x: 35.16324, y: -20.476772, z: -29.859375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1784416918}
-  - {fileID: 191386573}
   - {fileID: 1775469398}
-  - {fileID: 885105632}
   - {fileID: 198644177}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -14581,6 +14666,87 @@ Transform:
   - {fileID: 1716997461}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1229234418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229234421}
+  - component: {fileID: 1229234420}
+  - component: {fileID: 1229234419}
+  m_Layer: 4
+  m_Name: 1stTripWire (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1229234419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229234418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4740a2decc44d284994bfc15e8d5d3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TileMapActivate: {fileID: 1784416916}
+  TileMapaDeactivate: {fileID: 0}
+  ShouldDrop: 0
+  IgnorePlayer: 0
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
+--- !u!61 &1229234420
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229234418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -4.835869}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 7.171036}
+  m_EdgeRadius: 0
+--- !u!4 &1229234421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229234418}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.03, y: 12.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1784416918}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231331595
 GameObject:
@@ -15035,6 +15201,7 @@ MonoBehaviour:
     name: 
     sentances:
     - RUN!!!
+  isStart: 0
 --- !u!1 &1373408026
 GameObject:
   m_ObjectHideFlags: 0
@@ -33612,7 +33779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1180863346}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784416916
 GameObject:
@@ -33630,7 +33797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1784416917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33659,10 +33826,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784416916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.036762, y: 33.156773, z: -286.51953}
+  m_LocalPosition: {x: 20.17, y: -0.13000011, z: -316.3789}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1180863346}
+  m_Father: {fileID: 1229234421}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807803350
@@ -33958,6 +34125,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025123473}
   m_CullTransparentMesh: 0
+--- !u!1 &2029397689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029397692}
+  - component: {fileID: 2029397691}
+  - component: {fileID: 2029397690}
+  m_Layer: 4
+  m_Name: 1stTripWire (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2029397690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029397689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4740a2decc44d284994bfc15e8d5d3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TileMapActivate: {fileID: 885105630}
+  TileMapaDeactivate: {fileID: 0}
+  ShouldDrop: 0
+  IgnorePlayer: 0
+  sound: 
+  shouldDestroy: 0
+  isBlueCrystal: 0
+  isRedCrystal: 0
+  isGreenCrystal: 0
+  bulletTag: CrystalShot
+--- !u!61 &2029397691
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029397689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5312119, y: -4.9864817}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.484467, y: 0.94574165}
+  m_EdgeRadius: 0
+--- !u!4 &2029397692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029397689}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 107.69, y: 9.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 885105632}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2093533158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34083,6 +34331,7 @@ MonoBehaviour:
     name: 
     sentances:
     - The Doors Locked!! Oh Shit I better Run
+  isStart: 0
 --- !u!61 &2114040222
 BoxCollider2D:
   m_ObjectHideFlags: 0
