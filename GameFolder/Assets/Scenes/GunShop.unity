@@ -3734,7 +3734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1373100728862361412, guid: 8033edcce594d4ef585aa2f99dfc1385, type: 3}
-  cost: 0
+  cost: 5
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
   costDialogue: {fileID: 1645744502}
@@ -3780,7 +3780,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Costs 0 coins to buy a Pistol. Press E to buy. '
+    - 'Costs 5 coins to buy a Pistol. Press E to buy. '
   isStart: 0
 --- !u!1 &1813552924
 GameObject:
