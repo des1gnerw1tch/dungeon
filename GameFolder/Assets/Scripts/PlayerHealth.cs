@@ -23,6 +23,9 @@ public class PlayerHealth : MonoBehaviour
     private bool regenEffect;
     private int regenTime = 15; //this effects how long it takes to regen health under effect. lower regen time = faster healing
     private float counter;
+    private Inventory inventoryScript;
+    private scroll scrollScript;
+    private bool KeepItem = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +33,32 @@ public class PlayerHealth : MonoBehaviour
         body = GetComponent<Tint>();
         healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
+        inventoryScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        scrollScript = GameObject.FindGameObjectWithTag("Player").GetComponent<scroll>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)
+        {
+            KeepItem = true;
+        }
         if(currentHealth <= 0){
+            if (SceneManager.GetActiveScene().name == "3rdDoor")
+            {
+
+                for (int i = 0; i < inventoryScript.item.Length; i++)
+                {
+                    if (inventoryScript.item[i] == "CrystalGauntletRed" && !KeepItem)
+                    {
+                        scrollScript.activeSlot = i;
+                        scrollScript.activeCanvasSlot.DestroyItem();
+                        inventoryScript.item[i] = null;
+                    }
+                }
+
+            }
             FindObjectOfType<GameSaveManager>().SavePlayer();
             //transfers to our salvage feature
             deathTransition.TransitionToScene("Death");

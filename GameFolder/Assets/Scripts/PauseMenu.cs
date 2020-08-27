@@ -10,7 +10,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameSaveManager GameManager;
     public GameObject[] keys;
-
+    private GameObject ItemManager;
+    private Inventory inventoryScript;
+    private scroll scrollScript;
+    private bool KeepItem = false;
+    private void Start()
+    {
+        ItemManager = GameObject.Find("ItemManager");
+        inventoryScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        scrollScript = GameObject.FindGameObjectWithTag("Player").GetComponent<scroll>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -48,6 +57,25 @@ public class PauseMenu : MonoBehaviour
 
         /*destroys all old objects, destroys animators first because there was a null problem
         where animators were trying to access already deleted objects!*/
+        if (PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)
+        {
+            KeepItem = true;
+        }
+
+        if (SceneManager.GetActiveScene().name == "3rdDoor")
+        {
+
+            for (int i = 0; i < inventoryScript.item.Length; i++)
+            {
+                if(inventoryScript.item[i] == "CrystalGauntletRed" && !KeepItem)
+                {
+                    scrollScript.activeSlot = i;
+                    scrollScript.activeCanvasSlot.DestroyItem();
+                    inventoryScript.item[i]= null;
+                }
+            }
+           
+        }
         GameManager.SavePlayer();
         Animator[] animators = UnityEngine.Object.FindObjectsOfType<Animator>();
         foreach(Animator anim in animators)  {
