@@ -133,8 +133,8 @@ public class LineJumper : MonoBehaviour
     {
         lineRenderer = new GameObject("line " + curLines).AddComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
-        lineRenderer.startWidth = .2f;
-        lineRenderer.endWidth = .2f;
+        lineRenderer.startWidth = .4f;
+        lineRenderer.endWidth = .4f;
         lineRenderer.numCapVertices = 40;
         lineRenderer.material = material;
 
