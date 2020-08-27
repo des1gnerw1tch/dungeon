@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +16,9 @@ public class CaveManager : MonoBehaviour
 
     public GameObject LavaDungeonPortal;
     public GameObject LavaDungeonDialogue;
+
+    public GameObject CrystalDungeonPortal;
+    public GameObject CrystalDungeonDialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +56,14 @@ public class CaveManager : MonoBehaviour
       } else {
         LavaDungeonPortal.SetActive(false);
         LavaDungeonDialogue.SetActive(true);
+      }
+
+      if (PlayerProgress.hasCrystalKey)  {
+        CrystalDungeonPortal.SetActive(true);
+        CrystalDungeonDialogue.SetActive(false);
+      } else {
+        CrystalDungeonPortal.SetActive(false);
+        CrystalDungeonDialogue.SetActive(true);
       }
     }
 }

@@ -10130,6 +10130,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Press e to activate bridge
+  isStart: 0
 --- !u!114 &1056138963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49674,7 +49675,7 @@ PrefabInstance:
     - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: max
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -69697,6 +69698,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Path Activated.
+  isStart: 0
 --- !u!4 &1762993628
 Transform:
   m_ObjectHideFlags: 0
@@ -70016,6 +70018,7 @@ MonoBehaviour:
     sentances:
     - 'In order to activate path, dungeon power must be turned on. '
     - 'Power can be activated from the control room. '
+  isStart: 0
 --- !u!4 &1899696268
 Transform:
   m_ObjectHideFlags: 0
@@ -70251,7 +70254,7 @@ PrefabInstance:
     - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
         type: 3}
       propertyPath: max
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
