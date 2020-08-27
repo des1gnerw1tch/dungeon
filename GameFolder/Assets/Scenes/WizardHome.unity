@@ -10475,6 +10475,8 @@ MonoBehaviour:
   dialogue:
     name: Ecco
     sentances:
+    - The Enchantmant rune for the book I gave you is 1-2. Hold your empty book and
+      carve it in.
     - Press e to enchant empty book
   isStart: 0
 --- !u!61 &1701888286
