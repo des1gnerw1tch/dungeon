@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -3510705732219272317, guid: 1f20ee6239ccc4a9da5cda87075a4e1a,
     type: 3}
@@ -148,6 +148,7 @@ MonoBehaviour:
   itemButton: {fileID: 5411605247203422836, guid: 3e9e60ed05e434ba6829a97fc5eedf31,
     type: 3}
   inventoryID: SlimeShooter
+  wasDropped: 0
 --- !u!61 &-3343882496042139585
 BoxCollider2D:
   m_ObjectHideFlags: 0

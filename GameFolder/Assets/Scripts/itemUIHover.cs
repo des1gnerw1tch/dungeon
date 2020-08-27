@@ -63,7 +63,7 @@ public class itemUIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
           maxImpact = gun.bullet.GetComponent<BulletHit>().knockback;
         }
 
-        if (gun.reloadTime > maxReload && gun.name != "RayGun")  {
+        if (gun.reloadTime > maxReload && gun.name != "PortalGun")  {
           maxReload = gun.reloadTime;
         }
       }
@@ -104,7 +104,7 @@ public class itemUIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         fireRateSlider.value = itemManager.activeGun.RPS;
         damageSlider.value = itemManager.activeGun.bullet.GetComponent<BulletHit>().damage;
         impactSlider.value = itemManager.activeGun.bullet.GetComponent<BulletHit>().knockback;
-        reloadSlider.value =  maxReload - itemManager.activeGun.reloadTime;
+        reloadSlider.value =  (maxReload - itemManager.activeGun.reloadTime) + .4f;
       } else {
         detailsWindow.SetActive(false);
       }
