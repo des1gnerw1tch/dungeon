@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 5177163722175238013, guid: 6afba157800074544a90004e1b42428a,
     type: 3}
-  inventoryID: CrystalGauntlet
+  inventoryID: Crystal Gauntlet
   wasDropped: 0
 --- !u!50 &4884322226637886318
 Rigidbody2D:

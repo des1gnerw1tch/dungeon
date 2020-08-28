@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 3
   m_Sprite: {fileID: -596818576799564364, guid: 7836efe942cdec7419f9c7b411dd63e1,
     type: 3}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 153160888118910108, guid: b276ade72c7ad414b832bfef0116b855,
     type: 3}
-  inventoryID: LavaAR
+  inventoryID: Magma Rifle
   wasDropped: 0
 --- !u!50 &8868467021749794044
 Rigidbody2D:

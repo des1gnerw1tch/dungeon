@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 3
   m_Sprite: {fileID: 1162406100204144664, guid: 7836efe942cdec7419f9c7b411dd63e1,
     type: 3}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 153160888118910108, guid: 4b73f69f7c38e1f4da8ecccec6d53b28,
     type: 3}
-  inventoryID: LavaSniper
+  inventoryID: Hot Shot
   wasDropped: 0
 --- !u!50 &8868467021749794044
 Rigidbody2D:

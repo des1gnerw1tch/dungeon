@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 5411605247203422836, guid: 3e9e60ed05e434ba6829a97fc5eedf31,
     type: 3}
-  inventoryID: SlimeShooter
+  inventoryID: Slime Shooter
   wasDropped: 0
 --- !u!61 &-3343882496042139585
 BoxCollider2D:
