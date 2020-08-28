@@ -375,16 +375,21 @@ PrefabInstance:
     - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
         type: 3}
       propertyPath: dialogue.sentances.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
         type: 3}
       propertyPath: dialogue.sentances.Array.data[0]
-      value: I'm going to stay with you if that is ok
+      value: I'm going to stay with you.
       objectReference: {fileID: 0}
     - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
         type: 3}
       propertyPath: dialogue.sentances.Array.data[1]
+      value: Is that okay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[2]
       value: 'We can have a sleepover every night!
 
 '

@@ -1193,21 +1193,21 @@ MonoBehaviour:
   dialogue:
     name: Grandfather
     sentances:
-    - We're the last ones left, my grandson...
-    - I'm going to venture into the cave to try to free the others. If I don't return,
-      know that you're the best grandson I'll ever have.
+    - We're the last ones left, grandson...
+    - I'm going to venture into the cave to try to free the others. The creatures
+      are not very friendly, but I can put up a fight.
+    - 'I just wish the townspeople hadn''t been lured by the riches in the dungeons. '
+    - If I don't return, know that you're the best grandson I could have.
     - We have our differences. I know I always get on you for drinking too much.
-    - And you always tell me I'm getting old and to get out the house. *laughs
-    - But we still love eachother. Love is when we accept eachothers imperfections.
+    - And you always tell me I'm getting old and to get out of the house.
+    - '*chuckles*'
+    - But we still love each other. Love is when we accept each other's imperfections.
     - 'If I don''t come back from that cave, the rest of Punyville will be in your
       hands. '
-    - 'Our people should have never ventured deep into there in the first place. '
-    - 'They angered the creatures that dwell in there. And now the whole town is
-      taken as hostages. '
     - If you ever need to store anything, I'm leaving you my old vault. It's empty
       for now, but it can hold quite a lot of supplies.
-    - 'I''m going to leave now, my son. And please, clean up these bottles from your
-      tent. It''s filthy. '
+    - 'I''m going to leave now, grandson. And please, clean up these bottles from
+      your tent. It''s filthy. '
   isStart: 1
 --- !u!4 &646748346
 Transform:
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1358c55729f084b8a56806965985b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numSentances: 10
+  numSentances: 11
 --- !u!1 &806094075
 GameObject:
   m_ObjectHideFlags: 0
