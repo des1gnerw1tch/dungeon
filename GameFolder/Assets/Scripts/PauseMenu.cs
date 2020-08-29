@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameSaveManager GameManager;
     public GameObject[] keys;
+    public GameObject[] completionTexts;
+    public GameObject[] incompleteTexts;
     private GameObject ItemManager;
     private Inventory inventoryScript;
     private scroll scrollScript;
@@ -47,6 +49,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         ShowKeys();
+        ShowCompletion();
         Time.timeScale = 0;
         GameIsPaused = true;
         FindObjectOfType<ItemManager>().enabled = false;
@@ -74,7 +77,7 @@ public class PauseMenu : MonoBehaviour
                     inventoryScript.item[i]= null;
                 }
             }
-           
+
         }
         GameManager.SavePlayer();
         Animator[] animators = UnityEngine.Object.FindObjectsOfType<Animator>();
@@ -122,5 +125,49 @@ public class PauseMenu : MonoBehaviour
         keys[3].SetActive(false);
       }
 
+    }
+
+
+
+    void ShowCompletion() {
+      if (PlayerProgress.nurseFreed)  {
+        completionTexts[0].SetActive(true);
+        incompleteTexts[0].SetActive(false);
+      } else {
+        completionTexts[0].SetActive(false);
+        incompleteTexts[0].SetActive(true);
+      }
+
+      if (PlayerProgress.wizardFreed)  {
+        completionTexts[1].SetActive(true);
+        incompleteTexts[1].SetActive(false);
+      } else {
+        completionTexts[1].SetActive(false);
+        incompleteTexts[1].SetActive(true);
+      }
+
+      if (PlayerProgress.alchemistFreed)  {
+        completionTexts[2].SetActive(true);
+        incompleteTexts[2].SetActive(false);
+      } else {
+        completionTexts[2].SetActive(false);
+        incompleteTexts[2].SetActive(true);
+      }
+
+      if (PlayerProgress.friendFreed)  {
+        completionTexts[3].SetActive(true);
+        incompleteTexts[3].SetActive(false);
+      } else {
+        completionTexts[3].SetActive(false);
+        incompleteTexts[3].SetActive(true);
+      }
+
+      if (PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)  {
+        completionTexts[4].SetActive(true);
+        incompleteTexts[4].SetActive(false);
+      } else {
+        completionTexts[4].SetActive(false);
+        incompleteTexts[4].SetActive(true);
+      }
     }
 }
