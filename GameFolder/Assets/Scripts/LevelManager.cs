@@ -46,6 +46,7 @@ public class LevelManager : MonoBehaviour
       Instantiate(gift1, pos, Quaternion.identity);
       PlayerProgress.wizardFreed = true;
       PlayerProgress.hasBlueKey = true;
+      FindObjectOfType<DungeonCompletedPop>().ShowDungeonCompleted();
       FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 

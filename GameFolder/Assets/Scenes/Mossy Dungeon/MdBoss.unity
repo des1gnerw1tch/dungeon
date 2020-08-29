@@ -644,6 +644,11 @@ PrefabInstance:
       propertyPath: objectsToEnable.Array.data[1]
       value: 
       objectReference: {fileID: 1493601288}
+    - target: {fileID: 2232500335104863717, guid: be23fe728bc664d7784fb08f5d9ddc6b,
+        type: 3}
+      propertyPath: objectsToEnable.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be23fe728bc664d7784fb08f5d9ddc6b, type: 3}
 --- !u!1 &494668098 stripped
@@ -7470,6 +7475,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d51f3c7e9a744d43882ec8d0a2aa4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1372868709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372868707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01dee28dde947d28b62aa61b63d032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1379772813

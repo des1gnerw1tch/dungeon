@@ -24,6 +24,7 @@ public class GradpaBehavoir : MonoBehaviour
             other.GetComponent<PlayerMovement>().moveSpeed = 0f;
             DialogueCollider.size = new Vector2(10, 10);
             trig = true;
+            FindObjectOfType<DungeonCompletedPop>().ShowDungeonCompleted();
         }
 
     }
@@ -37,7 +38,7 @@ public class GradpaBehavoir : MonoBehaviour
                 counter += 1;
 
                 //on 8th dialogue
-                
+
 
                 //on end of conversation, teleport to shop Scene
                 if (counter == 2)
