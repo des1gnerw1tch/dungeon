@@ -34,30 +34,33 @@ public class CaveManager : MonoBehaviour
       } else {
         merchantNPC.SetActive(true);
       }
-        if (!PlayerProgress.friendFreed && !PlayerProgress.nurseFreed)
+        if (!PlayerProgress.nurseFreed)
         {
             Markers[0].SetActive(true);
         }
 
-        if (PlayerProgress.friendFreed && !PlayerProgress.nurseFreed)
-        {
-            Markers[1].SetActive(true);
-        }
-
         if (PlayerProgress.nurseFreed && !PlayerProgress.wizardFreed)
         {
-            Markers[2].SetActive(true);
+            Markers[1].SetActive(true);
         }
        
         if (PlayerProgress.wizardFreed && !PlayerProgress.alchemistFreed)
         {
-            Markers[3].SetActive(true);
+            Markers[2].SetActive(true);
         }
         if (PlayerProgress.alchemistFreed && !PlayerProgress.friendFreed)
         {
+            Markers[3].SetActive(true);
+        }
+        if (PlayerProgress.friendFreed &&( !PlayerProgress.blueCrystalDestroyed || !PlayerProgress.redCrystalDestroyed || !PlayerProgress.greenCrystalDestroyed))
+        {
             Markers[4].SetActive(true);
         }
-        
+        if(PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)
+        {
+            Markers[5].SetActive(true);
+        }
+
 
 
         //dungeon unlocks

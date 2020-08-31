@@ -22,6 +22,7 @@ public class TargetPractace : MonoBehaviour
         if(other.CompareTag("CrystalShot") && !IsLit)
         {
             counter = 0;
+            TargetPractaceManagerScript.UInum = counter;
             Debug.Log("you hit the wrong crystal restart " + counter);
         }
     }

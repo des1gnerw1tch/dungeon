@@ -25,6 +25,8 @@ public class AntiChamberManager : MonoBehaviour
     private GameObject FinalDialouge;
     [SerializeField]
     private GameObject grandpa;
+    [SerializeField]
+    private GameObject Caveteleporter;
 
     private bool active = true;
 
@@ -64,6 +66,7 @@ public class AntiChamberManager : MonoBehaviour
         {
             Cage.SetActive(false);
             FinalDialouge.SetActive(true);
+            Caveteleporter.SetActive(false);
         }
         if (PlayerProgress.blueCrystalDestroyed && !PlayerProgress.greenCrystalDestroyed)
         {
