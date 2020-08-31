@@ -19,6 +19,8 @@ public class CaveManager : MonoBehaviour
 
     public GameObject CrystalDungeonPortal;
     public GameObject CrystalDungeonDialogue;
+
+    public GameObject[] Markers;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +34,34 @@ public class CaveManager : MonoBehaviour
       } else {
         merchantNPC.SetActive(true);
       }
+        if (!PlayerProgress.friendFreed && !PlayerProgress.nurseFreed)
+        {
+            Markers[0].SetActive(true);
+        }
 
-      //dungeon unlocks
-      if (PlayerProgress.hasPurpleKey)  {
+        if (PlayerProgress.friendFreed && !PlayerProgress.nurseFreed)
+        {
+            Markers[1].SetActive(true);
+        }
+
+        if (PlayerProgress.nurseFreed && !PlayerProgress.wizardFreed)
+        {
+            Markers[2].SetActive(true);
+        }
+       
+        if (PlayerProgress.wizardFreed && !PlayerProgress.alchemistFreed)
+        {
+            Markers[3].SetActive(true);
+        }
+        if (PlayerProgress.alchemistFreed && !PlayerProgress.friendFreed)
+        {
+            Markers[4].SetActive(true);
+        }
+        
+
+
+        //dungeon unlocks
+        if (PlayerProgress.hasPurpleKey)  {
         PurpleDungeonPortal.SetActive(true);
         PurpleDungeonDialogue.SetActive(false);
       } else {
