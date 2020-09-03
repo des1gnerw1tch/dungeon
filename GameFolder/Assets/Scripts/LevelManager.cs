@@ -18,6 +18,11 @@ public class LevelManager : MonoBehaviour
     [HideInInspector]
     public int numCompleted = 0;
 
+    [SerializeField]
+    private GameObject caveTeleporter;
+    [SerializeField]
+    private GameObject toEccoHomeTeleporter;
+
     void Start()  {
       Globe[] globes = FindObjectsOfType<Globe>();
       foreach (Globe globe in globes) {
@@ -47,6 +52,8 @@ public class LevelManager : MonoBehaviour
       PlayerProgress.wizardFreed = true;
       PlayerProgress.hasBlueKey = true;
       FindObjectOfType<DungeonCompletedPop>().ShowDungeonCompleted();
+      caveTeleporter.SetActive(false);
+      toEccoHomeTeleporter.SetActive(true);
       FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 

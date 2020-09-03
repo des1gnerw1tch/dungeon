@@ -10,6 +10,8 @@ public class MusicPlayer : MonoBehaviour
     private bool playing;
     private float counter;
     public static string songPlaying;
+    [SerializeField]
+    private bool isSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,9 @@ public class MusicPlayer : MonoBehaviour
           counter-= Time.deltaTime;
         } else {
             FindObjectOfType<AudioManager>().PlayTheme(themeName);
-            songPlaying = themeName;
+            if (!isSFX) {
+              songPlaying = themeName;    
+            }
             playing = true;
             return;
         }
