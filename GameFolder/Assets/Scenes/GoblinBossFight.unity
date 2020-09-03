@@ -8645,9 +8645,10 @@ GameObject:
   - component: {fileID: 1592321001}
   - component: {fileID: 1592321000}
   - component: {fileID: 1592320999}
+  - component: {fileID: 1592321003}
   m_Layer: 5
   m_Name: Drop Down Scene Canvas
-  m_TagString: Untagged
+  m_TagString: AreaDropDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8732,6 +8733,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1592321003
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592320998}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1979734120
 PrefabInstance:
   m_ObjectHideFlags: 0

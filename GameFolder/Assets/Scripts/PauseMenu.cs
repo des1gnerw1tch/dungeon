@@ -44,6 +44,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         GameIsPaused = false;
         FindObjectOfType<ItemManager>().enabled = true;
+        GameObject canvas = GameObject.FindWithTag("AreaDropDown");
+        canvas.GetComponent<CanvasGroup>().alpha = 1f;
     }
     void Pause()
     {
@@ -53,6 +55,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         GameIsPaused = true;
         FindObjectOfType<ItemManager>().enabled = false;
+        GameObject canvas = GameObject.FindWithTag("AreaDropDown");
+        canvas.GetComponent<CanvasGroup>().alpha = 0f;
+
     }
     public void LoadMenu()
     {

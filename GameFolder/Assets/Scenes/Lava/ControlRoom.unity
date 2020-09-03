@@ -2684,6 +2684,7 @@ MonoBehaviour:
     - 'Press ''e'' to turn on Generator
 
 '
+  isStart: 0
 --- !u!4 &1300909045
 Transform:
   m_ObjectHideFlags: 0
@@ -2987,6 +2988,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0f257952ec8440a98fcf0cbca2c8072, type: 3}
+--- !u!1 &1377009625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 699694464226830012, guid: c0f257952ec8440a98fcf0cbca2c8072,
+    type: 3}
+  m_PrefabInstance: {fileID: 1377009624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1377009626
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377009625}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1633864640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,6 +5027,7 @@ MonoBehaviour:
     name: 
     sentances:
     - 'Building power activated. '
+  isStart: 0
 --- !u!4 &2001713251
 Transform:
   m_ObjectHideFlags: 0
@@ -5112,3 +5132,4 @@ MonoBehaviour:
     name: 'Notice: '
     sentances:
     - Intruder detected. Activating defensive protocols.
+  isStart: 0

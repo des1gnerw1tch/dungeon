@@ -284,9 +284,10 @@ GameObject:
   - component: {fileID: 222267008}
   - component: {fileID: 222267007}
   - component: {fileID: 222267006}
+  - component: {fileID: 222267010}
   m_Layer: 5
   m_Name: Drop Down Scene Canvas
-  m_TagString: Untagged
+  m_TagString: AreaDropDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -371,6 +372,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &222267010
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222267005}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &366420781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,6 +1532,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Costs 20 to buy a Focus Potion. Press E to buy.
+  isStart: 0
 --- !u!114 &603813541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,6 +1626,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Costs 20 to buy a Regeneration Potion. Press E to buy.
+  isStart: 0
 --- !u!114 &679654886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,6 +2058,7 @@ MonoBehaviour:
     name: Pherb
     sentances:
     - Jimeny Crickets! Did you read the price?
+  isStart: 0
 --- !u!4 &1270172780
 Transform:
   m_ObjectHideFlags: 0
@@ -2093,6 +2109,7 @@ MonoBehaviour:
     name: 
     sentances:
     - Costs 20 to buy a Speed Potion. Press E to buy.
+  isStart: 0
 --- !u!114 &1493362492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4693,6 +4710,7 @@ MonoBehaviour:
     name: Pherb
     sentances:
     - Jee thanks!
+  isStart: 0
 --- !u!4 &2000162173
 Transform:
   m_ObjectHideFlags: 0
