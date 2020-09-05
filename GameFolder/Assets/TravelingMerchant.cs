@@ -5,15 +5,27 @@ using UnityEngine;
 public class TravelingMerchant : MonoBehaviour
 {
     private int counter = 0;
-    // Start is called before the first frame update
-    [SerializeField] private bool trig = false;
+    private bool trig = false;
     [SerializeField] private GameObject shopObject;
     [SerializeField] private DialogueTrigger notice;
+    [SerializeField] private Shop shop;
+    [SerializeField] private DialogueTrigger costDialogue;
+    [SerializeField] private GameObject[] itemDrops;
+    [SerializeField] private int[] itemCost;
+
+
     void Start()
     {
       counter = 0;
       //starts dialogue late, not on start because of bug where dialogue isn't shown
       StartCoroutine(StartDialogue());
+
+      //this will pick the random item for the shop and set the dialogue
+      int rand = Random.Range(0, itemDrops.Length);
+      shop.prefab = itemDrops[rand];
+      shop.cost = itemCost[rand];
+      costDialogue.dialogue.sentances[0] = "Today I am selling a " + itemDrops[rand].GetComponent<PickUp>().inventoryID + " for " +
+        itemCost[rand]  + " coins. Press 'e' to buy";
     }
 
     void OnTriggerEnter2D(Collider2D other) {

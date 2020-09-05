@@ -317,6 +317,12 @@ MonoBehaviour:
   trig: 0
   shopObject: {fileID: 9091549685521437354}
   notice: {fileID: 8027374784812587104}
+  itemDrops:
+  - {fileID: 1373100728862361412, guid: d34f897a61dab441d8671cee9a98a306, type: 3}
+  - {fileID: 1373100728862361412, guid: d691ecf16f0964fa28c82d4783f6ab6d, type: 3}
+  itemCost: 6400000096000000
+  shop: {fileID: 9091549685521437349}
+  costDialogue: {fileID: 990105566177042217}
 --- !u!114 &990105566177042217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.968
+      value: -0.785
       objectReference: {fileID: 0}
     - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
         type: 3}
@@ -405,7 +411,7 @@ PrefabInstance:
     - target: {fileID: 6032845177187950166, guid: 299cefda604de164a8ac373b78ba110c,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.36911702
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6032845177187950166, guid: 299cefda604de164a8ac373b78ba110c,
         type: 3}
@@ -463,3 +469,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3284061997752552690}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9091549685521437349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6032845177187950167, guid: 299cefda604de164a8ac373b78ba110c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3284061997752552690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091549685521437354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e48056e7f0a6b4f9dffb1d09efe1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
