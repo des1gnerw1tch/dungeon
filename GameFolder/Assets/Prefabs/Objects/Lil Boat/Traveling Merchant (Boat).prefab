@@ -1,5 +1,104 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4674571173333452651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7423394575230110190}
+  - component: {fileID: 3967190837517003673}
+  m_Layer: 12
+  m_Name: Bought Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7423394575230110190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674571173333452651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7996987305585849201}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3967190837517003673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674571173333452651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: Adaeh
+    sentances:
+    - Thank you for purchasing!
+  isStart: 0
+--- !u!1 &7463624751514737591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769563176476223565}
+  - component: {fileID: 1950274821885046061}
+  m_Layer: 12
+  m_Name: NoMoneyDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769563176476223565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463624751514737591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7996987305585849201}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950274821885046061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463624751514737591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: Adaeh
+    sentances:
+    - I am sorry my dear but you do not have enough money!
+    - 'Come back soon. I will be departing shortly! '
+  isStart: 0
 --- !u!1 &7996987305585849166
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +112,7 @@ GameObject:
   - component: {fileID: 7996987305585849167}
   - component: {fileID: 3252883828592650459}
   - component: {fileID: 4717815265756678859}
+  - component: {fileID: 3179465130807529939}
   m_Layer: 12
   m_Name: Traveling Merchant (Boat)
   m_TagString: Untagged
@@ -30,7 +130,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 52.34, y: 45.1, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 9091549685521437350}
+  - {fileID: 769563176476223565}
+  - {fileID: 7423394575230110190}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,6 +249,166 @@ MonoBehaviour:
   dialogue:
     name: Adaeh
     sentances:
-    - 'Hey there! Welcome to Adaehs traveling shop. '
+    - 'Hey there! And welcome to Adaehs wandering shop. '
     - 'I sail all around the world to sell rare items. '
   isStart: 0
+--- !u!114 &3179465130807529939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996987305585849166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c9b2d25aade4a19bcaf43fd77c6e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trig: 0
+  shopObject: {fileID: 9091549685521437354}
+--- !u!114 &990105566177042217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091549685521437354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: Adaeh
+    sentances:
+    - Today I have a SMG for sale. Press "e" to purchase.
+  isStart: 0
+--- !u!1001 &3284061997752552690
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7996987305585849201}
+    m_Modifications:
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.968
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950166, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.019782014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950166, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.36911702
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950166, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.17161942
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950166, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.45041466
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950167, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 1373100728862361412, guid: d34f897a61dab441d8671cee9a98a306,
+        type: 3}
+    - target: {fileID: 6032845177187950167, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: costDialogue
+      value: 
+      objectReference: {fileID: 990105566177042217}
+    - target: {fileID: 6032845177187950167, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: boughtDialogue
+      value: 
+      objectReference: {fileID: 3967190837517003673}
+    - target: {fileID: 6032845177187950167, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: noMoneyDialogue
+      value: 
+      objectReference: {fileID: 1950274821885046061}
+    - target: {fileID: 6032845177187950168, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_Name
+      value: Merchant Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950168, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6032845177187950165, guid: 299cefda604de164a8ac373b78ba110c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 299cefda604de164a8ac373b78ba110c, type: 3}
+--- !u!1 &9091549685521437354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6032845177187950168, guid: 299cefda604de164a8ac373b78ba110c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3284061997752552690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9091549685521437350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6032845177187950164, guid: 299cefda604de164a8ac373b78ba110c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3284061997752552690}
+  m_PrefabAsset: {fileID: 0}
