@@ -80621,7 +80621,7 @@ PrefabInstance:
     - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
         type: 3}
       propertyPath: dialogue.sentances.Array.data[4]
-      value: 'You need to activate the ancient globes. Right now, they are shining
+      value: 'You need to darken the ancient globes. Right now, they are shining
         a bright yellow. This is the symbol of the slimes. '
       objectReference: {fileID: 0}
     - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
@@ -80637,8 +80637,8 @@ PrefabInstance:
     - target: {fileID: 3774206487288976030, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
         type: 3}
       propertyPath: dialogue.sentances.Array.data[3]
-      value: 'I am tethered to this dungeon by the power of the slimes. By helping
-        me, I could return home. '
+      value: I am tethered to this dungeon by the power of the slimes. If you help
+        me, I can return home.
       objectReference: {fileID: 0}
     - target: {fileID: 3774206488288140241, guid: 4c5be1b54df8f4b78bbd378a0e30344b,
         type: 3}
