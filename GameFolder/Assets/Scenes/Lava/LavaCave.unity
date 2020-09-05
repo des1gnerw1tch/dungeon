@@ -152,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeName: glassSky
   timeBeforeStart: 0
+  isSFX: 0
 --- !u!4 &11750314
 Transform:
   m_ObjectHideFlags: 0
@@ -81063,7 +81064,7 @@ PrefabInstance:
     - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
       propertyPath: posX
-      value: -60.01
+      value: -60.17
       objectReference: {fileID: 0}
     - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
@@ -81073,7 +81074,7 @@ PrefabInstance:
     - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
       propertyPath: posY
-      value: 32
+      value: 31.48
       objectReference: {fileID: 0}
     - target: {fileID: 3921428132169830077, guid: c05238c3813bb406495171f5cc3571f6,
         type: 3}
