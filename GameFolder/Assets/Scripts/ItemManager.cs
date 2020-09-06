@@ -35,11 +35,14 @@ public class ItemManager : MonoBehaviour
     private bool isWaiting = false;
     private bool deSlomo;
     private int currentAmmo;
+    //this disables shooting guns and using items
+    public bool useDisabled;
     void Start()
     {
       ReloadingText.SetActive(false);
       bulletsLeft.text = null;
       maxAmmoText.text = null;
+      useDisabled = false;
     }
 
     // Update is called once per frame
@@ -84,7 +87,7 @@ public class ItemManager : MonoBehaviour
         //full auto
         if (activeGun.fullAuto) {
 
-          if (Input.GetButton("Fire1") && !isWaiting) {
+          if (Input.GetButton("Fire1") && !isWaiting && !useDisabled) {
                 StartCoroutine(Shoot());
                     if (activeGun.HasAnimation){
                         //activeGun.animator.SetBool("IsShooting", true);
@@ -102,7 +105,7 @@ public class ItemManager : MonoBehaviour
           //semi auto
         } else {
 
-          if (Input.GetButtonDown("Fire1") && !isWaiting) {
+          if (Input.GetButtonDown("Fire1") && !isWaiting && !useDisabled) {
             StartCoroutine(Shoot());
                     if (activeGun.HasAnimation)
                     {
@@ -128,27 +131,27 @@ public class ItemManager : MonoBehaviour
         //is a health potion
         if (activeItem.isHealthPotion) {
 
-          if (Input.GetButton("Fire1")) {
+          if (Input.GetButton("Fire1")&& !useDisabled) {
             UseHealthPotion();
           }
         }
 
         //SPEED POTION
         if (activeItem.isSpeedPotion) {
-          if (Input.GetButton("Fire1")) {
+          if (Input.GetButton("Fire1")&& !useDisabled) {
             UseSpeedPotion();
           }
         }
 
         //REGENERATION POTION
         if (activeItem.isRegenPotion) {
-          if (Input.GetButton("Fire1")) {
+          if (Input.GetButton("Fire1")&& !useDisabled) {
             UseRegenPotion();
           }
         }
         //FOCUS POTION
         if (activeItem.isFocusPotion) {
-          if (Input.GetButton("Fire1")) {
+          if (Input.GetButton("Fire1")&& !useDisabled) {
             UseFocusPotion();
           }
         }

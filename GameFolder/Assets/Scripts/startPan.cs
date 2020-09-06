@@ -10,6 +10,8 @@ public class startPan : StateMachineBehaviour
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerMovement.moveSpeed = 0f;
+        ItemManager itemManager = FindObjectOfType<ItemManager>();
+        itemManager.useDisabled = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -18,7 +20,7 @@ public class startPan : StateMachineBehaviour
     //
     //}
 
-  
+
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

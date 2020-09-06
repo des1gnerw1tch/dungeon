@@ -9,6 +9,8 @@ public class endPan : StateMachineBehaviour
   {
       playerMovement = FindObjectOfType<PlayerMovement>();
       playerMovement.moveSpeed = 5f;
+      ItemManager itemManager = FindObjectOfType<ItemManager>();
+      itemManager.useDisabled = false;
   }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
