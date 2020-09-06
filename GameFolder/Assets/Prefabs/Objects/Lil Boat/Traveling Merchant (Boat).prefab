@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7423394575230110190}
   - component: {fileID: 3967190837517003673}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Bought Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7042969079266555374}
   - component: {fileID: 8027374784812587104}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Wandering Merchant notice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   dialogue:
     name: 'Notice: '
     sentances:
-    - A sailing merchant has appeared in Punyville to sell items.
+    - A sailing merchant has appeared in Punyville!
   isStart: 0
 --- !u!1 &7463624751514737591
 GameObject:
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769563176476223565}
   - component: {fileID: 1950274821885046061}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: NoMoneyDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,8 @@ GameObject:
   - component: {fileID: 3252883828592650459}
   - component: {fileID: 4717815265756678859}
   - component: {fileID: 3179465130807529939}
-  m_Layer: 12
+  - component: {fileID: 8172935669210944736}
+  m_Layer: 0
   m_Name: Traveling Merchant (Boat)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,15 +315,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c9b2d25aade4a19bcaf43fd77c6e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trig: 0
   shopObject: {fileID: 9091549685521437354}
   notice: {fileID: 8027374784812587104}
+  shop: {fileID: 9091549685521437349}
+  costDialogue: {fileID: 990105566177042217}
   itemDrops:
   - {fileID: 1373100728862361412, guid: d34f897a61dab441d8671cee9a98a306, type: 3}
   - {fileID: 1373100728862361412, guid: d691ecf16f0964fa28c82d4783f6ab6d, type: 3}
-  itemCost: 6400000096000000
-  shop: {fileID: 9091549685521437349}
-  costDialogue: {fileID: 990105566177042217}
+  - {fileID: 2839659968609529476, guid: a3d5de92ed677be4998fe8051c7cfa96, type: 3}
+  - {fileID: 5946864283718346727, guid: a38ed4c88679179458938938a4f020e2, type: 3}
+  - {fileID: 1373100728862361412, guid: ac74a764b7f63493c8db9183da1754b9, type: 3}
+  - {fileID: 2839659968609529476, guid: 1b479c249f0203a4e8dadd3782e030b6, type: 3}
+  itemCost: 64000000960000006e000000b40000003c00000064000000
+  triggerCollider: {fileID: 3252883828592650459}
+--- !u!61 &8172935669210944736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996987305585849166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009529054, y: -0.28798336}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8333333, y: 1}
+    newSize: {x: 0.8333333, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64063835, y: 0.2715708}
+  m_EdgeRadius: 0
 --- !u!114 &990105566177042217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +483,11 @@ PrefabInstance:
     - target: {fileID: 6032845177187950168, guid: 299cefda604de164a8ac373b78ba110c,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032845177187950168, guid: 299cefda604de164a8ac373b78ba110c,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

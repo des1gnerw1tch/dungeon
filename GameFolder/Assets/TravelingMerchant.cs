@@ -12,6 +12,7 @@ public class TravelingMerchant : MonoBehaviour
     [SerializeField] private DialogueTrigger costDialogue;
     [SerializeField] private GameObject[] itemDrops;
     [SerializeField] private int[] itemCost;
+    [SerializeField] private BoxCollider2D triggerCollider;
 
 
     void Start()
@@ -49,7 +50,7 @@ public class TravelingMerchant : MonoBehaviour
             //activates the shop after a certain amount of dialogue presses
             shopObject.SetActive(true);
             //disables the dialogue collider so that merchant does not repeat greeting
-            GetComponent<BoxCollider2D>().enabled = false;
+            triggerCollider.enabled = false;
           }
         }
     }

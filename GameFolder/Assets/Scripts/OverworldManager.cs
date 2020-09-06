@@ -19,6 +19,11 @@ public class OverworldManager : MonoBehaviour
 
     public BoxCollider2D dialogueMansion;
     public BoxCollider2D portalCredits;
+
+    [SerializeField] private GameObject travelingMerchant;
+    [SerializeField] private float merchantBufferTimeS;
+    [Range(0f, 1f)]
+    [SerializeField] private float merchantSpawnProbability;
     //public PlayerProgress progress;
     // Start is called before the first frame update
     void Start()
@@ -75,6 +80,16 @@ public class OverworldManager : MonoBehaviour
         dialogueMansion.enabled = true;
         portalCredits.enabled = false;
       }
+
+      //wandering merchant
+      MerchantTimer merchantTimer = FindObjectOfType<MerchantTimer>();
+      if (merchantTimer.counter > merchantBufferTimeS) {
+        merchantTimer.ResetTimer();
+        float rand = Random.Range(0f, 1f);
+          if (rand <= merchantSpawnProbability) {
+            travelingMerchant.SetActive(true);
+          }
+        }
 
       }
 

@@ -9,11 +9,6 @@ public class DropManager : MonoBehaviour
     public Drop[] drops;
     private Vector2 forceVector;
 
-    void Start()
-    {
-
-    }
-
     public void Drop(string name, Vector3 pos) {
       //finding drop
 
