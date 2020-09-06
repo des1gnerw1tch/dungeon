@@ -29,12 +29,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
 
     public void OnPointerEnter(PointerEventData eventData)  {
-      canShoot.enabled = false;
+      canShoot.useDisabled = true;
     }
     public void OnPointerExit(PointerEventData eventData)  {
       //if vault is not activated, let them shoot
       if (!vault.vaultActivated)
-        canShoot.enabled = true;
+        canShoot.useDisabled = false;
     }
 
     public void OnDrag(PointerEventData eventData) {

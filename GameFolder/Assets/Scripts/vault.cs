@@ -33,13 +33,13 @@ public class vault : MonoBehaviour
         vaultCanvas.SetActive(true);
         Time.timeScale = 0f;
         vaultActivated = true;
-        FindObjectOfType<ItemManager>().enabled = false;
+        FindObjectOfType<ItemManager>().useDisabled = true;
     }
     public void Close()
     {
         vaultCanvas.SetActive(false);
         Time.timeScale = 1;
         vaultActivated = false;
-        FindObjectOfType<ItemManager>().enabled = true;
+        FindObjectOfType<ItemManager>().useDisabled = false;
     }
 }

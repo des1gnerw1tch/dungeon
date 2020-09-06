@@ -12,11 +12,11 @@ public class SlotCover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField]
     private ItemManager canShoot;
     public void OnPointerEnter(PointerEventData eventData)  {
-      canShoot.enabled = false;
+      canShoot.useDisabled = true;
     }
     public void OnPointerExit(PointerEventData eventData)  {
       //if vault is not activated, let them shoot
       if (!vault.vaultActivated)
-        canShoot.enabled = true;
+        canShoot.useDisabled = false;
     }
 }
