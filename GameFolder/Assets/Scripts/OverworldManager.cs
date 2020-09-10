@@ -20,6 +20,9 @@ public class OverworldManager : MonoBehaviour
     public BoxCollider2D dialogueMansion;
     public BoxCollider2D portalCredits;
 
+    [SerializeField] private GameObject normalMusicPlayer;
+    [SerializeField] private GameObject merchantMusicPlayer;
+
     [SerializeField] private GameObject travelingMerchant;
     [SerializeField] private float merchantBufferTimeS;
     [Range(0f, 1f)]
@@ -88,6 +91,8 @@ public class OverworldManager : MonoBehaviour
         float rand = Random.Range(0f, 1f);
           if (rand <= merchantSpawnProbability) {
             travelingMerchant.SetActive(true);
+            normalMusicPlayer.SetActive(false);
+            merchantMusicPlayer.SetActive(true);
           }
         }
 
