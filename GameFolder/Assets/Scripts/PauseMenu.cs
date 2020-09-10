@@ -40,15 +40,38 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         GameIsPaused = false;
         FindObjectOfType<ItemManager>().enabled = true;
         GameObject canvas = GameObject.FindWithTag("AreaDropDown");
         canvas.GetComponent<CanvasGroup>().alpha = 1f;
+
+        /*
+        //tries to resume music if playing
+        try {
+          //FindObjectOfType<AudioManager>().Play(FindObjectOfType<MusicPlayer>().themeName);
+          FindObjectOfType<AudioManager>().Play(MusicPlayer.songPlaying);
+        }
+        catch (NullReferenceException e){
+            Debug.Log("No music found to resume");
+        }
+        */
+
     }
     void Pause()
     {
+        /*
+        //tries to pause music if playing
+        try {
+          //FindObjectOfType<AudioManager>().Pause(FindObjectOfType<MusicPlayer>().themeName);
+          FindObjectOfType<AudioManager>().Pause(MusicPlayer.songPlaying);
+        }
+        catch (NullReferenceException e){
+            Debug.Log("No music found to pause");
+        }*/
+
         pauseMenuUI.SetActive(true);
         ShowKeys();
         ShowCompletion();
@@ -57,6 +80,8 @@ public class PauseMenu : MonoBehaviour
         FindObjectOfType<ItemManager>().enabled = false;
         GameObject canvas = GameObject.FindWithTag("AreaDropDown");
         canvas.GetComponent<CanvasGroup>().alpha = 0f;
+
+
 
     }
     public void LoadMenu()
