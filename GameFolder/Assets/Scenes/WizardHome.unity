@@ -220,6 +220,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7170518217804481919, guid: d492162dc30317d4b8092606780719e9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9066383397914923831, guid: d492162dc30317d4b8092606780719e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10745,6 +10750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeName: glassSky
   timeBeforeStart: 0
+  isSFX: 0
 --- !u!4 &2006420829
 Transform:
   m_ObjectHideFlags: 0
