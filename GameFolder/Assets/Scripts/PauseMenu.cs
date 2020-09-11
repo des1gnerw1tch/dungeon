@@ -46,9 +46,10 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         FindObjectOfType<ItemManager>().enabled = true;
         GameObject canvas = GameObject.FindWithTag("AreaDropDown");
-        canvas.GetComponent<CanvasGroup>().alpha = 1f;
+        if (canvas != null)
+          canvas.GetComponent<CanvasGroup>().alpha = 1f;
 
-        /*
+
         //tries to resume music if playing
         try {
           //FindObjectOfType<AudioManager>().Play(FindObjectOfType<MusicPlayer>().themeName);
@@ -57,12 +58,12 @@ public class PauseMenu : MonoBehaviour
         catch (NullReferenceException e){
             Debug.Log("No music found to resume");
         }
-        */
+
 
     }
     void Pause()
     {
-        /*
+
         //tries to pause music if playing
         try {
           //FindObjectOfType<AudioManager>().Pause(FindObjectOfType<MusicPlayer>().themeName);
@@ -70,7 +71,7 @@ public class PauseMenu : MonoBehaviour
         }
         catch (NullReferenceException e){
             Debug.Log("No music found to pause");
-        }*/
+        }
 
         pauseMenuUI.SetActive(true);
         ShowKeys();
@@ -79,7 +80,8 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         FindObjectOfType<ItemManager>().enabled = false;
         GameObject canvas = GameObject.FindWithTag("AreaDropDown");
-        canvas.GetComponent<CanvasGroup>().alpha = 0f;
+        if (canvas != null)
+          canvas.GetComponent<CanvasGroup>().alpha = 0f;
 
 
 
