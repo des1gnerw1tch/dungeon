@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 1370200469599911333, guid: a7332f03ca631a049bde7f88b337a975,
     type: 3}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1011984905168220515, guid: fc1e688abcf25f549b4e8620e482f176,
     type: 3}
-  inventoryID: ShadowDartBook
+  inventoryID: Ecco's Diary
   wasDropped: 0
 --- !u!61 &6590106067721563443
 BoxCollider2D:

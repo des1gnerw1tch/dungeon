@@ -69988,12 +69988,12 @@ PrefabInstance:
     - target: {fileID: 6626097387151279059, guid: b029935d673a34888a1239f242d8047f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -128.94975
+      value: -96.8
       objectReference: {fileID: 0}
     - target: {fileID: 6626097387151279059, guid: b029935d673a34888a1239f242d8047f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 193.56706
+      value: 192.9
       objectReference: {fileID: 0}
     - target: {fileID: 6626097387151279059, guid: b029935d673a34888a1239f242d8047f,
         type: 3}
@@ -71155,6 +71155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeName: LavaTheme
   timeBeforeStart: 0
+  isSFX: 0
 --- !u!4 &2106916845
 Transform:
   m_ObjectHideFlags: 0
