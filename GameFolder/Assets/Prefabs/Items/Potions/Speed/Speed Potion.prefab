@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 3
   m_Sprite: {fileID: -7118549172432436139, guid: 577f670babf3346f9b08725e58e89f57,
     type: 3}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4348595976051347297, guid: 6c697708ce5714d7a8e2a56f41124f27,
     type: 3}
-  inventoryID: SpeedPotion
+  inventoryID: Speed Potion
   wasDropped: 0
 --- !u!50 &-5235608030274334757
 Rigidbody2D:

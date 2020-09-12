@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4348595976051347297, guid: a6a6cf6b9f900482db419e1814091438,
     type: 3}
-  inventoryID: RegenPotion
+  inventoryID: Restoration Potion
   wasDropped: 0
 --- !u!50 &-5235608030274334757
 Rigidbody2D:

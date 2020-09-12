@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4348595976051347297, guid: d5b7e50faae72450b8ec0da52e872ece,
     type: 3}
-  inventoryID: FocusPotion
+  inventoryID: Focus Potion
   wasDropped: 0
 --- !u!50 &-5235608030274334757
 Rigidbody2D:
