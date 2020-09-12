@@ -59,7 +59,7 @@ public class itemUIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
           maxDamage = gun.bullet.GetComponent<BulletHit>().damage;
         }
 
-        if (gun.bullet.GetComponent<BulletHit>().knockback > maxImpact)  {
+        if (gun.bullet.GetComponent<BulletHit>().knockback > maxImpact && gun.name != "RPG")  {
           maxImpact = gun.bullet.GetComponent<BulletHit>().knockback;
         }
 
