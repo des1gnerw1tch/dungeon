@@ -63,7 +63,7 @@ public class itemUIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
           maxImpact = gun.bullet.GetComponent<BulletHit>().knockback;
         }
 
-        if (gun.reloadTime > maxReload && gun.name != "PortalGun")  {
+        if (gun.reloadTime > maxReload && gun.name != "Ecco's Path")  {
           maxReload = gun.reloadTime;
         }
       }
