@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1500
+  maxHealth: 1300
   enemyID: Buggie
   dissolveSpeed: 0.1
   tintOnStart: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 6374451069617026663, guid: 057e6e3ae8efd445d8bf162a4b04256f, type: 3}
-  minsPerSpawn: 6
+  minsPerSpawn: 12
   spawnInterval: 10
   spawnSound: BuggieSummon
   animator: {fileID: 851798882778273197}
