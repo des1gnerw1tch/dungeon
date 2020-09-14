@@ -102,7 +102,11 @@ public class itemUIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void updateDetailWindow()  {
       if (itemManager.activeGun != null)  {
         fireRateSlider.value = itemManager.activeGun.RPS;
-        damageSlider.value = itemManager.activeGun.bullet.GetComponent<BulletHit>().damage;
+        if (!itemManager.activeGun.isShotgun) {
+          damageSlider.value = itemManager.activeGun.bullet.GetComponent<BulletHit>().damage;
+        } else {
+          damageSlider.value = itemManager.activeGun.bullet.GetComponent<BulletHit>().damage * 5;
+        }
         impactSlider.value = itemManager.activeGun.bullet.GetComponent<BulletHit>().knockback;
         reloadSlider.value =  (maxReload - itemManager.activeGun.reloadTime) + .4f;
       } else {
