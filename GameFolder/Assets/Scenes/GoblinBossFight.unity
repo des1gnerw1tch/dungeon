@@ -705,7 +705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 184, y: 156}
+  m_AnchoredPosition: {x: 187, y: 156}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &567725396
@@ -746,9 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'King''s Room
-
-'
+  m_text: The Throne
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da8a78044a2ec42129e85a7cfee616f4, type: 2}
   m_sharedMaterial: {fileID: 2347382509746732933, guid: da8a78044a2ec42129e85a7cfee616f4,
@@ -758,8 +756,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282534143
-  m_fontColor: {r: 1, g: 0.28187722, b: 0.25943398, a: 1}
+    rgba: 4294926848
+  m_fontColor: {r: 0, g: 0.3845291, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -818,9 +816,9 @@ MonoBehaviour:
   m_margin: {x: -207.37317, y: 0, z: -214.30286, w: 0}
   m_textInfo:
     textComponent: {fileID: 567725397}
-    characterCount: 12
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 2
+    spaceCount: 1
     wordCount: 2
     linkCount: 0
     lineCount: 1
@@ -881,6 +879,11 @@ PrefabInstance:
       propertyPath: objectsToEnable.Array.data[1]
       value: 
       objectReference: {fileID: 965708105}
+    - target: {fileID: 819445978010323823, guid: 83294f3c36175433f83b6626f5c4982e,
+        type: 3}
+      propertyPath: stopMusicOnDeath
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2177524917881198640, guid: 83294f3c36175433f83b6626f5c4982e,
         type: 3}
       propertyPath: m_Sprite
