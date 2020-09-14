@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -4461640469899584395, guid: f5f4d7343f96c44a0b76db1200b19c6e,
     type: 3}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 900
+  maxHealth: 1500
   enemyID: Buggie
   dissolveSpeed: 0.1
   tintOnStart: 0
@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a22cf8975eb4145a66e5625782ac9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldBounceOffSameType: 0
 --- !u!114 &2893820300167295680
 MonoBehaviour:
   m_ObjectHideFlags: 0
