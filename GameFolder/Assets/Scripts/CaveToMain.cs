@@ -72,7 +72,7 @@ public class CaveToMain : MonoBehaviour
           player.position = newPosition;
         }
         playerObject.GetComponent<PlayerHealth>().enabled = true;
-        //playerObject.GetComponent<PlayerMovement>().enabled = true;
+        playerObject.GetComponent<PlayerMovement>().enabled = true;
         if (isCredits)  {
           Animator[] animators = UnityEngine.Object.FindObjectsOfType<Animator>();
           foreach(Animator anim in animators)  {

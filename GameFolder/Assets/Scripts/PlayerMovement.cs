@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject dashParts;
     public Slider StaminaSlider;
     private bool footstepsPlaying = false;
+    //[HideInInspector]
+    public bool freezeMovement = false;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -84,7 +86,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            if (!freezeMovement)  {
+              rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            }
         }
         if (dashCooldown < 2f)
         {

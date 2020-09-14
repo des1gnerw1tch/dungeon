@@ -102,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetKnockback(int knockback, Transform other) {
 
-      GetComponent<PlayerMovement>().enabled = false;
+      GetComponent<PlayerMovement>().freezeMovement = true;
       int thrust = knockback;
       Vector2 difference = transform.position - other.transform.position;
       difference = difference.normalized * thrust;
@@ -119,7 +119,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void startMovement()  {
-      GetComponent<PlayerMovement>().enabled = true;
+      GetComponent<PlayerMovement>().freezeMovement = false;
     }
 
     public void StartRegen()  {
