@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41aa1659bfcd09440a556e84c4c790a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magnetSpeed: 3
+  magnetDistance: 3
 --- !u!70 &6136061618869464651
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
