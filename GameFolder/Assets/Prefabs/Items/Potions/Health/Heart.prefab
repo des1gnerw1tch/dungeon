@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8537102, y: 0.7773771}
+  m_Size: {x: 0.6075779, y: 0.53888696}
   m_EdgeRadius: 0
 --- !u!114 &-7403030412120622228
 MonoBehaviour:
@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df53acbdd30843cf9b1b0045793d57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magnetSpeed: 4
+  magnetDistance: 3
 --- !u!50 &-2544181046276378355
 Rigidbody2D:
   serializedVersion: 4
