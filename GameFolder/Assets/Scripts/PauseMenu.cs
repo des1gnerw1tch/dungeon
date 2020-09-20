@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
         //tries to resume music if playing
         try {
           //FindObjectOfType<AudioManager>().Play(FindObjectOfType<MusicPlayer>().themeName);
-          FindObjectOfType<AudioManager>().Play(MusicPlayer.songPlaying);
+          FindObjectOfType<AudioManager>().PlayTheme(MusicPlayer.songPlaying);
         }
         catch (NullReferenceException e){
             Debug.Log("No music found to resume");
