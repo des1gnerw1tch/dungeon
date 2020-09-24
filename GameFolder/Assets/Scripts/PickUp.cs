@@ -11,12 +11,14 @@ public class PickUp : MonoBehaviour
     private bool isDuplicate = false;
     [SerializeField] private DialogueTrigger pickUpDialogue;
     [SerializeField] private DialogueTrigger fullDialogue;
+    private dialogueTimer dialogueTimerScript;
 
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         pickUpDialogue = GameObject.FindWithTag("pickUpDialogue").GetComponent<DialogueTrigger>();
         fullDialogue = GameObject.FindWithTag("duplicateDialogue").GetComponent<DialogueTrigger>();
+        dialogueTimerScript = FindObjectOfType<dialogueTimer>();
     }
     void OnTriggerEnter2D(Collider2D other){
         if  (other.CompareTag("Player") && !wasDropped){
@@ -42,6 +44,7 @@ public class PickUp : MonoBehaviour
                     //Pick up dialogue
                     pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
                     pickUpDialogue.TriggerDialogue();
+                    dialogueTimerScript.endDialogue(3f);
                     break;
 				}
 		    }
@@ -50,6 +53,7 @@ public class PickUp : MonoBehaviour
         if (isDuplicate) {
           fullDialogue.dialogue.sentances[0] = "You already have a " + inventoryID + ". You may only have 1 of each weapon.";
           fullDialogue.TriggerDialogue();
+          dialogueTimerScript.endDialogue(2f);
         }
 
 	     }
@@ -67,5 +71,6 @@ public class PickUp : MonoBehaviour
         pickUpDialogue.EndTalk();
     }
   }
+
 
 }
