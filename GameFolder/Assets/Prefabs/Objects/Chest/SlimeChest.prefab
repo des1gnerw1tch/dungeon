@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2665790034282843314}
   - component: {fileID: 8402389894889599040}
   - component: {fileID: 698651471}
+  - component: {fileID: 7507875586639703799}
   m_Layer: 12
   m_Name: SlimeChest
   m_TagString: Interactable
@@ -185,3 +186,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScene: 
+--- !u!114 &7507875586639703799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536925610665632393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: 
+    sentances:
+    - Press "e" to open chest.
+  isStart: 0
