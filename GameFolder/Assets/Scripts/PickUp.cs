@@ -12,6 +12,7 @@ public class PickUp : MonoBehaviour
     [SerializeField] private DialogueTrigger pickUpDialogue;
     [SerializeField] private DialogueTrigger fullDialogue;
     private dialogueTimer dialogueTimerScript;
+    [HideInInspector]public bool dialogueIsTriggered = false;
 
     void Start()
     {
@@ -44,16 +45,17 @@ public class PickUp : MonoBehaviour
                     //Pick up dialogue
                     pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
                     pickUpDialogue.TriggerDialogue();
-                    dialogueTimerScript.endDialogue(3f);
+                    dialogueTimerScript.endDialogue(3f, this);
                     break;
 				}
 		    }
 
         //triggers duplicate dialogue
-        if (isDuplicate) {
+        if (isDuplicate && !dialogueIsTriggered) {
           fullDialogue.dialogue.sentances[0] = "You already have a " + inventoryID + ". You may only have 1 of each weapon.";
           fullDialogue.TriggerDialogue();
-          dialogueTimerScript.endDialogue(2f);
+          dialogueTimerScript.endDialogue(2f, this);
+          dialogueIsTriggered = true;
         }
 
 	     }
