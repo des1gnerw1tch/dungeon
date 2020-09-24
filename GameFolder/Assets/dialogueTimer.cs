@@ -11,7 +11,6 @@ public class dialogueTimer : MonoBehaviour
       StartCoroutine(endDialogue());
     }
     IEnumerator endDialogue() {
-      Debug.Log("Timer started");
       yield return new WaitForSeconds(time);
       FindObjectOfType<DialogueManager>().EndDialogue();
     }
