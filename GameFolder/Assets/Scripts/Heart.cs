@@ -23,6 +23,7 @@ public class Heart : MonoBehaviour
     void FixedUpdate()  {
       if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), new Vector2(player.position.x, player.position.y)) < magnetDistance) {
         transform.position = Vector3.MoveTowards(transform.position, player.position, magnetSpeed* Time.fixedDeltaTime) ;
+        magnetSpeed += Time.deltaTime * 3; //will increase speed the longer it is latched on
       }
     }
 }
