@@ -21,6 +21,8 @@ TagManager:
   - RedShot
   - ObjMarker
   - AreaDropDown
+  - pickUpDialogue
+  - duplicateDialogue
   layers:
   - Default
   - TransparentFX

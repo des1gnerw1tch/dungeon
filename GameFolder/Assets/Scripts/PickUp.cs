@@ -8,13 +8,19 @@ public class PickUp : MonoBehaviour
     public GameObject itemButton;
     public string inventoryID;
     public bool wasDropped = false;
+    private bool isDuplicate = false;
+    [SerializeField] private DialogueTrigger pickUpDialogue;
+    [SerializeField] private DialogueTrigger fullDialogue;
+
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        pickUpDialogue = GameObject.FindWithTag("pickUpDialogue").GetComponent<DialogueTrigger>();
+        fullDialogue = GameObject.FindWithTag("duplicateDialogue").GetComponent<DialogueTrigger>();
     }
     void OnTriggerEnter2D(Collider2D other){
         if  (other.CompareTag("Player") && !wasDropped){
-            bool isDuplicate = false;
+            isDuplicate = false;
             for(int j = 0; j < inventory.slots.Length; j ++){
                 if(inventory.item[j] == inventoryID && inventory.item[j] != "Health Potion" && inventory.item[j] != "Torch" && inventory.item[j] != "EmptyBook"
                 && inventory.item[j] != "Speed Potion" && inventory.item[j] != "Restoration Potion" && inventory.item[j] != "Focus Potion")
@@ -33,16 +39,32 @@ public class PickUp : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("pickUpItem");
                     FindObjectOfType<GameSaveManager>().SavePlayer();
 
+                    //Pick up dialogue
+                    pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
+                    pickUpDialogue.TriggerDialogue();
                     break;
 				}
 		    }
 
+        //triggers duplicate dialogue
+        if (isDuplicate) {
+          fullDialogue.dialogue.sentances[0] = "You already have a " + inventoryID + ". You may only have 1 of each weapon.";
+          fullDialogue.TriggerDialogue();
+        }
+
 	     }
+
+
 	}
 
   void OnTriggerExit2D(Collider2D other)  {
     if (other.CompareTag("Player")) {
       wasDropped = false;
+
+      /*We want it to end dialogue when you drop a weapon and get out of its radius
+      but not when you have a duplicate */
+      if (!isDuplicate)
+        pickUpDialogue.EndTalk();
     }
   }
 
