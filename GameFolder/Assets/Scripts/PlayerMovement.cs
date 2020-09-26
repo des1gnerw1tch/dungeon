@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void SpeedBoost() {
-      moveSpeed = 10f;
+      moveSpeed = 8f;
       speedEffectIcon.gameObject.SetActive(true);
       Invoke("StopSpeedBoost", speedBoostLength);
       Invoke("WarnBoostEnd", speedBoostLength - 3f);
