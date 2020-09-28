@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PauseMenu : MonoBehaviour
     private Inventory inventoryScript;
     private scroll scrollScript;
     private bool KeepItem = false;
+    [SerializeField]
+    private Text objective;
+
     private void Start()
     {
         ItemManager = GameObject.Find("ItemManager");
@@ -76,6 +80,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         ShowKeys();
         ShowCompletion();
+        ShowObjective();
         Time.timeScale = 0;
         GameIsPaused = true;
         FindObjectOfType<ItemManager>().enabled = false;
@@ -200,6 +205,15 @@ public class PauseMenu : MonoBehaviour
       } else {
         completionTexts[4].SetActive(false);
         incompleteTexts[4].SetActive(true);
+      }
+    }
+
+    void ShowObjective()  {
+      if (!PlayerProgress.merchantFreed)  {
+        objective.text = "Explore the cave for stragglers";
+      }
+      else if (PlayerProgress.merchantFreed)  {
+        objective.text = "Find Dr. Kadowitz in the Mossy Ruins";
       }
     }
 }
