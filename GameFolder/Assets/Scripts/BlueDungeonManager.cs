@@ -9,9 +9,15 @@ public class BlueDungeonManager : MonoBehaviour
     private BoxCollider2D completedDialogue;
     [SerializeField]
     private BoxCollider2D portal;
+    [SerializeField]
+    private GameObject Marker;
     void Start()
     {
       UpdateScene();
+        if (PlayerProgress.alchemistFreed)
+        {
+            Marker.SetActive(false);
+        }
     }
 
     // Update is called once per frame

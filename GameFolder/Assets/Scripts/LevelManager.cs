@@ -12,7 +12,8 @@ public class LevelManager : MonoBehaviour
     public GameObject gift;
     public GameObject gift1;
     public Text progressText;
-
+    public GameObject Markers;
+    public GameObject WizardMarker;
     [HideInInspector]
     public int numOfGlobes;
     [HideInInspector]
@@ -32,6 +33,7 @@ public class LevelManager : MonoBehaviour
 
       //if dungeon is completed
       if (PlayerProgress.wizardFreed) {
+        Markers.SetActive(false);
         progressText.text = numOfGlobes + " / " + numOfGlobes;
         mage.SetActive(false);
         foreach (Globe globe in globes) {
@@ -55,9 +57,11 @@ public class LevelManager : MonoBehaviour
       caveTeleporter.SetActive(false);
       toEccoHomeTeleporter.SetActive(true);
       FindObjectOfType<GameSaveManager>().SavePlayer();
+      WizardMarker.SetActive(true);
     }
 
     public void UpdateText()  {
       progressText.text = numCompleted + " / " + numOfGlobes;
     }
+    
 }

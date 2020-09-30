@@ -21,6 +21,10 @@ public class LavaDungManager : MonoBehaviour
     private GameObject happyMusicPlayer;
     [SerializeField]
     private GameObject friend;
+    [SerializeField]
+    private GameObject Markers;
+    [SerializeField]
+    private GameObject[] Marker;
 
     [SerializeField]
     private DialogueTrigger noPowerDialogue;
@@ -49,15 +53,19 @@ public class LavaDungManager : MonoBehaviour
         }
 
         bigChest.SetActive(true);
-      }
+        Marker[1].SetActive(false);
+        Marker[0].SetActive(true);
+        }
 
       if (PlayerProgress.friendFreed) {
         friend.SetActive(false);
+        Markers.SetActive(false);
       }
 
     }
     public void BuildBridge() {
       if (powerOn)  {
+        Marker[2].SetActive(true);
         removableLava.SetActive(false);
         poweredDialogue.TriggerDialogue();
         switchAnimator.SetTrigger("flip");
@@ -65,6 +73,8 @@ public class LavaDungManager : MonoBehaviour
       else  {
         noPowerDialogue.TriggerDialogue();
         FindObjectOfType<AudioManager>().Play("negative");
+        Marker[0].SetActive(false);
+        Marker[1].SetActive(true);
       }
 
     }

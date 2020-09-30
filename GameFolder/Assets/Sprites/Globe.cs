@@ -9,6 +9,7 @@ public class Globe : MonoBehaviour
     public GameObject miniBoss;
     public int numMinions;
     public Light2D globeLight;
+    public GameObject Marker;
     //test
     private GameObject bossInstance;
     private EnemyHealth bossHealth;
@@ -37,6 +38,7 @@ public class Globe : MonoBehaviour
             if (Input.GetKey("e"))  {
               if (!activated){
                 activated = true;
+                Marker.SetActive(false);
                 Invoke("Summon", 2.0f);
                 FindObjectOfType<AudioManager>().Play("globeSummon");
               }

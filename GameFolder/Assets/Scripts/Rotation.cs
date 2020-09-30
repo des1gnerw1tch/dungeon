@@ -46,5 +46,7 @@ public class Rotation : MonoBehaviour
             miniMapArrow.SetActive(false);
             
         }
+
+        
     }
 }
