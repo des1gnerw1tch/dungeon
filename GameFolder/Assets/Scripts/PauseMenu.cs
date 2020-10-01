@@ -209,11 +209,33 @@ public class PauseMenu : MonoBehaviour
     }
 
     void ShowObjective()  {
+
       if (!PlayerProgress.merchantFreed)  {
-        objective.text = "Explore the cave for stragglers";
+        objective.text = "Enter the cave";
       }
       else if (PlayerProgress.merchantFreed)  {
         objective.text = "Find Dr. Kadowitz in the Mossy Ruins";
       }
+
+      if (PlayerProgress.nurseFreed)  {
+        objective.text = "Explore Slime City";
+      }
+
+      if (PlayerProgress.wizardFreed) {
+        objective.text = "Defeat the Goblin King";
+      }
+
+      if (PlayerProgress.alchemistFreed) {
+        objective.text = "Explore past the orange door";
+      }
+
+      if (PlayerProgress.hasCrystalKey) {
+        objective.text = "Enter the Crystal Cove";
+      }
+
+      if (PlayerProgress.redCrystalDestroyed) {
+        objective.text = "Visit your Grandpa in his mansion";
+      }
+
     }
 }

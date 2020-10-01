@@ -20,6 +20,8 @@ public class OverworldManager : MonoBehaviour
     public BoxCollider2D dialogueMansion;
     public BoxCollider2D portalCredits;
 
+    public GameObject caveMarker;
+
     [SerializeField] private GameObject normalMusicPlayer;
     [SerializeField] private GameObject merchantMusicPlayer;
 
@@ -52,9 +54,11 @@ public class OverworldManager : MonoBehaviour
       if (PlayerProgress.merchantFreed) {
         dialogueGunShop.enabled = false;
         portalGunShop.enabled = true;
+        caveMarker.SetActive(false);
       } else {
         dialogueGunShop.enabled = true;
         portalGunShop.enabled = false;
+        caveMarker.SetActive(true);
       }
 
       //hospital
