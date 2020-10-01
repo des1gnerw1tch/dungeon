@@ -3902,6 +3902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeName: dungeon3
   timeBeforeStart: 0
+  isSFX: 0
 --- !u!4 &492923770
 Transform:
   m_ObjectHideFlags: 0
