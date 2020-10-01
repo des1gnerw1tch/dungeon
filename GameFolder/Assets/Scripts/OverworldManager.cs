@@ -21,6 +21,7 @@ public class OverworldManager : MonoBehaviour
     public BoxCollider2D portalCredits;
 
     public GameObject caveMarker;
+    public GameObject merchantMarker;
 
     [SerializeField] private GameObject normalMusicPlayer;
     [SerializeField] private GameObject merchantMusicPlayer;
@@ -97,6 +98,7 @@ public class OverworldManager : MonoBehaviour
             travelingMerchant.SetActive(true);
             normalMusicPlayer.SetActive(false);
             merchantMusicPlayer.SetActive(true);
+            merchantMarker.SetActive(true);
           }
         }
 
