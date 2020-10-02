@@ -48,7 +48,7 @@ public class GameSaveManager : MonoBehaviour
     public void LoadPlayer()  {
       PlayerData data = SaveSystem.LoadPlayer();
       //loads health
-      playerHealth.currentHealth = data.health;
+      //playerHealth.currentHealth = data.health;
       //loads position
     /*  Vector3 position;
       position.x = data.position[0];
