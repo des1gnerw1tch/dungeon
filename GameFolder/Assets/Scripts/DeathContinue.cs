@@ -15,7 +15,7 @@ public class DeathContinue : MonoBehaviour
     public void Continue() {
       EnablePlayer();
       player = GameObject.FindWithTag("Player");
-      player.GetComponent<PlayerHealth>().currentHealth = 20;
+      player.GetComponent<PlayerHealth>().currentHealth = player.GetComponent<PlayerHealth>().maxHealth;
       Vector3 reset = new Vector3(24.35f, 22.94f, 0f);
       player.transform.position = reset;
       Inventory inventory = player.GetComponent<Inventory>();
