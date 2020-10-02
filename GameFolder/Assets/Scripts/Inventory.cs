@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
         PlayerProgress.ResetStaticVariables();
         overworldScene.UpdateScene();
         beginningDialogue.TriggerDialogue();
-        Instantiate(pistol, new Vector2(7.7f, -1.0f), Quaternion.identity);
+        Instantiate(pistol, new Vector2(-7.33f, 26.38f), Quaternion.identity);
       }
 
     }

@@ -14,7 +14,11 @@ public class dialogueTimer : MonoBehaviour
     }
     IEnumerator endDialogue() {
       yield return new WaitForSeconds(time);
-      FindObjectOfType<DialogueManager>().EndDialogue();
+      /*dialogue does not end after time as expected, because there are bugs where
+      you would get kicked out of dialouge when talking to somebody else.
+      this new feature though just limits the amount of times you can get a duplicate warning message*/
+      
+      //FindObjectOfType<DialogueManager>().EndDialogue();
       item.dialogueIsTriggered = false;
     }
 }
