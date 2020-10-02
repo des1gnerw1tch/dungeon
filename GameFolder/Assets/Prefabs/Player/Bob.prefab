@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 1756797247}
   - component: {fileID: 1756797248}
   - component: {fileID: 269727511}
+  - component: {fileID: 756584431}
+  - component: {fileID: 756584432}
   m_Layer: 11
   m_Name: Bob
   m_TagString: Player
@@ -154,14 +156,15 @@ MonoBehaviour:
   cam: {fileID: 0}
   animator: {fileID: 8747800943941732924}
   dash: 0
-  dashCooldown: 0
-  dashLength: 1
-  startDashLength: 0
+  dashCooldown: 4
+  dashLength: 0.25
+  startDashLength: 0.25
   speedEffectIcon: {fileID: 0}
-  speedBoostLength: 10
+  speedBoostLength: 20
   focusEffectIcon: {fileID: 0}
   focusEffectLength: 8
-  dashParts: {fileID: 0}
+  dashParts: {fileID: 6004790951748253938, guid: 2d271de01d66bf34bbce230404569ad0,
+    type: 3}
   StaminaSlider: {fileID: 0}
   freezeMovement: 0
 --- !u!114 &5493401359268361209
@@ -180,7 +183,7 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 0}
   Camera: {fileID: 0}
-  deathTransition: {fileID: 0}
+  deathTransition: {fileID: 756584431}
   regenDuration: 15
   regenEffectIcon: {fileID: 0}
 --- !u!114 &5493401359268361210
@@ -226,7 +229,7 @@ MonoBehaviour:
   item: []
   overworldScene: {fileID: 0}
   beginningDialogue: {fileID: 0}
-  pistol: {fileID: 0}
+  pistol: {fileID: 1373100728862361412, guid: 8033edcce594d4ef585aa2f99dfc1385, type: 3}
 --- !u!70 &184997451201820118
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -333,6 +336,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3b42fc1a1b9435495883c39f5cd498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &756584431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6119eb1cd4c82a4689f655d9bae16ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Death
+  teleportToSetPosition: 0
+  posX: 0
+  posY: 0
+  NeedsKey: 0
+  neededKey: 
+  playSound: 0
+  transition: {fileID: 3000531597170886737}
+  transitionTime: 3
+  continueMusic: 0
+  isCredits: 0
+--- !u!114 &756584432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903378669057283929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96194133b05a4cbe9b0609880d98ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: 0
 --- !u!1 &8747800943320054309
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +573,12 @@ PrefabInstance:
 --- !u!4 &3000531597769564073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 579588676172314741, guid: 6edf67349087745f99085bd56ae3c4fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2427188701729990620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3000531597170886737 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 579588676653281165, guid: 6edf67349087745f99085bd56ae3c4fb,
     type: 3}
   m_PrefabInstance: {fileID: 2427188701729990620}
   m_PrefabAsset: {fileID: 0}
