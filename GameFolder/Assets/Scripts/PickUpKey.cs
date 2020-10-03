@@ -32,6 +32,7 @@ public class PickUpKey : MonoBehaviour
 
         Vector2 pos = new Vector2(player.position.x + 49.6355f + Random.Range(-1f, 1f), player.position.y -47.0451f + Random.Range(-1f, 1f));
         Instantiate(keyReceivedText, pos, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("key");
         Destroy(this.gameObject);
       }
     }
