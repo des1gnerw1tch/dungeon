@@ -1483,7 +1483,7 @@ MonoBehaviour:
   projectile: {fileID: 3983355164322582027, guid: a08bb78be488f49f183122b5516c2a3a,
     type: 3}
   projectileSpeed: 8
-  audio: pft
+  audio: Skeleton Knight Shot
   atkCooldown: 2
 --- !u!1101 &-4606822580324936330
 AnimatorStateTransition:
@@ -1855,7 +1855,7 @@ MonoBehaviour:
   projectile: {fileID: 3983355164322582027, guid: a08bb78be488f49f183122b5516c2a3a,
     type: 3}
   projectileSpeed: 8
-  audio: pft
+  audio: Skeleton Knight Shot
   atkCooldown: 2
 --- !u!1102 &-2869096443042315118
 AnimatorState:
@@ -2755,7 +2755,7 @@ MonoBehaviour:
   projectile: {fileID: 3983355164322582027, guid: a08bb78be488f49f183122b5516c2a3a,
     type: 3}
   projectileSpeed: 8
-  audio: pft
+  audio: Skeleton Knight Shot
   atkCooldown: 2
 --- !u!114 &-264033164897153967
 MonoBehaviour:
@@ -4881,7 +4881,7 @@ MonoBehaviour:
   projectile: {fileID: 3983355164322582027, guid: a08bb78be488f49f183122b5516c2a3a,
     type: 3}
   projectileSpeed: 8
-  audio: pft
+  audio: Skeleton Knight Shot
   atkCooldown: 2
 --- !u!1101 &6004929749567087714
 AnimatorStateTransition:

@@ -48,16 +48,18 @@ public class ActivatePath : MonoBehaviour
             //saving variables
             if (isBlueCrystal)  {
               PlayerProgress.blueCrystalDestroyed = true;
-              Debug.Log(PlayerProgress.blueCrystalDestroyed);
+              FindObjectOfType<AudioManager>().Play("crystalBreak");
               FindObjectOfType<GameSaveManager>().SavePlayer();
               AstarPath.active.Scan();
               }
             if (isGreenCrystal)  {
               PlayerProgress.greenCrystalDestroyed = true;
+              FindObjectOfType<AudioManager>().Play("crystalBreak");
               FindObjectOfType<GameSaveManager>().SavePlayer();
             }
             if (isRedCrystal)  {
               PlayerProgress.redCrystalDestroyed = true;
+              FindObjectOfType<AudioManager>().Play("crystalBreak");
               FindObjectOfType<GameSaveManager>().SavePlayer();
             }
 
