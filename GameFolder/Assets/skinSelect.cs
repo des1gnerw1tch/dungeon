@@ -17,7 +17,6 @@ public class skinSelect : MonoBehaviour
       UpdateCharacterSkin();
     }
 
-    // Update is called once per frame
     void UpdateCharacterSkin()  {
 
       if (PlayerSettings.character == "Bob")  {
