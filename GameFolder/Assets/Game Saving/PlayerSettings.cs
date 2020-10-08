@@ -7,7 +7,7 @@ public class PlayerSettings : MonoBehaviour
     public static bool soundEffects = true;
     public static bool music = true;
     public static bool fancyGraphics = true;
-    public static string character = "Bob";
+    public static string character;
 
     public static void ResetStaticVariables() {
       soundEffects = true;

@@ -27,7 +27,6 @@ public class MenuManager : MonoBehaviour
     PlayerSettings.soundEffects = data.soundEffects;
     PlayerSettings.fancyGraphics = data.fancyGraphics;
     PlayerSettings.character = data.character;
-
   }
 
   public void PlaySave(float delay)  {
@@ -54,7 +53,7 @@ public class MenuManager : MonoBehaviour
     resetGameWarningUI.SetActive(false);
     animator.SetTrigger("NewGame");
     yield return new WaitForSeconds(_delay);
-    SceneManager.LoadScene("Start");
+    SceneManager.LoadScene("ChooseCharacter");
   }
 
   public void QuitGame()  {

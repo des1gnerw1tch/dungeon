@@ -16,8 +16,8 @@ public class GameSaveManager : MonoBehaviour
   public float saveInterval = 10f;
   private float counter;
 
-//tries to load save
-  void Start()  {
+//tries to load save, this used to be on START(), so if something wacky happens change to START
+  void Awake()  {
   //  Player is loaded in the INVENTORY script on start
     counter = 0;
   //loading settings data
@@ -25,6 +25,7 @@ public class GameSaveManager : MonoBehaviour
     PlayerSettings.music = data.music;
     PlayerSettings.soundEffects = data.soundEffects;
     PlayerSettings.fancyGraphics = data.fancyGraphics;
+    PlayerSettings.character = data.character;
   }
 
 //saves file every so seconds
