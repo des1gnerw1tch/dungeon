@@ -55,7 +55,7 @@ public class itemUIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
           maxFireRate = gun.RPS;
         }
 
-        if (gun.bullet.GetComponent<BulletHit>().damage > maxDamage && gun.name != "Explorer's Shotgun")  {
+        if (gun.bullet.GetComponent<BulletHit>().damage > maxDamage)  {
           maxDamage = gun.bullet.GetComponent<BulletHit>().damage;
         }
 

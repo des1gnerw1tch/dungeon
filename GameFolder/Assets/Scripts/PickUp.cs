@@ -9,8 +9,8 @@ public class PickUp : MonoBehaviour
     public string inventoryID;
     public bool wasDropped = false;
     private bool isDuplicate = false;
-    [SerializeField] private DialogueTrigger pickUpDialogue;
-    [SerializeField] private DialogueTrigger fullDialogue;
+    private DialogueTrigger pickUpDialogue;
+    private DialogueTrigger fullDialogue;
     private dialogueTimer dialogueTimerScript;
     [HideInInspector]public bool dialogueIsTriggered = false;
 
