@@ -26,6 +26,7 @@ public class MenuManager : MonoBehaviour
     PlayerSettings.music = data.music;
     PlayerSettings.soundEffects = data.soundEffects;
     PlayerSettings.fancyGraphics = data.fancyGraphics;
+    PlayerSettings.character = data.character;
 
   }
 
