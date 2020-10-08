@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 
 public class skinSelect : MonoBehaviour
 {
     [SerializeField] private Sprite bobSprite;
-    [SerializeField] private AnimatorController bobAnimator;
+    [SerializeField] private RuntimeAnimatorController bobAnimator;
 
     [SerializeField] private Sprite zachSprite;
-    [SerializeField] private AnimatorController zachAnimator;
+    [SerializeField] private RuntimeAnimatorController zachAnimator;
 
     // Start is called before the first frame update
     void Start()
