@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23511c5ebb0441241ae87f7b380dcc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pounceSpeed: 200
-  lifeTimeAttack: 0.6
+  pounceSpeed: 11
+  lifeTimeAttack: 0.7
 --- !u!1101 &-2917159084604850683
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -375,7 +375,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -291868240980081312}
-    m_Position: {x: 160, y: 300, z: 0}
+    m_Position: {x: 160, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -377811072369003627}
     m_Position: {x: 160, y: 460, z: 0}

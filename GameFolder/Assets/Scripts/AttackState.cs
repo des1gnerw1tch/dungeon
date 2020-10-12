@@ -10,6 +10,7 @@ public class AttackState : StateMachineBehaviour
     private float lifeTimeFirstAttack;
     public float lifeTimeAttack;
     private bool hasAttacked = false;
+    private bool ndTime = false;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -24,11 +25,14 @@ public class AttackState : StateMachineBehaviour
 
         if(lifeTimeFirstAttack > 0){
             lifeTimeFirstAttack -= Time.deltaTime;
+            if(lifeTimeFirstAttack < lifeTimeAttack /4)
+            {
+                animator.transform.position = Vector2.MoveTowards(animator.transform.position, target.position, pounceSpeed * Time.deltaTime);
+            }
+            
 
-
-		}
+        }
         if (lifeTimeFirstAttack <= 0){
-            animator.transform.position = Vector2.MoveTowards(animator.transform.position, target.position, pounceSpeed * Time.deltaTime);
             animator.SetFloat("IsClose", -1);
             lifeTimeFirstAttack = lifeTimeAttack;
         }
