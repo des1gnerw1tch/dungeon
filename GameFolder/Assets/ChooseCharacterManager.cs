@@ -16,4 +16,10 @@ public class ChooseCharacterManager : MonoBehaviour
       SaveSystem.SaveSettings();
       SceneManager.LoadScene("Start");
     }
+
+    public void girlChose()  {
+      PlayerSettings.character = "Girl";
+      SaveSystem.SaveSettings();
+      SceneManager.LoadScene("Start");
+    }
 }

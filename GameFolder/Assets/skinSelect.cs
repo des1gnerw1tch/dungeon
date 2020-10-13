@@ -11,6 +11,9 @@ public class skinSelect : MonoBehaviour
     [SerializeField] private Sprite zachSprite;
     [SerializeField] private RuntimeAnimatorController zachAnimator;
 
+    [SerializeField] private Sprite girlSprite;
+    [SerializeField] private RuntimeAnimatorController girlAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,12 @@ public class skinSelect : MonoBehaviour
       if (PlayerSettings.character == "Zach")  {
         GetComponent<SpriteRenderer>().sprite = zachSprite;
         GetComponent<Animator>().runtimeAnimatorController = zachAnimator;
+      }
+
+      if (PlayerSettings.character == "Girl")  {
+        GetComponent<SpriteRenderer>().sprite = girlSprite;
+        GetComponent<Animator>().runtimeAnimatorController = girlAnimator;
+        Debug.Log("Girl was chosen");
       }
 
     }
