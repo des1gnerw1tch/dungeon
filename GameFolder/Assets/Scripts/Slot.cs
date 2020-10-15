@@ -7,6 +7,7 @@ public class Slot : MonoBehaviour
     private Inventory inventory;
     public int i;
     private DestroyGun DropThing;
+    [SerializeField] private scroll scrollScript;
 
     private void Start()
     {
@@ -19,6 +20,16 @@ public class Slot : MonoBehaviour
 		} else {
       inventory.isFull[i]  = true;
     }
+
+    /*this makes the slot bigger when you are holding it*/
+    if (i >= 0 && i <= 4) {
+        if (scrollScript.activeSlot == i) {
+          transform.localScale = new Vector3(.6f, .6f, .6f);
+        } else {
+          transform.localScale = new Vector3(.5f, .5f, .5f);
+        }
+    }
+
 	}
 
     public void DropItem(){
