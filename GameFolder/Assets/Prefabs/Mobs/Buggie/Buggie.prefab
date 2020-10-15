@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minion: {fileID: 6374451069617026663, guid: 057e6e3ae8efd445d8bf162a4b04256f, type: 3}
   minsPerSpawn: 12
-  spawnInterval: 10
+  spawnInterval: 15
   spawnSound: BuggieSummon
   animator: {fileID: 851798882778273197}
   offsetX: 0

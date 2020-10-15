@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -510003387
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 17f431dc57d7a40e7a5fa8d70e54619b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minion: {fileID: 6374451069617026663, guid: 057e6e3ae8efd445d8bf162a4b04256f, type: 3}
   minsPerSpawn: 2
-  spawnInterval: 5
+  spawnInterval: 3
   spawnSound: 
   animator: {fileID: 2566242466193417055}
   offsetX: 0

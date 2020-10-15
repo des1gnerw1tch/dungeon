@@ -37,7 +37,8 @@ public class DrKBehavior : MonoBehaviour
           //start boss fight
           Player.GetComponent<PlayerMovement>().moveSpeed = 5f;
           DialogueCollider.enabled = false;
-          FindObjectOfType<AudioManager>().Play("MDBoss");
+          if (PlayerSettings.music)
+            FindObjectOfType<AudioManager>().Play("MDBoss");
           foreach (GameObject obj in objectsToEnable)  {
             obj.SetActive(true);
           }
