@@ -73,6 +73,6 @@ public class Shop : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D other)  {
-      FindObjectOfType<DialogueManager>().EndDialogue();
+      //FindObjectOfType<DialogueManager>().EndDialogue();
     }
 }

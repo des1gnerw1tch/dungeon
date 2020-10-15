@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickUp : MonoBehaviour
 {
@@ -43,9 +44,12 @@ public class PickUp : MonoBehaviour
                     FindObjectOfType<GameSaveManager>().SavePlayer();
 
                     //Pick up dialogue
-                    pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
-                    pickUpDialogue.TriggerDialogue();
-                    dialogueTimerScript.endDialogue(3f, this);
+                    Scene scene = SceneManager.GetActiveScene();
+                    if (scene.name != "GunShop" && scene.name != "Hospital" && scene.name != "AlchemistHome") {
+                      pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
+                      pickUpDialogue.TriggerDialogue();
+                      dialogueTimerScript.endDialogue(3f, this);
+                    }
                     break;
 				}
 		    }
@@ -69,8 +73,10 @@ public class PickUp : MonoBehaviour
 
       /*We want it to end dialogue when you drop a weapon and get out of its radius
       but not when you have a duplicate */
-      if (!isDuplicate)
+      Scene scene = SceneManager.GetActiveScene();
+      if (!isDuplicate && scene.name != "GunShop" && scene.name != "Hospital" && scene.name != "AlchemistHome") {
         pickUpDialogue.EndTalk();
+      }
     }
   }
 
