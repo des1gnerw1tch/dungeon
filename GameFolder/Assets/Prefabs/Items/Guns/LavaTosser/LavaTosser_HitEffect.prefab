@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6644903681427174064}
   - component: {fileID: 6644903681427174065}
   - component: {fileID: 7282917252932997780}
-  - component: {fileID: 5728857951720770016}
   - component: {fileID: -1834249947485182071}
   m_Layer: 0
   m_Name: LavaTosser_HitEffect
@@ -131,30 +130,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5728857951720770016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6644903681427174066}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e3e5df1bf4c5bd44a2f926fa8e19039, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  altHitEffect: {fileID: 0}
-  damage: 3
-  damageUncertainty: 0
-  criticalChance: 0
-  knockback: 1
-  hitSound: 
-  isPiercing: 1
-  IsTeleporter: 0
-  TeleportScript: {fileID: 0}
-  positions: []
-  destoryEffectTime: 1
 --- !u!114 &-1834249947485182071
 MonoBehaviour:
   m_ObjectHideFlags: 0
