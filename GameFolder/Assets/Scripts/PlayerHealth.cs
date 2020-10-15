@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     private Inventory inventoryScript;
     private scroll scrollScript;
     private bool KeepItem = false;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +62,19 @@ public class PlayerHealth : MonoBehaviour
             }
             FindObjectOfType<GameSaveManager>().SavePlayer();
             //transfers to our salvage feature
-            deathTransition.TransitionToScene("Death");
+            if (UnityEngine.Random.Range(1,10) == 1 && SceneManager.GetActiveScene().name != "Arena")
+            {
+                player = GameObject.FindWithTag("Player");
+                player.GetComponent<PlayerHealth>().currentHealth = player.GetComponent<PlayerHealth>().maxHealth;
+                Vector3 reset = new Vector3(0, 0, 0);
+                player.transform.position = reset;
+                SceneManager.LoadScene("Arena");
+            }
+            else
+            {
+                deathTransition.TransitionToScene("Death");
+            }
+            
 
 
             //tries to stop music / footsteps
