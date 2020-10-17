@@ -16,8 +16,8 @@ public class DungeonCompletedPop : MonoBehaviour
     {
 
     }
-
+    //show dungeon completed UI is broken in build. 
     public void ShowDungeonCompleted() {
-      text.SetActive(true);
+      //text.SetActive(true);
     }
 }
