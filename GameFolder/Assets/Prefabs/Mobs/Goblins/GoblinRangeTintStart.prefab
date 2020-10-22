@@ -17,11 +17,9 @@ GameObject:
   - component: {fileID: 819445978010323823}
   - component: {fileID: 8017402406109829784}
   - component: {fileID: -741415980469027085}
-  - component: {fileID: -1607134487483299486}
-  - component: {fileID: -9033608811590798709}
-  - component: {fileID: -8693281510930512835}
+  - component: {fileID: -6695375716001925734}
   m_Layer: 10
-  m_Name: Goblin King
+  m_Name: GoblinRangeTintStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2177524917881198654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1422465503
   m_SortingLayer: 4
   m_SortingOrder: 2
-  m_Sprite: {fileID: 2572365745140355499, guid: 8688b062eb8d44e81a8e9194235d49a9,
+  m_Sprite: {fileID: 4894819272218501108, guid: 57ba1138022714ca5abadb1c5d6b5ecf,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00073617697, y: 0.07803208}
+  m_Offset: {x: -0.00073617697, y: 0.12579349}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -116,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5004773, y: 0.6592227}
+  m_Size: {x: 0.5004773, y: 0.5636999}
   m_EdgeRadius: 0
 --- !u!95 &2177524917881198641
 Animator:
@@ -128,7 +126,7 @@ Animator:
   m_GameObject: {fileID: 2177524917881198654}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bee163d72a58548ac95593cd7984cf45, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0bc4b878ea5f5485dbfb024527f16b89, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -174,14 +172,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2500
-  enemyID: GoblinKing
-  dissolveSpeed: 0.1
-  tintOnStart: 0
+  maxHealth: 75
+  enemyID: Goblin
+  dissolveSpeed: 2
+  tintOnStart: 1
   dissolve: {fileID: -6677500666373917982}
   tint: {fileID: 8247682188220123959}
   animator: {fileID: 2177524917881198641}
-  isBoss: 1
+  isBoss: 0
   stopMusicOnDeath: 0
   objectsToEnable: []
   damagePopUp: {fileID: 3143137803910608348, guid: 9c763aa2b62da41709570ebaea7e2c46,
@@ -198,7 +196,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 10
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -219,45 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db42f1420e2d14cd3a367620bcae3646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1607134487483299486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2177524917881198654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minion: {fileID: 2177524917881198654, guid: 646c05daf368e4d4d8f2d588e184f517, type: 3}
-  minsPerSpawn: 2
-  spawnInterval: 8
-  spawnSound: goblinChant
-  animator: {fileID: 0}
-  offsetX: 0
-  offsetY: 0
---- !u!114 &-9033608811590798709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2177524917881198654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6374ad9252a4716a693ca97bf86384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minion: {fileID: 2177524917881198654, guid: cd474ab7090ef4e0490a18ff2af2872b, type: 3}
-  minsPerSpawn: 2
-  spawnInterval: 8
-  spawnSound: goblinChant
-  animator: {fileID: 0}
-  offsetX: 0
-  offsetY: 0
---- !u!114 &-8693281510930512835
+--- !u!114 &-6695375716001925734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
