@@ -34,6 +34,7 @@ public class vault : MonoBehaviour
         Time.timeScale = 0f;
         vaultActivated = true;
         FindObjectOfType<ItemManager>().useDisabled = true;
+        FindObjectOfType<AudioManager>().Play("chest");
     }
     public void Close()
     {
