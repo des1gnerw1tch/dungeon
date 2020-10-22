@@ -46,6 +46,7 @@ public class BulletHit : MonoBehaviour
             if (chance < criticalChance) {
               realDamage = realDamage * 2;
               critical = true;
+              FindObjectOfType<AudioManager>().Play("critical");
             }
             enemy.TakeDamage(realDamage, critical);
 		     } else {
