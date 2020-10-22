@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 600423442, guid: ff0a65d40543d40e5b34b19697217f99, type: 3}
       propertyPath: spawnInterval
-      value: 2.7
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 600423442, guid: ff0a65d40543d40e5b34b19697217f99, type: 3}
       propertyPath: minsPerSpawn
@@ -29,6 +29,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3143137803910608348, guid: 9c763aa2b62da41709570ebaea7e2c46,
         type: 3}
+    - target: {fileID: 47184095784892331, guid: ff0a65d40543d40e5b34b19697217f99,
+        type: 3}
+      propertyPath: maxHealth
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2067427647925096064, guid: ff0a65d40543d40e5b34b19697217f99,
         type: 3}
       propertyPath: m_LocalPosition.x

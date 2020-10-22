@@ -105,6 +105,7 @@ MonoBehaviour:
   GizmosColor: {r: 1, g: 0, b: 0, a: 1}
   health: {fileID: 47184095784892331}
   minionsOnDeath: 2
+  soundOnStart: 0
 --- !u!114 &600423442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 40
   enemyID: Hive
   dissolveSpeed: 1
   tintOnStart: 1
