@@ -11,10 +11,14 @@ public class HiveController : MonoBehaviour
     [SerializeField] private EnemyHealth health;
     [SerializeField] private int minionsOnDeath;
     private bool isDead = false;
+    [SerializeField] private bool soundOnStart = false;
 
     // Update is called once per frame
     void Start()  {
       target = FindObjectOfType<PlayerHealth>().GetComponent<Transform>();
+      if (soundOnStart) {
+        FindObjectOfType<AudioManager>().Play("woodBuild");
+      }
     }
 
     void Update()
@@ -31,7 +35,7 @@ public class HiveController : MonoBehaviour
         isDead = true;
         Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
         Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
-        Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);    
+        Instantiate(minionSpawn.minion, new Vector2(transform.position.x, transform.position.y - 1), Quaternion.identity);
       }
     }
 
