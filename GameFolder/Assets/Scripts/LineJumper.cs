@@ -8,7 +8,7 @@ public class LineJumper : MonoBehaviour
     private LineRenderer lineRenderer;
     Vector2 mousePosStart;
     Vector2 mousePosEnd;
-    public float bounds = .5f;
+    public float bounds = 1f;
     private int curLines = 0;
     private bool wasFound;
     public string[] combo;
@@ -133,8 +133,8 @@ public class LineJumper : MonoBehaviour
     {
         lineRenderer = new GameObject("line " + curLines).AddComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
-        lineRenderer.startWidth = .4f;
-        lineRenderer.endWidth = .4f;
+        lineRenderer.startWidth = .7f;
+        lineRenderer.endWidth = .7f;
         lineRenderer.numCapVertices = 40;
         lineRenderer.material = material;
 
