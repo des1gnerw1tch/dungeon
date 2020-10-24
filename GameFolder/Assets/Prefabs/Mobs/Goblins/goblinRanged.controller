@@ -277,7 +277,7 @@ MonoBehaviour:
   atkRadius: 5
   projectile: {fileID: 9151130746491375280, guid: b0bce9cdbcccf4fca93e78c2d3e0006e,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 4
   audio: machete
   atkCooldown: 2
 --- !u!1101 &-6014238269478392322
