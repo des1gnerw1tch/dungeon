@@ -135,6 +135,10 @@ public class EnemyHealth : MonoBehaviour
       return curHealth;
     }
 
+    public void SetHealth(float num)  {
+      curHealth = num;
+    }
+
 
 
 

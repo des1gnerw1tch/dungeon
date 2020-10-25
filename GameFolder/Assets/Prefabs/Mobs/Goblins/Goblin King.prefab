@@ -285,3 +285,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 819445978010323823}
   phase2Animator: {fileID: 9100000, guid: 23bb69ac274a24171836e6d4c293d991, type: 2}
+  animator: {fileID: 2177524917881198641}
+  timeCrying: 8
