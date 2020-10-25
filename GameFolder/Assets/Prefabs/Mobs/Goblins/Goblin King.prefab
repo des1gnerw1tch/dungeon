@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -1607134487483299486}
   - component: {fileID: -9033608811590798709}
   - component: {fileID: -8693281510930512835}
+  - component: {fileID: 5062583716099315716}
   m_Layer: 10
   m_Name: Goblin King
   m_TagString: Untagged
@@ -270,3 +271,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShouldBounceOffSameType: 0
+--- !u!114 &5062583716099315716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177524917881198654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8c3fa42ef6a45e295d4eafb84fe832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 819445978010323823}
+  phase2Animator: {fileID: 9100000, guid: 23bb69ac274a24171836e6d4c293d991, type: 2}
