@@ -63,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
             }
             FindObjectOfType<GameSaveManager>().SavePlayer();
             //transfers to our salvage feature
-            if (UnityEngine.Random.Range(1,1) == 1 && SceneManager.GetActiveScene().name != "Arena")
+            if (UnityEngine.Random.Range(1,10) == 1 && SceneManager.GetActiveScene().name != "Arena")
             {
                 player = GameObject.FindWithTag("Player");
                 player.GetComponent<PlayerHealth>().currentHealth = player.GetComponent<PlayerHealth>().maxHealth;
@@ -77,7 +77,7 @@ public class PlayerHealth : MonoBehaviour
                 deathTransition.TransitionToScene("Death");
                 transported = false;
             }
-            
+
 
 
             //tries to stop music / footsteps
