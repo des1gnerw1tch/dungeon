@@ -955,6 +955,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5062583716099315716, guid: 83294f3c36175433f83b6626f5c4982e,
+        type: 3}
+      propertyPath: cryingDialogue
+      value: 
+      objectReference: {fileID: 1031942619}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83294f3c36175433f83b6626f5c4982e, type: 3}
 --- !u!95 &599668262 stripped
@@ -1350,6 +1355,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c0a8d36659a04b6893d2d35c13e1a10, type: 3}
+--- !u!1 &1031942618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031942620}
+  - component: {fileID: 1031942619}
+  m_Layer: 0
+  m_Name: Boss Crying Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1031942619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031942618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b5b3cbda44dc4eb55b613fa027866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  dialogue:
+    name: Goblin King
+    sentances:
+    - STOP IT!!! YOU ARE MAKING ME CRY
+    - ENOUGH OF THIS NONSENSE
+  isStart: 0
+--- !u!4 &1031942620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031942618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.410404, y: -1.4222025, z: -609.5183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103181536
 GameObject:
   m_ObjectHideFlags: 0
