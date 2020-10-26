@@ -57549,7 +57549,7 @@ MonoBehaviour:
   NeedsKey: 0
   neededKey: 
   playSound: 0
-  transition: {fileID: 0}
+  transition: {fileID: 179371882}
   transitionTime: 1
   continueMusic: 0
   isCredits: 0
@@ -57563,7 +57563,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0090610385, y: 0.01812315}
