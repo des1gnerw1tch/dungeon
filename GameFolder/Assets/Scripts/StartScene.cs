@@ -8,11 +8,11 @@ public class StartScene : MonoBehaviour
 
     public int numSentances;
     private int counter;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class StartScene : MonoBehaviour
         }
         if (counter == numSentances)
         {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("Tutorial");
         }
     }
 }
