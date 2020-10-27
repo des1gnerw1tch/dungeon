@@ -34,7 +34,7 @@ public class Check : StateMachineBehaviour
                 int areax = Random.Range(-patrolArea, patrolArea);
                 int areay = Random.Range(-patrolArea, patrolArea);
                 pos.Set(animator.transform.position.x + areax, animator.transform.position.y + areay);
-                pos.Set(pos.x - animator.transform.position.x , pos.y - animator.transform.position.y);
+                //pos.Set(pos.x - animator.transform.position.x , pos.y + animator.transform.position.y);
                 reachedPos = false;
                 animator.SetBool("isPatrolling",true);
                 //Debug.Log(patrolArea);
