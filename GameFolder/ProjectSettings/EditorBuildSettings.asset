@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChooseCharacter.unity
     guid: e226678702d86427e8cfd374f82e5901
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 12aafe5dea509459f8d677885af34342
   m_configObjects: {}
