@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
           FindObjectOfType<AudioManager>().Play("footsteps");
         }*/
         //Dash Function
-        if(Input.GetKey(KeyCode.LeftShift) && dashCooldown >= 2f)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && dashCooldown >= 2f)
         {
             dashDir = movement;
             dashCooldown = 0f;
