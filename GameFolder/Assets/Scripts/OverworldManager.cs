@@ -55,7 +55,7 @@ public class OverworldManager : MonoBehaviour
       if (PlayerProgress.merchantFreed) {
         dialogueGunShop.enabled = false;
         portalGunShop.enabled = true;
-        caveMarker.SetActive(false);
+
       } else {
         dialogueGunShop.enabled = true;
         portalGunShop.enabled = false;
@@ -84,6 +84,7 @@ public class OverworldManager : MonoBehaviour
       if (PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)  {
         dialogueMansion.enabled = false;
         portalCredits.enabled = true;
+        caveMarker.SetActive(false);
       } else {
         dialogueMansion.enabled = true;
         portalCredits.enabled = false;
@@ -99,6 +100,7 @@ public class OverworldManager : MonoBehaviour
             normalMusicPlayer.SetActive(false);
             merchantMusicPlayer.SetActive(true);
             merchantMarker.SetActive(true);
+            caveMarker.SetActive(false);
           }
         }
 
