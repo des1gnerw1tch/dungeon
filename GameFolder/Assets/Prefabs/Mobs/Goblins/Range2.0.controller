@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 5
+  atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: b0bce9cdbcccf4fca93e78c2d3e0006e,
     type: 3}
   projectileSpeed: 10
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 9
   speed: 3
   minWaitTime: 3
   maxWaitTime: 5
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 5
+  atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: b0bce9cdbcccf4fca93e78c2d3e0006e,
     type: 3}
   projectileSpeed: 10
@@ -1900,7 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 9
   speed: 3
   minWaitTime: 3
   maxWaitTime: 5
@@ -2563,8 +2563,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 5
+  lookRadius: 9
+  atkRadius: 8
 --- !u!1101 &-515159427558120789
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 5
+  atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: b0bce9cdbcccf4fca93e78c2d3e0006e,
     type: 3}
   projectileSpeed: 10
@@ -3536,7 +3536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 9
   speed: 3
   minWaitTime: 3
   maxWaitTime: 5
@@ -3769,7 +3769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1e44fdbfd1f49e896deab4f427f2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 8
+  lookRadius: 9
   speed: 3
   minWaitTime: 3
   maxWaitTime: 5
@@ -3962,8 +3962,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 5
+  lookRadius: 9
+  atkRadius: 8
 --- !u!1102 &4251646587352133738
 AnimatorState:
   serializedVersion: 5
@@ -4675,7 +4675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451b4d15b45ff43c1b4cb1238cbff0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRadius: 5
+  atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: b0bce9cdbcccf4fca93e78c2d3e0006e,
     type: 3}
   projectileSpeed: 10
@@ -5536,8 +5536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 5
+  lookRadius: 9
+  atkRadius: 8
 --- !u!1102 &8532439646935419444
 AnimatorState:
   serializedVersion: 5
@@ -5758,8 +5758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lookRadius: 8
-  atkRadius: 5
+  lookRadius: 9
+  atkRadius: 8
 --- !u!1101 &9050677338227680930
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
