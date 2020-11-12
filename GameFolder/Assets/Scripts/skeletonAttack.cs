@@ -13,6 +13,7 @@ public class skeletonAttack : StateMachineBehaviour
   public string audio;
 
   public float atkCooldown = 2f;
+  public float missFactor = 0f;
 
   private float timer;
   override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -39,8 +40,9 @@ public class skeletonAttack : StateMachineBehaviour
         GameObject instance = Instantiate(projectile, pos, Quaternion.identity);
         Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
 
-        //push the projectile
-        Vector3 force = (target.position - animator.transform.position).normalized * projectileSpeed;
+        //push the projectile with a controlled accuracy
+        Vector3 aim = new Vector3(target.position.x + Random.Range(-missFactor, missFactor), target.position.y + Random.Range(-missFactor, missFactor), 0);
+        Vector3 force = (aim - animator.transform.position).normalized * projectileSpeed;
         //make sure bullet is facing the right direction
         if (target.position.x - animator.transform.position.x >=0)  {
           instance.transform.Rotate(0, 0, (Mathf.Atan(force.y / force.x)) * Mathf.Rad2Deg + 90, Space.Self);

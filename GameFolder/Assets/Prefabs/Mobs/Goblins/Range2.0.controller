@@ -1407,6 +1407,7 @@ MonoBehaviour:
   projectileSpeed: 10
   audio: machete
   atkCooldown: 2
+  missFactor: 2
 --- !u!1101 &-4606822580324936330
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -1753,6 +1754,7 @@ MonoBehaviour:
   projectileSpeed: 10
   audio: machete
   atkCooldown: 2
+  missFactor: 2
 --- !u!1102 &-2869096443042315118
 AnimatorState:
   serializedVersion: 5
@@ -2628,6 +2630,7 @@ MonoBehaviour:
   projectileSpeed: 10
   audio: machete
   atkCooldown: 2
+  missFactor: 2
 --- !u!114 &-264033164897153967
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -4678,6 +4681,7 @@ MonoBehaviour:
   projectileSpeed: 10
   audio: machete
   atkCooldown: 2
+  missFactor: 2
 --- !u!1101 &6004929749567087714
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
