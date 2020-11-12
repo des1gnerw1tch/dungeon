@@ -146,7 +146,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -510003387
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 511431682034995651, guid: 463a8b800e43e4730a0d1b6854f95dbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -192,8 +192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minion: {fileID: 3811510162841372, guid: 9302214696e304b2aafd5352533b32ac, type: 3}
   miniBoss: {fileID: 3811510162841372, guid: 048ff042f6b644c5bbe4dce452c54eed, type: 3}
-  numMinions: 10
+  numMinions: 2
   globeLight: {fileID: 2178747669296557116}
+  Marker: {fileID: 0}
   activated: 0
 --- !u!114 &2178747670340525275
 MonoBehaviour:
