@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 3203619258547263977, guid: 45aaebf7f972b2045b486c14ea28748b,
     type: 3}
@@ -100,9 +100,9 @@ MonoBehaviour:
   hitEffect: {fileID: 4419856995888367890, guid: 9108d03f947dcb148860b20003b70a85,
     type: 3}
   altHitEffect: {fileID: 0}
-  damage: 45
-  damageUncertainty: 4
-  criticalChance: 0.351
+  damage: 5
+  damageUncertainty: 1
+  criticalChance: 0.117
   knockback: 3
   hitSound: 
   isPiercing: 0

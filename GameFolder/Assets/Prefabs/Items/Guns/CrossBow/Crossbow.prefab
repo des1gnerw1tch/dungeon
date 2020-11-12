@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 2
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 8982283821434432117, guid: 45aaebf7f972b2045b486c14ea28748b,
     type: 3}
@@ -100,8 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 5177163722175238013, guid: b332b4769c26f61408cb814340d075fd,
     type: 3}
-  inventoryID: Crossbow
+  inventoryID: Auto Crossbow
   wasDropped: 0
+  dialogueIsTriggered: 0
 --- !u!50 &4884322226637886318
 Rigidbody2D:
   serializedVersion: 4

@@ -146,7 +146,7 @@ MonoBehaviour:
   hitEffect: {fileID: 8660191419251044891, guid: 97480823efe0ded4c90e9cda9500bc48,
     type: 3}
   altHitEffect: {fileID: 0}
-  damage: 12
+  damage: 40
   damageUncertainty: 1
   criticalChance: 0.094
   knockback: 50
