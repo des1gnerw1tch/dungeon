@@ -14,18 +14,20 @@ public class goblinAttack : StateMachineBehaviour
     public int knockback = 0;
 
     private float timer;
+    private bool attackedOnce = false;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
       target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
       player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
       timer = 0;
+      attackedOnce = false;
     }
 
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
       //if outside attack radius
-      if (Vector2.Distance(animator.transform.position, target.position) > atkRadius) {
+      if (Vector2.Distance(animator.transform.position, target.position) > atkRadius && attackedOnce) {
         animator.SetBool("isAttacking", false);
       }
       //when inside attack radius
@@ -36,8 +38,10 @@ public class goblinAttack : StateMachineBehaviour
           player.TakeDamage(atkDamage);
           player.SetKnockback(knockback, animator.transform);
           timer = atkCooldown;
+          attackedOnce = true;
         }
       }
+
 
     }
 
