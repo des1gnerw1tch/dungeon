@@ -149,7 +149,7 @@ MonoBehaviour:
   altHitEffect: {fileID: 0}
   damage: 28
   damageUncertainty: 5
-  criticalChance: 0.312
+  criticalChance: 0.105
   knockback: 50
   hitSound: 
   isPiercing: 0
