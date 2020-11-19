@@ -3797,7 +3797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: Scarlette
+    name: Mr. Tracy
     sentances:
     - Always good doing business with you.
   isStart: 0
@@ -5115,7 +5115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: Scarlette
+    name: Mr. Tracy
     sentances:
     - 'You don''t got the coins, my boy! Go get your bread up and then come back
       to me. '
