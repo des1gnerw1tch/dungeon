@@ -46,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
         {
             KeepItem = true;
         }
+
         if(currentHealth <= 0){
             if (SceneManager.GetActiveScene().name == "3rdDoor")
             {
@@ -112,7 +113,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         body.SetTintColor(new Color (1, 0, 0, 1f));
         Camera.shake(5f, 2f, .3f);
-        FindObjectOfType<AudioManager>().Play("playerHurt");
+        
+        //only play player hit sound when player is not dying
+        if (currentHealth >= 0) {
+          FindObjectOfType<AudioManager>().Play("playerHurt");
+        }
 
     }
 
