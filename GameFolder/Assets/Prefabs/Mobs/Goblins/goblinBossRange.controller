@@ -1183,7 +1183,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Follow Up
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7038838636572376972}
@@ -1365,7 +1365,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Follow Forward
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 215601013485625891}
@@ -1404,9 +1404,10 @@ MonoBehaviour:
   atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: e6a6e562b28464bc0a4591819a6c1ef1,
     type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 10
   audio: machete
   atkCooldown: 1
+  missFactor: 3
 --- !u!1101 &-4606822580324936330
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -1750,9 +1751,10 @@ MonoBehaviour:
   atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: e6a6e562b28464bc0a4591819a6c1ef1,
     type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 10
   audio: machete
   atkCooldown: 1
+  missFactor: 3
 --- !u!1102 &-2869096443042315118
 AnimatorState:
   serializedVersion: 5
@@ -2315,7 +2317,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Follow Left
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7776970322705811749}
@@ -2600,7 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 20
   atkRadius: 8
 --- !u!1101 &-515159427558120789
@@ -2690,9 +2692,10 @@ MonoBehaviour:
   atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: e6a6e562b28464bc0a4591819a6c1ef1,
     type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 10
   audio: machete
   atkCooldown: 1
+  missFactor: 3
 --- !u!114 &-264033164897153967
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -2750,67 +2753,67 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: destX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: destY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: followingPlayer
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: trigR
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: trigF
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: trigL
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: trigU
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isDead
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: stopCrying
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -3736,7 +3739,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Follow Right
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3614788193231586516}
@@ -4039,7 +4042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 20
   atkRadius: 8
 --- !u!1102 &4251646587352133738
@@ -4810,9 +4813,10 @@ MonoBehaviour:
   atkRadius: 8
   projectile: {fileID: 9151130746491375280, guid: e6a6e562b28464bc0a4591819a6c1ef1,
     type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 10
   audio: machete
   atkCooldown: 1
+  missFactor: 3
 --- !u!1101 &6004929749567087714
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -5725,7 +5729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 20
   atkRadius: 8
 --- !u!1102 &8532439646935419444
@@ -5947,7 +5951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b556efaf411274ed8817dbaaa3fe14bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   lookRadius: 20
   atkRadius: 8
 --- !u!1101 &9050677338227680930

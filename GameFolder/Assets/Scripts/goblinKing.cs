@@ -9,6 +9,9 @@ public class goblinKing : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float timeCrying;
     [SerializeField] private DialogueTrigger cryingDialogue;
+    [SerializeField] private MinionSpawn minionSpawn1;
+    [SerializeField] private MinionSpawn minionSpawn2;
+
 
     private bool phase2Triggered = false;
 
@@ -19,6 +22,8 @@ public class goblinKing : MonoBehaviour
         cryingDialogue.TriggerDialogue();
         GetComponent<Animator>().runtimeAnimatorController = phase2Animator;
         StartCoroutine(StopCrying());
+        minionSpawn1.enabled = false;
+        minionSpawn2.enabled = false;
         phase2Triggered = true;
       }
     }

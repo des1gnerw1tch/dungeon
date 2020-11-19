@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2500
+  maxHealth: 2800
   enemyID: GoblinKing
   dissolveSpeed: 0.1
   tintOnStart: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 2177524917881198654, guid: cd474ab7090ef4e0490a18ff2af2872b, type: 3}
-  minsPerSpawn: 2
+  minsPerSpawn: 1
   spawnInterval: 8
   spawnSound: goblinChant
   animator: {fileID: 0}
@@ -287,3 +287,6 @@ MonoBehaviour:
   phase2Animator: {fileID: 9100000, guid: 23bb69ac274a24171836e6d4c293d991, type: 2}
   animator: {fileID: 2177524917881198641}
   timeCrying: 8
+  cryingDialogue: {fileID: 0}
+  minionSpawn1: {fileID: -1607134487483299486}
+  minionSpawn2: {fileID: -9033608811590798709}
