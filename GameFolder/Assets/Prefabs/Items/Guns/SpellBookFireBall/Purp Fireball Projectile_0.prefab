@@ -145,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129681771
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -4697075171581014815, guid: 4b5a621c83aa54d4f9d015e526192c98,
     type: 3}
@@ -172,12 +172,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
+  altHitEffect: {fileID: 0}
   damage: 30
   damageUncertainty: 2
   criticalChance: 0
-  knockback: 150
+  knockback: 0
   hitSound: 
   isPiercing: 1
+  IsTeleporter: 0
+  TeleportScript: {fileID: 0}
+  positions: []
+  destoryEffectTime: 0.2
 --- !u!50 &7030127122113010486
 Rigidbody2D:
   serializedVersion: 4
