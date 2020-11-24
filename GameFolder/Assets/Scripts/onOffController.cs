@@ -19,6 +19,11 @@ public class onOffController : MonoBehaviour
     [SerializeField]
     private GameObject fancyLightingOff;
 
+    [SerializeField]
+    private GameObject invertScrollOn;
+    [SerializeField]
+    private GameObject invertScrollOff;
+
     void Start()
     {
 
@@ -45,6 +50,16 @@ public class onOffController : MonoBehaviour
         fancyLightingOn.SetActive(false);
         fancyLightingOff.SetActive(true);
       }
+
+      if (PlayerSettings.invertScroll)  {
+        invertScrollOn.SetActive(true);
+        invertScrollOff.SetActive(false);
+      } else {
+        invertScrollOn.SetActive(false);
+        invertScrollOff.SetActive(true);
+      }
+
+      Debug.Log(PlayerSettings.invertScroll);
 
     }
 
@@ -93,6 +108,22 @@ public class onOffController : MonoBehaviour
         fancyLightingOff.SetActive(false);
         PlayerSettings.fancyGraphics = true;
       }
+      SaveSystem.SaveSettings();
+
+    }
+
+    public void ClickInvertScroll() {
+
+      if (PlayerSettings.invertScroll)  {
+        invertScrollOn.SetActive(false);
+        invertScrollOff.SetActive(true);
+        PlayerSettings.invertScroll = false;
+      } else {
+        invertScrollOn.SetActive(true);
+        invertScrollOff.SetActive(false);
+        PlayerSettings.invertScroll = true;
+      }
+      Debug.Log(PlayerSettings.invertScroll);
       SaveSystem.SaveSettings();
 
     }

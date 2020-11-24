@@ -27,6 +27,7 @@ public class MenuManager : MonoBehaviour
     PlayerSettings.soundEffects = data.soundEffects;
     PlayerSettings.fancyGraphics = data.fancyGraphics;
     PlayerSettings.character = data.character;
+    PlayerSettings.invertScroll = data.invertScroll;
   }
 
   public void PlaySave(float delay)  {
