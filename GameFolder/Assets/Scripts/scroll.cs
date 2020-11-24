@@ -32,24 +32,43 @@ public class scroll : MonoBehaviour
     void Update()
     {
         //input logic
-        if (Input.mouseScrollDelta.y <= -.1)  {
-          //scroll down, add
-          if (activeSlot >= 4) {
-            activeSlot = 0;
-          } else {
-            activeSlot++;
+        if (!PlayerSettings.invertScroll) {
+          //behavior when scroll is not inverted
+          if (Input.mouseScrollDelta.y <= -.1)  {
+            //scroll down, add
+            if (activeSlot >= 4) {
+              activeSlot = 0;
+            } else {
+              activeSlot++;
+            }
+          }
+          else if (Input.mouseScrollDelta.y >= .1)  {
+            //scroll up, subtract
+            if (activeSlot <= 0) {
+              activeSlot = 4;
+            } else {
+              activeSlot--;
+            }
           }
 
-
-        }
-        else if (Input.mouseScrollDelta.y >= .1)  {
-          //scroll up, subtract
-          if (activeSlot <= 0) {
-            activeSlot = 4;
-          } else {
-            activeSlot--;
+        } else {
+          //behavior when scroll is inverted
+          if (Input.mouseScrollDelta.y >= .1)  {
+            //scroll down, add
+            if (activeSlot >= 4) {
+              activeSlot = 0;
+            } else {
+              activeSlot++;
+            }
           }
-
+          else if (Input.mouseScrollDelta.y <= -.1)  {
+            //scroll up, subtract
+            if (activeSlot <= 0) {
+              activeSlot = 4;
+            } else {
+              activeSlot--;
+            }
+          }
         }
         //ui switches black dot and active slot
         switch (activeSlot) {

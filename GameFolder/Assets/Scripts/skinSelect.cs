@@ -35,7 +35,6 @@ public class skinSelect : MonoBehaviour
       if (PlayerSettings.character == "Girl")  {
         GetComponent<SpriteRenderer>().sprite = girlSprite;
         GetComponent<Animator>().runtimeAnimatorController = girlAnimator;
-        Debug.Log("Girl was chosen");
       }
 
     }

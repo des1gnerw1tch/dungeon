@@ -59,8 +59,6 @@ public class onOffController : MonoBehaviour
         invertScrollOff.SetActive(true);
       }
 
-      Debug.Log(PlayerSettings.invertScroll);
-
     }
 
     public void ClickMusic()  {
@@ -123,7 +121,6 @@ public class onOffController : MonoBehaviour
         invertScrollOff.SetActive(false);
         PlayerSettings.invertScroll = true;
       }
-      Debug.Log(PlayerSettings.invertScroll);
       SaveSystem.SaveSettings();
 
     }
