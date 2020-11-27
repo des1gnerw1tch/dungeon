@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1422465503
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1343179526369027782, guid: 3656053adb7df454697941265c73c3d5,
     type: 3}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 80
   enemyID: Slime
   dissolveSpeed: 2
   tintOnStart: 0
@@ -234,3 +234,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a22cf8975eb4145a66e5625782ac9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldBounceOffSameType: 0
