@@ -8,6 +8,8 @@ public class SettingsData {
   public bool music;
   public bool fancyGraphics;
   public bool invertScroll;
+  public bool gameCompleted;
+
   public string character;
 
   //constructor
@@ -17,5 +19,6 @@ public class SettingsData {
     fancyGraphics = PlayerSettings.fancyGraphics;
     invertScroll = PlayerSettings.invertScroll;
     character = PlayerSettings.character;
+    gameCompleted = PlayerSettings.gameCompleted;
   }
 }

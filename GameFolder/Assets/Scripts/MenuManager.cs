@@ -18,6 +18,9 @@ public class MenuManager : MonoBehaviour
   private GameObject resetGameWarningUI;
 
   [SerializeField]
+  private GameObject gameCompletedUI;
+
+  [SerializeField]
   private AudioManager audioManager;
 
   void Start()  {
@@ -28,6 +31,14 @@ public class MenuManager : MonoBehaviour
     PlayerSettings.fancyGraphics = data.fancyGraphics;
     PlayerSettings.character = data.character;
     PlayerSettings.invertScroll = data.invertScroll;
+    PlayerSettings.gameCompleted = data.gameCompleted;
+
+    if (PlayerSettings.gameCompleted) {
+      gameCompletedUI.SetActive(true);
+    } else {
+      gameCompletedUI.SetActive(false);
+    }
+
   }
 
   public void PlaySave(float delay)  {
