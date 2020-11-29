@@ -51,8 +51,15 @@ public class BulletHit : MonoBehaviour
             enemy.TakeDamage(realDamage, critical);
 		     } else {
            if (isPiercing)  {
+             GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+             Destroy(effect, destoryEffectTime);
+             if (altHitEffect != null)  {
+               GameObject effect1 = Instantiate(altHitEffect, transform.position, transform.rotation);
+               Destroy(effect1, destoryEffectTime);
+             }
              Destroy(gameObject);
            }
+
          }
     if (hitEffect != null)  {
 
@@ -81,11 +88,13 @@ public class BulletHit : MonoBehaviour
             }
             else
             {
-                GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-                Destroy(effect, destoryEffectTime);
-                if (altHitEffect != null)  {
-                  GameObject effect1 = Instantiate(altHitEffect, transform.position, transform.rotation);
-                  Destroy(effect1, destoryEffectTime);
+                if (!isPiercing)  {
+                  GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+                  Destroy(effect, destoryEffectTime);
+                  if (altHitEffect != null)  {
+                    GameObject effect1 = Instantiate(altHitEffect, transform.position, transform.rotation);
+                    Destroy(effect1, destoryEffectTime);
+                  }
                 }
             }
     }
