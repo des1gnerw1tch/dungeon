@@ -149,8 +149,8 @@ MonoBehaviour:
   altHitEffect: {fileID: 0}
   damage: 13
   damageUncertainty: 6
-  criticalChance: 0.417
-  knockback: 200
+  criticalChance: 0.09
+  knockback: 20
   hitSound: 
   isPiercing: 1
   IsTeleporter: 0
