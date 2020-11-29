@@ -34535,7 +34535,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - The Doors Locked!! Oh Shit I better Run
+    - 'This door is locked. '
   isStart: 0
 --- !u!61 &2114040222
 BoxCollider2D:
