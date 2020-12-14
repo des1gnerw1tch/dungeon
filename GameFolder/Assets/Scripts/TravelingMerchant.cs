@@ -21,12 +21,27 @@ public class TravelingMerchant : MonoBehaviour
       //starts dialogue late, not on start because of bug where dialogue isn't shown
       StartCoroutine(StartDialogue());
 
-      //this will pick the random item for the shop and set the dialogue
+
+      MerchantTimer merchantTimer = FindObjectOfType<MerchantTimer>();
+      /*this will pick the random item for the shop and set the dialogue.
+      if this is first visit, have it sell a chosen item FIRST*/
+
+      if (merchantTimer.firstVisit)  {
+        merchantTimer.firstVisit = false;
+
+        //this will make sure fairy bow is picked every time on first merchant!
+        int itemNum = 3;
+        shop.prefab = itemDrops[itemNum];
+        shop.cost = itemCost[itemNum];
+        costDialogue.dialogue.sentances[0] = "Today I am selling a " + itemDrops[itemNum].GetComponent<PickUp>().inventoryID + " for " +
+        itemCost[itemNum]  + " coins. Press 'e' to buy";
+      } else {
       int rand = Random.Range(0, itemDrops.Length);
       shop.prefab = itemDrops[rand];
       shop.cost = itemCost[rand];
       costDialogue.dialogue.sentances[0] = "Today I am selling a " + itemDrops[rand].GetComponent<PickUp>().inventoryID + " for " +
         itemCost[rand]  + " coins. Press 'e' to buy";
+      }
     }
 
     void OnTriggerEnter2D(Collider2D other) {

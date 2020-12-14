@@ -96,7 +96,6 @@ public class OverworldManager : MonoBehaviour
         merchantTimer.ResetTimer();
         float rand = Random.Range(0f, 1f);
           if (rand <= merchantSpawnProbability && PlayerProgress.nurseFreed || merchantTimer.firstVisit) {
-            merchantTimer.firstVisit = false;
             travelingMerchant.SetActive(true);
             normalMusicPlayer.SetActive(false);
             merchantMusicPlayer.SetActive(true);
