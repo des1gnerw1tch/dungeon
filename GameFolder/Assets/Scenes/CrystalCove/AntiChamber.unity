@@ -6312,7 +6312,7 @@ MonoBehaviour:
   posY: 0
   NeedsKey: 0
   neededKey: 
-  playSound: 0
+  playSound: 1
   transition: {fileID: 650980965}
   transitionTime: 1
   continueMusic: 0
