@@ -3062,8 +3062,8 @@ MonoBehaviour:
   dialogue:
     name: William Strand
     sentances:
-    - I am so proud of you!! you saved us all.
-    - Now lets get out of this hell hole and return home.
+    - I am so proud of you. You saved us all.
+    - It is time to return home.
   isStart: 0
 --- !u!4 &53707079
 Transform:
@@ -5813,7 +5813,11 @@ MonoBehaviour:
   dialogue:
     name: William Strand
     sentances:
-    - 'Amazing work grandson just one more to destroy. '
+    - 'I was trying to let you find your independence. I wanted you to grow up. '
+    - 'I realize now... you were not ready to live on your own. But that is okay. '
+    - 'I wanted you to grow up too fast. '
+    - I am sorry for letting you live all alone in that tent. It is no way to live.
+    - 'Just one more crystal to destroy until I am free and we can go home. '
     - The third door should be unlocked now.
   isStart: 0
 --- !u!4 &801535709
@@ -6165,7 +6169,9 @@ MonoBehaviour:
   dialogue:
     name: William Strand
     sentances:
-    - 'Amazing work grandson just two more to destroy. '
+    - 'Amazing work grandchild... just two more to destroy. '
+    - Once you free me, you can live in the mansion with me again.
+    - 'You won''t need to live in your tent anymore. '
     - The second door should be unlocked now.
   isStart: 0
 --- !u!4 &1211900648
@@ -6478,19 +6484,18 @@ MonoBehaviour:
   dialogue:
     name: William Strand
     sentances:
-    - Who is there?? Please dont hurt me :(
-    - Wait, I recognize you? You look just like your father.
-    - It is so good to see you. I thought you had long forgotten us in your cups.
-    - You saved the others!?! That brings me great joy.
+    - Is, is that you? My grandchild...
+    - You still look just like your father.
+    - It is so good to see you... How is the town doing?
+    - You saved the others? That brings me great joy.
     - 'You need to get me out of here. '
-    - 'I overheard the guards bragging about how unbreakable this cell is. '
+    - This cell is magically locked, it is impossible to break.
     - 'You see the three crystals? One red, one blue, one green? '
-    - They are the source of power for the magic shield that is on this door. You
-      must destory them.
-    - Through each door there are a host of enemies that you must face. In the heart
-      of each room, you will find an altar that is powerd by a gauntlet.
-    - 'Each gauntlet will destory a differant crystal in this room.   For me to escape
-      they all must be destroyed. '
+    - 'They power this cell. You must destroy them. '
+    - Through each door, you will find a gauntlet matching each color crystal.
+    - 'Shoot the crystal with the corresponding gauntlet to destroy it. '
+    - 'Start at the door on your left. Good luck. '
+    - 'Come talk to me again once you have destroyed the blue crystal. '
   isStart: 0
 --- !u!4 &1289363502
 Transform:
@@ -7003,7 +7008,7 @@ MonoBehaviour:
   dialogue:
     name: Will Strand
     sentances:
-    - That doors locked. Try the other one.
+    - That door is locked.
   isStart: 0
 --- !u!61 &1419367091
 BoxCollider2D:
@@ -9079,7 +9084,7 @@ GameObject:
   - component: {fileID: 1522796110}
   - component: {fileID: 1522796109}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Locked dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9115,7 +9120,7 @@ MonoBehaviour:
   dialogue:
     name: Will Strand
     sentances:
-    - That doors locked. Try the first door.
+    - The door is locked.
   isStart: 0
 --- !u!61 &1522796110
 BoxCollider2D:
@@ -9239,7 +9244,7 @@ GameObject:
   - component: {fileID: 1570670500}
   - component: {fileID: 1570670499}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Door locked dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9275,7 +9280,7 @@ MonoBehaviour:
   dialogue:
     name: Will Strand
     sentances:
-    - That doors locked. Try the first door.
+    - The door is locked.
   isStart: 0
 --- !u!61 &1570670500
 BoxCollider2D:
