@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
 
                 for (int i = 0; i < inventoryScript.item.Length; i++)
                 {
-                    if (inventoryScript.item[i] == "CrystalGauntletRed" && !KeepItem)
+                    if (inventoryScript.item[i] == "Ruby Gauntlet" && !KeepItem)
                     {
                         scrollScript.activeSlot = i;
                         scrollScript.activeCanvasSlot.DestroyItem();
@@ -113,7 +113,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         body.SetTintColor(new Color (1, 0, 0, 1f));
         Camera.shake(5f, 2f, .3f);
-        
+
         //only play player hit sound when player is not dying
         if (currentHealth >= 0) {
           FindObjectOfType<AudioManager>().Play("playerHurt");
