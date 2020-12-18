@@ -41,26 +41,29 @@ public class LavaDungManager : MonoBehaviour
         happyMusicPlayer.SetActive(true);
         bigChest.SetActive(false);
       } else {
-        //if power is on turn off all lights and turn on warning light
-        Light2D[] lights = FindObjectsOfType<Light2D>();
-        foreach (Light2D light in lights) {
-          light.gameObject.SetActive(false);
-        }
-        warningLight.SetActive(true);
-        //turn on skelly knight spawners
-        foreach (GameObject spawner in skellyKnightSpawners)  {
-          spawner.SetActive(true);
-        }
+          //if power is on turn off all lights and turn on warning light
+          Light2D[] lights = FindObjectsOfType<Light2D>();
+          foreach (Light2D light in lights) {
+            light.gameObject.SetActive(false);
+          }
+          warningLight.SetActive(true);
+          //turn on skelly knight spawners
+          foreach (GameObject spawner in skellyKnightSpawners)  {
+            spawner.SetActive(true);
+          }
 
-        bigChest.SetActive(true);
-        Marker[1].SetActive(false);
-        Marker[0].SetActive(true);
+          bigChest.SetActive(true);
+          Marker[1].SetActive(false);
+          Marker[0].SetActive(true);
+          StartCoroutine(StopSiren());
         }
 
       if (PlayerProgress.friendFreed) {
         friend.SetActive(false);
         Markers.SetActive(false);
       }
+
+
 
     }
     public void BuildBridge() {
@@ -77,5 +80,10 @@ public class LavaDungManager : MonoBehaviour
         Marker[1].SetActive(true);
       }
 
+    }
+
+    IEnumerator StopSiren() {
+      yield return new WaitForSeconds(20f);
+      FindObjectOfType<AudioManager>().Stop("siren");
     }
 }
