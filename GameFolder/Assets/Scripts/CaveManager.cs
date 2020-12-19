@@ -21,10 +21,23 @@ public class CaveManager : MonoBehaviour
     public GameObject CrystalDungeonDialogue;
 
     public GameObject[] Markers;
+
+    [SerializeField] private GameObject musicPlayerAmbience;
+    [SerializeField] private GameObject musicPlayerMusic;
     // Start is called before the first frame update
     void Start()
     {
       UpdateScene();
+
+      //choose between ambience and music
+      int rand = Random.Range(0,2);
+      if (rand == 0 || !PlayerProgress.merchantFreed)  {
+        //enable music
+        musicPlayerMusic.SetActive(true);
+      } else {
+        //enable ambience
+         musicPlayerAmbience.SetActive(true);
+      }
     }
 
     public void UpdateScene()  {
@@ -43,7 +56,7 @@ public class CaveManager : MonoBehaviour
         {
             Markers[1].SetActive(true);
         }
-       
+
         if (PlayerProgress.wizardFreed && !PlayerProgress.alchemistFreed)
         {
             Markers[2].SetActive(true);
