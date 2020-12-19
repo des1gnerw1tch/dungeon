@@ -31,110 +31,111 @@ public class scroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //input logic
-        if (!PlayerSettings.invertScroll) {
-          //behavior when scroll is not inverted
-          if (Input.mouseScrollDelta.y <= -.1)  {
-            //scroll down, add
-            if (activeSlot >= 4) {
+      if (!PauseMenu.GameIsPaused)  {
+          //input logic
+          if (!PlayerSettings.invertScroll) {
+            //behavior when scroll is not inverted
+            if (Input.mouseScrollDelta.y <= -.1)  {
+              //scroll down, add
+              if (activeSlot >= 4) {
+                activeSlot = 0;
+              } else {
+                activeSlot++;
+              }
+            }
+            else if (Input.mouseScrollDelta.y >= .1)  {
+              //scroll up, subtract
+              if (activeSlot <= 0) {
+                activeSlot = 4;
+              } else {
+                activeSlot--;
+              }
+            }
+
+          } else {
+            //behavior when scroll is inverted
+            if (Input.mouseScrollDelta.y >= .1)  {
+              //scroll down, add
+              if (activeSlot >= 4) {
+                activeSlot = 0;
+              } else {
+                activeSlot++;
+              }
+            }
+            else if (Input.mouseScrollDelta.y <= -.1)  {
+              //scroll up, subtract
+              if (activeSlot <= 0) {
+                activeSlot = 4;
+              } else {
+                activeSlot--;
+              }
+            }
+          }
+          //ui switches black dot and active slot
+          switch (activeSlot) {
+            case 0 :
+              indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+              activeCanvasSlot = canvasSlot0;
+              break;
+            case 1:
+              indicatorLoc.anchoredPosition = slot1.anchoredPosition;
+              activeCanvasSlot = canvasSlot1;
+              break;
+            case 2:
+              indicatorLoc.anchoredPosition = slot2.anchoredPosition;
+              activeCanvasSlot = canvasSlot2;
+              break;
+            case 3:
+              indicatorLoc.anchoredPosition = slot3.anchoredPosition;
+              activeCanvasSlot = canvasSlot3;
+              break;
+            case 4:
+              indicatorLoc.anchoredPosition = slot4.anchoredPosition;
+              activeCanvasSlot = canvasSlot4;
+              break;
+          }
+
+
+
+
+            //makes sure that gun dissapears
+            if (lastSlot != activeSlot) {
+              lastSlot = activeSlot;
+            }
+
+            if (Input.GetKeyDown("q") && inventory.item[activeSlot] != null)  {
+              inventory.item[activeSlot] = null;
+              //only drops the top item
+              activeCanvasSlot.DropItem();
+              FindObjectOfType<AudioManager>().Play("dropItem");
+            }
+          if (Input.GetKeyDown(KeyCode.Alpha1))
+          {
+              //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
               activeSlot = 0;
-            } else {
-              activeSlot++;
-            }
           }
-          else if (Input.mouseScrollDelta.y >= .1)  {
-            //scroll up, subtract
-            if (activeSlot <= 0) {
+          if (Input.GetKeyDown(KeyCode.Alpha2))
+          {
+              //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+              activeSlot = 1;
+          }
+          if (Input.GetKeyDown(KeyCode.Alpha3))
+          {
+              //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+              activeSlot = 2;
+          }
+          if (Input.GetKeyDown(KeyCode.Alpha4))
+          {
+              //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
+              activeSlot = 3;
+          }
+          if (Input.GetKeyDown(KeyCode.Alpha5))
+          {
+              //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
               activeSlot = 4;
-            } else {
-              activeSlot--;
-            }
           }
 
-        } else {
-          //behavior when scroll is inverted
-          if (Input.mouseScrollDelta.y >= .1)  {
-            //scroll down, add
-            if (activeSlot >= 4) {
-              activeSlot = 0;
-            } else {
-              activeSlot++;
-            }
-          }
-          else if (Input.mouseScrollDelta.y <= -.1)  {
-            //scroll up, subtract
-            if (activeSlot <= 0) {
-              activeSlot = 4;
-            } else {
-              activeSlot--;
-            }
-          }
-        }
-        //ui switches black dot and active slot
-        switch (activeSlot) {
-          case 0 :
-            indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-            activeCanvasSlot = canvasSlot0;
-            break;
-          case 1:
-            indicatorLoc.anchoredPosition = slot1.anchoredPosition;
-            activeCanvasSlot = canvasSlot1;
-            break;
-          case 2:
-            indicatorLoc.anchoredPosition = slot2.anchoredPosition;
-            activeCanvasSlot = canvasSlot2;
-            break;
-          case 3:
-            indicatorLoc.anchoredPosition = slot3.anchoredPosition;
-            activeCanvasSlot = canvasSlot3;
-            break;
-          case 4:
-            indicatorLoc.anchoredPosition = slot4.anchoredPosition;
-            activeCanvasSlot = canvasSlot4;
-            break;
-        }
 
-
-
-
-          //makes sure that gun dissapears
-          if (lastSlot != activeSlot) {
-            lastSlot = activeSlot;
-          }
-
-          if (Input.GetKeyDown("q") && inventory.item[activeSlot] != null)  {
-            inventory.item[activeSlot] = null;
-            //only drops the top item
-            activeCanvasSlot.DropItem();
-            FindObjectOfType<AudioManager>().Play("dropItem");
-          }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-            activeSlot = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-            activeSlot = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-            activeSlot = 2;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-            activeSlot = 3;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            //indicatorLoc.anchoredPosition = slot0.anchoredPosition;
-            activeSlot = 4;
-        }
-
-
-
+      }
     }
 }
