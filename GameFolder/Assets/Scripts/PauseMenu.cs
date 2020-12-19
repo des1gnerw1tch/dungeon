@@ -94,7 +94,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-
+        GameIsPaused = false;
         /*destroys all old objects, destroys animators first because there was a null problem
         where animators were trying to access already deleted objects!*/
         if (PlayerProgress.blueCrystalDestroyed && PlayerProgress.redCrystalDestroyed && PlayerProgress.greenCrystalDestroyed)
