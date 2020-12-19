@@ -10,6 +10,7 @@ public class PickUp : MonoBehaviour
     public string inventoryID;
     public bool wasDropped = false;
     private bool isDuplicate = false;
+    private int duplicateSlot;
     private DialogueTrigger pickUpDialogue;
     private DialogueTrigger fullDialogue;
     private dialogueTimer dialogueTimerScript;
@@ -24,14 +25,17 @@ public class PickUp : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other){
         if  (other.CompareTag("Player") && !wasDropped){
+
+          //check for duplicates
             isDuplicate = false;
             for(int j = 0; j < inventory.slots.Length; j ++){
                 if(inventory.item[j] == inventoryID && inventory.item[j] != "Health Potion" && inventory.item[j] != "Torch" && inventory.item[j] != "EmptyBook"
                 && inventory.item[j] != "Speed Potion" && inventory.item[j] != "Restoration Potion" && inventory.item[j] != "Focus Potion")
                 {
                     isDuplicate = true;
-				}
-			}
+                    duplicateSlot = j;
+				        }
+			       }
             for(int i = 0; i < inventory.slots.Length; i ++){
 
                 if(inventory.isFull[i] == false && !isDuplicate && i < 5){
@@ -56,7 +60,10 @@ public class PickUp : MonoBehaviour
 
         //triggers duplicate dialogue
         if (isDuplicate && !dialogueIsTriggered) {
-          fullDialogue.dialogue.sentances[0] = "You already have a " + inventoryID + ". You may only have 1 of each weapon.";
+          if (duplicateSlot <=4)
+            fullDialogue.dialogue.sentances[0] = "You already have a " + inventoryID + " in your hotbar. You may only have 1 of each weapon.";
+          else
+            fullDialogue.dialogue.sentances[0] = "You have an " + inventoryID + " in your vault. You may only have 1 of each weapon.";
           fullDialogue.TriggerDialogue();
           dialogueTimerScript.endDialogue(2f, this);
           dialogueIsTriggered = true;
