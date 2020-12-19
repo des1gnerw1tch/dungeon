@@ -39,6 +39,7 @@ public class DrKBehavior : MonoBehaviour
           DialogueCollider.enabled = false;
           if (PlayerSettings.music)
             FindObjectOfType<AudioManager>().Play("MDBoss");
+            MusicPlayer.songPlaying = "MDBoss";
           foreach (GameObject obj in objectsToEnable)  {
             obj.SetActive(true);
           }
