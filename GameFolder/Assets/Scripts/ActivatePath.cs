@@ -85,7 +85,9 @@ public class ActivatePath : MonoBehaviour
                 if (!hasDropped && ShouldDrop)
                 {
                     FindObjectOfType<DropManager>().Drop("WhiteGauntlet", transform.position);
-                    hasDropped = true;
+                    /*white WhiteGauntlet should always drop. otherwise, if someone misses it the first time, they
+                    would not be able to get it again...*/
+                    hasDropped = false;
                 }
             }
 
