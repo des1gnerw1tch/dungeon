@@ -38,6 +38,7 @@ public class OverworldManager : MonoBehaviour
       when you die, lava dung progress is reset. */
       LavaDungManager.powerOn = false;
       UpdateScene();
+      
     }
 
     public void UpdateScene()

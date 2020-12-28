@@ -83013,7 +83013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2088422282, guid: fff0213d02df7419cb83d5883a1526ea, type: 3}
       propertyPath: dialogue.sentances.Array.data[7]
-      value: 'Especially you being a veteran and all, this should be a piece of cake! '
+      value: 'Especially you being so young and all, this should be a piece of cake! '
       objectReference: {fileID: 0}
     - target: {fileID: 2088422282, guid: fff0213d02df7419cb83d5883a1526ea, type: 3}
       propertyPath: dialogue.sentances.Array.data[8]

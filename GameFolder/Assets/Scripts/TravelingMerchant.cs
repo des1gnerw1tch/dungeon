@@ -27,7 +27,6 @@ public class TravelingMerchant : MonoBehaviour
       if this is first visit, have it sell a chosen item FIRST*/
 
       if (merchantTimer.firstVisit)  {
-        merchantTimer.firstVisit = false;
 
         //this will make sure fairy bow is picked every time on first merchant!
         int itemNum = 3;
@@ -35,6 +34,8 @@ public class TravelingMerchant : MonoBehaviour
         shop.cost = itemCost[itemNum];
         costDialogue.dialogue.sentances[0] = "Today I am selling a " + itemDrops[itemNum].GetComponent<PickUp>().inventoryID + " for " +
         itemCost[itemNum]  + " coins. Press 'e' to buy";
+
+        merchantTimer.firstVisit = false;
       } else {
       int rand = Random.Range(0, itemDrops.Length);
       shop.prefab = itemDrops[rand];
