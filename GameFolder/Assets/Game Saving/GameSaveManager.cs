@@ -95,6 +95,8 @@ public class GameSaveManager : MonoBehaviour
         PlayerProgress.blueCrystalDestroyed = data.blueCrystalDestroyed;
         PlayerProgress.greenCrystalDestroyed = data.greenCrystalDestroyed;
         PlayerProgress.redCrystalDestroyed = data.redCrystalDestroyed;
+
+        PlayerProgress.hadFirstMerchantVisit = data.hadFirstMerchantVisit;
       }
 
     }

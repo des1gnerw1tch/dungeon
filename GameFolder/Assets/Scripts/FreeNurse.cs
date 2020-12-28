@@ -9,7 +9,6 @@ public class FreeNurse : MonoBehaviour
     {
         PlayerProgress.nurseFreed = true;
         PlayerProgress.hasPurpleKey = true;
-        FindObjectOfType<MerchantTimer>().firstVisit = true;
         FindObjectOfType<GameSaveManager>().SavePlayer();
     }
 

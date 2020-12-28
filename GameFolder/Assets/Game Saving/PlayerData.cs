@@ -27,6 +27,9 @@ public class PlayerData {
   public bool hasBrownKey;
   public bool hasCrystalKey;
 
+  //other progress
+  public bool hadFirstMerchantVisit;
+
   public PlayerData (PlayerMovement playerMovement, PlayerHealth playerHealth, Inventory playerInventory, PlayerMoney playerMoney) {
     //player health
     health = playerHealth.currentHealth;
@@ -63,9 +66,8 @@ public class PlayerData {
     hasBrownKey = PlayerProgress.hasBrownKey;
     hasCrystalKey = PlayerProgress.hasCrystalKey;
 
-
-
-
+    //other progress
+    hadFirstMerchantVisit = PlayerProgress.hadFirstMerchantVisit;
 
   }
 }

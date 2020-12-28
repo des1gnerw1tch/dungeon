@@ -38,11 +38,14 @@ public class OverworldManager : MonoBehaviour
       when you die, lava dung progress is reset. */
       LavaDungManager.powerOn = false;
       UpdateScene();
-      
+
+      Debug.Log(PlayerProgress.hadFirstMerchantVisit);
+
     }
 
     public void UpdateScene()
     {
+      Debug.Log("Scene Updated");
       //wizard
       if (PlayerProgress.wizardFreed) {
         dialogueCollider.enabled = false;
@@ -93,10 +96,13 @@ public class OverworldManager : MonoBehaviour
 
       //wandering merchant
       MerchantTimer merchantTimer = FindObjectOfType<MerchantTimer>();
+      Debug.Log(merchantTimer);
       if (merchantTimer.counter > merchantBufferTimeS) {
+        Debug.Log("First if was executed");
         merchantTimer.ResetTimer();
         float rand = Random.Range(0f, 1f);
-          if (rand <= merchantSpawnProbability && PlayerProgress.nurseFreed || merchantTimer.firstVisit) {
+          if ((rand <= merchantSpawnProbability && PlayerProgress.nurseFreed) || (PlayerProgress.nurseFreed && !PlayerProgress.hadFirstMerchantVisit)) {
+            Debug.Log("Second if was executed");
             travelingMerchant.SetActive(true);
             normalMusicPlayer.SetActive(false);
             merchantMusicPlayer.SetActive(true);
