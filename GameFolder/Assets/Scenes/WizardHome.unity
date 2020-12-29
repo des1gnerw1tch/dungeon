@@ -10390,7 +10390,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'It costs 80 coins to buy Empty Book Press E to buy. '
+    - 'It costs 10 coins to buy Empty Book Press E to buy. '
   isStart: 0
 --- !u!114 &1697723247
 MonoBehaviour:
@@ -10405,7 +10405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2839659968609529476, guid: a0403b81de62e1e4d9d39df68021c26e, type: 3}
-  cost: 90
+  cost: 10
   noMoneyDialogue: {fileID: 452711287}
   boughtDialogue: {fileID: 2066614255}
   costDialogue: {fileID: 1697723246}
@@ -10498,9 +10498,14 @@ MonoBehaviour:
   dialogue:
     name: Ecco
     sentances:
-    - The Enchantmant rune for the book I gave you is 1-2. Hold your empty book and
-      carve it in.
-    - Press e to enchant empty book
+    - This is Punyville's sacred crystal.
+    - Many people don't know much about it. But over the years...
+    - '... I have learned how to harness the magic. '
+    - 'Try it yourself. '
+    - 'Hold an empty book. Tether the first button to the second by dragging and
+      releasing. '
+    - 'That is all I can say. If you cannot figure it out, you aren''t fit for magic. '
+    - Press e to enchant empty book.
   isStart: 0
 --- !u!61 &1701888286
 BoxCollider2D:
