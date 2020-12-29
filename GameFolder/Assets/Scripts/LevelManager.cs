@@ -24,6 +24,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject toEccoHomeTeleporter;
 
+    [SerializeField]
+    private GameObject spawnerManager;
+
     void Start()  {
       Globe[] globes = FindObjectsOfType<Globe>();
       foreach (Globe globe in globes) {
@@ -58,10 +61,32 @@ public class LevelManager : MonoBehaviour
       toEccoHomeTeleporter.SetActive(true);
       FindObjectOfType<GameSaveManager>().SavePlayer();
       WizardMarker.SetActive(true);
+      killMinions();
     }
 
     public void UpdateText()  {
       progressText.text = numCompleted + " / " + numOfGlobes;
     }
-    
+
+    void killMinions()  {
+      EnemyHealth[] minions = Object.FindObjectsOfType<EnemyHealth>();
+      Spawner[] spawners = Object.FindObjectsOfType<Spawner>();
+      MinionSpawn[] bossSpawners = GetComponents<MinionSpawn>();
+      //kills all minions
+      foreach (EnemyHealth minion in minions) {
+        minion.Die();
+      }
+
+      //turns off spawners
+      foreach (Spawner spawner in spawners) {
+        spawner.enabled = false;
+      }
+      //turns off boss spawn minions
+      foreach (MinionSpawn script in bossSpawners) {
+        script.enabled = false;
+      }
+      //this turns off the spawner manager
+      spawnerManager.SetActive(false);
+    }
+
 }

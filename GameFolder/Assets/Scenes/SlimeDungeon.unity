@@ -57950,6 +57950,7 @@ MonoBehaviour:
   numCompleted: 0
   caveTeleporter: {fileID: 301787412}
   toEccoHomeTeleporter: {fileID: 234922305}
+  spawnerManager: {fileID: 2033894165}
 --- !u!4 &1513469718
 Transform:
   m_ObjectHideFlags: 0
