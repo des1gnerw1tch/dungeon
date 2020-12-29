@@ -171,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3e5df1bf4c5bd44a2f926fa8e19039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 3958167721768742269, guid: 8403d4a92065e49cdb7608dd3ac744fa,
+    type: 3}
   altHitEffect: {fileID: 0}
   damage: 30
   damageUncertainty: 2
