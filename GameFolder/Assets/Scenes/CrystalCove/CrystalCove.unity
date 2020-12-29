@@ -449,7 +449,7 @@ MonoBehaviour:
   xRadius: 10
   yRadius: 2
   minDistanceFromPlayer: 10
-  GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.2}
+  GizmosColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &191386573
 Transform:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 1
-  max: 15
+  max: 10
   numAlive: 0
   xRadius: 10
   yRadius: 2
@@ -14345,7 +14345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 0.2
-  max: 30
+  max: 20
   numAlive: 0
   xRadius: 4
   yRadius: 2
@@ -33966,7 +33966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4344612068431696852, guid: 2605f13b3060be7448bb7b1c972a9665, type: 3}
   spawnTime: 0.2
-  max: 30
+  max: 24
   numAlive: 0
   xRadius: 4
   yRadius: 2
@@ -34010,7 +34010,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784416916}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b292b7721ce000849b790e34500add86, type: 3}
   m_Name: 
