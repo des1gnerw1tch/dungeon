@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 2
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 5823410054530108904, guid: 58434655fc2b242a8a3eb0b415a684ec,
     type: 3}
@@ -148,6 +148,8 @@ MonoBehaviour:
   itemButton: {fileID: 5411605247203422836, guid: 614f7a6c6d1284194aa019409a50a6c9,
     type: 3}
   inventoryID: Scout Rifle
+  wasDropped: 0
+  dialogueIsTriggered: 0
 --- !u!61 &6302650298956719216
 BoxCollider2D:
   m_ObjectHideFlags: 0
