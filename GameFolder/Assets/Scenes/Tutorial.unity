@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2. Point and click to shoot
+  m_Text: 2. Point and click to shoot, press shift to dash
 --- !u!222 &12318988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.999996, y: -27.999992}
+  m_AnchoredPosition: {x: 49.999996, y: -65.6}
   m_SizeDelta: {x: 529.18677, y: 77.30797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161855560
@@ -796,7 +796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -174.31}
+  m_AnchoredPosition: {x: 18, y: -182.4}
   m_SizeDelta: {x: 529.18677, y: 77.30797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305963796
@@ -1697,7 +1697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.9, y: -63.999992}
+  m_AnchoredPosition: {x: 56.9, y: -111.4}
   m_SizeDelta: {x: 542.9512, y: 77.30797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855563216
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4. Press (esc) to pause
+  m_Text: 4. Press (esc) to pause / view controls
 --- !u!222 &855563217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4682,8 +4682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329.6, y: 82}
-  m_SizeDelta: {x: 113.23511, y: 113.23511}
+  m_AnchoredPosition: {x: -332.29, y: 120.05}
+  m_SizeDelta: {x: 118.60658, y: 189.33127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123251973
 MonoBehaviour:
