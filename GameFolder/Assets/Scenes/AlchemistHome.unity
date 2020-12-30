@@ -2770,7 +2770,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - Costs 20 to buy a Speed Potion. Press E to buy.
+    - Costs 10 to buy a Speed Potion. Press E to buy.
   isStart: 0
 --- !u!114 &1493362492
 MonoBehaviour:
@@ -2785,7 +2785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 143954038635760408, guid: 991af9f5fca5a4e388743adc99a1b7ed, type: 3}
-  cost: 20
+  cost: 10
   noMoneyDialogue: {fileID: 1270172779}
   boughtDialogue: {fileID: 2000162172}
   costDialogue: {fileID: 1493362491}
