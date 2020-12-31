@@ -9,7 +9,6 @@ public class Inventory : MonoBehaviour
     public GameObject[] slots;
     public string[] item;
     public OverworldManager overworldScene;
-    [SerializeField] private DialogueTrigger beginningDialogue;
     [SerializeField] private GameObject pistol;
 
 
@@ -24,7 +23,6 @@ public class Inventory : MonoBehaviour
         NewGameOnClick.newGame = false;
         PlayerProgress.ResetStaticVariables();
         overworldScene.UpdateScene();
-        beginningDialogue.TriggerDialogue();
         Instantiate(pistol, new Vector2(-7.33f, 26.38f), Quaternion.identity);
       }
 

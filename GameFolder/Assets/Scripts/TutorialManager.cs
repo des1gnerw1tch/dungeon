@@ -13,6 +13,7 @@ public class TutorialManager : MonoBehaviour
   [SerializeField] private GameObject TutCan;
   [SerializeField] private GameObject sentence4;
     [SerializeField] private GameObject space;
+    [SerializeField] private DialogueTrigger beginningMonologue;
 
     public bool sequencePassed;
   // Update is called once per frame
@@ -39,19 +40,21 @@ public class TutorialManager : MonoBehaviour
                         sentence3.SetActive(true);
                         FindObjectOfType<AudioManager>().Play("blip");
                         sentence2.SetActive(false);
-                       
+
                         break;
                     case 3:
                         //show fourth sentence
                         sentence4.SetActive(true);
                         FindObjectOfType<AudioManager>().Play("blip");
                         sentence3.SetActive(false);
-                        
+
                         break;
                     case 4:
+                        beginningMonologue.TriggerDialogue();
                         TutCan.SetActive(false);
                         FindObjectOfType<AudioManager>().Play("blip");
                         sequencePassed = false;
+
                         break;
                 }
             }

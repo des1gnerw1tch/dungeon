@@ -24,7 +24,7 @@ public class StartScene : MonoBehaviour
         }
         if (counter == numSentances)
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("Main");
         }
     }
 }

@@ -30,7 +30,8 @@ public class OverworldManager : MonoBehaviour
     [SerializeField] private float merchantBufferTimeS;
     [Range(0f, 1f)]
     [SerializeField] private float merchantSpawnProbability;
-    //public PlayerProgress progress;
+
+    [SerializeField] private GameObject tutorialCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +39,6 @@ public class OverworldManager : MonoBehaviour
       when you die, lava dung progress is reset. */
       LavaDungManager.powerOn = false;
       UpdateScene();
-
-      Debug.Log(PlayerProgress.hadFirstMerchantVisit);
 
     }
 
@@ -109,6 +108,13 @@ public class OverworldManager : MonoBehaviour
             merchantMarker.SetActive(true);
             caveMarker.SetActive(false);
           }
+        }
+
+        //activate tutorial if tracy is not freed
+        if (PlayerProgress.merchantFreed) {
+          tutorialCanvas.SetActive(false);
+        } else {
+          tutorialCanvas.SetActive(true);
         }
 
       }
