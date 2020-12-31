@@ -97,11 +97,9 @@ public class OverworldManager : MonoBehaviour
       MerchantTimer merchantTimer = FindObjectOfType<MerchantTimer>();
       Debug.Log(merchantTimer);
       if (merchantTimer.counter > merchantBufferTimeS) {
-        Debug.Log("First if was executed");
         merchantTimer.ResetTimer();
         float rand = Random.Range(0f, 1f);
           if ((rand <= merchantSpawnProbability && PlayerProgress.nurseFreed) || (PlayerProgress.nurseFreed && !PlayerProgress.hadFirstMerchantVisit)) {
-            Debug.Log("Second if was executed");
             travelingMerchant.SetActive(true);
             normalMusicPlayer.SetActive(false);
             merchantMusicPlayer.SetActive(true);
