@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minion: {fileID: 6374451069617026663, guid: 057e6e3ae8efd445d8bf162a4b04256f, type: 3}
   minsPerSpawn: 2
-  spawnInterval: 3
+  spawnInterval: 5
   spawnSound: 
   animator: {fileID: 2566242466193417055}
   offsetX: 0

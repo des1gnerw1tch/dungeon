@@ -7,6 +7,7 @@ public class MD2Manager : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject bossTeleporter;
     [SerializeField] private GameObject completedDialogue;
+    [SerializeField] private GameObject potTutorial;
     void Start()
     {
         UpdateScene();
@@ -18,9 +19,11 @@ public class MD2Manager : MonoBehaviour
       if (PlayerProgress.nurseFreed)  {
         bossTeleporter.SetActive(false);
         completedDialogue.SetActive(true);
+        potTutorial.SetActive(false);
       } else {
         bossTeleporter.SetActive(true);
         completedDialogue.SetActive(false);
+        potTutorial.SetActive(true);
       }
     }
 }
