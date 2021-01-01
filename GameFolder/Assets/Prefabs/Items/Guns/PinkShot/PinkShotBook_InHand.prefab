@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7947528126464265978}
   - component: {fileID: 3184194267645605563}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: PinkShotBook_InHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -129681771
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1583529527325391953, guid: a7332f03ca631a049bde7f88b337a975,
     type: 3}
