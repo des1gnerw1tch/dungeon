@@ -149,7 +149,7 @@ MonoBehaviour:
   damage: 17
   damageUncertainty: 1
   criticalChance: 0.2
-  knockback: 180
+  knockback: 30
   hitSound: 
   isPiercing: 0
   IsTeleporter: 0
