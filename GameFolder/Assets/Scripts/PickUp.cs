@@ -50,7 +50,14 @@ public class PickUp : MonoBehaviour
                     //Pick up dialogue
                     Scene scene = SceneManager.GetActiveScene();
                     if (scene.name != "GunShop" && scene.name != "Hospital" && scene.name != "AlchemistHome") {
-                      pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
+                      if(inventoryID == "Glick" && scene.name == "Main")
+                        {
+                            pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "! point and click to shoot.";
+                        }
+                        else
+                        {
+                            pickUpDialogue.dialogue.sentances[0] = "You found a " + inventoryID + "!";
+                        }
                       pickUpDialogue.TriggerDialogue();
                       dialogueTimerScript.endDialogue(3f, this);
                     }
