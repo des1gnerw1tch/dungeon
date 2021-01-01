@@ -155,6 +155,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-8654034562738034810
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8535103737968507416}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-8648324016173261718
 AnimatorState:
   serializedVersion: 5
@@ -1485,6 +1510,7 @@ MonoBehaviour:
   projectileSpeed: 18
   audio: pft
   atkCooldown: 1
+  missFactor: 0
 --- !u!1101 &-4606822580324936330
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -1857,6 +1883,7 @@ MonoBehaviour:
   projectileSpeed: 18
   audio: pft
   atkCooldown: 1
+  missFactor: 0
 --- !u!1102 &-2869096443042315118
 AnimatorState:
   serializedVersion: 5
@@ -2757,6 +2784,7 @@ MonoBehaviour:
   projectileSpeed: 18
   audio: pft
   atkCooldown: 1
+  missFactor: 0
 --- !u!114 &-264033164897153967
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3425,12 +3453,16 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -1405317264243683519}
     m_Position: {x: -520, y: -210, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8535103737968507416}
+    m_Position: {x: 210, y: 290, z: 0}
   m_ChildStateMachines: []
-  m_AnyStateTransitions: []
+  m_AnyStateTransitions:
+  - {fileID: -8654034562738034810}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 300, y: -230, z: 0}
+  m_AnyStatePosition: {x: -130, y: 300, z: 0}
   m_EntryPosition: {x: -490, y: -530, z: 0}
   m_ExitPosition: {x: 1160, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -4883,6 +4915,7 @@ MonoBehaviour:
   projectileSpeed: 18
   audio: pft
   atkCooldown: 1
+  missFactor: 0
 --- !u!1101 &6004929749567087714
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -5789,6 +5822,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: c6c11c3cd54b6469bb04b2ec1a9d2241, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &8535103737968507416
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Death
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 05db179c49aef4f54aac3bfb6a72acd9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
