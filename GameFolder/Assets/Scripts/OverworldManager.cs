@@ -32,6 +32,7 @@ public class OverworldManager : MonoBehaviour
     [SerializeField] private float merchantSpawnProbability;
 
     [SerializeField] private GameObject tutorialCanvas;
+    [SerializeField] private GameObject punyvilleDropDownText;
     // Start is called before the first frame update
     void Start()
     {
@@ -111,8 +112,10 @@ public class OverworldManager : MonoBehaviour
         //activate tutorial if tracy is not freed
         if (PlayerProgress.merchantFreed) {
           tutorialCanvas.SetActive(false);
+          punyvilleDropDownText.SetActive(true);
         } else {
           tutorialCanvas.SetActive(true);
+          punyvilleDropDownText.SetActive(false);
         }
 
       }
