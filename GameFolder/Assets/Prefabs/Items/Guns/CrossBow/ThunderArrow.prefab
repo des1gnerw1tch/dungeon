@@ -100,9 +100,9 @@ MonoBehaviour:
   hitEffect: {fileID: 4419856995888367890, guid: 9108d03f947dcb148860b20003b70a85,
     type: 3}
   altHitEffect: {fileID: 0}
-  damage: 20
-  damageUncertainty: 1
-  criticalChance: 0.163
+  damage: 40
+  damageUncertainty: 5
+  criticalChance: 0.222
   knockback: 7
   hitSound: 
   isPiercing: 0
