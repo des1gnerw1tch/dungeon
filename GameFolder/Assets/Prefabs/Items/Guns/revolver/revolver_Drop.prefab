@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 153160888118910108, guid: b276ade72c7ad414b832bfef0116b855,
     type: 3}
-  inventoryID: revolver
+  inventoryID: Revolver
   wasDropped: 0
   dialogueIsTriggered: 0
 --- !u!50 &8868467021749794044
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
