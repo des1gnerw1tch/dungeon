@@ -38,7 +38,7 @@ public class MenuManager : MonoBehaviour
     } else {
       gameCompletedUI.SetActive(false);
     }
-
+    
   }
 
   public void PlaySave(float delay)  {
