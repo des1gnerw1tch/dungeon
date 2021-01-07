@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 28
   enemyID: Hive
   dissolveSpeed: 1
   tintOnStart: 1
