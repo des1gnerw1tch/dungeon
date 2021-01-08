@@ -126,8 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1011984905168220515, guid: e6db75c2b1396cf4fac0bf62a3433e86,
     type: 3}
-  inventoryID: PinkShot
+  inventoryID: Pink Shot
   wasDropped: 0
+  dialogueIsTriggered: 0
 --- !u!61 &6590106067721563443
 BoxCollider2D:
   m_ObjectHideFlags: 0
