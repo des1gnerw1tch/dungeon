@@ -211,9 +211,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: 
+    name: Mr. Tracy
     sentances:
-    - 'Costs 20 coins to buy an AR. Press E to buy. '
+    - 'It costs 20 coins to buy an AR. Press E to buy. '
   isStart: 0
 --- !u!1 &128880049
 GameObject:
@@ -2623,9 +2623,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: 
+    name: Mr. Tracy
     sentances:
-    - 'Costs 50 coins to buy an SMG. Press E to buy. '
+    - 'Ah, the SMG. This is the fastest shooting gun I sell in my shop. '
+    - 'It costs 40 coins to buy an SMG. Press E to buy. '
   isStart: 0
 --- !u!114 &369512466
 MonoBehaviour:
@@ -2640,7 +2641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1373100728862361412, guid: 5e825915b07f3e8499021e8666d898f7, type: 3}
-  cost: 50
+  cost: 40
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
   costDialogue: {fileID: 369512465}
@@ -2682,7 +2683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382283159
 GameObject:
@@ -4039,7 +4040,7 @@ PrefabInstance:
     - target: {fileID: 2832181886494366236, guid: 2e3a1b9afb48e42458ed3b3b9894e083,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2832181886494366236, guid: 2e3a1b9afb48e42458ed3b3b9894e083,
         type: 3}
@@ -4106,9 +4107,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: 
+    name: Mr. Tracy
     sentances:
-    - 'Costs 50 coins to buy a Shotgun. Press E to buy. '
+    - This is my "Cave Shotgun".
+    - The impact stat of this gun is crazy high! It will knockback even the toughest
+      enemies.
+    - 'It costs 30 coins to buy a Cave Shotgun. Press E to buy. '
   isStart: 0
 --- !u!114 &1063401333
 MonoBehaviour:
@@ -4123,7 +4127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8459001620821164121, guid: 2e3a1b9afb48e42458ed3b3b9894e083, type: 3}
-  cost: 50
+  cost: 30
   noMoneyDialogue: {fileID: 1813552925}
   boughtDialogue: {fileID: 889595413}
   costDialogue: {fileID: 1063401332}
@@ -4165,7 +4169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1150315938
 PrefabInstance:
@@ -4212,7 +4216,7 @@ PrefabInstance:
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1672989749191045727, guid: 5bb89a4486516cc4b904ea8f7ab025c1,
         type: 3}
@@ -4338,9 +4342,9 @@ MonoBehaviour:
   dialogue:
     name: Tracy
     sentances:
-    - Ah, the Heavy Sniper! This is one of my favorites.
+    - The Heavy Sniper! This is one of my favorites.
     - It may be slow, but boy does this thing pack a punch!
-    - 'Costs 50 coins to buy a Heavy Sniper. Press E to buy. '
+    - 'It costs 50 coins to buy a Heavy Sniper. Press E to buy. '
   isStart: 0
 --- !u!1 &1236613106
 GameObject:
@@ -4726,7 +4730,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1418780652
 MonoBehaviour:
@@ -4742,9 +4746,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: 
+    name: Mr. Tracy
     sentances:
-    - 'Costs 100 coins to buy RPG. Press E to buy. '
+    - Interested in buying a Rocket Launcher?
+    - The creation wouldn't have been possible without help from our town's alchemist,
+      Pherb.
+    - Extremely smart man...
+    - 'It costs 100 coins to buy RPG. Press E to buy. '
   isStart: 0
 --- !u!1001 &1524322030
 PrefabInstance:
@@ -4982,7 +4990,10 @@ MonoBehaviour:
     sentances:
     - BREAKING NEWS - Many residents of the small island town "Punyville" have been
       reported missing.
-    - BREAKING NEWS - Causes are still unknown. Authorities are yet to arrive.
+    - Causes are still unknown.
+    - 'Authorities are having trouble reaching Punyville, as it is located on a remote
+      island. '
+    - 'If you have any updates on the situation, call our tip line: 1(800)-207-7870'
   isStart: 0
 --- !u!1 &1586079817
 GameObject:
@@ -5176,8 +5187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
   dialogue:
-    name: 
+    name: Mr. Tracy
     sentances:
+    - 'This is a standard pistol. A Glick as many call it. '
+    - I give these away for free. Protect yourself youngin'!
     - 'Costs 0 coins to buy a Pistol. Press E to buy. '
   isStart: 0
 --- !u!1 &1813552924
