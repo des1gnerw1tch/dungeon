@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-
+        FindObjectOfType<AudioManager>().Play("resume");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         GameIsPaused = false;
@@ -77,6 +77,7 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("No music found to pause");
         }
 
+        FindObjectOfType<AudioManager>().Play("pause");
         pauseMenuUI.SetActive(true);
         ShowKeys();
         ShowCompletion();
