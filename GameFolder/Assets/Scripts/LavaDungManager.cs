@@ -84,6 +84,6 @@ public class LavaDungManager : MonoBehaviour
 
     IEnumerator StopSiren() {
       yield return new WaitForSeconds(20f);
-      FindObjectOfType<AudioManager>().Stop("siren");
+      //FindObjectOfType<AudioManager>().Stop("siren");
     }
 }
