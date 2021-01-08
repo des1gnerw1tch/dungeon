@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529948243
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 3
   m_Sprite: {fileID: -596818576799564364, guid: 7836efe942cdec7419f9c7b411dd63e1,
     type: 3}
@@ -124,10 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cfd59861e83a04c9d5d28b59dca502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 153160888118910108, guid: b276ade72c7ad414b832bfef0116b855,
+  itemButton: {fileID: 153160888118910108, guid: 97ccd95dba329f54aae29b25b4a0ec18,
     type: 3}
   inventoryID: Magma Rifle
   wasDropped: 0
+  dialogueIsTriggered: 0
 --- !u!50 &8868467021749794044
 Rigidbody2D:
   serializedVersion: 4
