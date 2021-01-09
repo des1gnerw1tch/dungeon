@@ -87,7 +87,7 @@ public class ActivatePath : MonoBehaviour
                     FindObjectOfType<DropManager>().Drop("WhiteGauntlet", transform.position);
                     /*white WhiteGauntlet should always drop. otherwise, if someone misses it the first time, they
                     would not be able to get it again...*/
-                    hasDropped = false;
+                    hasDropped = true;
                 }
             }
 
@@ -96,7 +96,7 @@ public class ActivatePath : MonoBehaviour
     }
     void Start()
     {
-
+      hasDropped = false;
     }
 
     // Update is called once per frame
