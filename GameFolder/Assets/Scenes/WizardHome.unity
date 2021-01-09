@@ -2759,7 +2759,9 @@ MonoBehaviour:
   dialogue:
     name: Ecco
     sentances:
-    - 'Life''s a marathon, not a sprint, pace yourself. '
+    - If you have lost the gift I have given to you, try the code 1-2 on an empty
+      book.
+    - 'No need to thank me. '
   isStart: 0
 --- !u!61 &508323779
 BoxCollider2D:
