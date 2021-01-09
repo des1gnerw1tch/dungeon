@@ -234,6 +234,11 @@ PrefabInstance:
       propertyPath: max
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
 --- !u!4 &2983506 stripped
@@ -527,7 +532,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -699,7 +704,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -1043,8 +1048,8 @@ Transform:
   - {fileID: 300734842}
   - {fileID: 1064535282}
   - {fileID: 1976210691}
-  - {fileID: 182409598}
   - {fileID: 1855402510}
+  - {fileID: 182409598}
   - {fileID: 1101825926}
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -1081,7 +1086,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -1233,6 +1238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: max
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -59149,7 +59159,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -59221,7 +59231,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -59293,7 +59303,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -59431,6 +59441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: max
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -59649,7 +59664,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -60049,6 +60064,11 @@ PrefabInstance:
       propertyPath: max
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
 --- !u!4 &558652580 stripped
@@ -60089,7 +60109,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -60161,7 +60181,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -60427,7 +60447,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -60499,7 +60519,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -60571,7 +60591,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -62401,6 +62421,11 @@ PrefabInstance:
       propertyPath: max
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
 --- !u!4 &954516817 stripped
@@ -62441,7 +62466,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -62673,6 +62698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: max
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -63313,7 +63343,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -63385,7 +63415,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -63537,7 +63567,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -63791,6 +63821,11 @@ PrefabInstance:
       propertyPath: max
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
 --- !u!4 &1282306883 stripped
@@ -63828,7 +63863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9bf829bbd3e4c74a89f1dd5244e0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 50
+  maxEnemies: 44
   currentEnemies: 0
 --- !u!4 &1285734956
 Transform:
@@ -64188,7 +64223,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -64382,7 +64417,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -64590,7 +64625,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -64954,7 +64989,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -65257,6 +65292,11 @@ PrefabInstance:
       propertyPath: max
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
 --- !u!4 &1801061581 stripped
@@ -65297,7 +65337,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -65383,7 +65423,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -65455,7 +65495,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -65700,7 +65740,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -65786,7 +65826,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -65924,6 +65964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: max
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
@@ -66278,6 +66323,11 @@ PrefabInstance:
       propertyPath: max
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9040440001880212294, guid: 09565b11c0cf60c479ee25c9f8fabab8,
+        type: 3}
+      propertyPath: minDistanceFromPlayer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09565b11c0cf60c479ee25c9f8fabab8, type: 3}
 --- !u!4 &1919014382 stripped
@@ -66378,7 +66428,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -66562,7 +66612,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -66772,7 +66822,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -66927,7 +66977,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757
@@ -68378,7 +68428,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.74263185, g: 0.9716981, b: 0.70127267, a: 1}
+  m_Color: {r: 0.85054255, g: 0.9811321, b: 0.8284087, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f369ab4d7d9f0cfee9b4cf8a21e636ab953645f845f799e15328315bbb1af757

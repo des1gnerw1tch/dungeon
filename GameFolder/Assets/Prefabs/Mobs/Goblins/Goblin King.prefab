@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3143686525053c41bb3bb4490810e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2800
+  maxHealth: 3400
   enemyID: GoblinKing
   dissolveSpeed: 0.1
   tintOnStart: 0
