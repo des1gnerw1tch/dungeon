@@ -184,8 +184,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   Camera: {fileID: 0}
   deathTransition: {fileID: 756584431}
-  regenDuration: 15
+  regenDuration: 13
   regenEffectIcon: {fileID: 0}
+  transported: 0
 --- !u!114 &5493401359268361210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +229,6 @@ MonoBehaviour:
   - {fileID: 0}
   item: []
   overworldScene: {fileID: 0}
-  beginningDialogue: {fileID: 0}
   pistol: {fileID: 1373100728862361412, guid: 8033edcce594d4ef585aa2f99dfc1385, type: 3}
 --- !u!70 &184997451201820118
 CapsuleCollider2D:
