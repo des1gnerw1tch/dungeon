@@ -98791,7 +98791,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentances:
-    - 'Tip: Look at the minimap to aim at the next crystals'
+    - 'Tip: Look at the minimap to aim at the next crystals.'
   isStart: 0
 --- !u!61 &1372390906
 BoxCollider2D:
