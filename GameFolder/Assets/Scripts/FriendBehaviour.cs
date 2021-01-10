@@ -22,6 +22,7 @@ public class FriendBehaviour : MonoBehaviour
       DialogueCollider.size = new Vector2(10, 10);
       trig = true;
       PlayerProgress.friendFreed = true;
+      PlayerProgress.hasCrystalKey = true;
       FindObjectOfType<DungeonCompletedPop>().ShowDungeonCompleted();
       FindObjectOfType<GameSaveManager>().SavePlayer();
       FindObjectOfType<AudioManager>().Stop("siren");
