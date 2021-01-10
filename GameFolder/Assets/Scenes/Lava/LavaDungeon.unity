@@ -71329,6 +71329,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC3_0
       objectReference: {fileID: 0}
+    - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[2]
+      value: You look so much healthier... How many of our townspeople have been
+        freed?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146325184077233614, guid: ccb4f365f1523451284d9f6455e9be6b,
+        type: 3}
+      propertyPath: dialogue.sentances.Array.data[4]
+      value: 'Well, I guess it''s time to go home...
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 5100479673690177880, guid: ccb4f365f1523451284d9f6455e9be6b,
         type: 3}
       propertyPath: m_LocalPosition.x
